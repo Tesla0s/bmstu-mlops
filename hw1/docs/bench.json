@@ -1,0 +1,65 @@
+{
+  "measured_at": "2026-09-05T16:06:12+03:00",
+  "model": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "device": "mps:0",
+  "dtype": "bfloat16",
+  "parameters": 596049920,
+  "config": {
+    "model": {
+      "name": "Qwen/Qwen3-0.6B",
+      "dtype": "bfloat16",
+      "device": "mps"
+    },
+    "generate": {
+      "max_new_tokens": 200,
+      "temperature": 0.0,
+      "seed": 42,
+      "enable_thinking": false
+    },
+    "bench": {
+      "warmup_runs": 1,
+      "measure_runs": 3,
+      "prompt": "Объясни, что такое MLOps, в трёх предложениях."
+    }
+  },
+  "input_tokens": 30,
+  "load_time_sec": 0.8158666669623926,
+  "tokens_per_sec": 40.43017901951768,
+  "tokens_per_sec_all": [
+    41.02600749633678,
+    40.43017901951768,
+    33.79728368913858
+  ],
+  "runs": [
+    {
+      "elapsed_sec": 1.7306095409439877,
+      "new_tokens": 71,
+      "tokens_per_sec": 41.02600749633678
+    },
+    {
+      "elapsed_sec": 1.7561139159370214,
+      "new_tokens": 71,
+      "tokens_per_sec": 40.43017901951768
+    },
+    {
+      "elapsed_sec": 2.1007605419727042,
+      "new_tokens": 71,
+      "tokens_per_sec": 33.79728368913858
+    }
+  ],
+  "answer": "MLOps — это совокупность практик и инструментов, направленных на интеграцию и управление машинным обучением в производственные процессы. Это включает в себя интеграцию данных, оптимизацию модели, контроль качества и автоматизацию процессов.",
+  "software": {
+    "python": "3.12.14",
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "accelerate": "1.12.0",
+    "numpy": "2.2.6",
+    "pyyaml": "6.0.3",
+    "os": "macOS-15.7.9-arm64-arm-64bit",
+    "torch_num_threads": 6,
+    "hf_hub_offline": "1"
+  },
+  "peak_rss_mb": 581.859375,
+  "memory_unit": "MiB (2**20 bytes)"
+}

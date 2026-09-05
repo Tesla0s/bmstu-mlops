@@ -1,0 +1,16 @@
+{
+  "requested_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "loaded_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "model_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "device": "mps:0",
+  "dtype": "torch.bfloat16",
+  "new_tokens": 39,
+  "answer": "Объясни, что такое MLOps, в трёх предложениях.",
+  "params_file_unchanged": true,
+  "generation_successful": true,
+  "english_check": {
+    "prompt": "Explain what MLOps is in three short sentences.",
+    "answer": "MLOps is a cloud computing platform that provides a unified platform for managing and deploying cloud-based applications, services, and data. It enables organizations to easily scale their applications and services across different cloud providers, reducing the need for individual infrastructure deployments and improving scalability.",
+    "new_tokens": 54
+  }
+}

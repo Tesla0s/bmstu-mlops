@@ -1,0 +1,15 @@
+{
+  "generation_exit_codes": [
+    0,
+    0
+  ],
+  "byte_identical": true,
+  "stdout_sha256": "1007ad1255986dd12938947178da3e1c27ffb783792e8e305abac490b90e5351",
+  "new_tokens": 71,
+  "answer_nonempty": true,
+  "prompt_excluded": true,
+  "thinking_disabled": true,
+  "benchmark_matches_config": true,
+  "benchmark_answer_matches_generation": true,
+  "benchmark_arithmetic_valid": true
+}

@@ -1,0 +1,12 @@
+[project]
+name = "mlops-hw1"
+version = "0.1.0"
+description = "MLOps, ДЗ 1: воспроизводимая генерация и измерение производительности"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch==2.8.0",
+    "transformers==4.57.6",
+    "accelerate==1.12.0",
+    "numpy==2.2.6",
+    "pyyaml==6.0.3",
+]

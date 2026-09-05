@@ -1,0 +1,35 @@
+# Локальные окружения, инструменты и кэши
+.venv/
+venv/
+.tools/
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Локальные настройки и данные для входа
+.env
+.env.*
+!.env.example
+
+# Временные результаты проверок
+out1.txt
+out2.txt
+params.yaml.bak
+params.yaml.orig
+
+# Материалы занятия, видео и вспомогательные записи
+sources/
+samples/
+demo_output/
+*.mp4
+*.mov
+*.m4a
+*.mp3
+*.wav
+
+# Скачанные веса моделей
+*.safetensors
+*.pt
+*.pth
+*.ckpt

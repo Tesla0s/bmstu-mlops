@@ -1,0 +1,16 @@
+# Выбор модели задаётся только здесь; Python-код читает конфигурацию.
+model:
+  name: "Qwen/Qwen3-0.6B"
+  dtype: "bfloat16"
+  device: "mps"              # auto | cpu | cuda | mps
+
+generate:
+  max_new_tokens: 200
+  temperature: 0.0           # без случайного выбора следующего токена
+  seed: 42
+  enable_thinking: false
+
+bench:
+  warmup_runs: 1
+  measure_runs: 3
+  prompt: "Объясни, что такое MLOps, в трёх предложениях."
