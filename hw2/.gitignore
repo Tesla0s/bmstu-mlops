@@ -1,0 +1,9 @@
+.venv/
+.tools/
+.cache/
+demo_output/
+__pycache__/
+*.py[cod]
+.DS_Store
+*.bak
+*.orig

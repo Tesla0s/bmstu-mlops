@@ -1,0 +1,19 @@
+[project]
+name = "mlops-hw2"
+version = "0.1.0"
+description = "MLOPS-26, домашняя работа 2: анатомия Qwen3, хуки, профиль памяти"
+requires-python = ">=3.12,<3.13"
+# Нижние границы стоят не для красоты: Qwen3 появился в transformers 4.51,
+# а peft младше 0.14 не умеет считать trainable-параметры так, как ждёт проверка.
+# psutil — не «на всякий случай»: на Windows модуля resource нет вовсе,
+# и пик RSS там снимается только через psutil (memory_info().peak_wset).
+dependencies = [
+    "torch==2.8.0",
+    "transformers==4.57.6",
+    "accelerate==1.12.0",
+    "peft==0.17.1",
+    "matplotlib==3.10.8",
+    "numpy==2.2.6",
+    "psutil==7.2.2",
+    "pyyaml==6.0.3",
+]

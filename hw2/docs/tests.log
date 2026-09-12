@@ -1,0 +1,12 @@
+./.tools/bin/uv run --locked python -m unittest discover -s tests -v
+test_every_mode_and_repeat_uses_a_new_process_and_passed_config (test_anatomy.AnatomyTests.test_every_mode_and_repeat_uses_a_new_process_and_passed_config) ... ok
+test_failed_child_is_not_reported_as_a_measurement (test_anatomy.AnatomyTests.test_failed_child_is_not_reported_as_a_measurement) ... ok
+test_hooks_and_state_are_restored_when_forward_raises (test_anatomy.AnatomyTests.test_hooks_and_state_are_restored_when_forward_raises) ... ok
+test_hooks_repeat_and_preserve_preexisting_hook_and_training_state (test_anatomy.AnatomyTests.test_hooks_repeat_and_preserve_preexisting_hook_and_training_state) ... ok
+test_peak_keeps_transient_allocation_after_it_was_freed (test_anatomy.AnatomyTests.test_peak_keeps_transient_allocation_after_it_was_freed) ... ok
+test_shared_weight_is_counted_once_and_keeps_both_names (test_anatomy.AnatomyTests.test_shared_weight_is_counted_once_and_keeps_both_names) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.006s
+
+OK

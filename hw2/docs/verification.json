@@ -1,0 +1,15 @@
+{
+  "parameter_totals_match": true,
+  "both_lora_formulas_match": true,
+  "nine_unique_process_ids": true,
+  "all_peaks_above_weights": true,
+  "hooks_after_two_forwards": 0,
+  "activation_norms_repeat_exactly": true,
+  "teacher_check_unchanged": true,
+  "teacher_check_sha256": "7c585c755db152784aeac78675f3c52c8e14b115688c14c025f188b3aaed1c16",
+  "teacher_checks_passed": 7,
+  "additional_tests_passed": 6,
+  "workbook_formulas_preserved": true,
+  "workbook_recalculated_in_excel": true,
+  "workbook_rank_change_detected": true
+}

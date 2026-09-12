@@ -1,0 +1,11 @@
+./.tools/bin/uv run --locked python -m src.inspect_model
+trainable params: 1,146,880 || all params: 597,196,800 || trainable%: 0.1920
+trainable params: 10,092,544 || all params: 606,142,464 || trainable%: 1.6650
+
+Параметров: 596 049 920 (по таблице) / 596 049 920 (напрямую)
+Условия: macOS-15.7.9-arm64-arm-64bit, device mps, dtype bfloat16, seq_len 256, прогонов на режим 3, torch 2.8.0, transformers 4.57.6
+  inference  пик   1512.8 МБ  (память устройства mps: torch.mps.driver_allocated_memory)
+  full_ft    пик   7106.6 МБ  (память устройства mps: torch.mps.driver_allocated_memory)
+  lora       пик   3239.8 МБ  (память устройства mps: torch.mps.driver_allocated_memory)
+
+Отчёт: docs/anatomy.md, график: docs/activations.png
