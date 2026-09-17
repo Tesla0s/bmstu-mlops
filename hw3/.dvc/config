@@ -1,0 +1,6 @@
+[core]
+    analytics = false
+    autostage = false
+    remote = local
+['remote "local"']
+    url = ../../../dvc_remote

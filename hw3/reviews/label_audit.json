@@ -1,0 +1,967 @@
+{
+  "reviewer": "Codex; assisted content review, not independent human annotation",
+  "date": "2026-09-17",
+  "selection": "15 per repository/category from preliminary v2 after cleaning, ranked by sha256(audit-2026-09-17:id); 90 total. Rules were then tightened using this development audit before freezing the final split. Follow-up: 15 new question records per repository from refined preliminary v2, excluding initial ids, ranked by sha256(followup-audit:id). Both reviews precede the final freeze; no model was evaluated.",
+  "records": [
+    {
+      "id": "microsoft/vscode#278002",
+      "url": "https://github.com/microsoft/vscode/issues/278002",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Зависание выполнения echo; есть шаги воспроизведения и несоответствие состояния интерфейса.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#281924",
+      "url": "https://github.com/microsoft/vscode/issues/281924",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "В облачной сессии пропала кнопка просмотра изменений.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#281435",
+      "url": "https://github.com/microsoft/vscode/issues/281435",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Список фонового агента показывает несовместимые пользовательские агенты.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#284793",
+      "url": "https://github.com/microsoft/vscode/issues/284793",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Лишний отступ в диалоге подтверждения; описание дефекта интерфейса.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#281350",
+      "url": "https://github.com/microsoft/vscode/issues/281350",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Статистика изменений теряется после перезагрузки окна.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#276035",
+      "url": "https://github.com/microsoft/vscode/issues/276035",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Исчез существовавший выбор модели во встроенном чате.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#280559",
+      "url": "https://github.com/microsoft/vscode/issues/280559",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Отрицательная настройка приводит к ошибке запуска сервера.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#280662",
+      "url": "https://github.com/microsoft/vscode/issues/280662",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Замедление отправки запроса при параллельных сессиях.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#283242",
+      "url": "https://github.com/microsoft/vscode/issues/283242",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Регрессия прокрутки результата после обновления; описание достаточно без вложения.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#280532",
+      "url": "https://github.com/microsoft/vscode/issues/280532",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Фоновый агент игнорирует заданное свойство model.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#281517",
+      "url": "https://github.com/microsoft/vscode/issues/281517",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Интерфейс показывает сессии из посторонних рабочих каталогов.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#276167",
+      "url": "https://github.com/microsoft/vscode/issues/276167",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Ошибка неизвестной сессии блокирует инструменты; приложен стек вызовов.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#277416",
+      "url": "https://github.com/microsoft/vscode/issues/277416",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "После обновления перестал работать существующий обработчик ошибок TypeScript.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#283701",
+      "url": "https://github.com/microsoft/vscode/issues/283701",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Новая модель появляется в списке только после перезагрузки.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#285409",
+      "url": "https://github.com/microsoft/vscode/issues/285409",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Локализация вывода Git нарушает существующий разбор ошибок.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#56081",
+      "url": "https://github.com/pandas-dev/pandas/issues/56081",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Сообщает о различии поведения сортировки Index и Series с одинаковым ключом.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#60498",
+      "url": "https://github.com/pandas-dev/pandas/issues/60498",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Имеется воспроизводимый сбой выравнивания столбцов MultiIndex.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#62622",
+      "url": "https://github.com/pandas-dev/pandas/issues/62622",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Сообщает о нестабильных результатах неизменного булева сравнения.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#57189",
+      "url": "https://github.com/pandas-dev/pandas/issues/57189",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Описывает нежелательное преобразование целого типа в float после map.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#58924",
+      "url": "https://github.com/pandas-dev/pandas/issues/58924",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Есть минимальный пример ошибочных индексов при NA и длине более 128.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#57055",
+      "url": "https://github.com/pandas-dev/pandas/issues/57055",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Функция определения типа по-разному обрабатывает dtype и Series.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#57209",
+      "url": "https://github.com/pandas-dev/pandas/issues/57209",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Обращение сформулировано как сообщение о несовпадении границ интервалов.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#58538",
+      "url": "https://github.com/pandas-dev/pandas/issues/58538",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Сообщает о несоответствии результата ewm приведённой формуле.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#59957",
+      "url": "https://github.com/pandas-dev/pandas/issues/59957",
+      "source_category": "bug",
+      "decision": "exclude",
+      "reason": "Смешаны жалоба на расход памяти и явный запрос новой опции; bug и feature_request неоднозначны.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#56839",
+      "url": "https://github.com/pandas-dev/pandas/issues/56839",
+      "source_category": "bug",
+      "decision": "exclude",
+      "reason": "Смешаны сообщение об ошибке и вопрос о представлении float32; надёжная категория из текста неочевидна.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#59213",
+      "url": "https://github.com/pandas-dev/pandas/issues/59213",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Есть регрессия pd.unique для NumpyExtensionArray.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#63484",
+      "url": "https://github.com/pandas-dev/pandas/issues/63484",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Описывает неожиданное изменение типа исключения после обновления зависимости.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#61175",
+      "url": "https://github.com/pandas-dev/pandas/issues/61175",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Вызов метода после бинарного выражения в eval завершается AttributeError.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#56690",
+      "url": "https://github.com/pandas-dev/pandas/issues/56690",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Обращение сформулировано как воспроизводимое неправильное чтение CSV.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#61179",
+      "url": "https://github.com/pandas-dev/pandas/issues/61179",
+      "source_category": "bug",
+      "decision": "keep",
+      "reason": "Сообщает об изменении поведения replace между версиями.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#268238",
+      "url": "https://github.com/microsoft/vscode/issues/268238",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Предлагается новый механизм возврата фокуса к последнему сообщению.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#270668",
+      "url": "https://github.com/microsoft/vscode/issues/270668",
+      "source_category": "feature_request",
+      "decision": "exclude",
+      "reason": "Текст описывает отказ существующей команды; метка новой функции неоднозначна без обсуждения.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#262372",
+      "url": "https://github.com/microsoft/vscode/issues/262372",
+      "source_category": "feature_request",
+      "decision": "exclude",
+      "reason": "Обращение описывает неработающие элементы при настройках; граница bug/feature_request неясна.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#279243",
+      "url": "https://github.com/microsoft/vscode/issues/279243",
+      "source_category": "feature_request",
+      "decision": "exclude",
+      "reason": "Описано неполное существующее автодополнение без явной постановки новой функции; категория неоднозначна.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#273132",
+      "url": "https://github.com/microsoft/vscode/issues/273132",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Явно предлагается новый пункт копирования описания настройки.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#277312",
+      "url": "https://github.com/microsoft/vscode/issues/277312",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "План улучшений интеграции и расширения поддерживаемых возможностей.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#285212",
+      "url": "https://github.com/microsoft/vscode/issues/285212",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Запрашиваются новые методы hide и collapse для webview.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#262933",
+      "url": "https://github.com/microsoft/vscode/issues/262933",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Просьба распространить автоответ на терминалы переднего плана.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#281700",
+      "url": "https://github.com/microsoft/vscode/issues/281700",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Просьба увеличить доступное количество недавних проектов.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#275136",
+      "url": "https://github.com/microsoft/vscode/issues/275136",
+      "source_category": "feature_request",
+      "decision": "exclude",
+      "reason": "Одновременно исправление индикатора завершения и новая сводка; смешанные цели обращения.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#278688",
+      "url": "https://github.com/microsoft/vscode/issues/278688",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Явный запрос поддержки Linux x64.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#258919",
+      "url": "https://github.com/microsoft/vscode/issues/258919",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Запрашивается новое действие открытия чата в отдельном окне.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#283767",
+      "url": "https://github.com/microsoft/vscode/issues/283767",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Предлагается новый переключатель фильтрации файлов поиска.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#262735",
+      "url": "https://github.com/microsoft/vscode/issues/262735",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Запрашивается навигация к ранее принятому изменению.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#272076",
+      "url": "https://github.com/microsoft/vscode/issues/272076",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Предлагается новая команда экспорта чата в Markdown.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#42609",
+      "url": "https://github.com/pandas-dev/pandas/issues/42609",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Предлагается новая возможность сохранить GroupBy после фильтрации.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#43975",
+      "url": "https://github.com/pandas-dev/pandas/issues/43975",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Запрашивается новое свойство unixtime с описанием интерфейса.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#62826",
+      "url": "https://github.com/pandas-dev/pandas/issues/62826",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Предлагается дополнительный режим поэлементных битовых операций.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#57214",
+      "url": "https://github.com/pandas-dev/pandas/issues/57214",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Запрашивается новый метод проверки пустой строки.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#41157",
+      "url": "https://github.com/pandas-dev/pandas/issues/41157",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Предлагается новый бот запуска и публикации результатов измерений.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#46868",
+      "url": "https://github.com/pandas-dev/pandas/issues/46868",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Запрашивается расширение аргумента dtype для отдельных столбцов.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#45332",
+      "url": "https://github.com/pandas-dev/pandas/issues/45332",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Предлагается новый параметр fill_partial с сохранением прежнего поведения.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#47335",
+      "url": "https://github.com/pandas-dev/pandas/issues/47335",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Предлагается добавить необязательные зависимости в механизм установки.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#49997",
+      "url": "https://github.com/pandas-dev/pandas/issues/49997",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Запрашивается дополнительный выбор типов Arrow при преобразовании.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#56975",
+      "url": "https://github.com/pandas-dev/pandas/issues/56975",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Явно предлагается вернуть публичный метод и изменить правила устаревания.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#41272",
+      "url": "https://github.com/pandas-dev/pandas/issues/41272",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Обсуждается расширение поддерживаемых числовых типов индекса.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#63373",
+      "url": "https://github.com/pandas-dev/pandas/issues/63373",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Есть конкретное предложение нового режима чтения строк, хотя вводная часть сформулирована как просьба совета.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#53665",
+      "url": "https://github.com/pandas-dev/pandas/issues/53665",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Запрашивается поддержка новой версии Python.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#43857",
+      "url": "https://github.com/pandas-dev/pandas/issues/43857",
+      "source_category": "feature_request",
+      "decision": "exclude",
+      "reason": "Формулировка является вопросом о способе настройки dtype; без обсуждения метка новой функции неоднозначна.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#58108",
+      "url": "https://github.com/pandas-dev/pandas/issues/58108",
+      "source_category": "feature_request",
+      "decision": "keep",
+      "reason": "Описывается отсутствующий вариант отображения ключей и списков с обходным решением.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#235586",
+      "url": "https://github.com/microsoft/vscode/issues/235586",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Жалоба на неправильное обнаружение изменений без явного вопроса по использованию; метка question неоднозначна.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#257611",
+      "url": "https://github.com/microsoft/vscode/issues/257611",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Текст просит отсутствующий режим удалённого запуска; по содержанию это предложение функции.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#229593",
+      "url": "https://github.com/microsoft/vscode/issues/229593",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Явное предложение переместить файл настроек, в теле указан Feature request.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#233541",
+      "url": "https://github.com/microsoft/vscode/issues/233541",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явная просьба помочь исправить пользовательскую конфигурацию recovery mode.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#277095",
+      "url": "https://github.com/microsoft/vscode/issues/277095",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Приведён сбой расширения и шаги воспроизведения без явного вопроса по использованию.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#244723",
+      "url": "https://github.com/microsoft/vscode/issues/244723",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Сообщение об ошибке запуска с журналом; намерение question по самому тексту не подтверждено.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#272163",
+      "url": "https://github.com/microsoft/vscode/issues/272163",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явный вопрос, как настроить вид и поведение встроенного терминала.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#272581",
+      "url": "https://github.com/microsoft/vscode/issues/272581",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Жалоба на пропадающие таблицы учебной платформы; вопрос использования VS Code не сформулирован.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#266128",
+      "url": "https://github.com/microsoft/vscode/issues/266128",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Жалоба на неверную оценку задания и просьба исправить; категория вопроса неоднозначна.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#247947",
+      "url": "https://github.com/microsoft/vscode/issues/247947",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Явное предложение встроенного браузера, а не вопрос о текущем использовании.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#278452",
+      "url": "https://github.com/microsoft/vscode/issues/278452",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Просьба помочь разобраться с recovery mode и настройкой среды.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#274651",
+      "url": "https://github.com/microsoft/vscode/issues/274651",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явный вопрос о выборе исполняемого файла и запуске учебного задания.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#225229",
+      "url": "https://github.com/microsoft/vscode/issues/225229",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Заявлен отказ терминала и просьба исправить его; явного вопроса по использованию нет.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#235118",
+      "url": "https://github.com/microsoft/vscode/issues/235118",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Явное предложение добавить подтверждение выхода.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#269644",
+      "url": "https://github.com/microsoft/vscode/issues/269644",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Просьба подсказать действия для открытия папки.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#59270",
+      "url": "https://github.com/pandas-dev/pandas/issues/59270",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Описан сбой совместимости зависимостей и предложено исправление, а не вопрос по использованию.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#52270",
+      "url": "https://github.com/pandas-dev/pandas/issues/52270",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Предлагается исправление документации; не относится к выбранной категории вопроса.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#39055",
+      "url": "https://github.com/pandas-dev/pandas/issues/39055",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явные вопросы о синтаксисе доступа к элементу и длине DataFrame.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#41754",
+      "url": "https://github.com/pandas-dev/pandas/issues/41754",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Автор просит разъяснить ожидаемую семантику импорта CSV.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#35362",
+      "url": "https://github.com/pandas-dev/pandas/issues/35362",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Общая негативная оценка библиотеки без вопроса или содержательной задачи.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#24696",
+      "url": "https://github.com/pandas-dev/pandas/issues/24696",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явная просьба объяснить расход памяти и правильный способ обработки данных.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#50045",
+      "url": "https://github.com/pandas-dev/pandas/issues/50045",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явный вопрос о различии вызовов агрегации и ошибке пользовательского кода.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#55891",
+      "url": "https://github.com/pandas-dev/pandas/issues/55891",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явный вопрос о причине появления потоков при импорте.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#40466",
+      "url": "https://github.com/pandas-dev/pandas/issues/40466",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явный вопрос о слиянии двух таблиц.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#35682",
+      "url": "https://github.com/pandas-dev/pandas/issues/35682",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явный вопрос, является ли поведение cumcount ожидаемым.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#32070",
+      "url": "https://github.com/pandas-dev/pandas/issues/32070",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "Просьба оптимизировать интерфейс ExcelWriter без вопроса по использованию.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#42793",
+      "url": "https://github.com/pandas-dev/pandas/issues/42793",
+      "source_category": "question",
+      "decision": "exclude",
+      "reason": "В теле остался только незаполненный шаблон; существенная информация вынесена во внешнее видео.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#39723",
+      "url": "https://github.com/pandas-dev/pandas/issues/39723",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явный вопрос о поддержке dataclass конструктором.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#42638",
+      "url": "https://github.com/pandas-dev/pandas/issues/42638",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Автор просит помочь различить ошибку собственного кода и библиотеки; подпись требует маскирования.",
+      "phase": "initial"
+    },
+    {
+      "id": "pandas-dev/pandas#27240",
+      "url": "https://github.com/pandas-dev/pandas/issues/27240",
+      "source_category": "question",
+      "decision": "keep",
+      "reason": "Явный вопрос о правильных настройках чтения строкового null.",
+      "phase": "initial"
+    },
+    {
+      "id": "microsoft/vscode#241531",
+      "url": "https://github.com/microsoft/vscode/issues/241531",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явная просьба помочь восстановить удалённые файлы."
+    },
+    {
+      "id": "microsoft/vscode#155111",
+      "url": "https://github.com/microsoft/vscode/issues/155111",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о параметрах запуска и сохранении открытых вкладок."
+    },
+    {
+      "id": "microsoft/vscode#194798",
+      "url": "https://github.com/microsoft/vscode/issues/194798",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "exclude",
+      "reason": "Одновременно вопрос о наличии редактора сочетаний и предложение нового интерфейса; категория неоднозначна."
+    },
+    {
+      "id": "microsoft/vscode#268471",
+      "url": "https://github.com/microsoft/vscode/issues/268471",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "exclude",
+      "reason": "Просьба добавить специальное поведение сортировки импортов; смешаны bug и feature_request."
+    },
+    {
+      "id": "microsoft/vscode#170719",
+      "url": "https://github.com/microsoft/vscode/issues/170719",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Запрашивается справочная информация о названиях областей интерфейса."
+    },
+    {
+      "id": "microsoft/vscode#188255",
+      "url": "https://github.com/microsoft/vscode/issues/188255",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Просьба помочь настроить подключение приложения в Codespaces к базе данных."
+    },
+    {
+      "id": "microsoft/vscode#195322",
+      "url": "https://github.com/microsoft/vscode/issues/195322",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о вызове задач из разных папок."
+    },
+    {
+      "id": "microsoft/vscode#211558",
+      "url": "https://github.com/microsoft/vscode/issues/211558",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Просьба помочь подключить библиотеку в учебной среде."
+    },
+    {
+      "id": "microsoft/vscode#207768",
+      "url": "https://github.com/microsoft/vscode/issues/207768",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "exclude",
+      "reason": "Смешаны просьба изменить синтаксис и жалоба на систему оценивания сторонней платформы."
+    },
+    {
+      "id": "microsoft/vscode#182478",
+      "url": "https://github.com/microsoft/vscode/issues/182478",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о причине диагностического сообщения для пользовательского синтаксиса."
+    },
+    {
+      "id": "microsoft/vscode#153815",
+      "url": "https://github.com/microsoft/vscode/issues/153815",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о назначении файлов запуска."
+    },
+    {
+      "id": "microsoft/vscode#242964",
+      "url": "https://github.com/microsoft/vscode/issues/242964",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Просьба объяснить восстановление учебного окружения и базы."
+    },
+    {
+      "id": "microsoft/vscode#272611",
+      "url": "https://github.com/microsoft/vscode/issues/272611",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о поиске переводов строки."
+    },
+    {
+      "id": "microsoft/vscode#224755",
+      "url": "https://github.com/microsoft/vscode/issues/224755",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "exclude",
+      "reason": "Текст недостаточно связный и не даёт надёжной постановки вопроса по использованию."
+    },
+    {
+      "id": "microsoft/vscode#193166",
+      "url": "https://github.com/microsoft/vscode/issues/193166",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о расположении файлов расширений."
+    },
+    {
+      "id": "pandas-dev/pandas#31937",
+      "url": "https://github.com/pandas-dev/pandas/issues/31937",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о назначении transform и различии с apply."
+    },
+    {
+      "id": "pandas-dev/pandas#26731",
+      "url": "https://github.com/pandas-dev/pandas/issues/26731",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Автор спрашивает, является ли изменение поведения ожидаемым или регрессией."
+    },
+    {
+      "id": "pandas-dev/pandas#39596",
+      "url": "https://github.com/pandas-dev/pandas/issues/39596",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Запрашивается объяснение ошибки при сочетании параметров построения графика."
+    },
+    {
+      "id": "pandas-dev/pandas#46088",
+      "url": "https://github.com/pandas-dev/pandas/issues/46088",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Самостоятельный вопрос о resample сформулирован в заголовке; в теле ссылка на обсуждение."
+    },
+    {
+      "id": "pandas-dev/pandas#36543",
+      "url": "https://github.com/pandas-dev/pandas/issues/36543",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о реализации пользовательского подкласса DataFrame."
+    },
+    {
+      "id": "pandas-dev/pandas#59149",
+      "url": "https://github.com/pandas-dev/pandas/issues/59149",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Просьба помочь разобраться с блокировкой базы после остановки приложения."
+    },
+    {
+      "id": "pandas-dev/pandas#37793",
+      "url": "https://github.com/pandas-dev/pandas/issues/37793",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о подходящей функции группировки по временным окнам."
+    },
+    {
+      "id": "pandas-dev/pandas#35089",
+      "url": "https://github.com/pandas-dev/pandas/issues/35089",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Запрашивается рекомендуемый способ доступа к маске без копирования."
+    },
+    {
+      "id": "pandas-dev/pandas#44508",
+      "url": "https://github.com/pandas-dev/pandas/issues/44508",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явная просьба помочь с to_sql; строка подключения требует удаления учётных данных."
+    },
+    {
+      "id": "pandas-dev/pandas#25999",
+      "url": "https://github.com/pandas-dev/pandas/issues/25999",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явная просьба помочь исправить путь сохранения CSV."
+    },
+    {
+      "id": "pandas-dev/pandas#34089",
+      "url": "https://github.com/pandas-dev/pandas/issues/34089",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Вопрос о рекомендуемом способе различения срезов в подклассе."
+    },
+    {
+      "id": "pandas-dev/pandas#39119",
+      "url": "https://github.com/pandas-dev/pandas/issues/39119",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Автор просит объяснить работу часовых поясов и допускает ошибку в собственном понимании."
+    },
+    {
+      "id": "pandas-dev/pandas#35880",
+      "url": "https://github.com/pandas-dev/pandas/issues/35880",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Явный вопрос о реализации группировки и пересечения временных диапазонов."
+    },
+    {
+      "id": "pandas-dev/pandas#25294",
+      "url": "https://github.com/pandas-dev/pandas/issues/25294",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Автор спрашивает о причине изменения вывода типов между версиями."
+    },
+    {
+      "id": "pandas-dev/pandas#56956",
+      "url": "https://github.com/pandas-dev/pandas/issues/56956",
+      "source_category": "question",
+      "phase": "followup",
+      "decision": "keep",
+      "reason": "Самостоятельный вопрос о процессах при импорте содержится в заголовке."
+    }
+  ]
+}

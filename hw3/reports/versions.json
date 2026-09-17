@@ -1,0 +1,637 @@
+{
+  "versions": {
+    "v1": {
+      "metrics": {
+        "collect": {
+          "eligible_by_repository_class": {
+            "microsoft/vscode/bug": 937,
+            "microsoft/vscode/feature_request": 925,
+            "microsoft/vscode/question": 376,
+            "pandas-dev/pandas/bug": 992,
+            "pandas-dev/pandas/feature_request": 939,
+            "pandas-dev/pandas/question": 275
+          },
+          "eligible_rows": 4444,
+          "exact_title_links": 9,
+          "excluded": {
+            "ambiguous_or_missing_label": 34,
+            "bot": 9,
+            "declared_type_disagrees_with_label": 1192,
+            "empty_body": 59,
+            "no_text_after_template_removal": 63,
+            "non_english_heuristic": 12,
+            "question_without_explicit_help_intent": 896,
+            "review_excluded": 24
+          },
+          "groups": 1497,
+          "not_selected_by_quota": 2944,
+          "reviewed_source_records": 120,
+          "rows_written": 1500,
+          "selected_by_class": {
+            "bug": 500,
+            "feature_request": 500,
+            "question": 500
+          },
+          "selected_by_repository": {
+            "microsoft/vscode": 750,
+            "pandas-dev/pandas": 750
+          },
+          "selected_by_repository_class": {
+            "microsoft/vscode/bug": 250,
+            "microsoft/vscode/feature_request": 250,
+            "microsoft/vscode/question": 250,
+            "pandas-dev/pandas/bug": 250,
+            "pandas-dev/pandas/feature_request": 250,
+            "pandas-dev/pandas/question": 250
+          },
+          "similar_title_links": 16,
+          "source_rows": 6733,
+          "system_prompt_variants": 5,
+          "transformations": {
+            "attachment_markup": 1604,
+            "checkbox_lines": 4829,
+            "diagnostic_blocks": 2872,
+            "empty_diagnostic_tail": 1,
+            "empty_fences": 182,
+            "feature_type_field": 432,
+            "form_headings": 6182,
+            "html_comments": 7307,
+            "placeholder_lines": 880,
+            "question_form_headings": 595,
+            "question_form_notes": 32,
+            "reporter_metadata": 1384,
+            "title_prefixes": 2042,
+            "tracking_urls": 14,
+            "type_lines": 441
+          },
+          "version": "v1"
+        },
+        "clean": {
+          "assistant_chars": {
+            "cv": 0.199,
+            "max": 31,
+            "min": 19,
+            "p10": 19,
+            "p50": 24,
+            "p90": 31,
+            "ratio_p90_p10": 1.63
+          },
+          "dropped_conflicting_labels": 0,
+          "dropped_exact_dup": 0,
+          "dropped_length": 61,
+          "dropped_near_dup": 2,
+          "groups": 1436,
+          "near_pairs_before_removal": 2,
+          "pii_hits": {
+            "birth_date": 0,
+            "email": 17,
+            "github_token": 0,
+            "home_path": 118,
+            "mention": 72,
+            "phone": 0,
+            "phone_context": 0,
+            "query_secret": 0,
+            "signature_name": 14,
+            "url_credentials": 1,
+            "windows_home": 30
+          },
+          "pii_rows_masked": 105,
+          "rows_in": 1500,
+          "rows_out": 1437,
+          "user_chars": {
+            "cv": 0.787,
+            "max": 3989,
+            "min": 56,
+            "p10": 228,
+            "p50": 694,
+            "p90": 1886,
+            "ratio_p90_p10": 8.27
+          },
+          "version": "v1"
+        },
+        "diversity": {
+          "answer_len": {
+            "cv": 0.199,
+            "max": 31,
+            "min": 19,
+            "p10": 19,
+            "p50": 24,
+            "p90": 31,
+            "ratio_p90_p10": 1.63
+          },
+          "class_counts": {
+            "bug": 475,
+            "feature_request": 476,
+            "question": 486
+          },
+          "class_shares": {
+            "bug": 0.33054975643702156,
+            "feature_request": 0.3312456506610995,
+            "question": 0.33820459290187893
+          },
+          "duplicate_answer_share": 0.9979123173277662,
+          "examples": 1437,
+          "groups": 1436,
+          "invalid_answers": 0,
+          "largest_group": "issue-family:pandas-dev/pandas#52663",
+          "largest_group_share": 0.0013917884481558804,
+          "largest_system_prompt_share": 0.21433542101600556,
+          "passed": true,
+          "same_length_share": 0.33820459290187893,
+          "system_prompts": 5,
+          "system_prompts_per_class": {
+            "bug": 5,
+            "feature_request": 5,
+            "question": 5
+          },
+          "thresholds": {
+            "max_class_share": 0.45,
+            "max_duplicate_answer_share": 1.0,
+            "max_group_share": 0.1,
+            "max_same_length_share": 0.45,
+            "max_system_prompt_share": 0.3,
+            "min_answer_len_ratio": 1.6,
+            "min_class_share": 0.2,
+            "min_examples": 1000,
+            "min_groups": 50,
+            "min_system_prompts": 3,
+            "min_unique_user_share": 1.0,
+            "min_user_len_ratio": 2.0,
+            "min_vocabulary": 1000,
+            "required_categories": [
+              "bug",
+              "feature_request",
+              "question"
+            ]
+          },
+          "unique_user_share": 1.0,
+          "user_len": {
+            "cv": 0.787,
+            "max": 3989,
+            "min": 56,
+            "p10": 228,
+            "p50": 694,
+            "p90": 1886,
+            "ratio_p90_p10": 8.27
+          },
+          "version": "v1",
+          "violations": [],
+          "vocabulary": 8491
+        },
+        "split": {
+          "class_counts": {
+            "test": {
+              "bug": 71,
+              "feature_request": 72,
+              "question": 73
+            },
+            "train": {
+              "bug": 333,
+              "feature_request": 333,
+              "question": 340
+            },
+            "val": {
+              "bug": 71,
+              "feature_request": 71,
+              "question": 73
+            }
+          },
+          "date_ranges": {
+            "test": {
+              "first": "2023-05-23T06:07:04Z",
+              "last": "2025-12-31T14:26:51Z"
+            },
+            "train": {
+              "first": "2019-01-03T08:14:19Z",
+              "last": "2025-12-07T18:46:20Z"
+            },
+            "val": {
+              "first": "2022-02-21T01:27:10Z",
+              "last": "2025-12-12T12:55:05Z"
+            }
+          },
+          "group_key": "topic",
+          "groups": {
+            "test": 216,
+            "train": 1006,
+            "val": 214
+          },
+          "groups_total": 1436,
+          "mixed_families": 0,
+          "ratios_actual": {
+            "test": 0.1503,
+            "train": 0.7001,
+            "val": 0.1496
+          },
+          "sizes": {
+            "test": 216,
+            "train": 1006,
+            "val": 215
+          },
+          "strata_sizes": {
+            "microsoft/vscode/bug": {
+              "test": 36,
+              "train": 169,
+              "val": 36
+            },
+            "microsoft/vscode/feature_request": {
+              "test": 37,
+              "train": 171,
+              "val": 36
+            },
+            "microsoft/vscode/question": {
+              "test": 37,
+              "train": 173,
+              "val": 37
+            },
+            "pandas-dev/pandas/bug": {
+              "test": 35,
+              "train": 164,
+              "val": 35
+            },
+            "pandas-dev/pandas/feature_request": {
+              "test": 35,
+              "train": 162,
+              "val": 35
+            },
+            "pandas-dev/pandas/question": {
+              "test": 36,
+              "train": 167,
+              "val": 36
+            }
+          },
+          "strategy": "temporal within repository/class; whole connected issue families",
+          "version": "v1"
+        },
+        "contamination": {
+          "complete_partition": true,
+          "pairs": {
+            "train_test": {
+              "examples": {
+                "group": [],
+                "id": [],
+                "near_dup": []
+              },
+              "group_overlap": 0,
+              "id_overlap": 0,
+              "near_dup_pairs": 0,
+              "text_overlap": 0
+            },
+            "train_val": {
+              "examples": {
+                "group": [],
+                "id": [],
+                "near_dup": []
+              },
+              "group_overlap": 0,
+              "id_overlap": 0,
+              "near_dup_pairs": 0,
+              "text_overlap": 0
+            },
+            "val_test": {
+              "examples": {
+                "group": [],
+                "id": [],
+                "near_dup": []
+              },
+              "group_overlap": 0,
+              "id_overlap": 0,
+              "near_dup_pairs": 0,
+              "text_overlap": 0
+            }
+          },
+          "passed": true,
+          "threshold": 0.85,
+          "version": "v1"
+        }
+      },
+      "sha256": {
+        "raw": "7f89c457a8faecf4693584ad4164d8b42e16fcedbb3aab43ca9fece7522d9b38",
+        "clean": "1c8a31eddd6b54903d0209b274f88826ad263c0a8e1f660cd99deaa209fe13f0",
+        "train": "f99c8d9325c7c5b5a0fc4f2cca0c155f587a43264d6f5c7798acad22e366d550",
+        "val": "952f7179e823ca67677074d68d5f5d9b833ccff1a7d3419f3f82686612623079",
+        "test": "bdbafeb71130265a121a91c5a9564cb803e7f24f330235ac8d1b637412c5e6b5"
+      },
+      "repro_wall_seconds": 3.347
+    },
+    "v2": {
+      "metrics": {
+        "collect": {
+          "eligible_by_repository_class": {
+            "microsoft/vscode/bug": 937,
+            "microsoft/vscode/feature_request": 925,
+            "microsoft/vscode/question": 376,
+            "pandas-dev/pandas/bug": 992,
+            "pandas-dev/pandas/feature_request": 939,
+            "pandas-dev/pandas/question": 275
+          },
+          "eligible_rows": 4444,
+          "exact_title_links": 9,
+          "excluded": {
+            "ambiguous_or_missing_label": 34,
+            "bot": 9,
+            "declared_type_disagrees_with_label": 1192,
+            "empty_body": 59,
+            "no_text_after_template_removal": 63,
+            "non_english_heuristic": 12,
+            "question_without_explicit_help_intent": 896,
+            "review_excluded": 24
+          },
+          "groups": 1948,
+          "not_selected_by_quota": 2491,
+          "reviewed_source_records": 120,
+          "rows_written": 1953,
+          "selected_by_class": {
+            "bug": 651,
+            "feature_request": 651,
+            "question": 651
+          },
+          "selected_by_repository": {
+            "microsoft/vscode": 1128,
+            "pandas-dev/pandas": 825
+          },
+          "selected_by_repository_class": {
+            "microsoft/vscode/bug": 376,
+            "microsoft/vscode/feature_request": 376,
+            "microsoft/vscode/question": 376,
+            "pandas-dev/pandas/bug": 275,
+            "pandas-dev/pandas/feature_request": 275,
+            "pandas-dev/pandas/question": 275
+          },
+          "similar_title_links": 16,
+          "source_rows": 6733,
+          "system_prompt_variants": 5,
+          "transformations": {
+            "attachment_markup": 1604,
+            "checkbox_lines": 4829,
+            "diagnostic_blocks": 2872,
+            "empty_diagnostic_tail": 1,
+            "empty_fences": 182,
+            "feature_type_field": 432,
+            "form_headings": 6182,
+            "html_comments": 7307,
+            "placeholder_lines": 880,
+            "question_form_headings": 595,
+            "question_form_notes": 32,
+            "reporter_metadata": 1384,
+            "title_prefixes": 2042,
+            "tracking_urls": 14,
+            "type_lines": 441
+          },
+          "version": "v2"
+        },
+        "clean": {
+          "assistant_chars": {
+            "cv": 0.199,
+            "max": 31,
+            "min": 19,
+            "p10": 19,
+            "p50": 24,
+            "p90": 31,
+            "ratio_p90_p10": 1.63
+          },
+          "dropped_conflicting_labels": 0,
+          "dropped_exact_dup": 1,
+          "dropped_length": 72,
+          "dropped_near_dup": 2,
+          "groups": 1876,
+          "near_pairs_before_removal": 2,
+          "pii_hits": {
+            "birth_date": 0,
+            "email": 18,
+            "github_token": 0,
+            "home_path": 236,
+            "mention": 108,
+            "phone": 0,
+            "phone_context": 0,
+            "query_secret": 1,
+            "signature_name": 17,
+            "url_credentials": 2,
+            "windows_home": 44
+          },
+          "pii_rows_masked": 141,
+          "rows_in": 1953,
+          "rows_out": 1878,
+          "user_chars": {
+            "cv": 0.82,
+            "max": 3989,
+            "min": 56,
+            "p10": 216,
+            "p50": 636,
+            "p90": 1842,
+            "ratio_p90_p10": 8.53
+          },
+          "version": "v2"
+        },
+        "diversity": {
+          "answer_len": {
+            "cv": 0.199,
+            "max": 31,
+            "min": 19,
+            "p10": 19,
+            "p50": 24,
+            "p90": 31,
+            "ratio_p90_p10": 1.63
+          },
+          "class_counts": {
+            "bug": 615,
+            "feature_request": 627,
+            "question": 636
+          },
+          "class_shares": {
+            "bug": 0.3274760383386581,
+            "feature_request": 0.33386581469648563,
+            "question": 0.33865814696485624
+          },
+          "duplicate_answer_share": 0.9984025559105432,
+          "examples": 1878,
+          "groups": 1876,
+          "invalid_answers": 0,
+          "largest_group": "issue-family:microsoft/vscode#282107",
+          "largest_group_share": 0.0010649627263045794,
+          "largest_system_prompt_share": 0.211395101171459,
+          "passed": true,
+          "same_length_share": 0.33865814696485624,
+          "system_prompts": 5,
+          "system_prompts_per_class": {
+            "bug": 5,
+            "feature_request": 5,
+            "question": 5
+          },
+          "thresholds": {
+            "max_class_share": 0.45,
+            "max_duplicate_answer_share": 1.0,
+            "max_group_share": 0.1,
+            "max_same_length_share": 0.45,
+            "max_system_prompt_share": 0.3,
+            "min_answer_len_ratio": 1.6,
+            "min_class_share": 0.2,
+            "min_examples": 1000,
+            "min_groups": 50,
+            "min_system_prompts": 3,
+            "min_unique_user_share": 1.0,
+            "min_user_len_ratio": 2.0,
+            "min_vocabulary": 1000,
+            "required_categories": [
+              "bug",
+              "feature_request",
+              "question"
+            ]
+          },
+          "unique_user_share": 1.0,
+          "user_len": {
+            "cv": 0.82,
+            "max": 3989,
+            "min": 56,
+            "p10": 216,
+            "p50": 636,
+            "p90": 1842,
+            "ratio_p90_p10": 8.53
+          },
+          "version": "v2",
+          "violations": [],
+          "vocabulary": 9735
+        },
+        "split": {
+          "class_counts": {
+            "test": {
+              "bug": 93,
+              "feature_request": 94,
+              "question": 95
+            },
+            "train": {
+              "bug": 431,
+              "feature_request": 439,
+              "question": 445
+            },
+            "val": {
+              "bug": 91,
+              "feature_request": 94,
+              "question": 96
+            }
+          },
+          "date_ranges": {
+            "test": {
+              "first": "2023-06-08T08:31:47Z",
+              "last": "2025-12-31T14:26:51Z"
+            },
+            "train": {
+              "first": "2019-01-03T08:14:19Z",
+              "last": "2025-12-07T22:25:00Z"
+            },
+            "val": {
+              "first": "2022-02-21T01:27:10Z",
+              "last": "2025-12-12T23:19:12Z"
+            }
+          },
+          "group_key": "topic",
+          "groups": {
+            "test": 281,
+            "train": 1315,
+            "val": 280
+          },
+          "groups_total": 1876,
+          "mixed_families": 0,
+          "ratios_actual": {
+            "test": 0.1502,
+            "train": 0.7002,
+            "val": 0.1496
+          },
+          "sizes": {
+            "test": 282,
+            "train": 1315,
+            "val": 281
+          },
+          "strata_sizes": {
+            "microsoft/vscode/bug": {
+              "test": 54,
+              "train": 250,
+              "val": 53
+            },
+            "microsoft/vscode/feature_request": {
+              "test": 55,
+              "train": 259,
+              "val": 56
+            },
+            "microsoft/vscode/question": {
+              "test": 56,
+              "train": 261,
+              "val": 56
+            },
+            "pandas-dev/pandas/bug": {
+              "test": 39,
+              "train": 181,
+              "val": 38
+            },
+            "pandas-dev/pandas/feature_request": {
+              "test": 39,
+              "train": 180,
+              "val": 38
+            },
+            "pandas-dev/pandas/question": {
+              "test": 39,
+              "train": 184,
+              "val": 40
+            }
+          },
+          "strategy": "temporal within repository/class; whole connected issue families",
+          "version": "v2"
+        },
+        "contamination": {
+          "complete_partition": true,
+          "pairs": {
+            "train_test": {
+              "examples": {
+                "group": [],
+                "id": [],
+                "near_dup": []
+              },
+              "group_overlap": 0,
+              "id_overlap": 0,
+              "near_dup_pairs": 0,
+              "text_overlap": 0
+            },
+            "train_val": {
+              "examples": {
+                "group": [],
+                "id": [],
+                "near_dup": []
+              },
+              "group_overlap": 0,
+              "id_overlap": 0,
+              "near_dup_pairs": 0,
+              "text_overlap": 0
+            },
+            "val_test": {
+              "examples": {
+                "group": [],
+                "id": [],
+                "near_dup": []
+              },
+              "group_overlap": 0,
+              "id_overlap": 0,
+              "near_dup_pairs": 0,
+              "text_overlap": 0
+            }
+          },
+          "passed": true,
+          "threshold": 0.85,
+          "version": "v2"
+        }
+      },
+      "sha256": {
+        "raw": "6824a8b5cbf89205d3ce413d89bdf51091954a739efeacda489dee8b4f121429",
+        "clean": "9a129deb98da0a764802f8a559dbeaf91550d96b05b2e9aab0e55acbcfafc6b4",
+        "train": "db0442ebeebe9ee235fdd4de6bb9251bdda4e5b0bc188e58edefb5a10143eb35",
+        "val": "058574c2fdaa86c25737599d257e344371509224a4591fee8a79cb182eba1063",
+        "test": "4e593ef8a7ce7bdaf9bf227202c8f5e0cc4e80a0e3a95a35236c1d26f7e8a6a3"
+      },
+      "repro_wall_seconds": 3.472
+    }
+  },
+  "comparison": {
+    "added_clean_ids": 441,
+    "removed_clean_ids": 0,
+    "v1_is_subset_of_v2": true
+  }
+}

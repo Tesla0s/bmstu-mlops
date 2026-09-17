@@ -1,0 +1,43 @@
+{
+  "assistant_chars": {
+    "cv": 0.199,
+    "max": 31,
+    "min": 19,
+    "p10": 19,
+    "p50": 24,
+    "p90": 31,
+    "ratio_p90_p10": 1.63
+  },
+  "dropped_conflicting_labels": 0,
+  "dropped_exact_dup": 0,
+  "dropped_length": 61,
+  "dropped_near_dup": 2,
+  "groups": 1436,
+  "near_pairs_before_removal": 2,
+  "pii_hits": {
+    "birth_date": 0,
+    "email": 17,
+    "github_token": 0,
+    "home_path": 118,
+    "mention": 72,
+    "phone": 0,
+    "phone_context": 0,
+    "query_secret": 0,
+    "signature_name": 14,
+    "url_credentials": 1,
+    "windows_home": 30
+  },
+  "pii_rows_masked": 105,
+  "rows_in": 1500,
+  "rows_out": 1437,
+  "user_chars": {
+    "cv": 0.787,
+    "max": 3989,
+    "min": 56,
+    "p10": 228,
+    "p50": 694,
+    "p90": 1886,
+    "ratio_p90_p10": 8.27
+  },
+  "version": "v1"
+}

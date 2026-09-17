@@ -1,0 +1,9 @@
+data/
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+params.yaml.bak
+params.yaml.orig
+dvc_remote/
+.ruff_cache/

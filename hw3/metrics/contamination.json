@@ -1,0 +1,41 @@
+{
+  "complete_partition": true,
+  "pairs": {
+    "train_test": {
+      "examples": {
+        "group": [],
+        "id": [],
+        "near_dup": []
+      },
+      "group_overlap": 0,
+      "id_overlap": 0,
+      "near_dup_pairs": 0,
+      "text_overlap": 0
+    },
+    "train_val": {
+      "examples": {
+        "group": [],
+        "id": [],
+        "near_dup": []
+      },
+      "group_overlap": 0,
+      "id_overlap": 0,
+      "near_dup_pairs": 0,
+      "text_overlap": 0
+    },
+    "val_test": {
+      "examples": {
+        "group": [],
+        "id": [],
+        "near_dup": []
+      },
+      "group_overlap": 0,
+      "id_overlap": 0,
+      "near_dup_pairs": 0,
+      "text_overlap": 0
+    }
+  },
+  "passed": true,
+  "threshold": 0.85,
+  "version": "v1"
+}

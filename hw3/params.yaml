@@ -1,0 +1,98 @@
+# ДЗ 3. Все параметры обработки и пути задаются здесь.
+collect:
+  version: "v1"
+  sources:
+    v1:
+      - "data/source/github-issues.jsonl"
+    v2:
+      - "data/source/github-issues.jsonl"
+  per_class:
+    v1: 500
+    v2: 800
+  seed: 42
+  repositories:
+    microsoft/vscode:
+      bug: "bug"
+      feature_request: "feature-request"
+      question: "*question"
+    pandas-dev/pandas:
+      bug: "Bug"
+      feature_request: "Enhancement"
+      question: "Usage Question"
+  # Период фиксирован; выгрузка сохраняется в DVC, метки отражают момент выгрузки.
+  created_from: "2019-01-01"
+  created_to: "2025-12-31"
+  fetch_per_repository_class: 1000
+  fetch_state: "closed"
+  extra_searches:
+    - repository: "microsoft/vscode"
+      category: "question"
+      created_from: "2019-01-01"
+      created_to: "2023-12-31"
+  page_size: 100
+  reviews: "reviews/label_audit.json"
+  question_require_explicit_intent: true
+  min_english_word_share: 0.85
+  title_group_threshold: 0.8
+  title_group_min_words: 5
+  system_prompts:
+    - 'Classify the GitHub issue from its title and description. Use bug for incorrect existing behavior, feature_request for a new capability or improvement, and question for a request for usage guidance. Return only a JSON object with the key "category" and one of these three values.'
+    - 'You assist with issue triage. Read the issue title and body and choose bug, feature_request, or question. A bug concerns faulty existing behavior; a feature request asks for an improvement; a question asks how to use the software. Reply only with {"category": "<label>"}.'
+    - 'Determine the type of this software issue: bug (existing behavior is wrong), feature_request (a capability or improvement is requested), or question (the author needs usage guidance). Output a valid JSON object containing only the category field.'
+    - 'Assign one category to the supplied GitHub issue: bug, feature_request, or question. Distinguish reports of incorrect behavior from enhancement proposals and requests for help using the software. Respond with JSON only: {"category": "<chosen category>"}.'
+    - 'Read the title and description of an issue and identify its purpose. Choose bug for a defect, feature_request for proposed functionality, or question for usage help. Your entire answer must be a JSON object with one category key.'
+clean:
+  min_user_chars: 30
+  max_user_chars: 4000
+  min_assistant_chars: 2
+  near_dup:
+    enabled: true
+    shingle_words: 4
+    num_perm: 64
+    threshold: 0.85
+  pii:
+    enabled: true
+diversity:
+  min_examples: 1000
+  min_system_prompts: 3
+  min_groups: 50
+  max_group_share: 0.10
+  # Три короткие JSON-метки законно повторяются. Обоснование — в datasheet.
+  min_answer_len_ratio: 1.6
+  max_same_length_share: 0.45
+  max_duplicate_answer_share: 1.0
+  # Проверки по смыслу задачи вместо требования разных ответов.
+  required_categories: ["bug", "feature_request", "question"]
+  min_class_share: 0.20
+  max_class_share: 0.45
+  min_user_len_ratio: 2.0
+  min_unique_user_share: 1.0
+  min_vocabulary: 1000
+  max_system_prompt_share: 0.30
+split:
+  group_key: "topic"
+  strategy: "temporal_grouped"
+  ratios:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+  seed: 42
+  min_class_examples: 20
+contamination:
+  threshold: 0.85
+paths:
+  raw: "data/raw.jsonl"
+  metadata: "data/metadata.jsonl"
+  clean: "data/clean.jsonl"
+  train: "data/train.jsonl"
+  val: "data/val.jsonl"
+  test: "data/test.jsonl"
+  source: "data/source/github-issues.jsonl"
+  source_manifest: "data/source/manifest.json"
+  download_cache: "data/download_cache"
+  metrics_collect: "metrics/collect.json"
+  metrics_clean: "metrics/clean.json"
+  metrics_split: "metrics/split.json"
+  metrics_diversity: "metrics/diversity.json"
+  metrics_contamination: "metrics/contamination.json"
+  datasheet: "docs/datasheet.md"

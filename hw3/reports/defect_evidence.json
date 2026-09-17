@@ -1,0 +1,183 @@
+{
+  "before": {
+    "fixture_only": "Synthetic diagnostic records, never part of the submitted dataset.",
+    "data_exposed_to_git": {
+      "dry_run_returncode": 0,
+      "would_add_files": 2,
+      "files": [
+        "data/val.jsonl",
+        "data/test.jsonl"
+      ],
+      "actually_added_or_committed": false
+    },
+    "version_change": {
+      "repro_returncode": 0,
+      "v1_rows_in": 180,
+      "after_switch_v2_rows_in": 180,
+      "v1_sha256": "9477e28367a5d3624d631bb032e70c6e44912171ccdb8550a15ffd2e1d50b420",
+      "after_switch_v2_sha256": "9477e28367a5d3624d631bb032e70c6e44912171ccdb8550a15ffd2e1d50b420",
+      "unchanged": true
+    },
+    "near_duplicates": {
+      "fixture_near_pairs": 60,
+      "dropped_exact": 60,
+      "dropped_near": 0,
+      "remaining": 120
+    },
+    "split_contamination": {
+      "checker_returncode": 1,
+      "id_overlap": 0,
+      "text_overlap": 0,
+      "group_overlap": 10,
+      "near_dup_pairs": 10,
+      "examples": {
+        "id": [],
+        "group": [
+          "topic 1",
+          "topic 15",
+          "topic 17"
+        ],
+        "near_dup": [
+          {
+            "train": "fixture_1_0",
+            "test": "fixture_1_2"
+          },
+          {
+            "train": "fixture_6_0",
+            "test": "fixture_6_2"
+          },
+          {
+            "train": "fixture_7_2",
+            "test": "fixture_7_0"
+          }
+        ]
+      }
+    },
+    "diversity": {
+      "exit_code": 0,
+      "passed_metric": false,
+      "violation_count": 6,
+      "violations": [
+        "системных промптов 1, нужно ≥ 3 — модель заучит единственную формулировку как константу",
+        "групп 1, нужно ≥ 50",
+        "крупнейшая группа занимает 100.0% (порог 10%): «same topic»",
+        "разброс длин ответа p90/p10 = 1.0, нужно ≥ 1.6 — ответы одной длины выдают шаблон",
+        "100.0% ответов имеют одну и ту же длину (порог 25%)",
+        "99.7% ответов дословно повторяют друг друга (порог 30%)"
+      ]
+    }
+  },
+  "after": {
+    "same_fixture_clean": {
+      "assistant_chars": {
+        "cv": 0.509,
+        "max": 250,
+        "min": 22,
+        "p10": 46,
+        "p50": 142,
+        "p90": 238,
+        "ratio_p90_p10": 5.17
+      },
+      "dropped_conflicting_labels": 0,
+      "dropped_exact_dup": 60,
+      "dropped_length": 0,
+      "dropped_near_dup": 60,
+      "groups": 60,
+      "near_pairs_before_removal": 60,
+      "pii_hits": {
+        "birth_date": 0,
+        "email": 0,
+        "github_token": 0,
+        "home_path": 0,
+        "mention": 0,
+        "phone": 0,
+        "phone_context": 0,
+        "query_secret": 0,
+        "signature_name": 0,
+        "url_credentials": 0,
+        "windows_home": 0
+      },
+      "pii_rows_masked": 0,
+      "rows_in": 180,
+      "rows_out": 60,
+      "user_chars": {
+        "cv": 0.0,
+        "max": 1003,
+        "min": 1003,
+        "p10": 1003,
+        "p50": 1003,
+        "p90": 1003,
+        "ratio_p90_p10": 1.0
+      },
+      "version": "v1"
+    },
+    "same_degenerate_fixture": {
+      "exit_code": 1,
+      "passed": false,
+      "violation_count": 6,
+      "violations": [
+        "системных промптов 1, нужно ≥ 3",
+        "групп 1, нужно ≥ 50",
+        "крупнейшая группа 1.000 > 0.1",
+        "разброс длин ответа 1.0 < 1.6",
+        "одну и ту же длину имеют 1.000 ответов, порог 0.25",
+        "повторяющихся ответов 0.997 > 0.3"
+      ]
+    },
+    "actual_data_versions": {
+      "v1": {
+        "rows_in": 1500,
+        "rows_out": 1437,
+        "sha256": "1c8a31eddd6b54903d0209b274f88826ad263c0a8e1f660cd99deaa209fe13f0"
+      },
+      "v2": {
+        "rows_in": 1953,
+        "rows_out": 1878,
+        "sha256": "9a129deb98da0a764802f8a559dbeaf91550d96b05b2e9aab0e55acbcfafc6b4"
+      }
+    },
+    "actual_contamination_v2": {
+      "complete_partition": true,
+      "pairs": {
+        "train_test": {
+          "examples": {
+            "group": [],
+            "id": [],
+            "near_dup": []
+          },
+          "group_overlap": 0,
+          "id_overlap": 0,
+          "near_dup_pairs": 0,
+          "text_overlap": 0
+        },
+        "train_val": {
+          "examples": {
+            "group": [],
+            "id": [],
+            "near_dup": []
+          },
+          "group_overlap": 0,
+          "id_overlap": 0,
+          "near_dup_pairs": 0,
+          "text_overlap": 0
+        },
+        "val_test": {
+          "examples": {
+            "group": [],
+            "id": [],
+            "near_dup": []
+          },
+          "group_overlap": 0,
+          "id_overlap": 0,
+          "near_dup_pairs": 0,
+          "text_overlap": 0
+        }
+      },
+      "passed": true,
+      "threshold": 0.85,
+      "version": "v2"
+    },
+    "instructor_check_unmodified": true,
+    "instructor_check_sha256": "5cb5aa3c97cb7e397edf3ef34ae4a9b85ca7bf928e217c213b03b0d8f3d43838"
+  }
+}

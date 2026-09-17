@@ -1,0 +1,66 @@
+Реальный вывод make verify. Цветовые коды удалены; абсолютный путь хранилища заменён на <local-dvc-remote>.
+
+uv run dvc repro
+'source.dvc' didn't change, skipping
+Stage 'collect' didn't change, skipping
+Stage 'clean' didn't change, skipping
+Stage 'diversity' didn't change, skipping
+Stage 'split' didn't change, skipping
+Stage 'contamination' didn't change, skipping
+Data and pipelines are up to date.
+uv run python -m unittest discover -s tests -p 'test_*.py' -v
+test_connection_password_and_query_token_are_masked (test_pipeline.CleaningTests.test_connection_password_and_query_token_are_masked) ... ok
+test_pii_masks_real_contacts_preserves_code (test_pipeline.CleaningTests.test_pii_masks_real_contacts_preserves_code) ... ok
+test_templates_removed_without_losing_functional_query (test_pipeline.CleaningTests.test_templates_removed_without_losing_functional_query) ... ok
+test_unfilled_question_form_is_removed (test_pipeline.CleaningTests.test_unfilled_question_form_is_removed) ... ok
+test_balanced_lengths_do_not_hide_missing_class (test_pipeline.DiversityTests.test_balanced_lengths_do_not_hide_missing_class) ... ok
+test_cross_index_equals_exhaustive_search (test_pipeline.JaccardTests.test_cross_index_equals_exhaustive_search) ... ok
+test_prefix_index_equals_exhaustive_search (test_pipeline.JaccardTests.test_prefix_index_equals_exhaustive_search) ... ok
+test_rejects_unrelated_lsh_candidates (test_pipeline.JaccardTests.test_rejects_unrelated_lsh_candidates) ... ok
+test_threshold_boundary (test_pipeline.JaccardTests.test_threshold_boundary) ... ok
+test_blank_topic_is_rejected (test_pipeline.SchemaTests.test_blank_topic_is_rejected) ... ok
+test_error_reports_actual_line (test_pipeline.SchemaTests.test_error_reports_actual_line) ... ok
+test_unicode_line_separator_is_part_of_content (test_pipeline.SchemaTests.test_unicode_line_separator_is_part_of_content) ... ok
+test_related_rows_never_split_and_time_orders_groups (test_pipeline.SplitTests.test_related_rows_never_split_and_time_orders_groups) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.030s
+
+OK
+uv run ruff check src scripts tests
+All checks passed!
+uv run ruff format --check src scripts tests
+17 files already formatted
+bash tests/check.sh
+
+1. Данные не в git и под управлением DVC
+  ✓ git не отслеживает ни одного файла в data/
+  ✓ data/ перечислен в .gitignore проекта
+  ✓ remote DVC настроен: local <local-dvc-remote>
+  ✓ все артефакты из params.paths объявлены в outs dvc.yaml
+
+2. Дедупликация ловит не только буквальные повторы
+  ✓ точный дубль удалён (dropped_exact_dup = 1)
+  ✓ почти-дубль удалён (dropped_near_dup = 1)
+  ✓ телефон, почта и дата рождения замаскированы (совпадений 3)
+
+3. Битый JSONL валит стадию clean с внятной ошибкой
+  ✓ стадия упала и назвала номер битой строки
+      data/_check/raw.jsonl:3: <корень>: Value error, роли должны идти ровно как ('system', 'user', 'assistant'), получено ('s
+
+4. Смена версии данных реально пересчитывает пайплайн
+  ✓ clean.jsonl пересчитан: v1 ba4908ec (1500 строк) → v2 62eb98bd (1953 строк)
+
+5. Контаминации между train и test нет
+  ✓ train/val: пересечение по id 0, по тексту 0, по группам 0; near-dup 0;train/test: пересечение по id 0, по тексту 0, по группам 0; near-dup 0 val/test: пересечение по id 0, по тексту 0, по группам 0; near-dup 0
+
+6. Гейт разнообразия падает на вырожденном наборе
+  ✓ гейт упал и назвал 7 нарушенных порога — разбираться есть по чему
+
+7. Гейт разнообразия пропускает нормальный датасет
+  ✓ diversity: 1878 примеров, 5 инструкций, 1876 групп; все пороги выполнены
+
+8. Гигиена репозитория
+  ✓ в git нет мусора и файлов тяжелее 5 МБ
+
+Все проверки пройдены. Не забудьте docs/datasheet.md и разбор дефектов.

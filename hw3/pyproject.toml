@@ -1,0 +1,27 @@
+[project]
+name = "mlops-hw3"
+version = "0.1.0"
+description = "MLOPS-26, домашняя работа 3: датасет, DVC, валидация, честный сплит"
+requires-python = ">=3.12"
+# Нижние границы, а не «любая версия»: pydantic v1 и v2 несовместимы по API,
+# а dvc до 3.x иначе называет команды. Без границ ДЗ ломается у соседа.
+dependencies = [
+    "dvc>=3.55",
+    "pydantic>=2.9",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.8",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*.py" = ["E402"]

@@ -1,0 +1,64 @@
+{
+  "eligible_by_repository_class": {
+    "microsoft/vscode/bug": 937,
+    "microsoft/vscode/feature_request": 925,
+    "microsoft/vscode/question": 376,
+    "pandas-dev/pandas/bug": 992,
+    "pandas-dev/pandas/feature_request": 939,
+    "pandas-dev/pandas/question": 275
+  },
+  "eligible_rows": 4444,
+  "exact_title_links": 9,
+  "excluded": {
+    "ambiguous_or_missing_label": 34,
+    "bot": 9,
+    "declared_type_disagrees_with_label": 1192,
+    "empty_body": 59,
+    "no_text_after_template_removal": 63,
+    "non_english_heuristic": 12,
+    "question_without_explicit_help_intent": 896,
+    "review_excluded": 24
+  },
+  "groups": 1497,
+  "not_selected_by_quota": 2944,
+  "reviewed_source_records": 120,
+  "rows_written": 1500,
+  "selected_by_class": {
+    "bug": 500,
+    "feature_request": 500,
+    "question": 500
+  },
+  "selected_by_repository": {
+    "microsoft/vscode": 750,
+    "pandas-dev/pandas": 750
+  },
+  "selected_by_repository_class": {
+    "microsoft/vscode/bug": 250,
+    "microsoft/vscode/feature_request": 250,
+    "microsoft/vscode/question": 250,
+    "pandas-dev/pandas/bug": 250,
+    "pandas-dev/pandas/feature_request": 250,
+    "pandas-dev/pandas/question": 250
+  },
+  "similar_title_links": 16,
+  "source_rows": 6733,
+  "system_prompt_variants": 5,
+  "transformations": {
+    "attachment_markup": 1604,
+    "checkbox_lines": 4829,
+    "diagnostic_blocks": 2872,
+    "empty_diagnostic_tail": 1,
+    "empty_fences": 182,
+    "feature_type_field": 432,
+    "form_headings": 6182,
+    "html_comments": 7307,
+    "placeholder_lines": 880,
+    "question_form_headings": 595,
+    "question_form_notes": 32,
+    "reporter_metadata": 1384,
+    "title_prefixes": 2042,
+    "tracking_urls": 14,
+    "type_lines": 441
+  },
+  "version": "v1"
+}
