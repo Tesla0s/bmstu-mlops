@@ -9,24 +9,24 @@
     "ratio_p90_p10": 1.63
   },
   "class_counts": {
-    "bug": 475,
-    "feature_request": 476,
-    "question": 486
+    "bug": 615,
+    "feature_request": 627,
+    "question": 636
   },
   "class_shares": {
-    "bug": 0.33054975643702156,
-    "feature_request": 0.3312456506610995,
-    "question": 0.33820459290187893
+    "bug": 0.3274760383386581,
+    "feature_request": 0.33386581469648563,
+    "question": 0.33865814696485624
   },
-  "duplicate_answer_share": 0.9979123173277662,
-  "examples": 1437,
-  "groups": 1436,
+  "duplicate_answer_share": 0.9984025559105432,
+  "examples": 1878,
+  "groups": 1876,
   "invalid_answers": 0,
-  "largest_group": "issue-family:pandas-dev/pandas#52663",
-  "largest_group_share": 0.0013917884481558804,
-  "largest_system_prompt_share": 0.21433542101600556,
+  "largest_group": "issue-family:microsoft/vscode#282107",
+  "largest_group_share": 0.0010649627263045794,
+  "largest_system_prompt_share": 0.211395101171459,
   "passed": true,
-  "same_length_share": 0.33820459290187893,
+  "same_length_share": 0.33865814696485624,
   "system_prompts": 5,
   "system_prompts_per_class": {
     "bug": 5,
@@ -55,15 +55,15 @@
   },
   "unique_user_share": 1.0,
   "user_len": {
-    "cv": 0.787,
+    "cv": 0.82,
     "max": 3989,
     "min": 56,
-    "p10": 228,
-    "p50": 694,
-    "p90": 1886,
-    "ratio_p90_p10": 8.27
+    "p10": 216,
+    "p50": 636,
+    "p90": 1842,
+    "ratio_p90_p10": 8.53
   },
-  "version": "v1",
+  "version": "v2",
   "violations": [],
-  "vocabulary": 8491
+  "vocabulary": 9735
 }

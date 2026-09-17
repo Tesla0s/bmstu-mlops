@@ -1,85 +1,85 @@
 {
   "class_counts": {
     "test": {
-      "bug": 71,
-      "feature_request": 72,
-      "question": 73
+      "bug": 93,
+      "feature_request": 94,
+      "question": 95
     },
     "train": {
-      "bug": 333,
-      "feature_request": 333,
-      "question": 340
+      "bug": 431,
+      "feature_request": 439,
+      "question": 445
     },
     "val": {
-      "bug": 71,
-      "feature_request": 71,
-      "question": 73
+      "bug": 91,
+      "feature_request": 94,
+      "question": 96
     }
   },
   "date_ranges": {
     "test": {
-      "first": "2023-05-23T06:07:04Z",
+      "first": "2023-06-08T08:31:47Z",
       "last": "2025-12-31T14:26:51Z"
     },
     "train": {
       "first": "2019-01-03T08:14:19Z",
-      "last": "2025-12-07T18:46:20Z"
+      "last": "2025-12-07T22:25:00Z"
     },
     "val": {
       "first": "2022-02-21T01:27:10Z",
-      "last": "2025-12-12T12:55:05Z"
+      "last": "2025-12-12T23:19:12Z"
     }
   },
   "group_key": "topic",
   "groups": {
-    "test": 216,
-    "train": 1006,
-    "val": 214
+    "test": 281,
+    "train": 1315,
+    "val": 280
   },
-  "groups_total": 1436,
+  "groups_total": 1876,
   "mixed_families": 0,
   "ratios_actual": {
-    "test": 0.1503,
-    "train": 0.7001,
+    "test": 0.1502,
+    "train": 0.7002,
     "val": 0.1496
   },
   "sizes": {
-    "test": 216,
-    "train": 1006,
-    "val": 215
+    "test": 282,
+    "train": 1315,
+    "val": 281
   },
   "strata_sizes": {
     "microsoft/vscode/bug": {
-      "test": 36,
-      "train": 169,
-      "val": 36
+      "test": 54,
+      "train": 250,
+      "val": 53
     },
     "microsoft/vscode/feature_request": {
-      "test": 37,
-      "train": 171,
-      "val": 36
+      "test": 55,
+      "train": 259,
+      "val": 56
     },
     "microsoft/vscode/question": {
-      "test": 37,
-      "train": 173,
-      "val": 37
+      "test": 56,
+      "train": 261,
+      "val": 56
     },
     "pandas-dev/pandas/bug": {
-      "test": 35,
-      "train": 164,
-      "val": 35
+      "test": 39,
+      "train": 181,
+      "val": 38
     },
     "pandas-dev/pandas/feature_request": {
-      "test": 35,
-      "train": 162,
-      "val": 35
+      "test": 39,
+      "train": 180,
+      "val": 38
     },
     "pandas-dev/pandas/question": {
-      "test": 36,
-      "train": 167,
-      "val": 36
+      "test": 39,
+      "train": 184,
+      "val": 40
     }
   },
   "strategy": "temporal within repository/class; whole connected issue families",
-  "version": "v1"
+  "version": "v2"
 }

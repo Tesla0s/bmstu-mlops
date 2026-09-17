@@ -1,6 +1,6 @@
 # ДЗ 3. Все параметры обработки и пути задаются здесь.
 collect:
-  version: "v1"
+  version: "v2"
   sources:
     v1:
       - "data/source/github-issues.jsonl"
