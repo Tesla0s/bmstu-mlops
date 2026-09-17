@@ -1,0 +1,66 @@
+{
+  "commit": "f044b295ccdc35de87c97c52274d2f7d726bda4a",
+  "platform": "macOS-15.7.9-arm64-arm-64bit-Mach-O",
+  "fresh_git_clone": true,
+  "fresh_virtual_environment": true,
+  "initially_empty_dvc_cache": true,
+  "downloaded_only_source": true,
+  "api_used_for_reproduction": false,
+  "v2_sha256": {
+    "raw": "6824a8b5cbf89205d3ce413d89bdf51091954a739efeacda489dee8b4f121429",
+    "clean": "9a129deb98da0a764802f8a559dbeaf91550d96b05b2e9aab0e55acbcfafc6b4",
+    "train": "db0442ebeebe9ee235fdd4de6bb9251bdda4e5b0bc188e58edefb5a10143eb35",
+    "val": "058574c2fdaa86c25737599d257e344371509224a4591fee8a79cb182eba1063",
+    "test": "4e593ef8a7ce7bdaf9bf227202c8f5e0cc4e80a0e3a95a35236c1d26f7e8a6a3"
+  },
+  "all_five_outputs_identical": true,
+  "verify_passed": true,
+  "git_clean_after_verification": true,
+  "steps": [
+    {
+      "command": "git clone --no-local --branch hw3-data <source-repository> <fresh-clone>",
+      "return_code": 0,
+      "seconds": 0.119
+    },
+    {
+      "command": "uv sync --frozen",
+      "return_code": 0,
+      "seconds": 0.203
+    },
+    {
+      "command": "uv run dvc remote modify --local local url <local-dvc-remote>",
+      "return_code": 0,
+      "seconds": 1.695
+    },
+    {
+      "command": "uv run dvc pull source.dvc",
+      "return_code": 0,
+      "seconds": 0.586
+    },
+    {
+      "command": "uv run dvc repro --force",
+      "return_code": 0,
+      "seconds": 4.629
+    },
+    {
+      "command": "make verify",
+      "return_code": 0,
+      "seconds": 8.246
+    }
+  ],
+  "remote_restore_without_recalculation": {
+    "v1": {
+      "ref": "hw3-v1",
+      "outputs_match": true,
+      "dvc_clean": true,
+      "git_clean": true
+    },
+    "v2": {
+      "ref": "hw3-data",
+      "outputs_match": true,
+      "dvc_clean": true,
+      "git_clean": true
+    }
+  },
+  "restore_started_with_empty_separate_cache": true
+}

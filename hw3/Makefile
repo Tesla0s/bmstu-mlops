@@ -49,7 +49,7 @@ lint:
 verify: repro test lint check
 
 push-data:
-	$(UV) run dvc push --all-tags
+	$(UV) run dvc push
 
 pull-data:
 	$(UV) run dvc pull
