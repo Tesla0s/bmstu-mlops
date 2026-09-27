@@ -92,6 +92,7 @@ data/tokenized/train.pt и val.pt содержат словарь examples и с
 - [Почему выбран предел 2176](docs/length_selection.md).
 - [Сверка требований и воспроизводимость](docs/validation.md).
 - [Проверка каждого сохранённого примера](reports/artifact_audit.json).
+- [Восстановление в новом клоне и совпадение результатов](reports/reproduction.json).
 - [Измерения дефектов](reports/defect_evidence.json).
 - [Сравнение ограничений длины](reports/length_selection.json).
 

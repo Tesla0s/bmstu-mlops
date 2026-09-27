@@ -1,0 +1,106 @@
+{
+  "commit": "ffc41cef4083ab4cdf6edc9e1a5dedb61fc2b946",
+  "new_git_clone": true,
+  "fresh_virtual_environment": true,
+  "initially_empty_dvc_cache": true,
+  "fresh_huggingface_cache": true,
+  "downloaded_model_weights": false,
+  "only_inputs_pulled_before_recomputation": true,
+  "all_eight_files_byte_identical": true,
+  "git_clean_after_verify": true,
+  "sha256": {
+    "data/train.jsonl": "db0442ebeebe9ee235fdd4de6bb9251bdda4e5b0bc188e58edefb5a10143eb35",
+    "data/val.jsonl": "058574c2fdaa86c25737599d257e344371509224a4591fee8a79cb182eba1063",
+    "data/tokenized/train.pt": "ff6c2a91d69ae6a90c04a2395d2d4e804dd8b92ffe816626e19bb2a19a4a3c96",
+    "data/tokenized/val.pt": "892713373d4a012388cbec518554cf2145b458e0affd4032037e3dde5819c879",
+    "metrics/tokenize.json": "11e9d3f999c16f741168fe24f5b0f34dd4823fb58a180d939d8a16490861775d",
+    "docs/tokenize_report.md": "70f67222543accf737161933ae471a65c5ceb4e197a4d13aea3001f6288a7005",
+    "reports/artifact_audit.json": "9efc6cbc3b04b5fc362c7a780e9f8124ca22103777f07bbe253297f4c6897763",
+    "dvc.lock": "f661dd2f20bce83edd6713f1e60def1287b53b8c5d90bcae166ede3f317f447c"
+  },
+  "steps": [
+    {
+      "command": [
+        "uv",
+        "sync",
+        "--frozen",
+        "--python",
+        "3.12"
+      ],
+      "returncode": 0,
+      "seconds": 0.633
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-c",
+        "from huggingface_hub import snapshot_download\nfrom pathlib import Path\np=Path(snapshot_download('Qwen/Qwen3-0.6B',revision='main',allow_patterns=['tokenizer.json','tokenizer_config.json','config.json','vocab.json','merges.txt','special_tokens_map.json','added_tokens.json']))\nassert p.name=='c1899de289a04d12100db370d81485cdf75e47ca',p.name\nprint('Tokenizer only; verified revision:',p.name)\nprint('Files:',sorted(x.name for x in p.iterdir()))\n"
+      ],
+      "returncode": 0,
+      "seconds": 4.24
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "dvc",
+        "remote",
+        "modify",
+        "--local",
+        "local",
+        "url",
+        "<local-dvc-remote>"
+      ],
+      "returncode": 0,
+      "seconds": 1.71
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "dvc",
+        "pull",
+        "inputs.dvc"
+      ],
+      "returncode": 0,
+      "seconds": 0.741
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "dvc",
+        "repro",
+        "--force"
+      ],
+      "returncode": 0,
+      "seconds": 15.728
+    },
+    {
+      "command": [
+        "make",
+        "verify"
+      ],
+      "returncode": 0,
+      "seconds": 25.753
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "dvc",
+        "status",
+        "--cloud"
+      ],
+      "returncode": 0,
+      "seconds": 0.392
+    }
+  ]
+}
