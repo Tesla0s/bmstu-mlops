@@ -1,0 +1,28 @@
+stages:
+  tokenize:
+    cmd: python -m src.tokenize_data
+    deps:
+      - data/train.jsonl
+      - data/val.jsonl
+      - src/tokenize_data.py
+      - src/prompt.py
+      - src/collate.py
+      - src/config.py
+      - pyproject.toml
+      - uv.lock
+      - ../hw1/docs/bench.json
+    params:
+      - model
+      - data
+      - provenance
+      - tokenize
+      - packing
+      - batch
+      - train_estimate
+    outs:
+      - data/tokenized
+      - docs/tokenize_report.md:
+          cache: false
+    metrics:
+      - metrics/tokenize.json:
+          cache: false

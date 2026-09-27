@@ -1,0 +1,69 @@
+uv run --locked dvc repro
+'inputs.dvc' didn't change, skipping
+Stage 'tokenize' didn't change, skipping
+Data and pipelines are up to date.
+uv run --locked python -m unittest discover -s tests -p 'test_*.py' -v
+test_error_reports_physical_line_even_with_unicode_separator (test_tokenize.InputTests.test_error_reports_physical_line_even_with_unicode_separator) ... ok
+test_repeated_ids_and_empty_dataset_are_rejected (test_tokenize.InputTests.test_repeated_ids_and_empty_dataset_are_rejected) ... ok
+test_left_padding_does_not_mask_real_eos_when_pad_equals_eos (test_tokenize.PaddingTests.test_left_padding_does_not_mask_real_eos_when_pad_equals_eos) ... ok
+test_padding_cost_keeps_last_incomplete_batch (test_tokenize.PaddingTests.test_padding_cost_keeps_last_incomplete_batch) ... ok
+test_rejects_right_padding_and_malformed_batch (test_tokenize.PaddingTests.test_rejects_right_padding_and_malformed_batch) ... ok
+test_dropped_rows_remain_in_truncation_denominator (test_tokenize.TokenizationTests.test_dropped_rows_remain_in_truncation_denominator) ... ok
+test_equal_threshold_is_allowed (test_tokenize.TokenizationTests.test_equal_threshold_is_allowed) ... ok
+test_fully_merged_answer_has_no_fake_supervision (test_tokenize.TokenizationTests.test_fully_merged_answer_has_no_fake_supervision) ... ok
+test_partial_answer_is_counted_separately (test_tokenize.TokenizationTests.test_partial_answer_is_counted_separately) ... ok
+test_real_bpe_merge_masks_crossing_token (test_tokenize.TokenizationTests.test_real_bpe_merge_masks_crossing_token) ... ok
+test_supervision_is_answer_and_eos_not_empty_reasoning (test_tokenize.TokenizationTests.test_supervision_is_answer_and_eos_not_empty_reasoning) ... ok
+test_thinking_mode_does_not_silently_train_on_reasoning (test_tokenize.TokenizationTests.test_thinking_mode_does_not_silently_train_on_reasoning) ... ok
+test_truncation_at_prompt_boundary_has_no_labels (test_tokenize.TokenizationTests.test_truncation_at_prompt_boundary_has_no_labels) ... ok
+test_unanswered_inference_matches_training_prompt (test_tokenize.TokenizationTests.test_unanswered_inference_matches_training_prompt) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.330s
+
+OK
+fixture: 2 -> 1 примеров; токенов 45, в лосс 8; p50/p90/p99/max = 541/938/1028/1037; обрезано 1 (50.00%)
+uv run --locked ruff check src scripts tests
+All checks passed!
+uv run --locked ruff format --check src scripts tests
+9 files already formatted
+bash tests/check.sh
+Вход стадии: data/train.jsonl, data/val.jsonl — make sample пропущен
+Готовлю артефакты: make tokenize
+
+1. В лосс попадает только ответ ассистента
+  ✓ декодированные позиции label != -100 — это ответ ассистента (сверено примеров: 1315)
+
+2. Шаблон обучения и шаблон инференса не разошлись
+  ✓ строка inference-пути — побайтовый префикс строки train-пути (сверено диалогов: 281)
+
+3. Шаблон чата не собирается руками
+  ✓ спецтокенов ролей в src/ нет
+  ✓ apply_chat_template вызывается ровно в одном месте: src/prompt.py
+
+4. Паддинг слева
+  ✓ левый паддинг, labels на паддинге -100 (params + metrics + коллатор)
+
+5. Обрезка по max_seq_len посчитана и не превышает порог
+  ✓ доля обрезанных есть в metrics/tokenize.json и ниже порога (train 0.0%, val 0.0% при пороге 5.0%)
+
+6. Граница маски устойчива к склейке BPE
+  ✓ при склейке BPE граница берётся по символьным офсетам (граница на токене 3)
+
+7. Стадия tokenize объявлена в dvc.yaml и согласована с params.yaml
+  ✓ стадия описана: deps 9, outs ['data/tokenized', "{'docs/tokenize_report.md': {'cache': False}}"], metrics/tokenize.json объявлен
+
+8. Разбор дефектов написан
+  ✓ docs/defects.md: разделов 6, слов 1054
+
+9. Гигиена репозитория
+  ✓ в git нет данных, мусора и файлов тяжелее 5 МБ
+
+отпечаток tests/check.sh: f2002c8c9519 — на видео сдачи должен совпадать с выданным
+
+Все проверки пройдены. Отчёт: docs/tokenize_report.md, метрики: metrics/tokenize.json
+
+uv run --locked python -m scripts.audit_artifacts
+train: проверены 1315 примеров, маски, конец ответа и все батчи
+val: проверены 281 примеров, маски, конец ответа и все батчи
+Проверка готовых файлов пройдена; отпечаток tests/check.sh: f2002c8c9519

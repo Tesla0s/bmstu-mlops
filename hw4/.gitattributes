@@ -1,0 +1,2 @@
+# DVC-generated YAML may wrap plain strings with trailing spaces.
+dvc.lock whitespace=-blank-at-eol

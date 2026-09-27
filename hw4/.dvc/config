@@ -1,0 +1,6 @@
+[core]
+    analytics = false
+    autostage = false
+    remote = local
+['remote "local"']
+    url = ../../../hw4/workspace/dvc_remote

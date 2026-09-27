@@ -1,0 +1,118 @@
+{
+  "method": "Full corrected-template lengths before truncation; no training performed",
+  "candidates": {
+    "train": {
+      "232": {
+        "truncated": 657,
+        "ratio": 0.49961977186311785,
+        "no_supervised_tokens": 641,
+        "partial_sequence_kept": 16
+      },
+      "512": {
+        "truncated": 170,
+        "ratio": 0.12927756653992395,
+        "no_supervised_tokens": 167,
+        "partial_sequence_kept": 3
+      },
+      "768": {
+        "truncated": 62,
+        "ratio": 0.04714828897338403,
+        "no_supervised_tokens": 61,
+        "partial_sequence_kept": 1
+      },
+      "1024": {
+        "truncated": 18,
+        "ratio": 0.013688212927756654,
+        "no_supervised_tokens": 18,
+        "partial_sequence_kept": 0
+      },
+      "1152": {
+        "truncated": 8,
+        "ratio": 0.006083650190114068,
+        "no_supervised_tokens": 7,
+        "partial_sequence_kept": 1
+      },
+      "1280": {
+        "truncated": 5,
+        "ratio": 0.0038022813688212928,
+        "no_supervised_tokens": 5,
+        "partial_sequence_kept": 0
+      },
+      "1536": {
+        "truncated": 2,
+        "ratio": 0.001520912547528517,
+        "no_supervised_tokens": 2,
+        "partial_sequence_kept": 0
+      },
+      "2048": {
+        "truncated": 1,
+        "ratio": 0.0007604562737642585,
+        "no_supervised_tokens": 1,
+        "partial_sequence_kept": 0
+      },
+      "2176": {
+        "truncated": 0,
+        "ratio": 0.0,
+        "no_supervised_tokens": 0,
+        "partial_sequence_kept": 0
+      }
+    },
+    "val": {
+      "232": {
+        "truncated": 162,
+        "ratio": 0.5765124555160143,
+        "no_supervised_tokens": 160,
+        "partial_sequence_kept": 2
+      },
+      "512": {
+        "truncated": 40,
+        "ratio": 0.1423487544483986,
+        "no_supervised_tokens": 37,
+        "partial_sequence_kept": 3
+      },
+      "768": {
+        "truncated": 10,
+        "ratio": 0.03558718861209965,
+        "no_supervised_tokens": 9,
+        "partial_sequence_kept": 1
+      },
+      "1024": {
+        "truncated": 4,
+        "ratio": 0.014234875444839857,
+        "no_supervised_tokens": 4,
+        "partial_sequence_kept": 0
+      },
+      "1152": {
+        "truncated": 3,
+        "ratio": 0.010676156583629894,
+        "no_supervised_tokens": 3,
+        "partial_sequence_kept": 0
+      },
+      "1280": {
+        "truncated": 2,
+        "ratio": 0.0071174377224199285,
+        "no_supervised_tokens": 2,
+        "partial_sequence_kept": 0
+      },
+      "1536": {
+        "truncated": 1,
+        "ratio": 0.0035587188612099642,
+        "no_supervised_tokens": 1,
+        "partial_sequence_kept": 0
+      },
+      "2048": {
+        "truncated": 0,
+        "ratio": 0.0,
+        "no_supervised_tokens": 0,
+        "partial_sequence_kept": 0
+      },
+      "2176": {
+        "truncated": 0,
+        "ratio": 0.0,
+        "no_supervised_tokens": 0,
+        "partial_sequence_kept": 0
+      }
+    }
+  },
+  "chosen_max_seq_len": 2176
+}

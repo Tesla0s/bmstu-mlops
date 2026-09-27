@@ -1,0 +1,193 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "enable_thinking": false,
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "pad_token_id": 151643,
+  "eos_token_id": 151645,
+  "max_seq_len": 2176,
+  "padding_side": "left",
+  "truncated_warn_ratio": 0.05,
+  "passed": true,
+  "input_sha256": {
+    "train": "db0442ebeebe9ee235fdd4de6bb9251bdda4e5b0bc188e58edefb5a10143eb35",
+    "val": "058574c2fdaa86c25737599d257e344371509224a4591fee8a79cb182eba1063"
+  },
+  "source": {
+    "git_tag": "hw3-v2",
+    "git_commit": "b1584355b59356f5a2f0bd81c7a279fbfb83318e"
+  },
+  "software": {
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6"
+  },
+  "batch": {
+    "size": 8,
+    "seed": 42
+  },
+  "splits": {
+    "train": {
+      "examples_in": 1315,
+      "examples_kept": 1315,
+      "dropped_no_supervision": 0,
+      "partial_answers_kept": 0,
+      "complete_answers": 1315,
+      "length_tokens": {
+        "count": 1315,
+        "min": 85,
+        "mean": 306.04,
+        "p50": 232,
+        "p90": 586,
+        "p95": 752,
+        "p99": 1098,
+        "max": 2131
+      },
+      "prompt_tokens": {
+        "count": 1315,
+        "min": 77,
+        "mean": 297.71,
+        "p50": 223,
+        "p90": 577,
+        "p95": 744,
+        "p99": 1090,
+        "max": 2123
+      },
+      "answer_tokens": {
+        "count": 1315,
+        "min": 8,
+        "mean": 8.33,
+        "p50": 8,
+        "p90": 9,
+        "p95": 9,
+        "p99": 9,
+        "max": 9
+      },
+      "bpe_boundary_fallback": 0,
+      "bpe_boundary_fallback_ratio": 0.0,
+      "tokens_before_truncation": 402445,
+      "answer_tokens_before_truncation": 10959,
+      "total_tokens": 402445,
+      "supervised_tokens": 10959,
+      "truncated": 0,
+      "truncated_ratio": 0.0,
+      "truncation_passed": true,
+      "padding": {
+        "batch_size": 8,
+        "seed": 42,
+        "batches": 165,
+        "useful_tokens": 402445,
+        "strategies": {
+          "fixed_max_seq_len": {
+            "positions": 2861440,
+            "padding": 2458995,
+            "padding_ratio": 0.8593557789085216
+          },
+          "dynamic_shuffled": {
+            "positions": 894116,
+            "padding": 491671,
+            "padding_ratio": 0.5498962103351243
+          },
+          "dynamic_sorted": {
+            "positions": 409345,
+            "padding": 6900,
+            "padding_ratio": 0.01685619709535966
+          }
+        }
+      },
+      "packing": null
+    },
+    "val": {
+      "examples_in": 281,
+      "examples_kept": 281,
+      "dropped_no_supervision": 0,
+      "partial_answers_kept": 0,
+      "complete_answers": 281,
+      "length_tokens": {
+        "count": 281,
+        "min": 87,
+        "mean": 322.06,
+        "p50": 280,
+        "p90": 564,
+        "p95": 704,
+        "p99": 1135,
+        "max": 1634
+      },
+      "prompt_tokens": {
+        "count": 281,
+        "min": 79,
+        "mean": 313.73,
+        "p50": 272,
+        "p90": 555,
+        "p95": 695,
+        "p99": 1127,
+        "max": 1626
+      },
+      "answer_tokens": {
+        "count": 281,
+        "min": 8,
+        "mean": 8.33,
+        "p50": 8,
+        "p90": 9,
+        "p95": 9,
+        "p99": 9,
+        "max": 9
+      },
+      "bpe_boundary_fallback": 0,
+      "bpe_boundary_fallback_ratio": 0.0,
+      "tokens_before_truncation": 90499,
+      "answer_tokens_before_truncation": 2342,
+      "total_tokens": 90499,
+      "supervised_tokens": 2342,
+      "truncated": 0,
+      "truncated_ratio": 0.0,
+      "truncation_passed": true,
+      "padding": {
+        "batch_size": 8,
+        "seed": 42,
+        "batches": 36,
+        "useful_tokens": 90499,
+        "strategies": {
+          "fixed_max_seq_len": {
+            "positions": 611456,
+            "padding": 520957,
+            "padding_ratio": 0.8519942563324262
+          },
+          "dynamic_shuffled": {
+            "positions": 189699,
+            "padding": 99200,
+            "padding_ratio": 0.5229337002303649
+          },
+          "dynamic_sorted": {
+            "positions": 95386,
+            "padding": 4887,
+            "padding_ratio": 0.05123393370096241
+          }
+        }
+      },
+      "packing": null
+    }
+  },
+  "train_time_estimate": {
+    "epochs": 3,
+    "tokens_per_sec": 40.43017901951768,
+    "tokens_per_epoch": 402445,
+    "seconds": 29862.22,
+    "hours": 8.295,
+    "training_slowdown_assumption": [
+      2,
+      3
+    ],
+    "training_hours_range": [
+      16.59,
+      24.885
+    ],
+    "benchmark_path": "../hw1/docs/bench.json",
+    "benchmark_sha256": "a3b84b2dd5b3c8f43bd719d711c9c65e3ccd31ee387ebfeacce382e7021a29ad",
+    "benchmark_device": "mps:0",
+    "benchmark_measured_at": "2026-09-05T16:06:12+03:00",
+    "note": "Скорость — фактический замер ГЕНЕРАЦИИ из ДЗ 1. Умножение времени на 2–3 — допущение из задания, не измерение обучения. Прогноз использует все полезные входные токены, не только позиции с метками. Паддинг, проверка модели, загрузка и сохранение дополнительно требуют времени. Оценка относится к машине и модели ДЗ 1, не к GPU Kaggle. Реальное время дообучения будет измерено в ДЗ 5."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "max_seq_len": 232,
+  "exit_code": 1,
+  "new_tensors_written": false,
+  "report_marked_failed": true,
+  "train": {
+    "truncated": 657,
+    "dropped_no_supervision": 641
+  },
+  "val": {
+    "truncated": 162,
+    "dropped_no_supervision": 160
+  }
+}

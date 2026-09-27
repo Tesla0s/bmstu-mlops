@@ -1,0 +1,51 @@
+Вход стадии: data/train.jsonl, data/val.jsonl — make sample пропущен
+Готовлю артефакты: make tokenize
+
+1. В лосс попадает только ответ ассистента
+  ✗ под маской лосса не только ответ: промпт не замаскирован либо граница уехала
+      microsoft/vscode#151115: под маской не ответ ассистента
+      ждали: '{"category": "question"}'
+      вышло: 'system\nClassify the GitHub issue from its title and description. Use bug for incorrect existing beha'
+
+2. Шаблон обучения и шаблон инференса не разошлись
+  ✗ train-путь и inference-путь дают разные строки: модель училась не на том формате
+      разошлись на байте 1075
+      inference: ...espaces<|im_end|>
+      <|im_start|>assistant
+      <think>
+
+      </think>
+
+
+      train:     ...espaces<|im_end|>
+      <|im_start|>assistant
+      {"category": "question"}<|im_end|>
+
+3. Шаблон чата не собирается руками
+  ✗ в src/ найдены спецтокены ролей строкой — шаблон обязан приходить из apply_chat_template
+      src/prompt.py:9:TURN = "<|im_start|>{role}\n{content}<|im_end|>\n"
+  ✓ apply_chat_template вызывается ровно в одном месте: src/prompt.py
+
+4. Паддинг слева
+  ✗ паддинг справа: при batch > 1 генерация продолжает pad-токены, а не промпт
+      в metrics/tokenize.json padding_side = 'right'
+
+5. Обрезка по max_seq_len посчитана и не превышает порог
+  ✗ обрезка молчаливая либо выше порога — часть ответов не доезжает до обучения
+      train: в метриках нет доли обрезанных примеров — обрезка молчаливая
+
+6. Граница маски устойчива к склейке BPE
+  ✓ при склейке BPE граница берётся по символьным офсетам (граница на токене 3)
+
+7. Стадия tokenize объявлена в dvc.yaml и согласована с params.yaml
+  ✓ стадия описана: deps 7, outs ['data/tokenized'], metrics/tokenize.json объявлен
+
+8. Разбор дефектов написан
+  ✗ нет docs/defects.md — разбор найденных дефектов не написан (или закоммичен не тот файл)
+
+9. Гигиена репозитория
+  ✓ в git нет данных, мусора и файлов тяжелее 5 МБ
+
+отпечаток tests/check.sh: f2002c8c9519 — на видео сдачи должен совпадать с выданным
+
+Провалено проверок: 6

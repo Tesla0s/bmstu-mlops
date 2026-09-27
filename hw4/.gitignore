@@ -1,0 +1,10 @@
+data/
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+.ruff_cache/
+.check_*.log
+params.yaml.bak
+params.yaml.orig

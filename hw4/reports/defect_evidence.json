@@ -1,0 +1,204 @@
+{
+  "baseline": {
+    "max_seq_len": 232,
+    "padding_default": "right",
+    "splits": {
+      "train": {
+        "examples": 1315,
+        "wrong_supervised_decodes": 1315,
+        "prefix_mismatches": 1315,
+        "truncated": 648,
+        "truncated_ratio": 0.49277566539923956,
+        "total_tokens": 256413,
+        "supervised_tokens": 256413
+      },
+      "val": {
+        "examples": 281,
+        "wrong_supervised_decodes": 281,
+        "prefix_mismatches": 281,
+        "truncated": 161,
+        "truncated_ratio": 0.5729537366548043,
+        "total_tokens": 56382,
+        "supervised_tokens": 56382
+      }
+    }
+  },
+  "fixed": {
+    "train": {
+      "examples_in": 1315,
+      "examples_kept": 1315,
+      "dropped_no_supervision": 0,
+      "partial_answers_kept": 0,
+      "complete_answers": 1315,
+      "length_tokens": {
+        "count": 1315,
+        "min": 85,
+        "mean": 306.04,
+        "p50": 232,
+        "p90": 586,
+        "p95": 752,
+        "p99": 1098,
+        "max": 2131
+      },
+      "prompt_tokens": {
+        "count": 1315,
+        "min": 77,
+        "mean": 297.71,
+        "p50": 223,
+        "p90": 577,
+        "p95": 744,
+        "p99": 1090,
+        "max": 2123
+      },
+      "answer_tokens": {
+        "count": 1315,
+        "min": 8,
+        "mean": 8.33,
+        "p50": 8,
+        "p90": 9,
+        "p95": 9,
+        "p99": 9,
+        "max": 9
+      },
+      "bpe_boundary_fallback": 0,
+      "bpe_boundary_fallback_ratio": 0.0,
+      "tokens_before_truncation": 402445,
+      "answer_tokens_before_truncation": 10959,
+      "total_tokens": 402445,
+      "supervised_tokens": 10959,
+      "truncated": 0,
+      "truncated_ratio": 0.0,
+      "truncation_passed": true,
+      "padding": {
+        "batch_size": 8,
+        "seed": 42,
+        "batches": 165,
+        "useful_tokens": 402445,
+        "strategies": {
+          "fixed_max_seq_len": {
+            "positions": 2861440,
+            "padding": 2458995,
+            "padding_ratio": 0.8593557789085216
+          },
+          "dynamic_shuffled": {
+            "positions": 894116,
+            "padding": 491671,
+            "padding_ratio": 0.5498962103351243
+          },
+          "dynamic_sorted": {
+            "positions": 409345,
+            "padding": 6900,
+            "padding_ratio": 0.01685619709535966
+          }
+        }
+      },
+      "packing": null
+    },
+    "val": {
+      "examples_in": 281,
+      "examples_kept": 281,
+      "dropped_no_supervision": 0,
+      "partial_answers_kept": 0,
+      "complete_answers": 281,
+      "length_tokens": {
+        "count": 281,
+        "min": 87,
+        "mean": 322.06,
+        "p50": 280,
+        "p90": 564,
+        "p95": 704,
+        "p99": 1135,
+        "max": 1634
+      },
+      "prompt_tokens": {
+        "count": 281,
+        "min": 79,
+        "mean": 313.73,
+        "p50": 272,
+        "p90": 555,
+        "p95": 695,
+        "p99": 1127,
+        "max": 1626
+      },
+      "answer_tokens": {
+        "count": 281,
+        "min": 8,
+        "mean": 8.33,
+        "p50": 8,
+        "p90": 9,
+        "p95": 9,
+        "p99": 9,
+        "max": 9
+      },
+      "bpe_boundary_fallback": 0,
+      "bpe_boundary_fallback_ratio": 0.0,
+      "tokens_before_truncation": 90499,
+      "answer_tokens_before_truncation": 2342,
+      "total_tokens": 90499,
+      "supervised_tokens": 2342,
+      "truncated": 0,
+      "truncated_ratio": 0.0,
+      "truncation_passed": true,
+      "padding": {
+        "batch_size": 8,
+        "seed": 42,
+        "batches": 36,
+        "useful_tokens": 90499,
+        "strategies": {
+          "fixed_max_seq_len": {
+            "positions": 611456,
+            "padding": 520957,
+            "padding_ratio": 0.8519942563324262
+          },
+          "dynamic_shuffled": {
+            "positions": 189699,
+            "padding": 99200,
+            "padding_ratio": 0.5229337002303649
+          },
+          "dynamic_sorted": {
+            "positions": 95386,
+            "padding": 4887,
+            "padding_ratio": 0.05123393370096241
+          }
+        }
+      },
+      "packing": null
+    }
+  },
+  "checked_artifacts": {
+    "passed": true,
+    "splits": {
+      "train": {
+        "examples_checked": 1315,
+        "tokens_checked": 402445,
+        "supervised_tokens_checked": 10959,
+        "all_answers_and_eos_intact": true,
+        "byte_prefix_and_token_boundary_match": true,
+        "all_batch_padding_positions_correct": true,
+        "input_sha256": "db0442ebeebe9ee235fdd4de6bb9251bdda4e5b0bc188e58edefb5a10143eb35",
+        "tokenized_sha256": "ff6c2a91d69ae6a90c04a2395d2d4e804dd8b92ffe816626e19bb2a19a4a3c96"
+      },
+      "val": {
+        "examples_checked": 281,
+        "tokens_checked": 90499,
+        "supervised_tokens_checked": 2342,
+        "all_answers_and_eos_intact": true,
+        "byte_prefix_and_token_boundary_match": true,
+        "all_batch_padding_positions_correct": true,
+        "input_sha256": "058574c2fdaa86c25737599d257e344371509224a4591fee8a79cb182eba1063",
+        "tokenized_sha256": "892713373d4a012388cbec518554cf2145b458e0affd4032037e3dde5819c879"
+      }
+    },
+    "generated_report_matches_metrics": true,
+    "teacher_check_sha256": "f2002c8c9519f919ef53bed7ba3f962a1d83cc021ce9dd5e36ab5bbb266a2bbb"
+  },
+  "baseline_check_failed_sections": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    8
+  ],
+  "teacher_check_fingerprint": "f2002c8c9519"
+}
