@@ -1,0 +1,79 @@
+uv run --locked dvc pull
+A       data/
+A       models/adapter_all_layers/
+A       models/adapter_freeze14/
+A       metrics/artifact_audit.json
+A       metrics/compare_all_layers.json
+A       metrics/train_all_layers.json
+A       metrics/train_freeze14.json
+24 files fetched and 31 files added
+uv run --locked dvc repro train_all train_freeze curves report
+'data.dvc' didn't change, skipping
+Stage 'train_all' didn't change, skipping
+Stage 'train_freeze' didn't change, skipping
+Stage 'curves' didn't change, skipping
+Stage 'report' didn't change, skipping
+Data and pipelines are up to date.
+uv run --locked dvc repro compare
+'data.dvc' didn't change, skipping
+Stage 'train_all' didn't change, skipping
+Stage 'compare' didn't change, skipping
+Data and pipelines are up to date.
+uv run --locked python -m unittest discover -s tests -p 'test_*.py' -v
+test_layer_selection_reduces_trainable_parameters (test_training.AdapterTests.test_layer_selection_reduces_trainable_parameters) ... ok
+test_seed_controls_initialization_and_dropout (test_training.AdapterTests.test_seed_controls_initialization_and_dropout) ... ok
+test_last_incomplete_accumulation_group_is_retained (test_training.DataTests.test_last_incomplete_accumulation_group_is_retained) ... ok
+test_padding_never_masks_a_real_eos_equal_to_pad (test_training.DataTests.test_padding_never_masks_a_real_eos_equal_to_pad) ... ok
+test_model_defaults_cannot_enable_random_sampling (test_training.GenerationTests.test_model_defaults_cannot_enable_random_sampling) ... ok
+test_accumulated_token_weighted_gradient_matches_whole_batch (test_training.LossTests.test_accumulated_token_weighted_gradient_matches_whole_batch) ... ok
+test_no_supervision_is_rejected (test_training.LossTests.test_no_supervision_is_rejected) ... ok
+test_selected_positions_match_full_loss_and_gradients (test_training.LossTests.test_selected_positions_match_full_loss_and_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.054s
+
+OK
+uv run --locked ruff check src scripts tests
+All checks passed!
+uv run --locked ruff format --check src scripts tests
+15 files already formatted
+bash tests/check.sh
+
+1. Валидация считается
+  ✓ точек val loss: 18, до обучения 0.600916, в конце 0.045128
+
+2. Обучение сошлось, адаптер лучше базовой модели
+  ✓ train 0.162 → 0.055, val 0.600916 → 0.045128
+
+3. Адаптер весит мегабайты, а не сотни мегабайт
+  ✓ 34.46 МБ, r=8, обучаемых 0.84%
+
+4. Адаптер поднимается на чистой машине и отвечает так же
+  ✓ 5 ответов совпали дословно
+
+5. Два прогона с одним конфигом дают одну кривую
+  ✓ train loss по шагам: [0.757417, 0.655543, 0.096733] — одинаково
+
+6. Эксперимент с заморозкой первых слоёв проведён
+  ✓ обучаемых 2,523,136 против 5,046,272; 1713 с против 1752 с; val 0.047402 против 0.045128
+
+7. Стадии train и compare объявлены в dvc.yaml
+  ✓ train_all, train_freeze, compare
+
+8. Разбор дефектов написан
+  ✓ docs/defects.md: разделов 8, слов 1105
+
+9. Гигиена репозитория
+  ✓ в git нет весов, данных, мусора и файлов тяжелее 5 МБ
+
+отпечаток tests/check.sh: 06a02208c1f0 — на видео сдачи должен совпадать с выданным
+
+Все проверки пройдены. Кривые: docs/curves.png, сравнение: docs/compare.md
+
+uv run --locked dvc repro audit
+'data.dvc' didn't change, skipping
+Stage 'train_all' didn't change, skipping
+Stage 'train_freeze' didn't change, skipping
+Stage 'compare' didn't change, skipping
+Stage 'audit' didn't change, skipping
+Data and pipelines are up to date.
