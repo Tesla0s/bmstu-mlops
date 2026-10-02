@@ -1,0 +1,121 @@
+stages:
+  train_all:
+    cmd: python -m src.train --variant all_layers
+    deps: &id001
+    - data/tokenized/train.pt
+    - data/tokenized/val.pt
+    - src/train.py
+    - src/data.py
+    - src/runtime.py
+    - src/config.py
+    - src/loss.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - model
+    - data
+    - lora
+    - train
+    - variants
+    - provenance
+    outs:
+    - models/adapter_all_layers
+    metrics:
+    - metrics/train_all_layers.json:
+        cache: true
+  train_freeze:
+    cmd: python -m src.train --variant freeze14
+    deps: *id001
+    params:
+    - model
+    - data
+    - lora
+    - train
+    - variants
+    - provenance
+    outs:
+    - models/adapter_freeze14
+    metrics:
+    - metrics/train_freeze14.json:
+        cache: true
+  curves:
+    cmd: python -m src.plot
+    deps:
+    - metrics/train_all_layers.json
+    - metrics/train_freeze14.json
+    - src/plot.py
+    - src/config.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - paths.curves
+    - variants
+    outs:
+    - docs/curves.png:
+        cache: false
+  compare:
+    cmd: python -m src.compare --variant all_layers
+    deps:
+    - models/adapter_all_layers
+    - src/compare.py
+    - src/runtime.py
+    - src/config.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - model
+    - compare
+    - train.seed
+    - train.cpu_threads
+    - paths.compare
+    outs:
+    - docs/compare.md:
+        cache: false
+    metrics:
+    - metrics/compare_all_layers.json:
+        cache: true
+  report:
+    cmd: python -m scripts.report
+    deps:
+    - metrics/train_all_layers.json
+    - metrics/train_freeze14.json
+    - ../hw4/metrics/tokenize.json
+    - scripts/report.py
+    - src/config.py
+    params:
+    - variants
+    - train
+    - lora
+    outs:
+    - docs/training_report.md:
+        cache: false
+  audit:
+    cmd: python -m scripts.audit_artifacts
+    deps:
+    - data/tokenized/train.pt
+    - data/tokenized/val.pt
+    - models/adapter_all_layers
+    - models/adapter_freeze14
+    - metrics/train_all_layers.json
+    - metrics/train_freeze14.json
+    - metrics/compare_all_layers.json
+    - scripts/audit_artifacts.py
+    - src/train.py
+    - src/data.py
+    - src/runtime.py
+    - src/config.py
+    - src/loss.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - model
+    - data
+    - lora
+    - train
+    - variants
+    - provenance
+    - compare
+    - paths
+    metrics:
+    - metrics/artifact_audit.json:
+        cache: true

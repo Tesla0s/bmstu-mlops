@@ -1,0 +1,103 @@
+# Все параметры зафиксированы до полных прогонов.
+model:
+  name: Qwen/Qwen3-0.6B
+  device: auto
+  dtype: bfloat16
+  enable_thinking: false
+  revision: c1899de289a04d12100db370d81485cdf75e47ca
+  attn_implementation: eager
+data:
+  train: data/tokenized/train.pt
+  val: data/tokenized/val.pt
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+train:
+  seed: 42
+  epochs: 1
+  batch_size: 1
+  grad_accum: 8
+  lr: 0.0002
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  eval_every: 10
+  eval_batch_size: 2
+  gradient_checkpointing: true
+  max_steps: null
+  cpu_threads: 6
+variants:
+- name: all_layers
+  freeze_first: 0
+- name: freeze14
+  freeze_first: 14
+compare:
+  max_new_tokens: 40
+  prompts:
+  - 'Title: Saving a file unexpectedly removes its last line
+
+
+    Description:
+
+    After updating the editor, saving a text file deletes the last line even though I did not edit that
+    line. I can reproduce this with a new file and all extensions disabled. The file should be saved without
+    losing any content.'
+  - 'Title: Allow exporting search results as a CSV file
+
+
+    Description:
+
+    It would be useful to add an Export CSV button to the search results panel. Currently I have to copy
+    every result manually. Please consider adding this capability in a future version.'
+  - 'Title: How can I select rows matching two conditions?
+
+
+    Description:
+
+    I am learning pandas and have a DataFrame with age and country columns. What is the correct way to
+    keep rows where age is greater than 18 and country is Germany? I would appreciate an example using
+    the existing API.'
+  - 'Title: Grouped sum returns the wrong result for negative values
+
+
+    Description:
+
+    A column containing -3 and -5 in the same group produces a grouped sum of 8 instead of -8. The ordinary
+    sum produces -8. This worked in the previous release and now gives an incorrect result.'
+  - 'Title: Add a configurable keyboard shortcut for switching profiles
+
+
+    Description:
+
+    The profile selector already works through the menu. I would like an option to assign a keyboard shortcut
+    to switch directly to a named profile, so that this workflow needs fewer clicks.'
+  system: Classify the GitHub issue from its title and description. Use bug for incorrect existing behavior,
+    feature_request for a new capability or improvement, and question for a request for usage guidance.
+    Return only a JSON object with the key "category" and one of these three values.
+  expected_categories:
+  - bug
+  - feature_request
+  - question
+  - bug
+  - feature_request
+  prompt_origin: Five synthetic GitHub issues fixed before training; not selected from train, val or test.
+paths:
+  models: models
+  metrics: metrics
+  curves: docs/curves.png
+  compare: docs/compare.md
+provenance:
+  hw4_commit: 084e8dd15d9fc4580d8524705bb6287f0703171e
+  tokenized_sha256:
+    train: ff6c2a91d69ae6a90c04a2395d2d4e804dd8b92ffe816626e19bb2a19a4a3c96
+    val: 892713373d4a012388cbec518554cf2145b458e0affd4032037e3dde5819c879
+  chat_template_sha256: a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8

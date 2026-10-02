@@ -1,0 +1,14 @@
+uv run --locked python -m unittest discover -s tests -p 'test_*.py' -v
+test_layer_selection_reduces_trainable_parameters (test_training.AdapterTests.test_layer_selection_reduces_trainable_parameters) ... ok
+test_seed_controls_initialization_and_dropout (test_training.AdapterTests.test_seed_controls_initialization_and_dropout) ... ok
+test_last_incomplete_accumulation_group_is_retained (test_training.DataTests.test_last_incomplete_accumulation_group_is_retained) ... ok
+test_padding_never_masks_a_real_eos_equal_to_pad (test_training.DataTests.test_padding_never_masks_a_real_eos_equal_to_pad) ... ok
+test_model_defaults_cannot_enable_random_sampling (test_training.GenerationTests.test_model_defaults_cannot_enable_random_sampling) ... ok
+test_accumulated_token_weighted_gradient_matches_whole_batch (test_training.LossTests.test_accumulated_token_weighted_gradient_matches_whole_batch) ... ok
+test_no_supervision_is_rejected (test_training.LossTests.test_no_supervision_is_rejected) ... ok
+test_selected_positions_match_full_loss_and_gradients (test_training.LossTests.test_selected_positions_match_full_loss_and_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.110s
+
+OK

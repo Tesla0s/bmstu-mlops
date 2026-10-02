@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+.cache/
+.ruff_cache/
+data/
+models/
+metrics/*.json
+.check_*.log
+*.log
+.DS_Store

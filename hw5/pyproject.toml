@@ -1,0 +1,19 @@
+[project]
+name = "mlops-hw5"
+version = "0.1.0"
+description = "LoRA для классификации обращений GitHub"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch==2.8.0",
+    "transformers==4.57.6",
+    "peft==0.17.1",
+    "numpy==2.2.6",
+    "pyyaml==6.0.3",
+    "matplotlib==3.10.7",
+    "psutil==7.1.0",
+    "dvc==3.67.1",
+]
+[dependency-groups]
+dev = ["ruff==0.16.8"]
+[tool.ruff]
+line-length = 100
