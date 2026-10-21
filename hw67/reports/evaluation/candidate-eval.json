@@ -855,7 +855,7 @@
     "run_id": "c21ef017fc9a475ebdb8ab9e279fd2fb",
     "uri": "models:/github-issue-qwen-adapter/1"
   },
-  "protocol_sha256": "23e3f14e1956f7328af5879392802294840ef0259ebdd1d739f009dbbfad0469",
+  "protocol_sha256": "f7c8bf45ef575dba55d83287cea1f17b75f55da49b8e5638d90e6f4e809956e5",
   "golden_sha256": "b3039f0edfd5e39049aafae02d1068f55697f9b5d05ce2bc085ccc98adf24370",
   "baseline_spec_sha256": "f71269b95f6b4e1e160fa25e9af6c973517cfebad15880b75b56c8184680b163",
   "behavioral": {
@@ -946,6 +946,6 @@
     "n_golden": 60,
     "n_behavioral": 4
   },
-  "outputs_sha256": "fc249fb8e85369eccde6153fde818954a58e8f73d1cfb2dd3b29ca9754d2452f",
-  "evaluation_run_id": "a0c13ddda50243629ce68dfae4ad4589"
+  "outputs_sha256": "0fad7a3c708b2b09310cf9e338a2fb2aa9a4e217400a9cc4ae2285274b99a100",
+  "evaluation_run_id": "b11b03d74c2746bcb2c7ff4b070823e6"
 }

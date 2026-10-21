@@ -1,6 +1,11 @@
+uv run python -m unittest discover -s checks -p "test_*.py" -v
 test_baseline_generation_errors_also_block_release (test_extra.AdditionalChecks.test_baseline_generation_errors_also_block_release) ... ok
+test_consistent_behavior_failure_rejected (test_extra.AdditionalChecks.test_consistent_behavior_failure_rejected) ... ok
+test_consistent_critical_regression_despite_average_growth (test_extra.AdditionalChecks.test_consistent_critical_regression_despite_average_growth) ... ok
+test_consistent_generation_error_rejected (test_extra.AdditionalChecks.test_consistent_generation_error_rejected) ... ok
 test_duplicate_json_fields_and_nonfinite_are_invalid (test_extra.AdditionalChecks.test_duplicate_json_fields_and_nonfinite_are_invalid) ... ok
 test_error_with_plausible_answer_is_still_failure (test_extra.AdditionalChecks.test_error_with_plausible_answer_is_still_failure) ... ok
+test_exact_model_identity_required (test_extra.AdditionalChecks.test_exact_model_identity_required) ... ok
 test_extra_missing_duplicate_task_and_output_ids (test_extra.AdditionalChecks.test_extra_missing_duplicate_task_and_output_ids) ... ok
 test_loss_gate_before_any_registry_mutation (test_extra.AdditionalChecks.test_loss_gate_before_any_registry_mutation) ... /Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw67/.venv/lib/python3.12/site-packages/mlflow/utils/pydantic_utils.py:33: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.13/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
   return pydantic_model_validator(mode=mode)(func)
@@ -9,9 +14,10 @@ test_loss_gate_before_any_registry_mutation (test_extra.AdditionalChecks.test_lo
 ok
 test_negative_or_missing_loss_rejected (test_extra.AdditionalChecks.test_negative_or_missing_loss_rejected) ... ok
 test_overlapping_slices_do_not_increase_overall_n (test_extra.AdditionalChecks.test_overlapping_slices_do_not_increase_overall_n) ... ok
+test_same_size_but_different_memberships_rejected (test_extra.AdditionalChecks.test_same_size_but_different_memberships_rejected) ... ok
 test_tampered_counts_and_group_membership_rejected (test_extra.AdditionalChecks.test_tampered_counts_and_group_membership_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 1.077s
+Ran 13 tests in 0.824s
 
 OK

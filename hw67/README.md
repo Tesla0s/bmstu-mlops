@@ -14,7 +14,7 @@
 После PASS версия 1 назначена champion. Это выполнение относительного учебного порога;
 качество на вопросах пользователей остаётся слабым (4/20).
 
-Пройдены 9/9 исходных проверок, 24 теста преподавателя и 8 дополнительных тестов.
+Пройдены 9/9 исходных проверок, 24 теста преподавателя и 13 дополнительных тестов.
 [Подробный итог](docs/conclusion.md), [проверки](reports/verification.txt).
 
 ## Проверка отчёта без модели и сервера
@@ -50,12 +50,13 @@ make verify-reports пересчитывает их и решение о вып�
 
 ```bash
 uv sync --frozen
+make prepare             # нужны восстановленные тензоры собственного ДЗ 4
+make fetch-eval
 make check-eval
 make up
 make sweep
 make report
 make candidate
-make baseline-init
 make evaluate
 make eval
 make check-negative
@@ -64,6 +65,10 @@ make promote
 make check-storage
 make check-all
 ```
+
+Исходная база уже закреплена в `evaluation/baseline.json`. Команда `make baseline-init`
+нужна только при первом создании проекта без этого файла и намеренно отказывается
+перезаписывать существующую точку отсчёта.
 
 При отказе `make eval` возвращает ненулевой код; `make promote` не запускают.
 Отказ считается допустимым результатом задания. Baseline самостоятельно не меняется.

@@ -3,384 +3,384 @@
     "id": "microsoft/vscode#232527",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4945539589971304
+    "latency_seconds": 0.5092754168435931
   },
   {
     "id": "microsoft/vscode#233467",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.44447195809334517
+    "latency_seconds": 0.4805878750048578
   },
   {
     "id": "microsoft/vscode#233541",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4602662078104913
+    "latency_seconds": 0.5118129160255194
   },
   {
     "id": "microsoft/vscode#234324",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.48395362542942166
+    "latency_seconds": 0.510710459202528
   },
   {
     "id": "microsoft/vscode#236985",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.49641991732642055
+    "latency_seconds": 0.5198209579102695
   },
   {
     "id": "microsoft/vscode#237223",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5882292920723557
+    "latency_seconds": 0.6082180002704263
   },
   {
     "id": "microsoft/vscode#241447",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4738291660323739
+    "latency_seconds": 0.5161233344115317
   },
   {
     "id": "microsoft/vscode#241531",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.44496179185807705
+    "latency_seconds": 0.4734594579786062
   },
   {
     "id": "microsoft/vscode#243627",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5103313326835632
+    "latency_seconds": 0.5312551246024668
   },
   {
     "id": "microsoft/vscode#243633",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5378692499361932
+    "latency_seconds": 0.5866594999097288
   },
   {
     "id": "microsoft/vscode#276636",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5049539161846042
+    "latency_seconds": 0.5370326247066259
   },
   {
     "id": "microsoft/vscode#276658",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4894822076894343
+    "latency_seconds": 0.5537938750348985
   },
   {
     "id": "microsoft/vscode#276955",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4715683329850435
+    "latency_seconds": 0.5237067919224501
   },
   {
     "id": "microsoft/vscode#277055",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.48454924998804927
+    "latency_seconds": 0.4905648329295218
   },
   {
     "id": "microsoft/vscode#277286",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4792012497782707
+    "latency_seconds": 0.49845816707238555
   },
   {
     "id": "microsoft/vscode#277511",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.46498383302241564
+    "latency_seconds": 0.4865725003182888
   },
   {
     "id": "microsoft/vscode#277799",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.48320074984803796
+    "latency_seconds": 0.503393666818738
   },
   {
     "id": "microsoft/vscode#277905",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5055219163186848
+    "latency_seconds": 0.555885124951601
   },
   {
     "id": "microsoft/vscode#278404",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.45753350015729666
+    "latency_seconds": 0.516479916870594
   },
   {
     "id": "microsoft/vscode#280206",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.46446712501347065
+    "latency_seconds": 0.5269268336705863
   },
   {
     "id": "microsoft/vscode#281844",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.48570020915940404
+    "latency_seconds": 0.494656584225595
   },
   {
     "id": "microsoft/vscode#281915",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.45404316717758775
+    "latency_seconds": 0.4670756673440337
   },
   {
     "id": "microsoft/vscode#281924",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4300447078421712
+    "latency_seconds": 0.4562429999932647
   },
   {
     "id": "microsoft/vscode#282035",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4381014588288963
+    "latency_seconds": 0.4528503338806331
   },
   {
     "id": "microsoft/vscode#282081",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4234696673229337
+    "latency_seconds": 0.45211037527769804
   },
   {
     "id": "microsoft/vscode#282113",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4411777500063181
+    "latency_seconds": 0.48890420934185386
   },
   {
     "id": "microsoft/vscode#282117",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5027308333665133
+    "latency_seconds": 0.5680979168973863
   },
   {
     "id": "microsoft/vscode#282118",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5026480830274522
+    "latency_seconds": 0.5718296249397099
   },
   {
     "id": "microsoft/vscode#282812",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4629758750088513
+    "latency_seconds": 0.47283870819956064
   },
   {
     "id": "microsoft/vscode#283220",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.44694679183885455
+    "latency_seconds": 0.4505917909555137
   },
   {
     "id": "pandas-dev/pandas#46088",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4881504578515887
+    "latency_seconds": 0.5184269999153912
   },
   {
     "id": "pandas-dev/pandas#46237",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.48455533292144537
+    "latency_seconds": 0.5038467501290143
   },
   {
     "id": "pandas-dev/pandas#47484",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5439917920157313
+    "latency_seconds": 0.5598747078329325
   },
   {
     "id": "pandas-dev/pandas#47593",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5049666250124574
+    "latency_seconds": 0.5253245830535889
   },
   {
     "id": "pandas-dev/pandas#47969",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5045257923193276
+    "latency_seconds": 0.5377152082510293
   },
   {
     "id": "pandas-dev/pandas#51062",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4860060000792146
+    "latency_seconds": 0.576413624919951
   },
   {
     "id": "pandas-dev/pandas#51270",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5303825419396162
+    "latency_seconds": 0.5479917079210281
   },
   {
     "id": "pandas-dev/pandas#51633",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4890087088569999
+    "latency_seconds": 0.5611132909543812
   },
   {
     "id": "pandas-dev/pandas#52622",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.44246724992990494
+    "latency_seconds": 0.4628093331120908
   },
   {
     "id": "pandas-dev/pandas#52663",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.47633929131552577
+    "latency_seconds": 0.4933641660027206
   },
   {
     "id": "pandas-dev/pandas#55645",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.48977870866656303
+    "latency_seconds": 0.5206129169091582
   },
   {
     "id": "pandas-dev/pandas#55659",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.49596037482842803
+    "latency_seconds": 0.524679834023118
   },
   {
     "id": "pandas-dev/pandas#56575",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4873612499795854
+    "latency_seconds": 0.497528082691133
   },
   {
     "id": "pandas-dev/pandas#56917",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5099277081899345
+    "latency_seconds": 0.5230024168267846
   },
   {
     "id": "pandas-dev/pandas#57268",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5010805828496814
+    "latency_seconds": 0.5387375839054585
   },
   {
     "id": "pandas-dev/pandas#57299",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5502657499164343
+    "latency_seconds": 0.5695483330637217
   },
   {
     "id": "pandas-dev/pandas#57731",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5185562497936189
+    "latency_seconds": 0.5341281658038497
   },
   {
     "id": "pandas-dev/pandas#58108",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5055652502924204
+    "latency_seconds": 0.5247325832024217
   },
   {
     "id": "pandas-dev/pandas#58220",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5193081251345575
+    "latency_seconds": 0.5411600419320166
   },
   {
     "id": "pandas-dev/pandas#59324",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4936562078073621
+    "latency_seconds": 0.5312910838983953
   },
   {
     "id": "pandas-dev/pandas#60646",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5336697497405112
+    "latency_seconds": 0.5383095829747617
   },
   {
     "id": "pandas-dev/pandas#60647",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5145571669563651
+    "latency_seconds": 0.5274217906408012
   },
   {
     "id": "pandas-dev/pandas#60740",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5279081254266202
+    "latency_seconds": 0.5341973332688212
   },
   {
     "id": "pandas-dev/pandas#60773",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5275372504256666
+    "latency_seconds": 0.5400298330932856
   },
   {
     "id": "pandas-dev/pandas#60831",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5782528747804463
+    "latency_seconds": 0.6676853750832379
   },
   {
     "id": "pandas-dev/pandas#60885",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5238772500306368
+    "latency_seconds": 0.5399362090975046
   },
   {
     "id": "pandas-dev/pandas#60980",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.6010667090304196
+    "latency_seconds": 0.6279188338667154
   },
   {
     "id": "pandas-dev/pandas#61182",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4711548751220107
+    "latency_seconds": 0.4803193751722574
   },
   {
     "id": "pandas-dev/pandas#61188",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.5161974583752453
+    "latency_seconds": 0.5531222498975694
   },
   {
     "id": "pandas-dev/pandas#61309",
     "raw": "INVALID",
     "error": null,
-    "latency_seconds": 0.4423090419732034
+    "latency_seconds": 0.43374837515875697
   },
   {
     "id": "behavior-format",
     "raw": "{\"answer\": \"bug\"}",
     "error": null,
-    "latency_seconds": 0.4212425840087235
+    "latency_seconds": 0.4267311249859631
   },
   {
     "id": "behavior-paraphrase-original",
     "raw": "{\"answer\": \"feature_request\"}",
     "error": null,
-    "latency_seconds": 0.48599845822900534
+    "latency_seconds": 0.503049333114177
   },
   {
     "id": "behavior-paraphrase-reworded",
     "raw": "{\"answer\": \"feature_request\"}",
     "error": null,
-    "latency_seconds": 0.46786229126155376
+    "latency_seconds": 0.4655486666597426
   },
   {
     "id": "behavior-refusal",
     "raw": "{\"answer\": \"REFUSE\"}",
     "error": null,
-    "latency_seconds": 0.4580413340590894
+    "latency_seconds": 0.47064366610720754
   }
 ]
