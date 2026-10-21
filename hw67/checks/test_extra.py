@@ -1,5 +1,6 @@
 """Дополнительные проверки; исходный каталог tests/ не изменяется."""
 
+import copy
 import unittest
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
@@ -101,6 +102,80 @@ class AdditionalChecks(unittest.TestCase):
                 promote(client, run, "fixture", "candidate", threshold)
             register.assert_not_called()
             self.assertEqual(client.mock_calls, [])
+
+    def test_exact_model_identity_required(self):
+        adapter = dict(kind="adapter", name="issues", version="1", run_id="a" * 32, uri="models:/issues/1")
+        candidate = report()
+        candidate["model"] = adapter
+        self.assertTrue(quality_gate(report(), candidate, ["class:0"])["passed"])
+        bad_specs = [
+            {"kind": "base"},
+            {"kind": "adapter"},
+            dict(kind="base", name="fixture", revision="main"),
+            dict(kind="base", name=" ", revision="a" * 40),
+            dict(kind="unknown", name="fixture"),
+        ]
+        for key in adapter:
+            spec = dict(adapter)
+            del spec[key]
+            bad_specs.append(spec)
+        for key, value in (("version", "latest"), ("run_id", ""), ("uri", "models:/issues@candidate")):
+            spec = dict(adapter)
+            spec[key] = value
+            bad_specs.append(spec)
+        for spec in bad_specs:
+            with self.subTest(spec=spec), self.assertRaises(ValueError):
+                candidate = report()
+                candidate["model"] = spec
+                quality_gate(report(), candidate, ["class:0"])
+
+    def test_consistent_critical_regression_despite_average_growth(self):
+        baseline, candidate = report(), report()
+        rows = items()
+        # База теряет два ответа вне class:0; кандидат — один внутри class:0.
+        for target, wrong_ids in ((baseline, {"1", "2"}), (candidate, {"0"})):
+            outputs = [
+                dict(
+                    id=r["id"],
+                    raw='{"answer":"question"}' if r["id"] in wrong_ids else '{"answer":"bug"}',
+                    error=None,
+                )
+                for r in rows
+            ]
+            target.update(score(rows, outputs))
+        self.assertGreater(candidate["overall"]["accuracy"], baseline["overall"]["accuracy"])
+        with self.assertRaisesRegex(ValueError, "критического среза class:0"):
+            quality_gate(baseline, candidate, ["class:0"])
+
+    def test_consistent_behavior_failure_rejected(self):
+        candidate = report()
+        behavior = items(4)
+        outputs = [dict(id=r["id"], raw='{"answer":"bug"}', error=None) for r in behavior]
+        outputs[0]["raw"] = '{"answer":"question"}'
+        candidate["behavioral"] = score(behavior, outputs)
+        with self.assertRaisesRegex(ValueError, "behavioral"):
+            quality_gate(report(), candidate, ["class:0"])
+
+    def test_consistent_generation_error_rejected(self):
+        rows = items()
+        for role in ("baseline", "candidate"):
+            baseline, candidate = report(), report()
+            outputs = [dict(id=r["id"], raw='{"answer":"bug"}', error=None) for r in rows]
+            outputs[0].update(raw="", error="timeout")
+            target = baseline if role == "baseline" else candidate
+            target.update(score(rows, outputs))
+            with self.subTest(role=role), self.assertRaisesRegex(ValueError, "ошибки генерации"):
+                quality_gate(baseline, candidate, ["class:0"])
+
+    def test_same_size_but_different_memberships_rejected(self):
+        baseline, candidate = report(), report()
+        rows = copy.deepcopy(items())
+        rows[0]["slices"], rows[1]["slices"] = rows[1]["slices"], rows[0]["slices"]
+        candidate.update(score(rows, [dict(id=r["id"], raw='{"answer":"bug"}', error=None) for r in rows]))
+        self.assertEqual(baseline["overall"], candidate["overall"])
+        self.assertEqual(baseline["slices"], candidate["slices"])
+        with self.assertRaisesRegex(ValueError, "состав срезов"):
+            quality_gate(baseline, candidate, ["class:0"])
 
     def test_negative_or_missing_loss_rejected(self):
         from src.promote import gate

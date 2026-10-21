@@ -22,10 +22,14 @@ def main():
         training_index=train,
         evaluation_code={p.name: p.read_text() for p in sorted(Path("evaluation").glob("*.py"))},
     )
+    candidate_spec = read_json("reports/evaluation/candidate-model.json")
     reports = {}
     for role in ("baseline", "candidate"):
         report = read_json(f"reports/evaluation/{role}-eval.json")
         outputs = read_json(f"reports/evaluation/{role}-outputs.json")
+        expected_model = baseline_spec if role == "baseline" else candidate_spec
+        if report.get("model") != expected_model:
+            raise ValueError(f"{role}: отчёт относится к другой модели")
         by_id = {o["id"]: o for o in outputs}
         if len(by_id) != len(outputs) or set(by_id) != {r["id"] for r in rows + behavior}:
             raise ValueError("Неполный набор ответов")

@@ -2,6 +2,7 @@
 
 import json
 import math
+import re
 
 
 def _unique(items, kind):
@@ -153,6 +154,32 @@ def _validate(report, where):
     return {x["id"]: set(x["slices"]) for x in items}
 
 
+def _model(spec, where):
+    if not isinstance(spec, dict):
+        raise ValueError(f"{where}: не указана модель")
+    kind = spec.get("kind")
+    # Синтетический тип из неизменённых тестов преподавателя.
+    # Реальная обвязка дополнительно сверяет весь spec с baseline.json/реестром.
+    if kind == "fixture":
+        return
+    if kind not in ("base", "adapter"):
+        raise ValueError(f"{where}: неизвестный тип модели")
+    if not isinstance(spec.get("name"), str) or not spec["name"].strip():
+        raise ValueError(f"{where}: отсутствует имя модели")
+    if kind == "base":
+        revision = spec.get("revision")
+        if not isinstance(revision, str) or not re.fullmatch(r"[0-9a-f]{40}", revision):
+            raise ValueError(f"{where}: нужна точная ревизия базовой модели")
+    else:
+        version, run_id = spec.get("version"), spec.get("run_id")
+        if not isinstance(version, str) or not re.fullmatch(r"[1-9][0-9]*", version):
+            raise ValueError(f"{where}: нужна числовая версия адаптера")
+        if not isinstance(run_id, str) or not run_id.strip():
+            raise ValueError(f"{where}: отсутствует точный run_id адаптера")
+        if spec.get("uri") != f"models:/{spec['name']}/{version}":
+            raise ValueError(f"{where}: нужен неизменяемый URI той же версии")
+
+
 def quality_gate(baseline, candidate, critical_slices):
     """Допуск регрессии равен нулю. Проверяем и counts, и каждую строку отчёта."""
     if (
@@ -165,8 +192,7 @@ def quality_gate(baseline, candidate, critical_slices):
     for role, report in (("baseline", baseline), ("candidate", candidate)):
         if not isinstance(report, dict) or report.get("status") != "complete":
             raise ValueError(f"{role}: оценка не завершена")
-        if not isinstance(report.get("model"), dict) or not report["model"].get("kind"):
-            raise ValueError(f"{role}: не указана модель")
+        _model(report.get("model"), role)
         for field in ("protocol_sha256", "golden_sha256", "baseline_spec_sha256"):
             if not isinstance(report.get(field), str) or not report[field]:
                 raise ValueError(f"{role}: нет {field}")

@@ -1,1 +1,1 @@
-{"id":"train-example-001","group_id":"train-spain-capital","input":"Столица Испании: A - Мадрид, B - Рим. choices: A, B, REFUSE."}
+{"id": "microsoft/vscode#151115", "group_id": "issue-family:microsoft/vscode#151115", "input": "Title: VSCode tooltips appearing while typing\n\nDescription:\nMy vscode keeps opening tooltips while typing.\nI'm using `\"editor.hover.enabled\": false` already, but whenever I'm typing within the argument of a python function, it opens a tooltip with definition and examples for that function.\n\nHow can I fix that?"}
