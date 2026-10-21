@@ -60,7 +60,7 @@ uv run python -m scripts.verify_submission
       "accuracy": 1.0,
       "format_rate": 1.0
     },
-    "protocol_sha256": "23e3f14e1956f7328af5879392802294840ef0259ebdd1d739f009dbbfad0469"
+    "protocol_sha256": "f7c8bf45ef575dba55d83287cea1f17b75f55da49b8e5638d90e6f4e809956e5"
   },
   "negative_rejected": true
 }
@@ -91,7 +91,7 @@ test_protocol_or_raw_changes_rejected (test_pipeline.PipelineContract.test_proto
 test_refused_candidate_keeps_alias (test_pipeline.PipelineContract.test_refused_candidate_keeps_alias) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 0.034s
+Ran 24 tests in 0.038s
 
 OK
 Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
@@ -103,19 +103,24 @@ Baseline обновлён явно; старый сохранён. Следую�
 Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
 uv run python -m unittest discover -s checks -p "test_*.py" -v
 test_baseline_generation_errors_also_block_release (test_extra.AdditionalChecks.test_baseline_generation_errors_also_block_release) ... ok
+test_consistent_behavior_failure_rejected (test_extra.AdditionalChecks.test_consistent_behavior_failure_rejected) ... ok
+test_consistent_critical_regression_despite_average_growth (test_extra.AdditionalChecks.test_consistent_critical_regression_despite_average_growth) ... ok
+test_consistent_generation_error_rejected (test_extra.AdditionalChecks.test_consistent_generation_error_rejected) ... ok
 test_duplicate_json_fields_and_nonfinite_are_invalid (test_extra.AdditionalChecks.test_duplicate_json_fields_and_nonfinite_are_invalid) ... ok
 test_error_with_plausible_answer_is_still_failure (test_extra.AdditionalChecks.test_error_with_plausible_answer_is_still_failure) ... ok
+test_exact_model_identity_required (test_extra.AdditionalChecks.test_exact_model_identity_required) ... ok
 test_extra_missing_duplicate_task_and_output_ids (test_extra.AdditionalChecks.test_extra_missing_duplicate_task_and_output_ids) ... ok
-test_loss_gate_before_any_registry_mutation (test_extra.AdditionalChecks.test_loss_gate_before_any_registry_mutation) ... /Users/vitalygubin/Desktop/MLOPS/hw6+7/workspace/audit/clean-repo/hw67/.venv/lib/python3.12/site-packages/mlflow/utils/pydantic_utils.py:33: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.13/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+test_loss_gate_before_any_registry_mutation (test_extra.AdditionalChecks.test_loss_gate_before_any_registry_mutation) ... /Users/vitalygubin/Desktop/MLOPS/hw6+7/workspace/audit/clean-reaudit/hw67/.venv/lib/python3.12/site-packages/mlflow/utils/pydantic_utils.py:33: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.13/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
   return pydantic_model_validator(mode=mode)(func)
-/Users/vitalygubin/Desktop/MLOPS/hw6+7/workspace/audit/clean-repo/hw67/.venv/lib/python3.12/site-packages/mlflow/gateway/config.py:454: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+/Users/vitalygubin/Desktop/MLOPS/hw6+7/workspace/audit/clean-reaudit/hw67/.venv/lib/python3.12/site-packages/mlflow/gateway/config.py:454: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
   class Route(ConfigModel):
 ok
 test_negative_or_missing_loss_rejected (test_extra.AdditionalChecks.test_negative_or_missing_loss_rejected) ... ok
 test_overlapping_slices_do_not_increase_overall_n (test_extra.AdditionalChecks.test_overlapping_slices_do_not_increase_overall_n) ... ok
+test_same_size_but_different_memberships_rejected (test_extra.AdditionalChecks.test_same_size_but_different_memberships_rejected) ... ok
 test_tampered_counts_and_group_membership_rejected (test_extra.AdditionalChecks.test_tampered_counts_and_group_membership_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 10.677s
+Ran 13 tests in 11.566s
 
 OK

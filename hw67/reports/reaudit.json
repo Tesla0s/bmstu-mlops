@@ -31,5 +31,13 @@
   },
   "strengthened_model_identity": true,
   "negative_immutable": true,
-  "note": "Данные, пороги и генерация неизменны; обе модели заново оценены после ужесточения проверки описания модели."
+  "note": "Данные, пороги и генерация неизменны; обе модели заново оценены после ужесточения проверки описания модели.",
+  "clean_clone": {
+    "commit": "7527bc81c3cfc3a05052a924be806b2222f7f282",
+    "fresh_environment": true,
+    "public_data_download": true,
+    "verify_reports": true,
+    "teacher_tests": 24,
+    "additional_tests": 13
+  }
 }
