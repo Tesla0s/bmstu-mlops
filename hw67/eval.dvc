@@ -3,4 +3,4 @@ outs:
   size: 1332321
   nfiles: 4
   hash: md5
-  path: eval
+  path: data/eval

@@ -1,0 +1,22 @@
+{
+  "url": "https://github.com/Tesla0s/bmstu-mlops/releases/download/hw67-data-v1/hw67-evaluation-data.zip",
+  "sha256": "4c49a8aec8935bc56721bbb0f034d4ae5dc7d26f369fb81826a04e9364f1e8b6",
+  "bytes": 923441,
+  "objects": [
+    "180657147d4ec96f45d1c947849248c6",
+    "28367be363ff690e4cf5e45ff5f995b8.dir",
+    "4098ced50302aafa59516b311ae602f5",
+    "449c5d167c1102d5ba4789708b72d64a",
+    "b513c1b8b903a345981996decbc00438.dir",
+    "cf2f5d75284839f51ac22f1f86c748b6",
+    "d41d8cd98f00b204e9800998ecf8427e",
+    "da230ca48c2aa9125a6f45341f528c12",
+    "fbc7d65f227ce803012ebd74995cc140"
+  ],
+  "stages": [
+    "eval.dvc",
+    "origin.dvc",
+    "review-selection.json.dvc"
+  ],
+  "contents": "golden, behavioral, полный train-index, исходные train/val JSONL, разбор меток; без тензоров и весов"
+}
