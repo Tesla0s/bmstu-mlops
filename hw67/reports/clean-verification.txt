@@ -1,0 +1,121 @@
+uv run python -m scripts.data_bundle fetch
+A       data/eval/
+A       data/origin/
+A       data/review-selection.json
+Данные проверки восстановлены; SHA-256 и все DVC-объекты проверены.
+uv run python -m scripts.verify_submission
+{
+  "verified": true,
+  "leakage": {
+    "exact_or_group_intersections": 0,
+    "n_train_index": 1315,
+    "n_golden": 60,
+    "n_behavioral": 4
+  },
+  "baseline": {
+    "n": 60,
+    "correct": 27,
+    "valid": 44,
+    "errors": 0,
+    "accuracy": 0.45,
+    "format_rate": 0.7333333333333333
+  },
+  "candidate": {
+    "n": 60,
+    "correct": 38,
+    "valid": 60,
+    "errors": 0,
+    "accuracy": 0.6333333333333333,
+    "format_rate": 1.0
+  },
+  "decision": {
+    "passed": true,
+    "regression_tolerance": 0,
+    "critical_slices": [
+      "class:bug",
+      "class:feature_request",
+      "class:question"
+    ],
+    "baseline": {
+      "n": 60,
+      "correct": 27,
+      "valid": 44,
+      "errors": 0,
+      "accuracy": 0.45,
+      "format_rate": 0.7333333333333333
+    },
+    "candidate": {
+      "n": 60,
+      "correct": 38,
+      "valid": 60,
+      "errors": 0,
+      "accuracy": 0.6333333333333333,
+      "format_rate": 1.0
+    },
+    "behavioral": {
+      "n": 4,
+      "correct": 4,
+      "valid": 4,
+      "errors": 0,
+      "accuracy": 1.0,
+      "format_rate": 1.0
+    },
+    "protocol_sha256": "23e3f14e1956f7328af5879392802294840ef0259ebdd1d739f009dbbfad0469"
+  },
+  "negative_rejected": true
+}
+uv run python -m unittest discover -s tests -p 'test_*.py' -v
+test_behavioral_failure_rejected (test_eval.GateContract.test_behavioral_failure_rejected) ... ok
+test_critical_regression_despite_average_growth (test_eval.GateContract.test_critical_regression_despite_average_growth) ... ok
+test_equal_passes (test_eval.GateContract.test_equal_passes) ... ok
+test_improvement_passes (test_eval.GateContract.test_improvement_passes) ... ok
+test_missing_critical_slice_rejected (test_eval.GateContract.test_missing_critical_slice_rejected) ... ok
+test_missing_nan_empty_error_and_incompatible_rejected (test_eval.GateContract.test_missing_nan_empty_error_and_incompatible_rejected) ... ok
+test_regression_rejected (test_eval.GateContract.test_regression_rejected) ... ok
+test_clean_data (test_eval.LeakageContract.test_clean_data) ... ok
+test_duplicate_golden_questions_rejected (test_eval.LeakageContract.test_duplicate_golden_questions_rejected) ... ok
+test_exact_overlap (test_eval.LeakageContract.test_exact_overlap) ... ok
+test_group_overlap (test_eval.LeakageContract.test_group_overlap) ... ok
+test_too_small_or_missing_behavior (test_eval.LeakageContract.test_too_small_or_missing_behavior) ... ok
+test_no_registry_mutation_when_gate_rejects (test_eval.PromotionContract.test_no_registry_mutation_when_gate_rejects) ... ok
+test_accuracy_uses_all_questions (test_eval.ScoreContract.test_accuracy_uses_all_questions) ... ok
+test_missing_duplicate_empty_rejected (test_eval.ScoreContract.test_missing_duplicate_empty_rejected) ... ok
+test_reordered_outputs_are_matched_by_id (test_eval.ScoreContract.test_reordered_outputs_are_matched_by_id) ... ok
+test_slice_counts_and_per_item (test_eval.ScoreContract.test_slice_counts_and_per_item) ... ok
+test_strict_json_and_label (test_eval.ScoreContract.test_strict_json_and_label) ... ok
+test_wrong_label_is_valid_but_incorrect (test_eval.ScoreContract.test_wrong_label_is_valid_but_incorrect) ... ok
+test_baseline_init_refuses_overwrite (test_pipeline.PipelineContract.test_baseline_init_refuses_overwrite) ... ok
+test_negative_check_does_not_mutate_model_or_alias (test_pipeline.PipelineContract.test_negative_check_does_not_mutate_model_or_alias) ... ok
+test_pass_release_and_explicit_baseline_update (test_pipeline.PipelineContract.test_pass_release_and_explicit_baseline_update) ... ok
+test_protocol_or_raw_changes_rejected (test_pipeline.PipelineContract.test_protocol_or_raw_changes_rejected) ... ok
+test_refused_candidate_keeps_alias (test_pipeline.PipelineContract.test_refused_candidate_keeps_alias) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.034s
+
+OK
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+PASS: испорченные ответы отклонены, alias не менялся
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+champion -> models:/fixture-model/2
+Baseline обновлён явно; старый сохранён. Следующая оценка сравнит с принятой версией
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+uv run python -m unittest discover -s checks -p "test_*.py" -v
+test_baseline_generation_errors_also_block_release (test_extra.AdditionalChecks.test_baseline_generation_errors_also_block_release) ... ok
+test_duplicate_json_fields_and_nonfinite_are_invalid (test_extra.AdditionalChecks.test_duplicate_json_fields_and_nonfinite_are_invalid) ... ok
+test_error_with_plausible_answer_is_still_failure (test_extra.AdditionalChecks.test_error_with_plausible_answer_is_still_failure) ... ok
+test_extra_missing_duplicate_task_and_output_ids (test_extra.AdditionalChecks.test_extra_missing_duplicate_task_and_output_ids) ... ok
+test_loss_gate_before_any_registry_mutation (test_extra.AdditionalChecks.test_loss_gate_before_any_registry_mutation) ... /Users/vitalygubin/Desktop/MLOPS/hw6+7/workspace/audit/clean-repo/hw67/.venv/lib/python3.12/site-packages/mlflow/utils/pydantic_utils.py:33: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.13/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+  return pydantic_model_validator(mode=mode)(func)
+/Users/vitalygubin/Desktop/MLOPS/hw6+7/workspace/audit/clean-repo/hw67/.venv/lib/python3.12/site-packages/mlflow/gateway/config.py:454: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+  class Route(ConfigModel):
+ok
+test_negative_or_missing_loss_rejected (test_extra.AdditionalChecks.test_negative_or_missing_loss_rejected) ... ok
+test_overlapping_slices_do_not_increase_overall_n (test_extra.AdditionalChecks.test_overlapping_slices_do_not_increase_overall_n) ... ok
+test_tampered_counts_and_group_membership_rejected (test_extra.AdditionalChecks.test_tampered_counts_and_group_membership_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 10.677s
+
+OK

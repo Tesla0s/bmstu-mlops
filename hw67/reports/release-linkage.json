@@ -1,0 +1,14 @@
+{
+  "name": "github-issue-qwen-adapter",
+  "version": "1",
+  "run_id": "c21ef017fc9a475ebdb8ab9e279fd2fb",
+  "tags": {
+    "val_ratio": "0.46012928639554057",
+    "gate.max_val_ratio": "1.0",
+    "validation": "passed",
+    "evaluation_run_id": "a0c13ddda50243629ce68dfae4ad4589",
+    "evaluation.protocol_sha256": "23e3f14e1956f7328af5879392802294840ef0259ebdd1d739f009dbbfad0469",
+    "quality_gate": "passed",
+    "author": "Губин Виталий Андреевич, ИУ6-74Б"
+  }
+}
