@@ -1,0 +1,4 @@
+[core]
+    remote = local
+['remote "local"']
+    url = ../../../../hw6+7/workspace/dvc_remote

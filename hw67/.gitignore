@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.cache/
+.ruff_cache/
+data/*
+!data/*.dvc
+!data/.gitignore
+models/
+metrics/
+mlruns/
+mlartifacts/
+*.log
+.DS_Store
