@@ -15,8 +15,8 @@ PostgreSQL уже имел volume, но каталог /mlartifacts находи
 Добавлено именованное хранилище artifacts:/mlartifacts. Метаданные и файлы сохраняются отдельно.
 Штатный make check-storage действительно заменил контейнер через --force-recreate;
 идентификаторы до/после различаются: [проверка](../reports/container-recreation.json).
-Затем скачан тот же probe-файл; SHA-256 fc5db5c95dbba9b40474b7cd540d36e56277f6596fcd7bdca3896bd7a1c99149.
-Run хранения: [c15d107f093f4a6aacf49f18747144a0](http://127.0.0.1:5006/#/experiments/1/runs/c15d107f093f4a6aacf49f18747144a0).
+Затем скачан тот же probe-файл; SHA-256 89064271061e62ac16f7f8ff22a3f1581e99dd978f10a41ce35f0e66796df578.
+Run хранения: [47d16cccef594bd6bfae72491c392e42](http://127.0.0.1:5006/#/experiments/1/runs/47d16cccef594bd6bfae72491c392e42).
 Выполнялся не просто restart; volumes не удалялись.
 
 ## 3. Из происхождения удалялись версии train/val

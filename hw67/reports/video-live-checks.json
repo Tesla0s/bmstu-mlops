@@ -1,0 +1,19 @@
+{
+  "recorded_terminal_seconds": 144.89290875010192,
+  "live_storage": {
+    "before": "2af43ae8703fa2d2f57e37d8f772c7cefefc156d81b9598e5da843435c8d986c",
+    "after": "b3cd6861fdd20eb87bbe82fc1a4f177222db0ba3b63c3133d2e8b869138a318b",
+    "recreated": true,
+    "storage_check": {
+      "run_id": "47d16cccef594bd6bfae72491c392e42",
+      "sha256": "89064271061e62ac16f7f8ff22a3f1581e99dd978f10a41ce35f0e66796df578",
+      "compose_sha256": "8c05f7a6868b88476eb4304b510515bcde083a0b588323f70f58a170b11a80f9",
+      "project": "mlops-hw6"
+    }
+  },
+  "teacher_checks": "9/9",
+  "teacher_unit_tests": 24,
+  "additional_unit_tests": 13,
+  "original_tests_fingerprint": "c42ac7788026",
+  "note": "Повторные реальные проверки во время записи; полный видеоролик хранится отдельно от Git."
+}
