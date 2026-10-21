@@ -1,0 +1,187 @@
+{
+  "video_file": "hw67-gubin.mp4",
+  "duration_seconds": 441.13,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "frames_per_second": 15,
+  "size_bytes": 22349620,
+  "sha256": "ccf26bf1522304e776d87f0964d50fb430fbc80ed114d41b2030e5c05a1c7db3",
+  "recorded_code_commit": "6abe90d824ae1ba92f7b3bb72fe891ec59f81daa",
+  "recorded_browser_commit": "e108d3fb2cb53f3ca454d014cbeebb072d83eb71",
+  "live_commands": "Реальные команды и данные; результаты повторных проверок — video-live-checks.json.",
+  "full_decode_success": true,
+  "video_frames_decoded": 6617,
+  "video_and_audio_timestamps_continuous": true,
+  "black_intervals": [],
+  "final_file_frames_visually_reviewed": 42,
+  "browser_scenes_preserved": 26,
+  "documents": {
+    "defects": {
+      "views": 4,
+      "end_confirmed": true,
+      "minimum_overlap_native_pixels": 480
+    },
+    "conclusion": {
+      "views": 13,
+      "end_confirmed": true,
+      "minimum_overlap_native_pixels": 478
+    }
+  },
+  "audio": {
+    "source": "Crystal-castles-bathroom-effect-mix.m4a",
+    "offset_seconds": 637,
+    "cut_at_end": true,
+    "start_correlation": 0.9999324906461569,
+    "source_pause_in_video_seconds": [
+      240.581655,
+      243.138005
+    ],
+    "note": "Пауза присутствует в исходном миксе; новых пауз монтаж не добавляет."
+  },
+  "content_coverage": [
+    {
+      "requirement": "Автор",
+      "verified": true,
+      "sample_timestamps": [
+        "00:01"
+      ]
+    },
+    {
+      "requirement": "Собственные данные и утечки",
+      "verified": true,
+      "sample_timestamps": [
+        "00:07"
+      ]
+    },
+    {
+      "requirement": "Все шесть измеренных запусков",
+      "verified": true,
+      "sample_timestamps": [
+        "00:20"
+      ]
+    },
+    {
+      "requirement": "Единый протокол",
+      "verified": true,
+      "sample_timestamps": [
+        "00:36"
+      ]
+    },
+    {
+      "requirement": "Положительный допуск",
+      "verified": true,
+      "sample_timestamps": [
+        "00:49"
+      ]
+    },
+    {
+      "requirement": "Отказ на испорченной копии",
+      "verified": true,
+      "sample_timestamps": [
+        "01:05"
+      ]
+    },
+    {
+      "requirement": "Сохранность при пересоздании",
+      "verified": true,
+      "sample_timestamps": [
+        "01:31"
+      ]
+    },
+    {
+      "requirement": "Загрузка и 9 проверок",
+      "verified": true,
+      "sample_timestamps": [
+        "01:53"
+      ]
+    },
+    {
+      "requirement": "Исходные и дополнительные тесты",
+      "verified": true,
+      "sample_timestamps": [
+        "02:06"
+      ]
+    },
+    {
+      "requirement": "Реестр модели",
+      "verified": true,
+      "sample_timestamps": [
+        "02:49",
+        "03:07"
+      ]
+    },
+    {
+      "requirement": "Все четыре графика",
+      "verified": true,
+      "sample_timestamps": [
+        "03:22",
+        "03:32"
+      ]
+    },
+    {
+      "requirement": "Исходные файлы оценки",
+      "verified": true,
+      "sample_timestamps": [
+        "03:42"
+      ]
+    },
+    {
+      "requirement": "Четыре исправления и конец документа",
+      "verified": true,
+      "sample_timestamps": [
+        "03:54",
+        "04:06",
+        "04:17",
+        "04:29"
+      ]
+    },
+    {
+      "requirement": "Все срезы и счётчики",
+      "verified": true,
+      "sample_timestamps": [
+        "05:14"
+      ]
+    },
+    {
+      "requirement": "Пять разобранных пар",
+      "verified": true,
+      "sample_timestamps": [
+        "05:23",
+        "05:33",
+        "05:42",
+        "05:52",
+        "06:01",
+        "06:10"
+      ]
+    },
+    {
+      "requirement": "Ограничения и конец заключения",
+      "verified": true,
+      "sample_timestamps": [
+        "06:29",
+        "06:39"
+      ]
+    },
+    {
+      "requirement": "График целиком",
+      "verified": true,
+      "sample_timestamps": [
+        "06:52"
+      ]
+    },
+    {
+      "requirement": "Опубликованный комплект",
+      "verified": true,
+      "sample_timestamps": [
+        "07:08"
+      ]
+    }
+  ],
+  "notes": [
+    "Видео отправляется отдельно; медиафайл и музыкальный трек не включены в Git.",
+    "Документы показаны с перекрытием соседних экранов; отдельно проверены последние абзацы, полная таблица срезов, график и оба монтажных стыка.",
+    "Отрицательный тест показывает ожидаемый отказ допуска, а не ошибку реализации."
+  ]
+}
