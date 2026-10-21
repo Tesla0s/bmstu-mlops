@@ -1,0 +1,11 @@
+{
+  "model": {
+    "kind": "adapter",
+    "name": "github-issue-qwen-adapter",
+    "version": "1",
+    "run_id": "c21ef017fc9a475ebdb8ab9e279fd2fb",
+    "uri": "models:/github-issue-qwen-adapter/1"
+  },
+  "evaluation_run_id": "a0c13ddda50243629ce68dfae4ad4589",
+  "protocol_sha256": "23e3f14e1956f7328af5879392802294840ef0259ebdd1d739f009dbbfad0469"
+}

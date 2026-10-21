@@ -1,0 +1,17 @@
+test_baseline_generation_errors_also_block_release (test_extra.AdditionalChecks.test_baseline_generation_errors_also_block_release) ... ok
+test_duplicate_json_fields_and_nonfinite_are_invalid (test_extra.AdditionalChecks.test_duplicate_json_fields_and_nonfinite_are_invalid) ... ok
+test_error_with_plausible_answer_is_still_failure (test_extra.AdditionalChecks.test_error_with_plausible_answer_is_still_failure) ... ok
+test_extra_missing_duplicate_task_and_output_ids (test_extra.AdditionalChecks.test_extra_missing_duplicate_task_and_output_ids) ... ok
+test_loss_gate_before_any_registry_mutation (test_extra.AdditionalChecks.test_loss_gate_before_any_registry_mutation) ... /Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw67/.venv/lib/python3.12/site-packages/mlflow/utils/pydantic_utils.py:33: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.13/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+  return pydantic_model_validator(mode=mode)(func)
+/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw67/.venv/lib/python3.12/site-packages/mlflow/gateway/config.py:454: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+  class Route(ConfigModel):
+ok
+test_negative_or_missing_loss_rejected (test_extra.AdditionalChecks.test_negative_or_missing_loss_rejected) ... ok
+test_overlapping_slices_do_not_increase_overall_n (test_extra.AdditionalChecks.test_overlapping_slices_do_not_increase_overall_n) ... ok
+test_tampered_counts_and_group_membership_rejected (test_extra.AdditionalChecks.test_tampered_counts_and_group_membership_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.077s
+
+OK

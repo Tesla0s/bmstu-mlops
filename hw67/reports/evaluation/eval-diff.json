@@ -1,0 +1,19 @@
+{
+  "improved": [
+    "microsoft/vscode#232527",
+    "microsoft/vscode#281844",
+    "pandas-dev/pandas#52622",
+    "pandas-dev/pandas#58220",
+    "pandas-dev/pandas#60646",
+    "pandas-dev/pandas#60647",
+    "pandas-dev/pandas#60773",
+    "pandas-dev/pandas#60831",
+    "pandas-dev/pandas#60885",
+    "pandas-dev/pandas#61182",
+    "pandas-dev/pandas#61188",
+    "pandas-dev/pandas#61309"
+  ],
+  "regressed": [
+    "pandas-dev/pandas#58108"
+  ]
+}

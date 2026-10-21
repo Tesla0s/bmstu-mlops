@@ -1,0 +1,9 @@
+{
+  "name": "github-issue-qwen-adapter",
+  "aliases": {
+    "candidate": "1",
+    "champion": "1"
+  },
+  "version": "1",
+  "run_id": "c21ef017fc9a475ebdb8ab9e279fd2fb"
+}

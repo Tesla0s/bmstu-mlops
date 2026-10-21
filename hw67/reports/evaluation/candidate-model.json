@@ -1,0 +1,7 @@
+{
+  "kind": "adapter",
+  "name": "github-issue-qwen-adapter",
+  "version": "1",
+  "run_id": "c21ef017fc9a475ebdb8ab9e279fd2fb",
+  "uri": "models:/github-issue-qwen-adapter/1"
+}

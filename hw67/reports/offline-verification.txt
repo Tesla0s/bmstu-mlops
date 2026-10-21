@@ -1,0 +1,65 @@
+uv run python -m scripts.verify_submission
+{
+  "verified": true,
+  "leakage": {
+    "exact_or_group_intersections": 0,
+    "n_train_index": 1315,
+    "n_golden": 60,
+    "n_behavioral": 4
+  },
+  "baseline": {
+    "n": 60,
+    "correct": 27,
+    "valid": 44,
+    "errors": 0,
+    "accuracy": 0.45,
+    "format_rate": 0.7333333333333333
+  },
+  "candidate": {
+    "n": 60,
+    "correct": 38,
+    "valid": 60,
+    "errors": 0,
+    "accuracy": 0.6333333333333333,
+    "format_rate": 1.0
+  },
+  "decision": {
+    "passed": true,
+    "regression_tolerance": 0,
+    "critical_slices": [
+      "class:bug",
+      "class:feature_request",
+      "class:question"
+    ],
+    "baseline": {
+      "n": 60,
+      "correct": 27,
+      "valid": 44,
+      "errors": 0,
+      "accuracy": 0.45,
+      "format_rate": 0.7333333333333333
+    },
+    "candidate": {
+      "n": 60,
+      "correct": 38,
+      "valid": 60,
+      "errors": 0,
+      "accuracy": 0.6333333333333333,
+      "format_rate": 1.0
+    },
+    "behavioral": {
+      "n": 4,
+      "correct": 4,
+      "valid": 4,
+      "errors": 0,
+      "accuracy": 1.0,
+      "format_rate": 1.0
+    },
+    "protocol_sha256": "23e3f14e1956f7328af5879392802294840ef0259ebdd1d739f009dbbfad0469"
+  },
+  "negative_rejected": true
+}
+uv run ruff check src evaluation scripts checks
+All checks passed!
+uv run ruff format --check src evaluation scripts checks
+22 files already formatted

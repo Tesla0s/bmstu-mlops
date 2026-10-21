@@ -1,0 +1,81 @@
+bash tests/check.sh
+PASS 1. Минимум шесть отдельных законченных runs
+PASS 2. Код, данные, конфиг и база имеют версии
+PASS 3. Конфигурации и кривые соответствуют бюджету
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 14665.40it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 7449.92it/s] 
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 407.49it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 398.09it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 349.55it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 343.77it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 441.09it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 430.32it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 494.79it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 483.77it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 515.78it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 505.64it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 357.91it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 352.26it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 493.10it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 481.50it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 418.59it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 410.56it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 471.01it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 460.41it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 413.39it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 405.40it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 514.64it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 500.75it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 492.87it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 483.33it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 458.44it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 448.97it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 348.08it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 343.06it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 464.23it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 455.16it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 490.45it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 478.64it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 484.27it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 474.42it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 393.09it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 386.43it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 494.26it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 484.72it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 514.64it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 503.22it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 481.00it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 470.37it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 388.79it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 381.54it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 511.50it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 500.22it/s]
+PASS 4. Реальный адаптер, токенизатор, signature и пример входа
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 524.09it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 512.25it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 546.13it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 532.14it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 529.38it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 518.39it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 531.13it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 520.39it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 545.57it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 532.75it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 538.84it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 527.45it/s]
+PASS 5. Одинаковые промпты и непустые примеры генерации
+PASS 6. Запрет регистрации при непройденном пороге
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 533.29it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 520.32it/s]
+PASS 7. Загрузка из реестра в новом процессе, без локального конфига
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 456.40it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 440.35it/s]
+PASS 8. Артефакт пережил пересоздание контейнера
+PASS 9. Есть сравнение, вывод и разбор дефектов (смысл проверяет преподаватель)
+Итог: 9/9
+Отпечаток всех файлов tests/: c42ac7788026
+uv run python -m unittest discover -s tests -p 'test_*.py' -v
+test_behavioral_failure_rejected (test_eval.GateContract.test_behavioral_failure_rejected) ... ok
+test_critical_regression_despite_average_growth (test_eval.GateContract.test_critical_regression_despite_average_growth) ... ok
+test_equal_passes (test_eval.GateContract.test_equal_passes) ... ok
+test_improvement_passes (test_eval.GateContract.test_improvement_passes) ... ok
+test_missing_critical_slice_rejected (test_eval.GateContract.test_missing_critical_slice_rejected) ... ok
+test_missing_nan_empty_error_and_incompatible_rejected (test_eval.GateContract.test_missing_nan_empty_error_and_incompatible_rejected) ... ok
+test_regression_rejected (test_eval.GateContract.test_regression_rejected) ... ok
+test_clean_data (test_eval.LeakageContract.test_clean_data) ... ok
+test_duplicate_golden_questions_rejected (test_eval.LeakageContract.test_duplicate_golden_questions_rejected) ... ok
+test_exact_overlap (test_eval.LeakageContract.test_exact_overlap) ... ok
+test_group_overlap (test_eval.LeakageContract.test_group_overlap) ... ok
+test_too_small_or_missing_behavior (test_eval.LeakageContract.test_too_small_or_missing_behavior) ... ok
+test_no_registry_mutation_when_gate_rejects (test_eval.PromotionContract.test_no_registry_mutation_when_gate_rejects) ... ok
+test_accuracy_uses_all_questions (test_eval.ScoreContract.test_accuracy_uses_all_questions) ... ok
+test_missing_duplicate_empty_rejected (test_eval.ScoreContract.test_missing_duplicate_empty_rejected) ... ok
+test_reordered_outputs_are_matched_by_id (test_eval.ScoreContract.test_reordered_outputs_are_matched_by_id) ... ok
+test_slice_counts_and_per_item (test_eval.ScoreContract.test_slice_counts_and_per_item) ... ok
+test_strict_json_and_label (test_eval.ScoreContract.test_strict_json_and_label) ... ok
+test_wrong_label_is_valid_but_incorrect (test_eval.ScoreContract.test_wrong_label_is_valid_but_incorrect) ... ok
+test_baseline_init_refuses_overwrite (test_pipeline.PipelineContract.test_baseline_init_refuses_overwrite) ... ok
+test_negative_check_does_not_mutate_model_or_alias (test_pipeline.PipelineContract.test_negative_check_does_not_mutate_model_or_alias) ... ok
+test_pass_release_and_explicit_baseline_update (test_pipeline.PipelineContract.test_pass_release_and_explicit_baseline_update) ... ok
+test_protocol_or_raw_changes_rejected (test_pipeline.PipelineContract.test_protocol_or_raw_changes_rejected) ... ok
+test_refused_candidate_keeps_alias (test_pipeline.PipelineContract.test_refused_candidate_keeps_alias) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.032s
+
+OK
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+PASS: испорченные ответы отклонены, alias не менялся
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+champion -> models:/fixture-model/2
+Baseline обновлён явно; старый сохранён. Следующая оценка сравнит с принятой версией
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote

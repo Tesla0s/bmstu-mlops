@@ -41,3 +41,22 @@ baseline-update:
 	uv run python -m evaluation.cli baseline-update
 predict-candidate:
 	uv run python -m src.predict --uri models:/github-issue-qwen-adapter@candidate --prompt "Title: Add CSV export. Description: Please add a new export command."
+
+.PHONY: fetch-eval prepare verify-reports check-extra lint
+fetch-eval:
+	uv run python -m scripts.data_bundle fetch
+prepare:
+	uv run python -m scripts.prepare_inputs
+verify-reports:
+	uv run python -m scripts.verify_submission
+check-extra:
+	uv run python -m unittest discover -s checks -p "test_*.py" -v
+lint:
+	uv run ruff check src evaluation scripts checks
+	uv run ruff format --check src evaluation scripts checks
+
+.PHONY: check-negative-consistent export-evidence
+check-negative-consistent:
+	uv run python -m scripts.check_negative_consistent
+export-evidence:
+	uv run python -m scripts.export_evidence

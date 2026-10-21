@@ -1,0 +1,386 @@
+[
+  {
+    "id": "microsoft/vscode#232527",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.5223899581469595
+  },
+  {
+    "id": "microsoft/vscode#233467",
+    "raw": "{\"answer\": \"question\"}",
+    "error": null,
+    "latency_seconds": 0.37239724956452847
+  },
+  {
+    "id": "microsoft/vscode#233541",
+    "raw": "{\"answer\": \"question\"}",
+    "error": null,
+    "latency_seconds": 0.42880937503650784
+  },
+  {
+    "id": "microsoft/vscode#234324",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.45050441566854715
+  },
+  {
+    "id": "microsoft/vscode#236985",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.45474829198792577
+  },
+  {
+    "id": "microsoft/vscode#237223",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.5678372080437839
+  },
+  {
+    "id": "microsoft/vscode#241447",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.4359473749063909
+  },
+  {
+    "id": "microsoft/vscode#241531",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.33015641616657376
+  },
+  {
+    "id": "microsoft/vscode#243627",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.4647826668806374
+  },
+  {
+    "id": "microsoft/vscode#243633",
+    "raw": "{\n  \"answer\": \"feature_request\"\n}",
+    "error": null,
+    "latency_seconds": 0.6023230832070112
+  },
+  {
+    "id": "microsoft/vscode#276636",
+    "raw": "{\n  \"answer\": \"feature_request\"\n}",
+    "error": null,
+    "latency_seconds": 0.6261287089437246
+  },
+  {
+    "id": "microsoft/vscode#276658",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.3707202081568539
+  },
+  {
+    "id": "microsoft/vscode#276955",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.4222235418856144
+  },
+  {
+    "id": "microsoft/vscode#277055",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.46761591685935855
+  },
+  {
+    "id": "microsoft/vscode#277286",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.3819895419292152
+  },
+  {
+    "id": "microsoft/vscode#277511",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.39562108274549246
+  },
+  {
+    "id": "microsoft/vscode#277799",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.44311424996703863
+  },
+  {
+    "id": "microsoft/vscode#277905",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.42378312535583973
+  },
+  {
+    "id": "microsoft/vscode#278404",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.33794954186305404
+  },
+  {
+    "id": "microsoft/vscode#280206",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.34802983282133937
+  },
+  {
+    "id": "microsoft/vscode#281844",
+    "raw": "```json\n{\n  \"answer\": \"bug\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.7403956251218915
+  },
+  {
+    "id": "microsoft/vscode#281915",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.3516003331169486
+  },
+  {
+    "id": "microsoft/vscode#281924",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.3993775830604136
+  },
+  {
+    "id": "microsoft/vscode#282035",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.3496759170666337
+  },
+  {
+    "id": "microsoft/vscode#282081",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.41722187492996454
+  },
+  {
+    "id": "microsoft/vscode#282113",
+    "raw": "{\n  \"answer\": \"feature_request\"\n}",
+    "error": null,
+    "latency_seconds": 0.5467233331874013
+  },
+  {
+    "id": "microsoft/vscode#282117",
+    "raw": "{\n  \"answer\": \"feature_request\"\n}",
+    "error": null,
+    "latency_seconds": 0.630180333275348
+  },
+  {
+    "id": "microsoft/vscode#282118",
+    "raw": "{\n  \"answer\": \"REFUSE\"\n}",
+    "error": null,
+    "latency_seconds": 0.5130123333074152
+  },
+  {
+    "id": "microsoft/vscode#282812",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.37619245890527964
+  },
+  {
+    "id": "microsoft/vscode#283220",
+    "raw": "{\n  \"answer\": \"bug\"\n}",
+    "error": null,
+    "latency_seconds": 0.48370612505823374
+  },
+  {
+    "id": "pandas-dev/pandas#46088",
+    "raw": "{\"answer\": \"REFUSE\"}",
+    "error": null,
+    "latency_seconds": 0.4517226251773536
+  },
+  {
+    "id": "pandas-dev/pandas#46237",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.42555862525478005
+  },
+  {
+    "id": "pandas-dev/pandas#47484",
+    "raw": "```json\n{\n  \"answer\": \"feature_request\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.893240958917886
+  },
+  {
+    "id": "pandas-dev/pandas#47593",
+    "raw": "{\n  \"answer\": \"feature_request\"\n}",
+    "error": null,
+    "latency_seconds": 0.5556720411404967
+  },
+  {
+    "id": "pandas-dev/pandas#47969",
+    "raw": "```json\n{\n  \"answer\": \"BUG\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.8517599999904633
+  },
+  {
+    "id": "pandas-dev/pandas#51062",
+    "raw": "```json\n{\n  \"answer\": \"feature_request\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.8089891253039241
+  },
+  {
+    "id": "pandas-dev/pandas#51270",
+    "raw": "{\"answer\": \"REFUSE\"}",
+    "error": null,
+    "latency_seconds": 0.4288275418803096
+  },
+  {
+    "id": "pandas-dev/pandas#51633",
+    "raw": "```json\n{\"answer\": \"feature_request\"}\n```",
+    "error": null,
+    "latency_seconds": 0.5405413745902479
+  },
+  {
+    "id": "pandas-dev/pandas#52622",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.4321307078935206
+  },
+  {
+    "id": "pandas-dev/pandas#52663",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.38121104100719094
+  },
+  {
+    "id": "pandas-dev/pandas#55645",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.3751187496818602
+  },
+  {
+    "id": "pandas-dev/pandas#55659",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.39318020921200514
+  },
+  {
+    "id": "pandas-dev/pandas#56575",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.42615120811387897
+  },
+  {
+    "id": "pandas-dev/pandas#56917",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.5583662912249565
+  },
+  {
+    "id": "pandas-dev/pandas#57268",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.4357969998382032
+  },
+  {
+    "id": "pandas-dev/pandas#57299",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.47068579168990254
+  },
+  {
+    "id": "pandas-dev/pandas#57731",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.4259693748317659
+  },
+  {
+    "id": "pandas-dev/pandas#58108",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.4629158340394497
+  },
+  {
+    "id": "pandas-dev/pandas#58220",
+    "raw": "```json\n{\"answer\": \"feature_request\"}\n```",
+    "error": null,
+    "latency_seconds": 0.6958639579825103
+  },
+  {
+    "id": "pandas-dev/pandas#59324",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.39899558294564486
+  },
+  {
+    "id": "pandas-dev/pandas#60646",
+    "raw": "```json\n{\n  \"answer\": \"bug\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.8082643747329712
+  },
+  {
+    "id": "pandas-dev/pandas#60647",
+    "raw": "```json\n{\n  \"answer\": \"bug\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.7224845420569181
+  },
+  {
+    "id": "pandas-dev/pandas#60740",
+    "raw": "```json\n{\n  \"answer\": \"feature_request\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.7186267906799912
+  },
+  {
+    "id": "pandas-dev/pandas#60773",
+    "raw": "```json\n{\n  \"answer\": \"bug\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.7795328754000366
+  },
+  {
+    "id": "pandas-dev/pandas#60831",
+    "raw": "```json\n{\"answer\": \"bug\"}\n```",
+    "error": null,
+    "latency_seconds": 0.761349834036082
+  },
+  {
+    "id": "pandas-dev/pandas#60885",
+    "raw": "```json\n{\n  \"answer\": \"bug\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.7259562080726027
+  },
+  {
+    "id": "pandas-dev/pandas#60980",
+    "raw": "```json\n{\n  \"answer\": \"feature_request\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.9170745830051601
+  },
+  {
+    "id": "pandas-dev/pandas#61182",
+    "raw": "```json\n{\"answer\": \"bug\"}\n```",
+    "error": null,
+    "latency_seconds": 0.5443471660837531
+  },
+  {
+    "id": "pandas-dev/pandas#61188",
+    "raw": "```json\n{\n  \"answer\": \"bug\"\n}\n```",
+    "error": null,
+    "latency_seconds": 0.858202041592449
+  },
+  {
+    "id": "pandas-dev/pandas#61309",
+    "raw": "```json\n{\"answer\": \"bug\"}\n```",
+    "error": null,
+    "latency_seconds": 0.46848933305591345
+  },
+  {
+    "id": "behavior-format",
+    "raw": "{\"answer\": \"bug\"}",
+    "error": null,
+    "latency_seconds": 0.4395750421099365
+  },
+  {
+    "id": "behavior-paraphrase-original",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.37862466694787145
+  },
+  {
+    "id": "behavior-paraphrase-reworded",
+    "raw": "{\"answer\": \"feature_request\"}",
+    "error": null,
+    "latency_seconds": 0.40838766703382134
+  },
+  {
+    "id": "behavior-refusal",
+    "raw": "{\n  \"answer\": \"REFUSE\"\n}",
+    "error": null,
+    "latency_seconds": 0.6453012502752244
+  }
+]

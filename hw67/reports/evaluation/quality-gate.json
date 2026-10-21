@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "regression_tolerance": 0,
+  "critical_slices": [
+    "class:bug",
+    "class:feature_request",
+    "class:question"
+  ],
+  "baseline": {
+    "n": 60,
+    "correct": 27,
+    "valid": 44,
+    "errors": 0,
+    "accuracy": 0.45,
+    "format_rate": 0.7333333333333333
+  },
+  "candidate": {
+    "n": 60,
+    "correct": 38,
+    "valid": 60,
+    "errors": 0,
+    "accuracy": 0.6333333333333333,
+    "format_rate": 1.0
+  },
+  "behavioral": {
+    "n": 4,
+    "correct": 4,
+    "valid": 4,
+    "errors": 0,
+    "accuracy": 1.0,
+    "format_rate": 1.0
+  },
+  "protocol_sha256": "23e3f14e1956f7328af5879392802294840ef0259ebdd1d739f009dbbfad0469"
+}

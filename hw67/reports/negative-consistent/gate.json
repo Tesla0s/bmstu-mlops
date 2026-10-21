@@ -1,0 +1,7 @@
+{
+  "rejected": true,
+  "reason": "Регрессия общей accuracy",
+  "metrics_recomputed_from_raw": true,
+  "original_outputs_unchanged": true,
+  "note": "Согласованные counts; отказ именно из-за падения accuracy."
+}
