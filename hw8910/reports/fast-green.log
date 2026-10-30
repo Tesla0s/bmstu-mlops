@@ -13,7 +13,7 @@ test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_re
 test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 0.010s
+Ran 13 tests in 0.008s
 
 OK
 test_01_recovery_and_cache_invalidation_in_new_process (test_integration.IntegrationTests.test_01_recovery_and_cache_invalidation_in_new_process) ... ok
@@ -25,7 +25,29 @@ test_06_http_invalid_requests_do_not_call_backend (test_integration.IntegrationT
 test_07_atomic_replace_failure_in_separate_process (test_integration.IntegrationTests.test_07_atomic_replace_failure_in_separate_process) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 22.067s
+Ran 7 tests in 23.628s
 
 OK
-FAST_CHECK_EXIT_CODES [0, 0]
+test_http_body_limit_with_and_without_content_length (test_robustness.FilesAndHTTP.test_http_body_limit_with_and_without_content_length) ... Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpgj_uz7h4/fixture
+ok
+test_http_corrupt_artifact_never_becomes_ready (test_robustness.FilesAndHTTP.test_http_corrupt_artifact_never_becomes_ready) ... Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpwv0k4fam/fixture
+ok
+test_recovery_after_journal_written_but_history_failed (test_robustness.FilesAndHTTP.test_recovery_after_journal_written_but_history_failed) ... Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp92en1d9y/fixture
+RECOVERED_JOURNAL cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+ALREADY_PUBLISHED fixture-B cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+ok
+test_rejected_and_incomplete_reports_are_preserved_byte_for_byte (test_robustness.FilesAndHTTP.test_rejected_and_incomplete_reports_are_preserved_byte_for_byte) ... Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpvp_w22ty/fixture
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpvp_w22ty/fixture/rejections/82384058-fa9f-4509-a5de-774c2a7ec39f/decision.json
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpvp_w22ty/fixture/rejections/a93b5b6c-9641-46cd-b295-0b39273e48d8/decision.json
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpvp_w22ty/fixture/rejections/3c198910-3b89-495a-9114-ffe2ad698b76/decision.json
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpvp_w22ty/fixture/rejections/3bbae793-0ae9-4e32-b043-47bc8f03351a/decision.json
+ok
+test_cancelled_generation_keeps_compute_slot_until_thread_finishes (test_robustness.ServingLimits.test_cancelled_generation_keeps_compute_slot_until_thread_finishes) ... CANCELLATION_MAX_PARALLEL 1
+ok
+test_ninth_request_rejected_without_starting_more_work (test_robustness.ServingLimits.test_ninth_request_rejected_without_starting_more_work) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.518s
+
+OK
+FAST_CHECK_EXIT_CODES [0, 0, 0]

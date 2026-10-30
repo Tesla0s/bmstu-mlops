@@ -1,0 +1,18 @@
+test_rejected_and_incomplete_reports_are_preserved_byte_for_byte (checks_extra.test_robustness.FilesAndHTTP.test_rejected_and_incomplete_reports_are_preserved_byte_for_byte) ... Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmppzwa8_am/fixture
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmppzwa8_am/fixture/rejections/3ed843b7-eb5e-466e-8996-8bbdbef7a36c/decision.json
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmppzwa8_am/fixture/rejections/47ab05f3-dd41-45ef-9199-7253ac2b3957/decision.json
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmppzwa8_am/fixture/rejections/a4d75364-7b1b-4ca5-b6f0-63236ad3205b/decision.json
+FAIL
+
+======================================================================
+FAIL: test_rejected_and_incomplete_reports_are_preserved_byte_for_byte (checks_extra.test_robustness.FilesAndHTTP.test_rejected_and_incomplete_reports_are_preserved_byte_for_byte)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/checks_extra/test_robustness.py", line 160, in test_rejected_and_incomplete_reports_are_preserved_byte_for_byte
+    self.assertEqual(len(decisions), len(names))
+AssertionError: 3 != 4
+
+----------------------------------------------------------------------
+Ran 1 test in 0.465s
+
+FAILED (failures=1)

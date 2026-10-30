@@ -1,0 +1,30 @@
+test_http_body_limit_with_and_without_content_length (test_robustness.FilesAndHTTP.test_http_body_limit_with_and_without_content_length) ... ok
+test_http_corrupt_artifact_never_becomes_ready (test_robustness.FilesAndHTTP.test_http_corrupt_artifact_never_becomes_ready) ... ok
+test_recovery_after_journal_written_but_history_failed (test_robustness.FilesAndHTTP.test_recovery_after_journal_written_but_history_failed) ... Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpb6g8p58b/fixture
+Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpnnh1wh55/fixture
+Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpmctuc3se/fixture
+RECOVERED_JOURNAL cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+ALREADY_PUBLISHED fixture-B cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+ok
+test_cancelled_generation_keeps_compute_slot_until_thread_finishes (test_robustness.ServingLimits.test_cancelled_generation_keeps_compute_slot_until_thread_finishes) ... CANCELLATION_MAX_PARALLEL 2
+FAIL
+test_ninth_request_rejected_without_starting_more_work (test_robustness.ServingLimits.test_ninth_request_rejected_without_starting_more_work) ... ok
+
+======================================================================
+FAIL: test_cancelled_generation_keeps_compute_slot_until_thread_finishes (test_robustness.ServingLimits.test_cancelled_generation_keeps_compute_slot_until_thread_finishes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/vitalygubin/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/checks_extra/test_robustness.py", line 70, in test_cancelled_generation_keeps_compute_slot_until_thread_finishes
+    self.assertEqual(state.backend.maximum, 1, "Cancellation released the slot while work was running")
+AssertionError: 2 != 1 : Cancellation released the slot while work was running
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.073s
+
+FAILED (failures=1)

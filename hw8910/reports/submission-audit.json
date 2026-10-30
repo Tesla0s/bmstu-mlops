@@ -12,7 +12,7 @@
     "evidence-6": true,
     "evidence-7": true,
     "all-seven-red-on-original": true,
-    "twenty-green-without-weights": true,
+    "twenty-six-green-without-weights": true,
     "deliberate-break-red-original-restored": true,
     "eleven-negative-cases": true,
     "release-contract": true,
@@ -46,8 +46,15 @@
     "benchmark-summary-2": true,
     "same-inputs-and-answers": true,
     "public-artifact-anonymous-and-verified": true,
-    "public-artifact-identical-release": true
+    "public-artifact-identical-release": true,
+    "original-prototype-byte-identical": true,
+    "cancellation-no-overlapping-compute": true,
+    "pinned-evaluation-run-for-both-reports": true,
+    "all-sixty-four-real-answers-match-evaluation": true,
+    "re-audited-real-restart-and-benchmark": true,
+    "saved-rejected-inputs:changed-data": true,
+    "saved-rejected-inputs:incompatible-runtime": true
   },
-  "n_checks": 46,
+  "n_checks": 53,
   "video_recorded": false
 }

@@ -3,11 +3,11 @@
     "command": [
       "lab.py",
       "--workspace",
-      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmplmbahlqb/case",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp3txt60z2/case",
       "init"
     ],
     "returncode": 0,
-    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmplmbahlqb/case\n",
+    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp3txt60z2/case\n",
     "stderr": ""
   },
   {
@@ -84,12 +84,12 @@
       "answer": "STUB ONLY: fixture-A",
       "output_tokens": 1,
       "text": "STUB ONLY: fixture-A",
-      "request_id": "c477baf7-a3fb-47ae-aa94-a2f94fe98d8b",
+      "request_id": "0ed0355a-f6c2-42c0-88ea-bb796bfc03dd",
       "model_id": "fixture-A",
       "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
-      "generation_seconds": 0.015401625074446201,
-      "queue_seconds": 9.374693036079407e-06,
-      "total_seconds": 0.01574708428233862
+      "generation_seconds": 0.01270424947142601,
+      "queue_seconds": 3.582797944545746e-06,
+      "total_seconds": 0.012845916673541069
     }
   }
 ]

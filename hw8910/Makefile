@@ -22,8 +22,8 @@ check-negative:
 check-extra:
 	$(PYTHON) scripts/negative_contracts.py
 lint:
-	.venv/bin/ruff check --no-cache release.py lab.py publication.py artifacts.py binding.py export_existing.py pipeline.py backends.py service.py scripts checks
-	.venv/bin/ruff format --check release.py lab.py publication.py artifacts.py binding.py export_existing.py pipeline.py backends.py service.py scripts checks
+	.venv/bin/ruff check --no-cache release.py lab.py publication.py artifacts.py binding.py export_existing.py pipeline.py backends.py service.py scripts checks checks_extra
+	.venv/bin/ruff format --check release.py lab.py publication.py artifacts.py binding.py export_existing.py pipeline.py backends.py service.py scripts checks checks_extra
 prefect:
 	.venv/bin/prefect server start --host 127.0.0.1 --port 4208
 fetch-model:

@@ -1,0 +1,22 @@
+test_http_body_limit_with_and_without_content_length (test_robustness.FilesAndHTTP.test_http_body_limit_with_and_without_content_length) ... ok
+test_http_corrupt_artifact_never_becomes_ready (test_robustness.FilesAndHTTP.test_http_corrupt_artifact_never_becomes_ready) ... ok
+test_recovery_after_journal_written_but_history_failed (test_robustness.FilesAndHTTP.test_recovery_after_journal_written_but_history_failed) ... Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpwoh3351e/fixture
+Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp483db_27/fixture
+Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmppt9_chfe/fixture
+RECOVERED_JOURNAL cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+ALREADY_PUBLISHED fixture-B cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+ok
+test_rejected_and_incomplete_reports_are_preserved_byte_for_byte (test_robustness.FilesAndHTTP.test_rejected_and_incomplete_reports_are_preserved_byte_for_byte) ... Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp0tatgtbk/fixture
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp0tatgtbk/fixture/rejections/326ca28c-50a7-4c21-ab98-680c9d453f8b/decision.json
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp0tatgtbk/fixture/rejections/e43eb3e7-087d-4c5d-83ad-778456695b95/decision.json
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp0tatgtbk/fixture/rejections/e4fff058-8e5a-40f7-aa1c-86ad01d33432/decision.json
+REJECTED_REPORT /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp0tatgtbk/fixture/rejections/db4afdea-830d-4887-8b93-f5e27b1fb997/decision.json
+ok
+test_cancelled_generation_keeps_compute_slot_until_thread_finishes (test_robustness.ServingLimits.test_cancelled_generation_keeps_compute_slot_until_thread_finishes) ... CANCELLATION_MAX_PARALLEL 1
+ok
+test_ninth_request_rejected_without_starting_more_work (test_robustness.ServingLimits.test_ninth_request_rejected_without_starting_more_work) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.525s
+
+OK

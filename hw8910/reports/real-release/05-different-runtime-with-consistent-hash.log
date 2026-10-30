@@ -1,9 +1,10 @@
-CACHE_HIT c9d885c07bff8013b41dfbea24d7be53868b01aae354404e8ada5760d389c4cf
-20:43:38.972 | INFO    | Flow run 'jumping-turaco' - Beginning flow run 'jumping-turaco' for flow 'hw8910-release'
-20:43:38.974 | INFO    | Flow run 'jumping-turaco' - View at http://127.0.0.1:4208/runs/flow-run/32f523f1-3a02-469d-a57b-f70a3d043a76
-20:43:38.980 | INFO    | Task run 'prepare-85b' - Finished in state Cached(type=COMPLETED)
-20:43:39.829 | INFO    | Task run 'get_existing_artifact-d8b' - Finished in state Completed()
-20:43:40.724 | ERROR   | Task run 'evaluate_release-5b4' - Task run failed with exception: ValueError('Serving runtime differs from HW67 evaluation; new evaluation required')
+CACHE_HIT 7e5a4a61a218a525bdfbfbcd5844283b20c00bc84822ac4a14af45103417e9d5
+REJECTED_REPORT /Users/vitalygubin/Desktop/MLOPS/hw8+9+10/workspace/real/rejections/68e02ed3-3b66-49cc-86da-fa5ff4da3a32/decision.json
+21:12:26.143 | INFO    | Flow run 'opal-earwig' - Beginning flow run 'opal-earwig' for flow 'hw8910-release'
+21:12:26.146 | INFO    | Flow run 'opal-earwig' - View at http://127.0.0.1:4208/runs/flow-run/68e02ed3-3b66-49cc-86da-fa5ff4da3a32
+21:12:26.152 | INFO    | Task run 'prepare-d68' - Finished in state Cached(type=COMPLETED)
+21:12:26.901 | INFO    | Task run 'get_existing_artifact-fd0' - Finished in state Completed()
+21:12:27.673 | ERROR   | Task run 'evaluate_release-e57' - Task run failed with exception: ValueError('Serving runtime differs from HW67 evaluation; new evaluation required')
 Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1027, in run_context
     yield self
@@ -15,14 +16,14 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 87, in evaluate_release
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 130, in evaluate_release
     report = verify_saved_evaluation(root, manifest, prepared)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 89, in verify_saved_evaluation
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 92, in verify_saved_evaluation
     raise ValueError("Serving runtime differs from HW67 evaluation; new evaluation required")
 ValueError: Serving runtime differs from HW67 evaluation; new evaluation required
-20:43:40.726 | ERROR   | Task run 'evaluate_release-5b4' - Finished in state Failed('Task run encountered an exception ValueError: Serving runtime differs from HW67 evaluation; new evaluation required')
-20:43:40.987 | ERROR   | Flow run 'jumping-turaco' - Encountered exception during execution: ValueError('Serving runtime differs from HW67 evaluation; new evaluation required')
+21:12:27.675 | ERROR   | Task run 'evaluate_release-e57' - Finished in state Failed('Task run encountered an exception ValueError: Serving runtime differs from HW67 evaluation; new evaluation required')
+21:12:28.161 | ERROR   | Flow run 'opal-earwig' - Encountered exception during execution: ValueError('Serving runtime differs from HW67 evaluation; new evaluation required')
 Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1330, in run_context
     yield self
@@ -34,7 +35,7 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 163, in release_flow
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 212, in release_flow
     decision = evaluate_release(str(root), artifact, report_name, prepared)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1230, in __call__
@@ -58,13 +59,13 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 87, in evaluate_release
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 130, in evaluate_release
     report = verify_saved_evaluation(root, manifest, prepared)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 89, in verify_saved_evaluation
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 92, in verify_saved_evaluation
     raise ValueError("Serving runtime differs from HW67 evaluation; new evaluation required")
 ValueError: Serving runtime differs from HW67 evaluation; new evaluation required
-20:43:41.017 | INFO    | Flow run 'jumping-turaco' - Finished in state Failed('Flow run encountered an exception: ValueError: Serving runtime differs from HW67 evaluation; new evaluation required')
+21:12:28.192 | INFO    | Flow run 'opal-earwig' - Finished in state Failed('Flow run encountered an exception: ValueError: Serving runtime differs from HW67 evaluation; new evaluation required')
 Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/lab.py", line 108, in <module>
     main()
@@ -94,7 +95,7 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 163, in release_flow
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 212, in release_flow
     decision = evaluate_release(str(root), artifact, report_name, prepared)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1230, in __call__
@@ -118,9 +119,9 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 87, in evaluate_release
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 130, in evaluate_release
     report = verify_saved_evaluation(root, manifest, prepared)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 89, in verify_saved_evaluation
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 92, in verify_saved_evaluation
     raise ValueError("Serving runtime differs from HW67 evaluation; new evaluation required")
 ValueError: Serving runtime differs from HW67 evaluation; new evaluation required

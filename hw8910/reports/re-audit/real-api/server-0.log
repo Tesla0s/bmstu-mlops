@@ -1,0 +1,122 @@
+INFO:     Started server process [19985]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:62467 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62474 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62475 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62476 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62477 - "POST /generate HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62478 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62481 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62492 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62496 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62500 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62505 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62509 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62520 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62523 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62527 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62530 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62534 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62538 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62541 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62544 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62550 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62551 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62554 - "GET /ready HTTP/1.1" 503 Service Unavailable
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+INFO:     127.0.0.1:62559 - "GET /ready HTTP/1.1" 503 Service Unavailable
+READY github-issue-qwen-adapter/1 21049dc5d627e1f1f7b8ba124f8461e6b340c0ae476fcca5b50065d51cc4dd38
+INFO:     127.0.0.1:62560 - "GET /ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62561 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62562 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62563 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62564 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62565 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62566 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62567 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62569 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62571 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62575 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62577 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62582 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62583 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62585 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62590 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62591 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62593 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62598 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62600 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62602 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62608 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62609 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62611 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62616 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62617 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62621 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62637 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62654 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62663 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62675 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62684 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62695 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62705 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62711 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62715 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62721 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62738 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62742 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62769 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62782 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62789 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62790 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62791 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62792 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62799 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62800 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62801 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62802 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62809 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62810 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62811 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62812 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62814 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62815 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62816 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62818 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62821 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62822 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62823 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62829 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62830 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62831 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62833 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62834 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62835 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62836 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62837 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62839 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62840 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62841 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62842 - "GET /ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62843 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62844 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62845 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62847 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62849 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62850 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62851 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62852 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62853 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62854 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62855 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62856 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62857 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62858 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62860 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62867 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62868 - "POST /generate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [19985]

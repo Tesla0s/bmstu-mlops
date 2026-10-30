@@ -77,20 +77,70 @@ def get_existing_artifact(workspace, manifest_name, prepared):
     return {**description, "manifest_uri": str(root / manifest_name)}
 
 
+def save_rejection(root, manifest_path, report_name, reason, real_model):
+    """Keep the actual rejected inputs, including malformed JSON values, as raw files."""
+    run_id = str(flow_run.id or uuid.uuid4())
+    directory = root / "rejections" / run_id
+    sources = {
+        "manifest.json": Path(manifest_path),
+        "input.txt": root / "input.txt",
+        "config.json": root / "config.json",
+    }
+    if real_model:
+        from binding import HW67
+
+        sources.update(
+            {
+                role + "-eval.json": HW67 / f"reports/evaluation/{role}-eval.json"
+                for role in ("baseline", "candidate")
+            }
+        )
+    else:
+        sources["submitted-report.json"] = root / report_name
+    hashes = {}
+    for name, source in sources.items():
+        if source.is_file():
+            content = source.read_bytes()
+            release.atomic_bytes(directory / name, content)
+            hashes[name] = release.digest(content)
+    pointer = root / "accepted.json"
+    release.write(
+        directory / "decision.json",
+        {
+            "status": "rejected",
+            "passed": False,
+            "flow_run_id": run_id,
+            "reason": reason,
+            "input_sha256": hashes,
+            "accepted_sha256": release.digest(pointer.read_bytes() if pointer.exists() else b""),
+        },
+    )
+    print("REJECTED_REPORT", directory / "decision.json", flush=True)
+
+
 @task(cache_policy=NO_CACHE, retries=0)
 def evaluate_release(workspace, artifact, report_name, prepared):
     root = Path(workspace)
     manifest = release.read(artifact["manifest_uri"])
-    if manifest.get("backend") == "transformers":
-        from binding import verify_saved_evaluation
+    real_model = manifest.get("backend") == "transformers"
+    try:
+        if real_model:
+            from binding import verify_saved_evaluation
 
-        report = verify_saved_evaluation(root, manifest, prepared)
-        release.write(root / report_name, report)
-    else:
-        report = release.read(root / report_name)
-        if report.get("synthetic") is not True or manifest["runtime"].get("base_revision") != "fixture-only":
-            raise ValueError("Synthetic gate is restricted to explicit STUB ONLY fixtures")
-    release.validate_release(manifest, report)
+            report = verify_saved_evaluation(root, manifest, prepared)
+            release.write(root / report_name, report)
+        else:
+            report = release.read(root / report_name)
+            if (
+                report.get("synthetic") is not True
+                or manifest["runtime"].get("base_revision") != "fixture-only"
+            ):
+                raise ValueError("Synthetic gate is restricted to explicit STUB ONLY fixtures")
+        release.validate_release(manifest, report)
+    except Exception as exc:
+        # Preserve invalid/missing structure as well as a failed quality decision, then re-raise.
+        save_rejection(root, artifact["manifest_uri"], report_name, str(exc), real_model)
+        raise
     # Content-addressed decisions cannot be overwritten by a rejected later attempt.
     decision_path = root / "decisions" / (release.fingerprint(report) + ".json")
     release.write(decision_path, report)

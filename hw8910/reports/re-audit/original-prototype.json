@@ -1,0 +1,77 @@
+{
+  "archive_sha256": "e3fbbd7cea7eba068716741f915b5ae5334a80396b3a7223e87a1e10c95fc0f4",
+  "all_files_identical": true,
+  "n_files": 14,
+  "files": [
+    {
+      "file": ".gitignore",
+      "sha256": "3248026da308266cad46a212975e4e9e02ad18193c69167456e969e0a415bfe3",
+      "identical": true
+    },
+    {
+      "file": "CONTRACTS.txt",
+      "sha256": "c1a09f181fbf9b6b38aa85731959c51384ddbdde996f2e8869a51dad3f4ac339",
+      "identical": true
+    },
+    {
+      "file": "INCIDENTS.txt",
+      "sha256": "6a02e8afb77582acc9433823db9dff78ab5d01ecbc688e15d2b1fc4e742683df",
+      "identical": true
+    },
+    {
+      "file": "Makefile",
+      "sha256": "b84f5479f9d389017780a51ff8645babe5f9c29283b4a7f5a265377aa09ca5c8",
+      "identical": true
+    },
+    {
+      "file": "README.txt",
+      "sha256": "6e7ad2ac2dd531febaad473128ee9aaaf5658a1b8a0e1f1868f67948b965583f",
+      "identical": true
+    },
+    {
+      "file": "REPORT.txt",
+      "sha256": "fb555048924a28d7fd8524da3df66ef54f004ba88a0136b4a726236a557d20c4",
+      "identical": true
+    },
+    {
+      "file": "ci.example.yml",
+      "sha256": "57d625430817a69f408b352b0d5337a1abcf679dc744216eb2097ccedb8bf404",
+      "identical": true
+    },
+    {
+      "file": "defects.csv",
+      "sha256": "087e6d0cb2151d794bc6567263c8c19811d50e3ca506f4131ca1155b817ace0f",
+      "identical": true
+    },
+    {
+      "file": "examples/manifest.example.json",
+      "sha256": "745b45787663316a360d5679524fb8a23a55b2a5912456d0bd5c52b75b8b9910",
+      "identical": true
+    },
+    {
+      "file": "examples/report.example.json",
+      "sha256": "0060bdfe8d49223c0a7f639b34fa64584724c17846fd8a55052c5a6df0d5ae71",
+      "identical": true
+    },
+    {
+      "file": "lab.py",
+      "sha256": "63997fa68793e7731689c3410e391343324c83e4033193d553e62d367813dea9",
+      "identical": true
+    },
+    {
+      "file": "release.py",
+      "sha256": "baab5c50ee29e6004a3623169ce3d851b7db61e45a7b4e35ccb049ebd0b2c7a5",
+      "identical": true
+    },
+    {
+      "file": "service.py",
+      "sha256": "81f5a08c9e90d96a8150dc153b313eab251393e02d3cde2d2fb763143fccaac1",
+      "identical": true
+    },
+    {
+      "file": "tests/test_release.py",
+      "sha256": "03632e58fa10f8742a205ae04ecba956f7a7cd0a0cfb90fc7fa9d32d6f2c1d7e",
+      "identical": true
+    }
+  ]
+}

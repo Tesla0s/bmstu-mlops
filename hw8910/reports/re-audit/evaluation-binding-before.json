@@ -1,0 +1,22 @@
+[
+  {
+    "case": "unchanged-real-reports",
+    "passed": true,
+    "evaluation_run_id": "b11b03d74c2746bcb2c7ff4b070823e6"
+  },
+  {
+    "case": "foreign-candidate",
+    "rejected": false,
+    "accepted_evaluation_run_id": "different-evaluation-run"
+  },
+  {
+    "case": "foreign-baseline",
+    "rejected": false,
+    "accepted_evaluation_run_id": "b11b03d74c2746bcb2c7ff4b070823e6"
+  },
+  {
+    "case": "foreign-candidate-and-baseline",
+    "rejected": false,
+    "accepted_evaluation_run_id": "different-evaluation-run"
+  }
+]

@@ -84,6 +84,9 @@ def verify_saved_evaluation(workspace, manifest, prepared):
         raise ValueError("Wrong candidate model_id")
     if manifest["artifact_uri"] != f"runs:/{candidate_spec['run_id']}/model":
         raise ValueError("Wrong immutable artifact URI")
+    evaluation_run_id = origin.get("evaluation_run_id")
+    if not isinstance(evaluation_run_id, str) or not evaluation_run_id.strip():
+        raise ValueError("Missing pinned evaluation run")
     expected = expected_runtime(artifact_root(manifest, workspace), cfg, origin["base_files"])
     if manifest["runtime"] != expected or manifest["runtime_sha256"] != release.fingerprint(expected):
         raise ValueError("Serving runtime differs from HW67 evaluation; new evaluation required")
@@ -111,6 +114,9 @@ def verify_saved_evaluation(workspace, manifest, prepared):
         output_path = HW67 / f"reports/evaluation/{role}-outputs.json"
         report, outputs = release.read(report_path), release.read(output_path)
         sources.extend((report_path, output_path))
+        if report.get("evaluation_run_id") != evaluation_run_id:
+            raise ValueError("Foreign evaluation run: " + role)
+
         if report["model"] != spec:
             raise ValueError("Evaluation model mismatch: " + role)
         hashes = {

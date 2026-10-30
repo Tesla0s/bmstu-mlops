@@ -1,0 +1,23 @@
+INFO:     Started server process [20217]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:62870 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62875 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62876 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62877 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62878 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62879 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62880 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62882 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62883 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62884 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62885 - "GET /ready HTTP/1.1" 503 Service Unavailable
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+INFO:     127.0.0.1:62886 - "GET /ready HTTP/1.1" 503 Service Unavailable
+READY github-issue-qwen-adapter/1 21049dc5d627e1f1f7b8ba124f8461e6b340c0ae476fcca5b50065d51cc4dd38
+INFO:     127.0.0.1:62887 - "GET /ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62888 - "POST /generate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [20217]

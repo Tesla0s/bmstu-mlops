@@ -56,7 +56,7 @@ def main():
                 else:
                     raise TimeoutError("Prefect server did not start")
                 codes = []
-                for directory in ("tests", "checks"):
+                for directory in ("tests", "checks", "checks_extra"):
                     process = subprocess.run(
                         [sys.executable, "-m", "unittest", "discover", "-s", directory, "-v"],
                         cwd=ROOT,

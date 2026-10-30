@@ -1,0 +1,335 @@
+{
+  "requirements": [
+    {
+      "id": "0.1",
+      "requirement": "Исходный прототип сохранён отдельным коммитом без изменений",
+      "status": "verified",
+      "evidence": [
+        "reports/re-audit/original-prototype.json"
+      ]
+    },
+    {
+      "id": "0.2",
+      "requirement": "Семь независимых причин, команды, фактическое/ожидаемое, исправления и тесты",
+      "status": "verified",
+      "evidence": [
+        "defects.csv"
+      ]
+    },
+    {
+      "id": "0.3",
+      "requirement": "Минимум шесть интеграций, три HTTP, два subprocess, повтор/откат",
+      "status": "verified",
+      "evidence": [
+        "checks/test_integration.py",
+        "reports/integration"
+      ]
+    },
+    {
+      "id": "0.4",
+      "requirement": "Те же семь тестов падают по дефектам исходника и проходят после исправления",
+      "status": "verified",
+      "evidence": [
+        "reports/integration-original.log",
+        "reports/fast-green.log"
+      ]
+    },
+    {
+      "id": "0.5",
+      "requirement": "Отдельный опыт A→B→A; фикстуры явно STUB ONLY",
+      "status": "verified",
+      "evidence": [
+        "scripts/stub_experiment.py",
+        "reports/stub-experiment/evidence.json"
+      ]
+    },
+    {
+      "id": "A.1",
+      "requirement": "Один Prefect-flow, четыре отдельные задачи; передаются URI и хеши",
+      "status": "verified",
+      "evidence": [
+        "pipeline.py",
+        "reports/real-release/02-recover.log"
+      ]
+    },
+    {
+      "id": "A.2",
+      "requirement": "Готовый training run из ДЗ 6+7, без повторного обучения",
+      "status": "verified",
+      "evidence": [
+        "export_existing.py",
+        "reports/model-origin.json"
+      ]
+    },
+    {
+      "id": "A.3",
+      "requirement": "Настоящая проверка схемы, устойчивый кеш, байты и все настройки в ключе",
+      "status": "verified",
+      "evidence": [
+        "pipeline.py",
+        "release.py",
+        "tests/test_release.py"
+      ]
+    },
+    {
+      "id": "A.4",
+      "requirement": "Сбой после подготовки, новый процесс использует Cached",
+      "status": "verified",
+      "evidence": [
+        "reports/real-release/01-failure-after-preparation.log",
+        "reports/real-release/02-recover.log"
+      ]
+    },
+    {
+      "id": "A.5",
+      "requirement": "Изменённые байты по тому же пути требуют новой подготовки",
+      "status": "verified",
+      "evidence": [
+        "reports/real-release/04-changed-evaluation-input.log"
+      ]
+    },
+    {
+      "id": "A.6",
+      "requirement": "Попытки отдельно от публикаций; идентификатор включает модель, runtime и решение",
+      "status": "verified",
+      "evidence": [
+        "publication.py",
+        "reports/real-release/attempts.jsonl",
+        "reports/real-release/publications.jsonl"
+      ]
+    },
+    {
+      "id": "A.7",
+      "requirement": "Сбой после указателя: восстановление без двойного события",
+      "status": "verified",
+      "evidence": [
+        "reports/stub-experiment/03-crash-after-pointer.log",
+        "reports/stub-experiment/04-recover-journal.log"
+      ]
+    },
+    {
+      "id": "A.8",
+      "requirement": "Атомарная запись; ошибка замены и отказ сохраняют старые байты",
+      "status": "verified",
+      "evidence": [
+        "release.py",
+        "reports/negative-contracts.json"
+      ]
+    },
+    {
+      "id": "A.9",
+      "requirement": "Ограниченные повторы только сетевых ошибок; gate без повторов",
+      "status": "verified",
+      "evidence": [
+        "scripts/fetch_model.py",
+        "pipeline.py"
+      ]
+    },
+    {
+      "id": "B.1",
+      "requirement": "Неизменённое правило ДЗ 6+7: accuracy, формат, критические классы и поведение",
+      "status": "verified",
+      "evidence": [
+        "binding.py",
+        "reports/hw67-report-verification.json"
+      ]
+    },
+    {
+      "id": "B.2",
+      "requirement": "Полный связанный release-report из настоящих ответов, не ручной PASS",
+      "status": "verified",
+      "evidence": [
+        "reports/real-release/release-report.json"
+      ]
+    },
+    {
+      "id": "B.3",
+      "requirement": "Точная база, веса, tokenizer, шаблон, генерация, dtype, протокол и golden",
+      "status": "verified",
+      "evidence": [
+        "reports/real-release/accepted.json",
+        "reports/model-origin.json"
+      ]
+    },
+    {
+      "id": "B.4",
+      "requirement": "Runtime API совпадает с оценкой; оба evaluation run закреплены",
+      "status": "verified",
+      "evidence": [
+        "reports/re-audit/evaluation-binding-after.json",
+        "reports/re-audit/real-api/comparisons.json"
+      ]
+    },
+    {
+      "id": "B.5",
+      "requirement": "Строгий контракт: Missing, NaN/Inf, чужой отчёт и ложный PASS отклоняются",
+      "status": "verified",
+      "evidence": [
+        "tests/test_release.py",
+        "reports/negative-contracts.json"
+      ]
+    },
+    {
+      "id": "B.6",
+      "requirement": "Реальные файлы проверяются перед выпуском и загрузкой",
+      "status": "verified",
+      "evidence": [
+        "artifacts.py",
+        "reports/negative-contracts.json",
+        "checks_extra/test_robustness.py"
+      ]
+    },
+    {
+      "id": "B.7",
+      "requirement": "Отказы и неполные отчёты сохраняются с исходными документами",
+      "status": "verified",
+      "evidence": [
+        "reports/re-audit/rejections",
+        "checks_extra/test_robustness.py"
+      ]
+    },
+    {
+      "id": "B.8",
+      "requirement": "Один быстрый запуск без весов; исходные тесты ДЗ 6+7 сохранены",
+      "status": "verified",
+      "evidence": [
+        "scripts/check_all.py",
+        "reports/fast-green.log",
+        "reports/environment.json"
+      ]
+    },
+    {
+      "id": "B.9",
+      "requirement": "Зелёный прогон, намеренный красный exit, исправленный код сохранён",
+      "status": "verified",
+      "evidence": [
+        "reports/fast-red.log",
+        "reports/mutation-summary.json"
+      ]
+    },
+    {
+      "id": "B.10",
+      "requirement": "Три триггера с командами; удалённый CI и защита merge не приписаны",
+      "status": "verified",
+      "evidence": [
+        "README.md",
+        "ci.example.yml"
+      ]
+    },
+    {
+      "id": "C.1",
+      "requirement": "Health жив; ready и generate дают 503 до загрузки и прогрева",
+      "status": "verified",
+      "evidence": [
+        "reports/re-audit/real-api/evidence.json"
+      ]
+    },
+    {
+      "id": "C.2",
+      "requirement": "Настоящая база и адаптер из принятого manifest",
+      "status": "verified",
+      "evidence": [
+        "backends.py",
+        "reports/re-audit/real-api/comparisons.json"
+      ]
+    },
+    {
+      "id": "C.3",
+      "requirement": "Лимиты входа, тела, ровно согласованный лимит 32, параллельность и очередь",
+      "status": "verified",
+      "evidence": [
+        "service.py",
+        "backends.py",
+        "reports/re-audit/robustness-after.log"
+      ]
+    },
+    {
+      "id": "C.4",
+      "requirement": "В ответе текст, request_id, фактическая модель/runtime, токены, длительности",
+      "status": "verified",
+      "evidence": [
+        "reports/re-audit/real-api/evidence.json"
+      ]
+    },
+    {
+      "id": "C.5",
+      "requirement": "Невалидные запросы дают 4xx без генерации",
+      "status": "verified",
+      "evidence": [
+        "reports/re-audit/real-api/evidence.json",
+        "reports/integration/test_06_http_invalid_requests_do_not_call_backend.json"
+      ]
+    },
+    {
+      "id": "C.6",
+      "requirement": "Дисковый указатель не подменяет модель в памяти; загрузка после рестарта",
+      "status": "verified",
+      "evidence": [
+        "reports/stub-experiment/evidence.json",
+        "reports/re-audit/real-api/evidence.json"
+      ]
+    },
+    {
+      "id": "C.7",
+      "requirement": "Обслуживание baseline при честном отказе текущего кандидата",
+      "status": "not_applicable_candidate_passed",
+      "evidence": [
+        "reports/real-release/release-report.json"
+      ]
+    },
+    {
+      "id": "D.1",
+      "requirement": "Те же восемь входов при 1 и 2 клиентах после прогрева",
+      "status": "verified",
+      "evidence": [
+        "benchmark-prompts.json",
+        "reports/benchmark/attempts.jsonl"
+      ]
+    },
+    {
+      "id": "D.2",
+      "requirement": "Все попытки и ошибки сохранены; прежний замер также сохранён",
+      "status": "verified",
+      "evidence": [
+        "reports/benchmark/attempts.csv",
+        "reports/re-audit/initial-benchmark"
+      ]
+    },
+    {
+      "id": "D.3",
+      "requirement": "n, успех/ошибка, время пакета, req/s, mean/max отдельно от ошибок",
+      "status": "verified",
+      "evidence": [
+        "reports/benchmark/summary.json",
+        "REPORT.txt"
+      ]
+    },
+    {
+      "id": "D.4",
+      "requirement": "Объяснение очереди, prefill/decode/KV-cache; нет выдуманных p95, TTFT и ITL",
+      "status": "verified",
+      "evidence": [
+        "REPORT.txt"
+      ]
+    },
+    {
+      "id": "S.1",
+      "requirement": "Репозиторий, отчёт, зависимости, команды, доступ к артефактам; веса вне Git",
+      "status": "verified",
+      "evidence": [
+        "README.md",
+        "pyproject.toml",
+        "uv.lock",
+        "reports/public-artifact-check.json"
+      ]
+    },
+    {
+      "id": "S.2",
+      "requirement": "Одно видео 5–8 минут",
+      "status": "deferred_by_user",
+      "evidence": []
+    }
+  ],
+  "content_verified": true,
+  "video_recorded": false
+}

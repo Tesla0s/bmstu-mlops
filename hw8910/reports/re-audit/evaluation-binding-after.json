@@ -1,0 +1,22 @@
+[
+  {
+    "case": "unchanged-real-reports",
+    "passed": true,
+    "evaluation_run_id": "b11b03d74c2746bcb2c7ff4b070823e6"
+  },
+  {
+    "case": "foreign-candidate",
+    "rejected": true,
+    "reason": "Foreign evaluation run: candidate"
+  },
+  {
+    "case": "foreign-baseline",
+    "rejected": true,
+    "reason": "Foreign evaluation run: baseline"
+  },
+  {
+    "case": "foreign-candidate-and-baseline",
+    "rejected": true,
+    "reason": "Foreign evaluation run: baseline"
+  }
+]

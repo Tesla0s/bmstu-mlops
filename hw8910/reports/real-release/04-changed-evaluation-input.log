@@ -1,9 +1,10 @@
-PREPARED 95c4d200823a7966e7eeb3c6759866e33b99f134385cf68166f11fe95f386ccd rows 61
-20:43:36.303 | INFO    | Flow run 'neon-cougar' - Beginning flow run 'neon-cougar' for flow 'hw8910-release'
-20:43:36.307 | INFO    | Flow run 'neon-cougar' - View at http://127.0.0.1:4208/runs/flow-run/5099b2fc-1a7f-4949-85ac-6db1b33c0225
-20:43:36.315 | INFO    | Task run 'prepare-a93' - Finished in state Completed()
-20:43:37.088 | INFO    | Task run 'get_existing_artifact-f76' - Finished in state Completed()
-20:43:37.830 | ERROR   | Task run 'evaluate_release-ecd' - Task run failed with exception: ValueError('Changed evaluation data: run HW67 evaluation again')
+PREPARED 7a09e93d27fe8986aee4b72cccb7252339dd15d04b2b9b06a7850bf775bd1e8c rows 61
+REJECTED_REPORT /Users/vitalygubin/Desktop/MLOPS/hw8+9+10/workspace/real/rejections/decc962b-386f-48aa-820b-854ab164642e/decision.json
+21:12:23.409 | INFO    | Flow run 'paper-mongoose' - Beginning flow run 'paper-mongoose' for flow 'hw8910-release'
+21:12:23.412 | INFO    | Flow run 'paper-mongoose' - View at http://127.0.0.1:4208/runs/flow-run/decc962b-386f-48aa-820b-854ab164642e
+21:12:23.420 | INFO    | Task run 'prepare-e70' - Finished in state Completed()
+21:12:24.192 | INFO    | Task run 'get_existing_artifact-e93' - Finished in state Completed()
+21:12:24.907 | ERROR   | Task run 'evaluate_release-a19' - Task run failed with exception: ValueError('Changed evaluation data: run HW67 evaluation again')
 Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1027, in run_context
     yield self
@@ -15,14 +16,14 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 87, in evaluate_release
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 130, in evaluate_release
     report = verify_saved_evaluation(root, manifest, prepared)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 66, in verify_saved_evaluation
     raise ValueError("Changed evaluation data: run HW67 evaluation again")
 ValueError: Changed evaluation data: run HW67 evaluation again
-20:43:37.833 | ERROR   | Task run 'evaluate_release-ecd' - Finished in state Failed('Task run encountered an exception ValueError: Changed evaluation data: run HW67 evaluation again')
-20:43:38.319 | ERROR   | Flow run 'neon-cougar' - Encountered exception during execution: ValueError('Changed evaluation data: run HW67 evaluation again')
+21:12:24.909 | ERROR   | Task run 'evaluate_release-a19' - Finished in state Failed('Task run encountered an exception ValueError: Changed evaluation data: run HW67 evaluation again')
+21:12:25.428 | ERROR   | Flow run 'paper-mongoose' - Encountered exception during execution: ValueError('Changed evaluation data: run HW67 evaluation again')
 Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1330, in run_context
     yield self
@@ -34,7 +35,7 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 163, in release_flow
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 212, in release_flow
     decision = evaluate_release(str(root), artifact, report_name, prepared)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1230, in __call__
@@ -58,13 +59,13 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 87, in evaluate_release
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 130, in evaluate_release
     report = verify_saved_evaluation(root, manifest, prepared)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 66, in verify_saved_evaluation
     raise ValueError("Changed evaluation data: run HW67 evaluation again")
 ValueError: Changed evaluation data: run HW67 evaluation again
-20:43:38.333 | INFO    | Flow run 'neon-cougar' - Finished in state Failed('Flow run encountered an exception: ValueError: Changed evaluation data: run HW67 evaluation again')
+21:12:25.459 | INFO    | Flow run 'paper-mongoose' - Finished in state Failed('Flow run encountered an exception: ValueError: Changed evaluation data: run HW67 evaluation again')
 Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/lab.py", line 108, in <module>
     main()
@@ -94,7 +95,7 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 163, in release_flow
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 212, in release_flow
     decision = evaluate_release(str(root), artifact, report_name, prepared)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1230, in __call__
@@ -118,7 +119,7 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 87, in evaluate_release
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 130, in evaluate_release
     report = verify_saved_evaluation(root, manifest, prepared)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/binding.py", line 66, in verify_saved_evaluation

@@ -1,4 +1,11 @@
-FAST_CHECK_EXIT_CODES [1, 1]
+Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpbdpoezp1/fixture
+Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp7ex_852x/fixture
+Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmph9gkit61/fixture
+RECOVERED_JOURNAL cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+ALREADY_PUBLISHED fixture-B cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp7ip7txue/fixture
+CANCELLATION_MAX_PARALLEL 1
+FAST_CHECK_EXIT_CODES [1, 1, 1]
 test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests.test_changed_bytes_at_same_path_invalidate_cache) ... ok
 test_complete_bound_report_allowed (test_release.ReleaseContractTests.test_complete_bound_report_allowed) ... ok
 test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) ... ok
@@ -66,7 +73,7 @@ test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.
 FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) (key='status', value='failed')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -75,7 +82,7 @@ AssertionError: ValueError not raised
 FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) (key='status', value='running')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -84,7 +91,7 @@ AssertionError: ValueError not raised
 FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) (key='passed', value=False)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -93,7 +100,7 @@ AssertionError: ValueError not raised
 FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) (key='passed', value='true')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -102,7 +109,7 @@ AssertionError: ValueError not raised
 FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) (key='evaluation_run_id', value='')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -111,7 +118,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) (key='schema_version')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -120,7 +127,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) (key='schema_version')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -129,7 +136,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) (key='model_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -138,7 +145,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) (key='model_id')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -147,7 +154,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) (key='artifact_uri')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -156,7 +163,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=nan, metric='accuracy')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -165,7 +172,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=nan, metric='format_rate')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -174,7 +181,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=inf, metric='accuracy')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -183,7 +190,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=inf, metric='format_rate')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -192,7 +199,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=-0.1, metric='accuracy')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -201,7 +208,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=-0.1, metric='format_rate')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -210,7 +217,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=1.1, metric='accuracy')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -219,7 +226,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=1.1, metric='format_rate')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -228,7 +235,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=True, metric='accuracy')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -237,7 +244,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=True, metric='format_rate')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -246,7 +253,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value='0.8', metric='accuracy')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -255,7 +262,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value='0.8', metric='format_rate')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -264,7 +271,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=None, metric='accuracy')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -273,7 +280,7 @@ AssertionError: ValueError not raised
 FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) (value=None, metric='format_rate')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 84, in test_invalid_metric_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -282,7 +289,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='manifest', key='schema_version')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -291,7 +298,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='manifest', key='model_id')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -300,7 +307,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='manifest', key='model_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -309,7 +316,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='manifest', key='protocol_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -318,7 +325,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='manifest', key='golden_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -327,7 +334,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='manifest', key='runtime_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -336,7 +343,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='manifest', key='runtime')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -345,7 +352,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='manifest', key='artifact_uri')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -354,7 +361,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='status')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -363,7 +370,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='passed')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -372,7 +379,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='evaluation_run_id')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -381,7 +388,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='model_id')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -390,7 +397,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='model_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -399,7 +406,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='protocol_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -408,7 +415,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='golden_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -417,7 +424,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='runtime_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -426,7 +433,7 @@ AssertionError: ValueError not raised
 FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) (side='report', key='metrics')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 65, in test_missing_fields_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -435,7 +442,7 @@ AssertionError: ValueError not raised
 FAIL: test_rejection_preserves_previous_bytes (test_release.ReleaseContractTests.test_rejection_preserves_previous_bytes)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 100, in test_rejection_preserves_previous_bytes
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 100, in test_rejection_preserves_previous_bytes
     with self.assertRaises(ValueError):release.publish(self.manifest,bad,self.target)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -444,7 +451,7 @@ AssertionError: ValueError not raised
 FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) (key='model_id')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -453,7 +460,7 @@ AssertionError: ValueError not raised
 FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) (key='model_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -462,7 +469,7 @@ AssertionError: ValueError not raised
 FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) (key='protocol_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -471,7 +478,7 @@ AssertionError: ValueError not raised
 FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) (key='golden_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -480,7 +487,7 @@ AssertionError: ValueError not raised
 FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) (key='runtime_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -489,7 +496,7 @@ AssertionError: ValueError not raised
 FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) (key='dtype')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -498,7 +505,7 @@ AssertionError: ValueError not raised
 FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) (key='template_sha256')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -507,7 +514,7 @@ AssertionError: ValueError not raised
 FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) (key='generation')
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
@@ -528,11 +535,31 @@ test_07_atomic_replace_failure_in_separate_process (test_integration.Integration
 FAIL: test_02_incomplete_foreign_and_runtime_report_rejected (test_integration.IntegrationTests.test_02_incomplete_foreign_and_runtime_report_rejected)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-n99rptuy/checks/test_integration.py", line 135, in test_02_incomplete_foreign_and_runtime_report_rejected
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/checks/test_integration.py", line 135, in test_02_incomplete_foreign_and_runtime_report_rejected
     self.assertNotEqual(incomplete.returncode, 0, "Incomplete report was published")
 AssertionError: 0 == 0 : Incomplete report was published
 
 ----------------------------------------------------------------------
-Ran 7 tests in 19.046s
+Ran 7 tests in 20.403s
+
+FAILED (failures=1)
+test_http_body_limit_with_and_without_content_length (test_robustness.FilesAndHTTP.test_http_body_limit_with_and_without_content_length) ... ok
+test_http_corrupt_artifact_never_becomes_ready (test_robustness.FilesAndHTTP.test_http_corrupt_artifact_never_becomes_ready) ... ok
+test_recovery_after_journal_written_but_history_failed (test_robustness.FilesAndHTTP.test_recovery_after_journal_written_but_history_failed) ... ok
+test_rejected_and_incomplete_reports_are_preserved_byte_for_byte (test_robustness.FilesAndHTTP.test_rejected_and_incomplete_reports_are_preserved_byte_for_byte) ... FAIL
+test_cancelled_generation_keeps_compute_slot_until_thread_finishes (test_robustness.ServingLimits.test_cancelled_generation_keeps_compute_slot_until_thread_finishes) ... ok
+test_ninth_request_rejected_without_starting_more_work (test_robustness.ServingLimits.test_ninth_request_rejected_without_starting_more_work) ... ok
+
+======================================================================
+FAIL: test_rejected_and_incomplete_reports_are_preserved_byte_for_byte (test_robustness.FilesAndHTTP.test_rejected_and_incomplete_reports_are_preserved_byte_for_byte)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/hw8910-mutation-fufosmys/checks_extra/test_robustness.py", line 155, in test_rejected_and_incomplete_reports_are_preserved_byte_for_byte
+    with self.assertRaises((ValueError, AttributeError)):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (<class 'ValueError'>, <class 'AttributeError'>) not raised
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.538s
 
 FAILED (failures=1)

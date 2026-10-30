@@ -1,8 +1,8 @@
-PREPARED c9d885c07bff8013b41dfbea24d7be53868b01aae354404e8ada5760d389c4cf rows 60
-20:43:27.207 | INFO    | Flow run 'undetectable-piculet' - Beginning flow run 'undetectable-piculet' for flow 'hw8910-release'
-20:43:27.210 | INFO    | Flow run 'undetectable-piculet' - View at http://127.0.0.1:4208/runs/flow-run/2e4adcfd-787b-48ee-9002-07d4dc4b3b50
-20:43:27.218 | INFO    | Task run 'prepare-2f3' - Finished in state Completed()
-20:43:28.220 | ERROR   | Flow run 'undetectable-piculet' - Encountered exception during execution: RuntimeError('Injected failure after successful preparation')
+PREPARED 7e5a4a61a218a525bdfbfbcd5844283b20c00bc84822ac4a14af45103417e9d5 rows 60
+21:12:14.208 | INFO    | Flow run 'cyber-mongrel' - Beginning flow run 'cyber-mongrel' for flow 'hw8910-release'
+21:12:14.212 | INFO    | Flow run 'cyber-mongrel' - View at http://127.0.0.1:4208/runs/flow-run/ed123995-3f5c-45fa-8b5a-972c5dcda93a
+21:12:14.220 | INFO    | Task run 'prepare-4f0' - Finished in state Completed()
+21:12:15.219 | ERROR   | Flow run 'cyber-mongrel' - Encountered exception during execution: RuntimeError('Injected failure after successful preparation')
 Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1330, in run_context
     yield self
@@ -14,10 +14,10 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 160, in release_flow
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 209, in release_flow
     raise RuntimeError("Injected failure after successful preparation")
 RuntimeError: Injected failure after successful preparation
-20:43:28.231 | INFO    | Flow run 'undetectable-piculet' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Injected failure after successful preparation')
+21:12:15.251 | INFO    | Flow run 'cyber-mongrel' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Injected failure after successful preparation')
 Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/lab.py", line 108, in <module>
     main()
@@ -47,6 +47,6 @@ Traceback (most recent call last):
   File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
     return fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 160, in release_flow
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 209, in release_flow
     raise RuntimeError("Injected failure after successful preparation")
 RuntimeError: Injected failure after successful preparation

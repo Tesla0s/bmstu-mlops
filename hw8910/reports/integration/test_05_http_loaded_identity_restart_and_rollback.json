@@ -3,11 +3,11 @@
     "command": [
       "lab.py",
       "--workspace",
-      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmphq3i1fax/case",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp7ekst300/case",
       "init"
     ],
     "returncode": 0,
-    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmphq3i1fax/case\n",
+    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp7ekst300/case\n",
     "stderr": ""
   },
   {
@@ -20,24 +20,24 @@
       "answer": "STUB ONLY: fixture-A",
       "output_tokens": 1,
       "text": "STUB ONLY: fixture-A",
-      "request_id": "84160f59-449d-4559-8040-1974b0e4477a",
+      "request_id": "7ae62af1-b72b-494c-9d08-8a661b069e97",
       "model_id": "fixture-A",
       "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
-      "generation_seconds": 0.015152624808251858,
-      "queue_seconds": 1.7918646335601807e-06,
-      "total_seconds": 0.015223084017634392
+      "generation_seconds": 0.012682667002081871,
+      "queue_seconds": 1.9585713744163513e-06,
+      "total_seconds": 0.012818749994039536
     }
   },
   {
     "command": [
       "lab.py",
       "--workspace",
-      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmphq3i1fax/case",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp7ekst300/case",
       "run"
     ],
     "returncode": 0,
-    "stdout": "PREPARED 09a76a1103e2ecdbffde617c8b94103b02fa853dfe8386ff681b5f07af55c8e7 rows 2\nPUBLISHED fixture-B cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082\n",
-    "stderr": "20:47:13.834 | INFO    | Flow run 'precious-lemur' - Beginning flow run 'precious-lemur' for flow 'hw8910-release'\n20:47:13.837 | INFO    | Flow run 'precious-lemur' - View at http://127.0.0.1:60392/runs/flow-run/7c74e033-5058-4577-b18d-40ef456a103a\n20:47:13.843 | INFO    | Task run 'prepare-e89' - Finished in state Completed()\n20:47:13.851 | INFO    | Task run 'get_existing_artifact-e89' - Finished in state Completed()\n20:47:13.853 | INFO    | Task run 'evaluate_release-3ca' - Finished in state Completed()\n20:47:13.857 | INFO    | Task run 'publish_release-208' - Finished in state Completed()\n20:47:14.852 | INFO    | Flow run 'precious-lemur' - Finished in state Completed()\n"
+    "stdout": "PREPARED 7beea257f931c3a5fe8199c503c6a708d07e1bfd65597acdc23aa9ed6bbd5bac rows 2\nPUBLISHED fixture-B cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082\n",
+    "stderr": "21:20:59.907 | INFO    | Flow run 'mutant-dingo' - Beginning flow run 'mutant-dingo' for flow 'hw8910-release'\n21:20:59.910 | INFO    | Flow run 'mutant-dingo' - View at http://127.0.0.1:64601/runs/flow-run/37a4d0d6-216b-413e-b2e4-24dc742992b7\n21:20:59.917 | INFO    | Task run 'prepare-d42' - Finished in state Completed()\n21:20:59.926 | INFO    | Task run 'get_existing_artifact-4d2' - Finished in state Completed()\n21:20:59.929 | INFO    | Task run 'evaluate_release-58c' - Finished in state Completed()\n21:20:59.933 | INFO    | Task run 'publish_release-2ab' - Finished in state Completed()\n21:21:00.918 | INFO    | Flow run 'mutant-dingo' - Finished in state Completed()\n"
   },
   {
     "request": "/generate",
@@ -49,12 +49,12 @@
       "answer": "STUB ONLY: fixture-A",
       "output_tokens": 1,
       "text": "STUB ONLY: fixture-A",
-      "request_id": "35744367-7d92-479f-91c1-b5cc33b836fb",
+      "request_id": "14fe0e88-1159-408b-8af0-2a0746193a09",
       "model_id": "fixture-A",
       "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
-      "generation_seconds": 0.011636916548013687,
-      "queue_seconds": 4.374422132968903e-06,
-      "total_seconds": 0.011743416078388691
+      "generation_seconds": 0.012756708078086376,
+      "queue_seconds": 2.2919848561286926e-06,
+      "total_seconds": 0.01290708314627409
     }
   },
   {
@@ -67,19 +67,19 @@
       "answer": "STUB ONLY: fixture-B",
       "output_tokens": 1,
       "text": "STUB ONLY: fixture-B",
-      "request_id": "20567415-27af-42cc-8715-18dafb42c694",
+      "request_id": "2ce5b01f-cbdb-4a98-a37b-2a0f9f128a65",
       "model_id": "fixture-B",
       "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
-      "generation_seconds": 0.01514358352869749,
-      "queue_seconds": 2.2081658244132996e-06,
-      "total_seconds": 0.015210624784231186
+      "generation_seconds": 0.0118559580296278,
+      "queue_seconds": 1.4165416359901428e-06,
+      "total_seconds": 0.01197766698896885
     }
   },
   {
     "command": [
       "-c",
       "import json,sys,release\nfrom pathlib import Path\nr=Path(sys.argv[1])\nrelease.publish(json.loads((r/'manifest-A.json').read_text()),json.loads((r/'report-A.json').read_text()),r/'accepted.json')\n",
-      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmphq3i1fax/case"
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp7ekst300/case"
     ],
     "returncode": 0,
     "stdout": "",
@@ -95,12 +95,12 @@
       "answer": "STUB ONLY: fixture-B",
       "output_tokens": 1,
       "text": "STUB ONLY: fixture-B",
-      "request_id": "316c322f-348c-4d67-a579-8751e7732bc5",
+      "request_id": "1b87f67b-c3c6-4493-81a9-d57430403a29",
       "model_id": "fixture-B",
       "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
-      "generation_seconds": 0.015170332975685596,
-      "queue_seconds": 2.0423904061317444e-06,
-      "total_seconds": 0.015226375311613083
+      "generation_seconds": 0.012723666615784168,
+      "queue_seconds": 1.8747523427009583e-06,
+      "total_seconds": 0.01286858320236206
     }
   },
   {
@@ -113,12 +113,12 @@
       "answer": "STUB ONLY: fixture-A",
       "output_tokens": 1,
       "text": "STUB ONLY: fixture-A",
-      "request_id": "044fe146-4cea-4d10-a16f-854c7f5e47d0",
+      "request_id": "bc10ebdf-b67a-45ec-81f5-467210666e4f",
       "model_id": "fixture-A",
       "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
-      "generation_seconds": 0.015176582150161266,
-      "queue_seconds": 1.8337741494178772e-06,
-      "total_seconds": 0.015252292156219482
+      "generation_seconds": 0.010899084620177746,
+      "queue_seconds": 1.62515789270401e-06,
+      "total_seconds": 0.011026958003640175
     }
   }
 ]

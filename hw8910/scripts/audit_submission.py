@@ -45,8 +45,8 @@ def main():
         "FAILED (failures=7)" in (reports / "integration-original.log").read_text(),
     )
     require(
-        "twenty-green-without-weights",
-        "FAST_CHECK_EXIT_CODES [0, 0]" in (reports / "fast-green.log").read_text(),
+        "twenty-six-green-without-weights",
+        "FAST_CHECK_EXIT_CODES [0, 0, 0]" in (reports / "fast-green.log").read_text(),
     )
     mutation = release.read(reports / "mutation-summary.json")
     require(
@@ -180,6 +180,65 @@ def main():
         == release.digest((reports / "real-release/release-report.json").read_bytes())
         and access["export_exit_code"] == access["release_exit_code"] == 0,
     )
+    prototype = release.read(reports / "re-audit/original-prototype.json")
+    require(
+        "original-prototype-byte-identical",
+        prototype["all_files_identical"]
+        and prototype["n_files"] == 14
+        and all(x["identical"] for x in prototype["files"]),
+    )
+    robustness = (reports / "re-audit/robustness-after.log").read_text()
+    require(
+        "cancellation-no-overlapping-compute",
+        "CANCELLATION_MAX_PARALLEL 2" in (reports / "re-audit/robustness-before.log").read_text()
+        and "CANCELLATION_MAX_PARALLEL 1" in robustness
+        and "Ran 6 tests" in robustness
+        and robustness.rstrip().endswith("OK"),
+    )
+    links = release.read(reports / "re-audit/evaluation-binding-after.json")
+    require(
+        "pinned-evaluation-run-for-both-reports",
+        links[0]["passed"] and len(links) == 4 and all(x["rejected"] for x in links[1:]),
+    )
+    comparisons = release.read(reports / "re-audit/real-api/comparisons.json")
+    actual_saved = {x["id"]: x for x in release.read(HW67 / "reports/evaluation/candidate-outputs.json")}
+    require(
+        "all-sixty-four-real-answers-match-evaluation",
+        len(comparisons) == 64
+        and {x["id"] for x in comparisons} == set(actual_saved)
+        and all(
+            x["status"] == 200
+            and x["actual"] == actual_saved[x["id"]]["raw"]
+            and x["model_id"] == manifest["model_id"]
+            and x["runtime_sha256"] == manifest["runtime_sha256"]
+            and 0 < x["output_tokens"] <= 32
+            for x in comparisons
+        ),
+    )
+    live = release.read(reports / "re-audit/real-api/evidence.json")
+    require(
+        "re-audited-real-restart-and-benchmark",
+        live[-1]["passed"]
+        and live[-1]["matched_evaluation_answers"] == 64
+        and live[-1]["benchmark_attempts"] == 16
+        and live[-1]["restarted_real_model"],
+    )
+    for label in ("changed-data", "incompatible-runtime"):
+        directory = reports / "re-audit/rejections" / label
+        rejection = release.read(directory / "decision.json")
+        require(
+            "saved-rejected-inputs:" + label,
+            rejection["passed"] is False
+            and rejection["status"] == "rejected"
+            and rejection["accepted_sha256"]
+            == release.digest((reports / "real-release/accepted.json").read_bytes())
+            and {"input.txt", "config.json", "manifest.json", "baseline-eval.json", "candidate-eval.json"}
+            <= set(rejection["input_sha256"])
+            and all(
+                release.digest((directory / name).read_bytes()) == value
+                for name, value in rejection["input_sha256"].items()
+            ),
+        )
     result = {"passed": True, "checks": checks, "n_checks": len(checks), "video_recorded": False}
     (reports / "submission-audit.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     print("SUBMISSION_AUDIT_PASSED", len(checks))

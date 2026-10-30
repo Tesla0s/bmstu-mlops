@@ -38,7 +38,7 @@ def main():
         copy = Path(tmp)
         for path in ROOT.glob("*.py"):
             shutil.copyfile(path, copy / path.name)
-        for name in ("tests", "checks", "scripts"):
+        for name in ("tests", "checks", "checks_extra", "scripts"):
             shutil.copytree(ROOT / name, copy / name, ignore=shutil.ignore_patterns("__pycache__"))
         (copy / "release.py").write_text(after)
         p = subprocess.run(

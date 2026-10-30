@@ -19,5 +19,12 @@
     "transformers_installed": false
   },
   "remote_ci_executed": false,
-  "branch_protection_claimed": false
+  "branch_protection_claimed": false,
+  "re_audit": {
+    "fast_tests": 26,
+    "matched_real_evaluation_answers": 64,
+    "consistency_checks": 53,
+    "scope": "content only; video deferred",
+    "snapshot_ref": "hw8910-audited"
+  }
 }

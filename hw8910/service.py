@@ -34,6 +34,26 @@ class GenerateRequest(BaseModel):
         return value
 
 
+async def finish_thread_before_cancelling(function, *args):
+    """A cancelled request still owns its compute slot until the synchronous work stops."""
+    worker = asyncio.create_task(asyncio.to_thread(function, *args))
+    try:
+        return await asyncio.shield(worker)
+    except asyncio.CancelledError:
+        # Cancelling an asyncio waiter cannot stop an already running Python/GPU thread.
+        # Keep the caller's lock and queue slot even if cancellation is requested again.
+        while not worker.done():
+            try:
+                await asyncio.shield(worker)
+            except asyncio.CancelledError:
+                continue
+            except Exception:
+                break
+        if not worker.cancelled():
+            worker.exception()  # Retrieve a possible backend exception before propagating cancellation.
+        raise
+
+
 class ServiceState:
     def __init__(self, root, warmup_seconds):
         self.root = root
@@ -66,11 +86,13 @@ class ServiceState:
             async with self.lock:
                 queue_seconds = time.perf_counter() - started
                 try:
-                    batch = await asyncio.to_thread(self.backend.validate, request.prompt)
+                    batch = await finish_thread_before_cancelling(self.backend.validate, request.prompt)
                 except ValueError as exc:
                     raise HTTPException(422, str(exc)) from exc
                 generation_start = time.perf_counter()
-                result = await asyncio.to_thread(self.backend.generate, batch, request.max_new_tokens)
+                result = await finish_thread_before_cancelling(
+                    self.backend.generate, batch, request.max_new_tokens
+                )
                 result.update(
                     text=result["answer"],
                     request_id=str(uuid.uuid4()),
