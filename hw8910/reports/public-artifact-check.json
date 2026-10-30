@@ -1,0 +1,13 @@
+{
+  "public_url": "https://github.com/Tesla0s/bmstu-mlops/releases/download/hw8910-model-v1/github-issue-adapter-v1.zip",
+  "anonymous_download": true,
+  "archive_sha256": "a99eed449cbe0181fe65255267207f8657de2b000d94c86f71d1b25bb35e51b3",
+  "bytes": 22447554,
+  "manifest_matches_original": true,
+  "report_matches_original": true,
+  "accepted_sha256": "838a6342d46c590e9c566d65e5651fae9aee72cc3ea921feb27e7c51e795015a",
+  "release_report_sha256": "971b200efd7b71db905e1a35dee32f1c3cc8c069ed47d7a8f5d8177811b76d0f",
+  "download_exit_code": 0,
+  "export_exit_code": 0,
+  "release_exit_code": 0
+}

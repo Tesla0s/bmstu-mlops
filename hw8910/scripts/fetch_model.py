@@ -24,7 +24,10 @@ def main():
     if not archive.exists() or hashlib.sha256(archive.read_bytes()).hexdigest() != manifest["sha256"]:
         for attempt in range(3):
             try:
-                with urllib.request.urlopen(manifest["url"], timeout=60) as response:
+                # Version the request by content to avoid an early cached 404 while an asset is uploading.
+                separator = "&" if "?" in manifest["url"] else "?"
+                url = manifest["url"] + separator + "sha256=" + manifest["sha256"]
+                with urllib.request.urlopen(url, timeout=60) as response:
                     data = response.read(manifest["bytes"] + 1)
                 break
             except urllib.error.HTTPError as exc:

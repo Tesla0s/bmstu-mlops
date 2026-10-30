@@ -162,6 +162,24 @@ def main():
         {x["id"]: x["answer"] for x in rows if x["concurrency"] == 1}
         == {x["id"]: x["answer"] for x in rows if x["concurrency"] == 2},
     )
+    access = release.read(reports / "public-artifact-check.json")
+    artifact = release.read(ROOT / "model-artifact.json")
+    require(
+        "public-artifact-anonymous-and-verified",
+        access["anonymous_download"]
+        and access["archive_sha256"] == artifact["sha256"]
+        and access["bytes"] == artifact["bytes"]
+        and access["download_exit_code"] == 0,
+    )
+    require(
+        "public-artifact-identical-release",
+        access["manifest_matches_original"]
+        and access["report_matches_original"]
+        and access["accepted_sha256"] == release.digest((reports / "real-release/accepted.json").read_bytes())
+        and access["release_report_sha256"]
+        == release.digest((reports / "real-release/release-report.json").read_bytes())
+        and access["export_exit_code"] == access["release_exit_code"] == 0,
+    )
     result = {"passed": True, "checks": checks, "n_checks": len(checks), "video_recorded": False}
     (reports / "submission-audit.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     print("SUBMISSION_AUDIT_PASSED", len(checks))

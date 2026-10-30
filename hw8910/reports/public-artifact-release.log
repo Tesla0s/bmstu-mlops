@@ -1,0 +1,9 @@
+20:57:13.500 | INFO    | Flow run 'warping-penguin' - Beginning flow run 'warping-penguin' for flow 'hw8910-release'
+20:57:13.504 | INFO    | Flow run 'warping-penguin' - View at http://127.0.0.1:4208/runs/flow-run/0f9bd1fe-1ffb-4aa0-8ec8-d10e9d8f98fc
+PREPARED c9d885c07bff8013b41dfbea24d7be53868b01aae354404e8ada5760d389c4cf rows 60
+20:57:13.513 | INFO    | Task run 'prepare-e04' - Finished in state Completed()
+20:57:14.460 | INFO    | Task run 'get_existing_artifact-3d8' - Finished in state Completed()
+20:57:15.266 | INFO    | Task run 'evaluate_release-f12' - Finished in state Completed()
+PUBLISHED github-issue-qwen-adapter/1 b567531062d50c6f26f528354731ac22a4e2eb82585a86abf8ceb27ba5d057a0
+20:57:15.995 | INFO    | Task run 'publish_release-fdc' - Finished in state Completed()
+20:57:16.518 | INFO    | Flow run 'warping-penguin' - Finished in state Completed()

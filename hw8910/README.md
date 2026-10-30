@@ -9,7 +9,7 @@ FastAPI загружает именно эту версию и сообщает 
 
 [Подробный отчёт](REPORT.txt), [семь дефектов](defects.csv),
 [исходный прототип](https://github.com/Tesla0s/bmstu-mlops/commit/686c0237195630aee0018ae4d4be326468832f82),
-[исправленное решение](https://github.com/Tesla0s/bmstu-mlops/tree/hw8910-solution/hw8910).
+[исправленное решение](https://github.com/Tesla0s/bmstu-mlops/tree/hw8910-ready/hw8910).
 
 ## Проверка без модели
 
@@ -70,7 +70,7 @@ make export-model
 
 `make fetch-model` получает [отдельный артефакт адаптера](https://github.com/Tesla0s/bmstu-mlops/releases/tag/hw8910-model-v1):
 22 447 554 байта, SHA-256 закреплён в [model-artifact.json](model-artifact.json).
-После проверки архива проверяются все файлы. В Git нет весов, среды Python и кешей.
+После проверки архива проверяются все файлы. [Публичное скачивание и выпуск в чистом каталоге проверены](reports/public-artifact-check.json). В Git нет весов, среды Python и кешей.
 База скачивается отдельно из `Qwen/Qwen3-0.6B` по точной ревизии
 `c1899de289a04d12100db370d81485cdf75e47ca`; её реальные файлы тоже проверяются.
 
@@ -85,7 +85,7 @@ MLFLOW_TRACKING_URI=http://127.0.0.1:5006 \
 создаёт `manifest-real.json`. Это не повторное обучение.
 Существующий опубликованный рабочий каталог не перезаписывается.
 
-Проверенный режим генерации: Apple M3 Pro, MPS, `bfloat16`, Transformers 4.57.6,
+Проверенный режим генерации: Apple M3 Pro, MPS (вычисления на графическом процессоре Apple), `bfloat16`, Transformers 4.57.6,
 PEFT 0.17.1, PyTorch 2.8.0. Для CPU/CUDA или других условий нужна новая оценка;
 сервер не подменяет устройство или настройки молча. Быстрые тесты переносимы.
 
@@ -161,7 +161,23 @@ make stub-experiment # отдельный НОВЫЙ .local/stub-experiment; я�
 |---|---|
 | Код процесса/сервера | `make check check-extra lint`. Если изменились генерация, шаблон или обработка входа: в `../hw67` повторить `make evaluate eval export-evidence`, затем собрать новый manifest и выпуск. Документация не требует обучения. |
 | Данные | `make release-audit` проверяет инвалидацию. Для новых данных оценки в `../hw67`: `make evaluate eval export-evidence`; старые отчёты выпуск не откроют. Новые train-данные требуют решения о переобучении; только тогда `make sweep candidate evaluate eval export-evidence`. |
-| Новый адаптер | В `../hw67`: `make candidate evaluate eval export-evidence`; сохранить прежний `reports/model-origin.json` отдельной версией, экспортировать новый run в новый рабочий каталог, проверить полную оценку, затем выполнить `lab.py ... run` и `service.py ...` для этого каталога. Старую историю и файлы оставить для отката. Если меняется режим API, его контракт и полная оценка обновляются вместе. |
+| Новый адаптер | В `../hw67`: `make candidate evaluate eval export-evidence`; сохранить прежний `reports/model-origin.json` отдельной версией, экспортировать новый run в новый рабочий каталог, проверить полную оценку, затем выполнить команды нового выпуска ниже. Старую историю и файлы оставить для отката. Если меняется режим API, его контракт и полная оценка обновляются вместе. |
+
+Пример для нового адаптера после завершения его полной оценки в ДЗ 6+7:
+
+```bash
+mv reports/model-origin.json reports/model-origin.previous.json
+MLFLOW_TRACKING_URI=http://127.0.0.1:5006 \
+.venv/bin/python export_existing.py --workspace .local/next
+.venv/bin/python lab.py --workspace .local/next run \
+  --manifest manifest-real.json --report release-report.json
+.venv/bin/python service.py --workspace .local/next --port 8099
+```
+
+Это проверочный запуск новой версии на другом порту. Старый сервер продолжает
+обслуживать принятую версию; переключение выполняется после проверки нового
+`/ready` и контрольного ответа. При изменении поведения генерации сначала
+приведите генератор оценки ДЗ 6+7 к тем же условиям и выполните полную оценку.
 
 Для смены кандидата проверка происхождения намеренно требует явно обновить
 `reports/model-origin.json` после новой оценки. Нельзя просто подставить другие веса
@@ -169,5 +185,7 @@ make stub-experiment # отдельный НОВЫЙ .local/stub-experiment; я�
 
 `ci.example.yml` — пример автоматизации. Выполнены локальные проверки;
 удалённый GitHub Actions не запускался, защита слияния не заявляется.
+
+Итоговая проверка согласованности: `.venv/bin/python scripts/audit_submission.py`; [46 проверок](reports/submission-audit.json).
 
 Видео будет записано отдельно после проверки содержательной части.
