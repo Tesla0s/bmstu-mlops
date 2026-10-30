@@ -1,0 +1,13 @@
+{
+  "status": 200,
+  "error": null,
+  "client_seconds": 0.5998073751106858,
+  "request_id": "fb217604-7c38-4534-a15c-a609c435f75a",
+  "generation_seconds": 0.5783555405214429,
+  "queue_seconds": 2.791173756122589e-06,
+  "total_seconds": 0.5982005828991532,
+  "model_id": "github-issue-qwen-adapter/1",
+  "runtime_sha256": "21049dc5d627e1f1f7b8ba124f8461e6b340c0ae476fcca5b50065d51cc4dd38",
+  "output_tokens": 7,
+  "answer": "{\"answer\": \"bug\"}"
+}

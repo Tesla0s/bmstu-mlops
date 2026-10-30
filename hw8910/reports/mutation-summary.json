@@ -1,0 +1,7 @@
+{
+  "mutated_check_exit_code": 1,
+  "original_sha256": "a16e6eed2e28a403d5971f13ec43fad872e1dd557473053b218985f947a0f878",
+  "after_sha256": "a16e6eed2e28a403d5971f13ec43fad872e1dd557473053b218985f947a0f878",
+  "original_unchanged": true,
+  "intentional_mutation_detected": true
+}

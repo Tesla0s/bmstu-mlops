@@ -1,0 +1,20 @@
+INFO:     Started server process [12719]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:59677 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59681 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59682 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59683 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59684 - "POST /generate HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59685 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59687 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59693 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59695 - "GET /ready HTTP/1.1" 503 Service Unavailable
+READY fixture-A bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547
+INFO:     127.0.0.1:59697 - "GET /ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59698 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59761 - "POST /generate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12719]

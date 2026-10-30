@@ -1,0 +1,47 @@
+[
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp6ftgrcuv/case",
+      "init"
+    ],
+    "returncode": 0,
+    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp6ftgrcuv/case\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp6ftgrcuv/case",
+      "run",
+      "--fail-after-prepare"
+    ],
+    "returncode": 1,
+    "stdout": "PREPARED 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4\n",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/vitalygubin/Desktop/MLOPS/hw8+9+10/workspace/original/lab.py\", line 84, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/Users/vitalygubin/Desktop/MLOPS/hw8+9+10/workspace/original/lab.py\", line 81, in main\n    else:run(args.workspace,args.report,args.fail_after_prepare)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/vitalygubin/Desktop/MLOPS/hw8+9+10/workspace/original/lab.py\", line 67, in run\n    if fail_after_prepare:raise RuntimeError('Инъекция сбоя после подготовки')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Инъекция сбоя после подготовки\n"
+  },
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp6ftgrcuv/case",
+      "run"
+    ],
+    "returncode": 0,
+    "stdout": "CACHE_HIT 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4\nPUBLISHED fixture-B\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp6ftgrcuv/case",
+      "run"
+    ],
+    "returncode": 0,
+    "stdout": "CACHE_HIT 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4\nPUBLISHED fixture-B\n",
+    "stderr": ""
+  }
+]

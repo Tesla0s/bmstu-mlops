@@ -1,0 +1,9 @@
+PREPARED cad84f9c0d0aebce6152f0b74ccb9705d310ecd91596bdbbf365a855d40f9748 rows 3
+ALREADY_PUBLISHED fixture-B cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+20:42:04.576 | INFO    | Flow run 'perky-orangutan' - Beginning flow run 'perky-orangutan' for flow 'hw8910-release'
+20:42:04.579 | INFO    | Flow run 'perky-orangutan' - View at http://127.0.0.1:4208/runs/flow-run/7607c166-b0e9-47cf-ab9f-37b050580eab
+20:42:04.586 | INFO    | Task run 'prepare-e3b' - Finished in state Completed()
+20:42:04.593 | INFO    | Task run 'get_existing_artifact-da6' - Finished in state Completed()
+20:42:04.596 | INFO    | Task run 'evaluate_release-753' - Finished in state Completed()
+20:42:04.599 | INFO    | Task run 'publish_release-63c' - Finished in state Completed()
+20:42:05.590 | INFO    | Flow run 'perky-orangutan' - Finished in state Completed()

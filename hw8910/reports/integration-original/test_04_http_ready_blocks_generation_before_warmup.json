@@ -1,0 +1,40 @@
+[
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmps166tht4/case",
+      "init"
+    ],
+    "returncode": 0,
+    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmps166tht4/case\n",
+    "stderr": ""
+  },
+  {
+    "request": "/health",
+    "body": null,
+    "status": 200,
+    "response": {
+      "alive": true,
+      "backend": "STUB ONLY"
+    }
+  },
+  {
+    "request": "/debug",
+    "body": null,
+    "status": 200,
+    "response": {
+      "loaded_id": "fixture-A",
+      "calls": 0,
+      "warmup_finished": false
+    }
+  },
+  {
+    "request": "/ready",
+    "body": null,
+    "status": 200,
+    "response": {
+      "ready": true
+    }
+  }
+]

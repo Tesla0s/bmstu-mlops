@@ -1,0 +1,10 @@
+--- release.py
++++ release.py.mutated
+@@ -35,6 +35,7 @@
+ 
+ 
+ def validate_release(manifest: dict, report: dict) -> None:
++    return  # DELIBERATE MUTATION: skip the whole release contract
+     try:
+         if not isinstance(manifest, dict) or not isinstance(report, dict):
+             raise ValueError("Manifest and report must be objects")

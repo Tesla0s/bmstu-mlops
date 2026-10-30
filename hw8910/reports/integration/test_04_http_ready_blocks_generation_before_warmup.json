@@ -1,0 +1,95 @@
+[
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmplmbahlqb/case",
+      "init"
+    ],
+    "returncode": 0,
+    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmplmbahlqb/case\n",
+    "stderr": ""
+  },
+  {
+    "request": "/health",
+    "body": null,
+    "status": 200,
+    "response": {
+      "alive": true
+    }
+  },
+  {
+    "request": "/debug",
+    "body": null,
+    "status": 200,
+    "response": {
+      "loaded_id": "fixture-A",
+      "calls": 0,
+      "warmup_finished": false,
+      "pending": 0,
+      "compute_slots": 1
+    }
+  },
+  {
+    "request": "/ready",
+    "body": null,
+    "status": 503,
+    "response": {
+      "ready": false,
+      "model_id": null,
+      "error": null
+    }
+  },
+  {
+    "request": "/generate",
+    "body": {
+      "prompt": "hello"
+    },
+    "status": 503,
+    "response": {
+      "detail": "Model loading/warmup has not completed"
+    }
+  },
+  {
+    "request": "/debug",
+    "body": null,
+    "status": 200,
+    "response": {
+      "loaded_id": "fixture-A",
+      "calls": 0,
+      "warmup_finished": false,
+      "pending": 0,
+      "compute_slots": 1
+    }
+  },
+  {
+    "request": "/debug",
+    "body": null,
+    "status": 200,
+    "response": {
+      "loaded_id": "fixture-A",
+      "calls": 0,
+      "warmup_finished": true,
+      "pending": 0,
+      "compute_slots": 1
+    }
+  },
+  {
+    "request": "/generate",
+    "body": {
+      "prompt": "hello"
+    },
+    "status": 200,
+    "response": {
+      "answer": "STUB ONLY: fixture-A",
+      "output_tokens": 1,
+      "text": "STUB ONLY: fixture-A",
+      "request_id": "c477baf7-a3fb-47ae-aa94-a2f94fe98d8b",
+      "model_id": "fixture-A",
+      "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+      "generation_seconds": 0.015401625074446201,
+      "queue_seconds": 9.374693036079407e-06,
+      "total_seconds": 0.01574708428233862
+    }
+  }
+]

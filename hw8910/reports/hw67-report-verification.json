@@ -1,0 +1,60 @@
+{
+  "verified": true,
+  "leakage": {
+    "exact_or_group_intersections": 0,
+    "n_train_index": 1315,
+    "n_golden": 60,
+    "n_behavioral": 4
+  },
+  "baseline": {
+    "n": 60,
+    "correct": 27,
+    "valid": 44,
+    "errors": 0,
+    "accuracy": 0.45,
+    "format_rate": 0.7333333333333333
+  },
+  "candidate": {
+    "n": 60,
+    "correct": 38,
+    "valid": 60,
+    "errors": 0,
+    "accuracy": 0.6333333333333333,
+    "format_rate": 1.0
+  },
+  "decision": {
+    "passed": true,
+    "regression_tolerance": 0,
+    "critical_slices": [
+      "class:bug",
+      "class:feature_request",
+      "class:question"
+    ],
+    "baseline": {
+      "n": 60,
+      "correct": 27,
+      "valid": 44,
+      "errors": 0,
+      "accuracy": 0.45,
+      "format_rate": 0.7333333333333333
+    },
+    "candidate": {
+      "n": 60,
+      "correct": 38,
+      "valid": 60,
+      "errors": 0,
+      "accuracy": 0.6333333333333333,
+      "format_rate": 1.0
+    },
+    "behavioral": {
+      "n": 4,
+      "correct": 4,
+      "valid": 4,
+      "errors": 0,
+      "accuracy": 1.0,
+      "format_rate": 1.0
+    },
+    "protocol_sha256": "f7c8bf45ef575dba55d83287cea1f17b75f55da49b8e5638d90e6f4e809956e5"
+  },
+  "negative_rejected": true
+}

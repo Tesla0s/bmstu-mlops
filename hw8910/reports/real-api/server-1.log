@@ -1,0 +1,36 @@
+INFO:     Started server process [12747]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:59742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59746 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59747 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59748 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59749 - "POST /generate HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59750 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59751 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59753 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59758 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59759 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59762 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59770 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59775 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59776 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59778 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59780 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59784 - "GET /ready HTTP/1.1" 503 Service Unavailable
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+INFO:     127.0.0.1:59785 - "GET /ready HTTP/1.1" 503 Service Unavailable
+READY github-issue-qwen-adapter/1 21049dc5d627e1f1f7b8ba124f8461e6b340c0ae476fcca5b50065d51cc4dd38
+INFO:     127.0.0.1:59787 - "GET /ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59788 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59789 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:59790 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:59791 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:59792 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:59793 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:59794 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59795 - "POST /generate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12747]

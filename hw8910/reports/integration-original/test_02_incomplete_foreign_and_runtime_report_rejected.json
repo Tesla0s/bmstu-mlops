@@ -1,0 +1,26 @@
+[
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpd800mhui/case",
+      "init"
+    ],
+    "returncode": 0,
+    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpd800mhui/case\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpd800mhui/case",
+      "run",
+      "--report",
+      "report-incomplete.json"
+    ],
+    "returncode": 0,
+    "stdout": "PREPARED 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4\nPUBLISHED fixture-B\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp70gqgbrn/case",
+      "init"
+    ],
+    "returncode": 0,
+    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp70gqgbrn/case\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "-c",
+      "import json,sys,release\nfrom pathlib import Path\nfrom unittest.mock import patch\nr=Path(sys.argv[1])\nm=json.loads((r/'manifest-B.json').read_text());q=json.loads((r/'report-B.json').read_text())\nwith patch('os.replace',side_effect=OSError('TEST disk error')):\n try:release.publish(m,q,r/'accepted.json')\n except OSError:print('EXPECTED_DISK_ERROR');sys.exit(23)\nraise AssertionError('Replacement error was bypassed')\n",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmp70gqgbrn/case"
+    ],
+    "returncode": 23,
+    "stdout": "EXPECTED_DISK_ERROR\n",
+    "stderr": ""
+  },
+  {
+    "accepted_sha256_before": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "accepted_sha256_after": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  }
+]

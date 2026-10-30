@@ -1,0 +1,75 @@
+[
+  {
+    "case": "status=running",
+    "rejected": true,
+    "reason": "Evaluation incomplete or rejected",
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  },
+  {
+    "case": "passed=true",
+    "rejected": true,
+    "reason": "Evaluation incomplete or rejected",
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  },
+  {
+    "case": "passed=False",
+    "rejected": true,
+    "reason": "Evaluation incomplete or rejected",
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  },
+  {
+    "case": "model_id=foreign",
+    "rejected": true,
+    "reason": "Foreign evaluation: model_id",
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  },
+  {
+    "case": "evaluation_run_id=",
+    "rejected": true,
+    "reason": "Missing evaluation_run_id",
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  },
+  {
+    "case": "accuracy=nan",
+    "rejected": true,
+    "reason": "Invalid metric: accuracy",
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  },
+  {
+    "case": "accuracy=inf",
+    "rejected": true,
+    "reason": "Invalid metric: accuracy",
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  },
+  {
+    "case": "accuracy=True",
+    "rejected": true,
+    "reason": "Invalid metric: accuracy",
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52"
+  },
+  {
+    "case": "atomic-replace-error",
+    "rejected": true,
+    "before_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "after_sha256": "d549211b23f5cdbec7b5e259f44e111a20a9fa11534d9cb2273c94e8bfc0aa52",
+    "temporary_files": 0
+  },
+  {
+    "case": "file-tampering-before-publish",
+    "rejected": true,
+    "reason": "Artifact file changed: model-B.txt"
+  },
+  {
+    "case": "file-tampering-before-load",
+    "rejected": true,
+    "reason": "Artifact file changed: model-A.txt"
+  }
+]

@@ -1,80 +1,161 @@
-"""Лёгкий HTTP-прототип с дефектами. Только localhost, STUB ONLY.
+"""FastAPI service: readiness after loading/warmup, fixed loaded identity, bounded generation."""
 
-Для итогового проекта перенесите исправленный контракт в FastAPI и подключите
-загрузчик ДЗ 6+7. Прототип нужен для опытов без установки зависимостей и весов.
-"""
 import argparse
-import json
-import threading
+import asyncio
+from contextlib import asynccontextmanager
+from pathlib import Path
 import time
 import uuid
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from pathlib import Path
+
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, field_validator
+
+from backends import load_backend
 
 
-class StubBackend:
-    def __init__(self,manifest):
-        self.loaded_id=manifest['model_id'];self.calls=0;self.runtime_sha256=manifest['runtime_sha256']
+class GenerateRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+    prompt: str = Field(min_length=1, max_length=8192)
+    max_new_tokens: StrictInt = 32
 
-    def generate(self,prompt,limit):
-        self.calls+=1;time.sleep(.01)
-        return {'answer':f'STUB ONLY: {self.loaded_id}', 'output_tokens':1}
+    @field_validator("prompt")
+    @classmethod
+    def nonblank(cls, value):
+        if not value.strip():
+            raise ValueError("prompt must contain text")
+        return value
+
+    @field_validator("max_new_tokens")
+    @classmethod
+    def fixed_generation(cls, value):
+        if value != 32:
+            raise ValueError("This evaluated runtime supports exactly max_new_tokens=32")
+        return value
 
 
 class ServiceState:
-    def __init__(self,root,warmup_seconds):
-        self.root=root;self.ready=True
-        manifest=json.loads((root/'accepted.json').read_text())
-        self.backend=StubBackend(manifest)
-        self.warmup_finished=threading.Event()
-        def warmup():
-            time.sleep(warmup_seconds);self.warmup_finished.set()
-        threading.Thread(target=warmup,daemon=True).start()
+    def __init__(self, root, warmup_seconds):
+        self.root = root
+        self.warmup_seconds = warmup_seconds
+        self.ready = False
+        self.backend = None
+        self.error = None
+        self.lock = asyncio.Lock()
+        self.pending = 0
 
-    def generate(self,request):
-        started=time.perf_counter()
-        result=self.backend.generate(request.get('prompt',''),request.get('max_new_tokens',32))
-        advertised=json.loads((self.root/'accepted.json').read_text())
-        result.update(model_id=advertised['model_id'],runtime_sha256=advertised['runtime_sha256'],
-                      request_id=str(uuid.uuid4()),generation_seconds=time.perf_counter()-started)
-        return result
+    async def load(self):
+        try:
+            self.backend = await asyncio.to_thread(load_backend, self.root)
+            await asyncio.sleep(self.warmup_seconds)
+            await asyncio.to_thread(self.backend.warmup)
+            self.ready = True
+            print("READY", self.backend.loaded_id, self.backend.runtime_sha256, flush=True)
+        except Exception as exc:
+            self.error = f"{type(exc).__name__}: {exc}"
+            print("LOAD_FAILED", self.error, flush=True)
+
+    async def generate(self, request):
+        if not self.ready:
+            raise HTTPException(503, "Model loading/warmup has not completed")
+        if self.pending >= 8:
+            raise HTTPException(429, "Generation queue is full")
+        started = time.perf_counter()
+        self.pending += 1
+        try:
+            async with self.lock:
+                queue_seconds = time.perf_counter() - started
+                try:
+                    batch = await asyncio.to_thread(self.backend.validate, request.prompt)
+                except ValueError as exc:
+                    raise HTTPException(422, str(exc)) from exc
+                generation_start = time.perf_counter()
+                result = await asyncio.to_thread(self.backend.generate, batch, request.max_new_tokens)
+                result.update(
+                    text=result["answer"],
+                    request_id=str(uuid.uuid4()),
+                    model_id=self.backend.loaded_id,
+                    runtime_sha256=self.backend.runtime_sha256,
+                    generation_seconds=time.perf_counter() - generation_start,
+                    queue_seconds=queue_seconds,
+                    total_seconds=time.perf_counter() - started,
+                )
+                return result
+        finally:
+            self.pending -= 1
 
 
-def handler_for(state):
-    class Handler(BaseHTTPRequestHandler):
-        def send_json(self,status,payload):
-            data=json.dumps(payload,ensure_ascii=False).encode()
-            self.send_response(status);self.send_header('Content-Type','application/json; charset=utf-8')
-            self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
+def create_app(root, warmup_seconds=0):
+    state = ServiceState(Path(root), warmup_seconds)
 
-        def do_GET(self):
-            if self.path=='/health':self.send_json(200,{'alive':True,'backend':'STUB ONLY'})
-            elif self.path=='/ready':self.send_json(200 if state.ready else 503,{'ready':state.ready})
-            elif self.path=='/debug':
-                self.send_json(200,{'loaded_id':state.backend.loaded_id,'calls':state.backend.calls,'warmup_finished':state.warmup_finished.is_set()})
-            else:self.send_json(404,{'error':'not found'})
+    @asynccontextmanager
+    async def lifespan(app):
+        worker = asyncio.create_task(state.load())
+        yield
+        if not worker.done():
+            worker.cancel()
+        await asyncio.gather(worker, return_exceptions=True)
 
-        def do_POST(self):
-            if self.path!='/generate':self.send_json(404,{'error':'not found'});return
-            size=int(self.headers.get('Content-Length','0'))
-            if size<0 or size>65536:self.send_json(413,{'error':'body too large'});return
-            try:
-                payload=json.loads(self.rfile.read(size))
-                self.send_json(200,state.generate(payload))
-            except (ValueError,TypeError,AttributeError,KeyError) as e:
-                self.send_json(400,{'error':str(e)})
-    return Handler
+    app = FastAPI(title="GitHub issue classifier — HW 8–10", lifespan=lifespan)
+    app.state.service = state
+
+    @app.middleware("http")
+    async def body_limit(request: Request, call_next):
+        length = request.headers.get("content-length")
+        if length and (not length.isdigit() or int(length) > 32768):
+            return JSONResponse({"detail": "Request body limit: 32768 bytes"}, status_code=413)
+        if request.method == "POST":
+            body = bytearray()
+            async for chunk in request.stream():
+                body.extend(chunk)
+                if len(body) > 32768:
+                    return JSONResponse({"detail": "Request body limit: 32768 bytes"}, status_code=413)
+            request._body = bytes(body)
+        return await call_next(request)
+
+    @app.get("/health")
+    async def health():
+        return {"alive": True}
+
+    @app.get("/ready")
+    async def ready():
+        return JSONResponse(
+            {
+                "ready": state.ready,
+                "model_id": state.backend.loaded_id if state.ready else None,
+                "error": state.error,
+            },
+            status_code=200 if state.ready else 503,
+        )
+
+    @app.get("/debug")
+    async def debug():
+        # Loopback diagnostic endpoint; no prompts or weights.
+        return {
+            "loaded_id": state.backend.loaded_id if state.backend else None,
+            "calls": state.backend.calls if state.backend else 0,
+            "warmup_finished": state.ready,
+            "pending": state.pending,
+            "compute_slots": 1,
+        }
+
+    @app.post("/generate")
+    async def generate(body: GenerateRequest):
+        return await state.generate(body)
+
+    return app
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--workspace',type=Path,default=Path('.lab'))
-    p.add_argument('--port',type=int,default=8091);p.add_argument('--warmup-seconds',type=float,default=5)
-    args=p.parse_args();state=ServiceState(args.workspace,args.warmup_seconds)
-    server=ThreadingHTTPServer(('127.0.0.1',args.port),handler_for(state))
-    print(f'STUB ONLY: http://127.0.0.1:{server.server_port}',flush=True)
-    try:server.serve_forever()
-    except KeyboardInterrupt:pass
-    finally:server.server_close()
+    import uvicorn
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--workspace", type=Path, default=Path(".lab"))
+    parser.add_argument("--port", type=int, default=8098)
+    parser.add_argument("--warmup-seconds", type=float, default=0)
+    args = parser.parse_args()
+    uvicorn.run(create_app(args.workspace, args.warmup_seconds), host="127.0.0.1", port=args.port)
 
 
-if __name__=='__main__':main()
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,23 @@
+[
+  {
+    "command": [
+      "lab.py",
+      "--workspace",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpt0hv4rs1/case",
+      "init"
+    ],
+    "returncode": 0,
+    "stdout": "Создан синтетический стенд: /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpt0hv4rs1/case\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "-c",
+      "import json,sys,release\nfrom pathlib import Path\nfrom unittest.mock import patch\nr=Path(sys.argv[1])\nm=json.loads((r/'manifest-B.json').read_text());q=json.loads((r/'report-B.json').read_text())\nwith patch('os.replace',side_effect=OSError('TEST disk error')):\n try:release.publish(m,q,r/'accepted.json')\n except OSError:print('EXPECTED_DISK_ERROR');sys.exit(23)\nraise AssertionError('Replacement error was bypassed')\n",
+      "/var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpt0hv4rs1/case"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAssertionError: Replacement error was bypassed\n"
+  }
+]

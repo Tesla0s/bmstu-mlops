@@ -1,10 +1,10 @@
+.lab*/
 .venv/
+.cache/
 __pycache__/
 *.pyc
-.env
-models/
-.cache/
-*.safetensors
-*.bin
-*.pt
-.lab*/
+.local/
+artifacts/
+.prefect/
+.ruff_cache/
+mlruns/

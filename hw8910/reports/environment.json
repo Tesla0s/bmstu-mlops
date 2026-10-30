@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-30",
+  "hardware": "Apple M3 Pro",
+  "memory_bytes": 38654705664,
+  "os": "macOS 15.7.9 (24G830)",
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "prefect": "3.8.8",
+  "fastapi": "0.154.0",
+  "generation_device": "mps",
+  "dtype": "bfloat16",
+  "original_commit": "686c0237195630aee0018ae4d4be326468832f82",
+  "test_fingerprints": {
+    "hw8910": "09bd65e6b886",
+    "hw67": "c42ac7788026"
+  },
+  "fast_environment": {
+    "torch_installed": false,
+    "transformers_installed": false
+  },
+  "remote_ci_executed": false,
+  "branch_protection_claimed": false
+}

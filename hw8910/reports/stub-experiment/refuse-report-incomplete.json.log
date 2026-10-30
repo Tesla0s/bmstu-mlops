@@ -1,0 +1,123 @@
+CACHE_HIT 09a76a1103e2ecdbffde617c8b94103b02fa853dfe8386ff681b5f07af55c8e7
+20:42:01.126 | INFO    | Flow run 'meek-puffin' - Beginning flow run 'meek-puffin' for flow 'hw8910-release'
+20:42:01.129 | INFO    | Flow run 'meek-puffin' - View at http://127.0.0.1:4208/runs/flow-run/55ddf52f-3209-4118-ae10-cd9993f7ca65
+20:42:01.135 | INFO    | Task run 'prepare-c67' - Finished in state Cached(type=COMPLETED)
+20:42:01.143 | INFO    | Task run 'get_existing_artifact-86b' - Finished in state Completed()
+20:42:01.144 | ERROR   | Task run 'evaluate_release-397' - Task run failed with exception: ValueError('Evaluation incomplete or rejected')
+Traceback (most recent call last):
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1027, in run_context
+    yield self
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1696, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1044, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 93, in evaluate_release
+    release.validate_release(manifest, report)
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/release.py", line 55, in validate_release
+    raise ValueError("Evaluation incomplete or rejected")
+ValueError: Evaluation incomplete or rejected
+20:42:01.146 | ERROR   | Task run 'evaluate_release-397' - Finished in state Failed('Task run encountered an exception ValueError: Evaluation incomplete or rejected')
+20:42:02.139 | ERROR   | Flow run 'meek-puffin' - Encountered exception during execution: ValueError('Evaluation incomplete or rejected')
+Traceback (most recent call last):
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1330, in run_context
+    yield self
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 2111, in run_flow_sync
+    engine.call_flow_fn()
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1350, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 163, in release_flow
+    decision = evaluate_release(str(root), artifact, report_name, prepared)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1230, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1929, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1699, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 619, in result
+    raise self._raised
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1027, in run_context
+    yield self
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1696, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1044, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 93, in evaluate_release
+    release.validate_release(manifest, report)
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/release.py", line 55, in validate_release
+    raise ValueError("Evaluation incomplete or rejected")
+ValueError: Evaluation incomplete or rejected
+20:42:02.158 | INFO    | Flow run 'meek-puffin' - Finished in state Failed('Flow run encountered an exception: ValueError: Evaluation incomplete or rejected')
+Traceback (most recent call last):
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/lab.py", line 108, in <module>
+    main()
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/lab.py", line 104, in main
+    run(args.workspace, args.report, args.fail_after_prepare, args.manifest, args.fail_after_pointer)
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/lab.py", line 77, in run
+    return release_flow(
+           ^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flows.py", line 1887, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 2268, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 2113, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 788, in result
+    raise self._raised
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1330, in run_context
+    yield self
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 2111, in run_flow_sync
+    engine.call_flow_fn()
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1350, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 163, in release_flow
+    decision = evaluate_release(str(root), artifact, report_name, prepared)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1230, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1929, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1699, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 619, in result
+    raise self._raised
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1027, in run_context
+    yield self
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1696, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1044, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 356, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/pipeline.py", line 93, in evaluate_release
+    release.validate_release(manifest, report)
+  File "/Users/vitalygubin/Desktop/MLOPS/bmstu-mlops/hw8910/release.py", line 55, in validate_release
+    raise ValueError("Evaluation incomplete or rejected")
+ValueError: Evaluation incomplete or rejected
