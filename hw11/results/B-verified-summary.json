@@ -1,0 +1,475 @@
+{
+  "B-hot80-ordinary-r1": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 288
+    },
+    "success_n": 288,
+    "error_fraction": 0.0,
+    "ttfc_p50": 0.45730892100004894,
+    "ttfc_p95": 1.5137578546999746,
+    "total_p95": 2.0198220394500592,
+    "queue_p95": 1.3177244178500016,
+    "inter_chunk_p95": 0.12792607344988483,
+    "send_lag_p95": 0.006201680016283716,
+    "send_lag_max": 0.00848537779961589,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-pqvw2": 148,
+      "hw11-api-74dd74c8b9-cmsh4": 140
+    },
+    "cache_hit_fraction_success": 0.7708333333333334,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 120.7260353565216,
+    "server_count": 288.0,
+    "idle_capacity": {
+      "samples": 62,
+      "hot_waiting_other_idle_samples": 7,
+      "fraction": 0.11290322580645161
+    }
+  },
+  "B-hot80-ordinary-r2": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 288
+    },
+    "success_n": 288,
+    "error_fraction": 0.0,
+    "ttfc_p50": 0.6186367254999823,
+    "ttfc_p95": 2.225217693900094,
+    "total_p95": 2.7308795017500183,
+    "queue_p95": 1.9754720248499544,
+    "inter_chunk_p95": 0.12803306149995705,
+    "send_lag_p95": 0.006291677710714793,
+    "send_lag_max": 0.009659111605515136,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-pqvw2": 150,
+      "hw11-api-74dd74c8b9-cmsh4": 138
+    },
+    "cache_hit_fraction_success": 0.7777777777777778,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 121.30120325088501,
+    "server_count": 288.0,
+    "idle_capacity": {
+      "samples": 63,
+      "hot_waiting_other_idle_samples": 12,
+      "fraction": 0.19047619047619047
+    }
+  },
+  "B-hot80-ordinary-r3": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 288
+    },
+    "success_n": 288,
+    "error_fraction": 0.0,
+    "ttfc_p50": 0.5280503825001688,
+    "ttfc_p95": 2.5446686252999347,
+    "total_p95": 3.053024264549888,
+    "queue_p95": 2.3689985845999884,
+    "inter_chunk_p95": 0.12907395379982062,
+    "send_lag_p95": 0.006296506298963322,
+    "send_lag_max": 0.010102737317083665,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-pqvw2": 139,
+      "hw11-api-74dd74c8b9-cmsh4": 149
+    },
+    "cache_hit_fraction_success": 0.7777777777777778,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 122.80309867858887,
+    "server_count": 288.0,
+    "idle_capacity": {
+      "samples": 63,
+      "hot_waiting_other_idle_samples": 24,
+      "fraction": 0.38095238095238093
+    }
+  },
+  "B-hot80-sticky-r1": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 225,
+      "rejected": 63
+    },
+    "success_n": 225,
+    "error_fraction": 0.21875,
+    "ttfc_p50": 4.420589272000143,
+    "ttfc_p95": 4.827997760000062,
+    "total_p95": 5.335978213199951,
+    "queue_p95": 4.676552080800093,
+    "inter_chunk_p95": 0.12840688105006848,
+    "send_lag_p95": 0.006008979127977908,
+    "send_lag_max": 0.01049588672799473,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-cmsh4": 250,
+      "hw11-api-74dd74c8b9-pqvw2": 38
+    },
+    "cache_hit_fraction_success": 0.8577777777777778,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 124.82035160064697,
+    "server_count": 225.0,
+    "idle_capacity": {
+      "samples": 64,
+      "hot_waiting_other_idle_samples": 50,
+      "fraction": 0.78125
+    }
+  },
+  "B-hot80-sticky-r2": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 224,
+      "rejected": 64
+    },
+    "success_n": 224,
+    "error_fraction": 0.2222222222222222,
+    "ttfc_p50": 4.402604092000047,
+    "ttfc_p95": 4.815101616350171,
+    "total_p95": 5.325881034950044,
+    "queue_p95": 4.666207198849816,
+    "inter_chunk_p95": 0.12900748749996183,
+    "send_lag_p95": 0.006487837014992693,
+    "send_lag_max": 0.009345734124508454,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-cmsh4": 250,
+      "hw11-api-74dd74c8b9-pqvw2": 38
+    },
+    "cache_hit_fraction_success": 0.8571428571428571,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 124.20525455474854,
+    "server_count": 224.0,
+    "idle_capacity": {
+      "samples": 64,
+      "hot_waiting_other_idle_samples": 50,
+      "fraction": 0.78125
+    }
+  },
+  "B-hot80-sticky-r3": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 224,
+      "rejected": 64
+    },
+    "success_n": 224,
+    "error_fraction": 0.2222222222222222,
+    "ttfc_p50": 4.430036905499946,
+    "ttfc_p95": 4.8337179911000705,
+    "total_p95": 5.339954605149887,
+    "queue_p95": 4.685582495799781,
+    "inter_chunk_p95": 0.1294775682498539,
+    "send_lag_p95": 0.006037212451496998,
+    "send_lag_max": 0.012888406808997388,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-cmsh4": 250,
+      "hw11-api-74dd74c8b9-pqvw2": 38
+    },
+    "cache_hit_fraction_success": 0.8571428571428571,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 124.26859831809998,
+    "server_count": 224.0,
+    "idle_capacity": {
+      "samples": 64,
+      "hot_waiting_other_idle_samples": 48,
+      "fraction": 0.75
+    }
+  },
+  "B-uniform-ordinary-r1": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 288
+    },
+    "success_n": 288,
+    "error_fraction": 0.0,
+    "ttfc_p50": 0.9619024045000515,
+    "ttfc_p95": 4.3445255511499,
+    "total_p95": 4.852218250949999,
+    "queue_p95": 4.055533519349967,
+    "inter_chunk_p95": 0.1277825482000594,
+    "send_lag_p95": 0.00380459483490085,
+    "send_lag_max": 0.006419528901687954,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-pqvw2": 141,
+      "hw11-api-74dd74c8b9-cmsh4": 147
+    },
+    "cache_hit_fraction_success": 0.23958333333333334,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 120.85682582855225,
+    "server_count": 288.0,
+    "idle_capacity": {
+      "samples": 62,
+      "hot_waiting_other_idle_samples": 4,
+      "fraction": 0.06451612903225806
+    }
+  },
+  "B-uniform-ordinary-r2": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 282,
+      "rejected": 6
+    },
+    "success_n": 282,
+    "error_fraction": 0.02083333333333337,
+    "ttfc_p50": 1.6215399400000479,
+    "ttfc_p95": 5.410887307800021,
+    "total_p95": 5.917494067199924,
+    "queue_p95": 5.122478477100138,
+    "inter_chunk_p95": 0.12787368505000812,
+    "send_lag_p95": 0.0036592870563254064,
+    "send_lag_max": 0.0074565418731253885,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-pqvw2": 134,
+      "hw11-api-74dd74c8b9-cmsh4": 154
+    },
+    "cache_hit_fraction_success": 0.2127659574468085,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 121.74009466171265,
+    "server_count": 282.0,
+    "idle_capacity": {
+      "samples": 63,
+      "hot_waiting_other_idle_samples": 15,
+      "fraction": 0.23809523809523808
+    }
+  },
+  "B-uniform-ordinary-r3": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 286,
+      "rejected": 2
+    },
+    "success_n": 286,
+    "error_fraction": 0.00694444444444442,
+    "ttfc_p50": 1.4008267335000255,
+    "ttfc_p95": 5.1103936397501,
+    "total_p95": 5.620728751750221,
+    "queue_p95": 4.821833100000049,
+    "inter_chunk_p95": 0.1289307688999088,
+    "send_lag_p95": 0.004395183186807116,
+    "send_lag_max": 0.011042148770229687,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-pqvw2": 140,
+      "hw11-api-74dd74c8b9-cmsh4": 148
+    },
+    "cache_hit_fraction_success": 0.22727272727272727,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 122.72470808029175,
+    "server_count": 286.0,
+    "idle_capacity": {
+      "samples": 63,
+      "hot_waiting_other_idle_samples": 14,
+      "fraction": 0.2222222222222222
+    }
+  },
+  "B-uniform-sticky-r1": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 288
+    },
+    "success_n": 288,
+    "error_fraction": 0.0,
+    "ttfc_p50": 0.3224637380000104,
+    "ttfc_p95": 0.6157359677000014,
+    "total_p95": 1.1214837578500663,
+    "queue_p95": 0.37479737620001286,
+    "inter_chunk_p95": 0.1281955973499862,
+    "send_lag_p95": 0.0033932793761209715,
+    "send_lag_max": 0.0064387714892291115,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-cmsh4": 144,
+      "hw11-api-74dd74c8b9-pqvw2": 144
+    },
+    "cache_hit_fraction_success": 0.8888888888888888,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 120.23908114433289,
+    "server_count": 288.0,
+    "idle_capacity": {
+      "samples": 60,
+      "hot_waiting_other_idle_samples": 0,
+      "fraction": 0.0
+    }
+  },
+  "B-uniform-sticky-r2": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 288
+    },
+    "success_n": 288,
+    "error_fraction": 0.0,
+    "ttfc_p50": 0.3071895584999993,
+    "ttfc_p95": 0.614345302149999,
+    "total_p95": 1.119311848550066,
+    "queue_p95": 0.3745911511500026,
+    "inter_chunk_p95": 0.12778208159990073,
+    "send_lag_p95": 0.003637771536659783,
+    "send_lag_max": 0.006895994084743506,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-cmsh4": 144,
+      "hw11-api-74dd74c8b9-pqvw2": 144
+    },
+    "cache_hit_fraction_success": 0.8888888888888888,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 120.24113869667053,
+    "server_count": 288.0,
+    "idle_capacity": {
+      "samples": 62,
+      "hot_waiting_other_idle_samples": 0,
+      "fraction": 0.0
+    }
+  },
+  "B-uniform-sticky-r3": {
+    "sent": 288,
+    "outcomes": {
+      "completed": 288
+    },
+    "success_n": 288,
+    "error_fraction": 0.0,
+    "ttfc_p50": 0.3131647999998677,
+    "ttfc_p95": 0.6149686483498469,
+    "total_p95": 1.121856933349815,
+    "queue_p95": 0.37415386995016886,
+    "inter_chunk_p95": 0.12927923644986095,
+    "send_lag_p95": 0.004843494783267487,
+    "send_lag_max": 0.007786506116644887,
+    "pod_distribution": {
+      "hw11-api-74dd74c8b9-cmsh4": 144,
+      "hw11-api-74dd74c8b9-pqvw2": 144
+    },
+    "cache_hit_fraction_success": 0.8888888888888888,
+    "client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "server_client_ips": [
+      "10.244.0.10",
+      "10.244.0.7",
+      "10.244.0.8",
+      "10.244.0.9"
+    ],
+    "observed_span_seconds": 120.2400496006012,
+    "server_count": 288.0,
+    "idle_capacity": {
+      "samples": 62,
+      "hot_waiting_other_idle_samples": 0,
+      "fraction": 0.0
+    }
+  }
+}

@@ -1,0 +1,371 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: monitoring
+  namespace: hw11
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: hw11-monitoring
+rules:
+- apiGroups:
+  - ''
+  resources:
+  - nodes
+  - nodes/proxy
+  - pods
+  - services
+  - endpoints
+  - namespaces
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  - replicasets
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - autoscaling
+  resources:
+  - horizontalpodautoscalers
+  verbs:
+  - get
+  - list
+  - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: hw11-monitoring
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: hw11-monitoring
+subjects:
+- kind: ServiceAccount
+  name: monitoring
+  namespace: hw11
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: hw11
+data:
+  prometheus.yml: "global:\n  evaluation_interval: 5s\n  scrape_interval: 5s\nrule_files:\n\
+    - /etc/prometheus/alerts.yaml\nscrape_configs:\n- job_name: hw11-api\n  kubernetes_sd_configs:\n\
+    \  - namespaces:\n      names:\n      - hw11\n    role: pod\n  relabel_configs:\n\
+    \  - action: keep\n    regex: hw11-api\n    source_labels:\n    - __meta_kubernetes_pod_label_app\n\
+    \  - action: keep\n    regex: http\n    source_labels:\n    - __meta_kubernetes_pod_container_port_name\n\
+    \  - source_labels:\n    - __meta_kubernetes_pod_name\n    target_label: pod\n\
+    \  - source_labels:\n    - __meta_kubernetes_namespace\n    target_label: namespace\n\
+    - job_name: kube-state-metrics\n  static_configs:\n  - targets:\n    - kube-state-metrics:8080\n\
+    - authorization:\n    credentials_file: /var/run/secrets/kubernetes.io/serviceaccount/token\n\
+    \  job_name: cadvisor\n  kubernetes_sd_configs:\n  - role: node\n  metric_relabel_configs:\n\
+    \  - action: keep\n    regex: hw11\n    source_labels:\n    - namespace\n  - action:\
+    \ keep\n    regex: container_cpu_usage_seconds_total|container_memory_working_set_bytes\n\
+    \    source_labels:\n    - __name__\n  relabel_configs:\n  - replacement: kubernetes.default.svc:443\n\
+    \    target_label: __address__\n  - replacement: /api/v1/nodes/$1/proxy/metrics/cadvisor\n\
+    \    source_labels:\n    - __meta_kubernetes_node_name\n    target_label: __metrics_path__\n\
+    \  scheme: https\n  tls_config:\n    ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt\n"
+  alerts.yaml: "groups:\n- interval: 5s\n  name: hw11\n  rules:\n  - alert: HighTTFC\n\
+    \    annotations:\n      summary: TTFC p95 > 1 second, at least 20 completed requests\
+    \ in 1m\n    expr: histogram_quantile(0.95, sum by (le) (rate(hw11_ttfc_seconds_bucket[1m])))\n\
+    \      > 1 and sum(increase(hw11_ttfc_seconds_count[1m])) >= 20\n    for: 15s\n\
+    \    labels:\n      severity: warning\n  - alert: HighFailureFraction\n    annotations:\n\
+    \      summary: Failure fraction > 5%, at least 20 outcomes in 1m\n    expr: (sum(rate(hw11_results_total{outcome!=\"\
+    completed\"}[1m])) / sum(rate(hw11_results_total[1m])))\n      > 0.05 and sum(increase(hw11_results_total[1m]))\
+    \ >= 20\n    for: 15s\n    labels:\n      severity: warning\n"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-provision
+  namespace: hw11
+data:
+  datasources.yaml: "apiVersion: 1\ndatasources:\n- access: proxy\n  isDefault: true\n\
+    \  name: Prometheus\n  type: prometheus\n  uid: prom\n  url: http://prometheus:9090\n"
+  dashboards.yaml: "apiVersion: 1\nproviders:\n- name: hw11\n  options:\n    path:\
+    \ /var/lib/grafana/dashboards\n  type: file\n"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboard
+  namespace: hw11
+data:
+  hw11.json: "{\"id\": null, \"uid\": \"hw11\", \"title\": \"\u0414\u0417 11 \xB7\
+    \ \u0441\u0435\u0440\u0432\u0438\u0441 \u043F\u043E\u0434 \u043D\u0430\u0433\u0440\
+    \u0443\u0437\u043A\u043E\u0439\", \"schemaVersion\": 41, \"version\": 1, \"tags\"\
+    : [\"hw11\", \"simulated\"], \"timezone\": \"browser\", \"refresh\": \"5s\", \"\
+    time\": {\"from\": \"now-15m\", \"to\": \"now\"}, \"panels\": [{\"id\": 1, \"\
+    type\": \"timeseries\", \"title\": \"\u0412\u0440\u0435\u043C\u044F \u0434\u043E\
+    \ \u043F\u0435\u0440\u0432\u043E\u0439 \u0447\u0430\u0441\u0442\u0438 \xB7 p95\"\
+    , \"gridPos\": {\"x\": 0, \"y\": 0, \"w\": 12, \"h\": 8}, \"datasource\": {\"\
+    type\": \"prometheus\", \"uid\": \"prom\"}, \"targets\": [{\"refId\": \"A\", \"\
+    expr\": \"histogram_quantile(0.95, sum by (le,pod) (rate(hw11_ttfc_seconds_bucket[1m])))\"\
+    , \"legendFormat\": \"{{pod}}\"}], \"fieldConfig\": {\"defaults\": {\"unit\":\
+    \ \"s\", \"min\": 0}, \"overrides\": []}}, {\"id\": 2, \"type\": \"timeseries\"\
+    , \"title\": \"\u0414\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\
+    \u044C \u043E\u0442\u0432\u0435\u0442\u0430 \xB7 p95\", \"gridPos\": {\"x\": 12,\
+    \ \"y\": 0, \"w\": 12, \"h\": 8}, \"datasource\": {\"type\": \"prometheus\", \"\
+    uid\": \"prom\"}, \"targets\": [{\"refId\": \"A\", \"expr\": \"histogram_quantile(0.95,\
+    \ sum by (le,pod) (rate(hw11_total_seconds_bucket[1m])))\", \"legendFormat\":\
+    \ \"{{pod}}\"}], \"fieldConfig\": {\"defaults\": {\"unit\": \"s\", \"min\": 0},\
+    \ \"overrides\": []}}, {\"id\": 3, \"type\": \"timeseries\", \"title\": \"\u0412\
+    \ \u0440\u0430\u0431\u043E\u0442\u0435 \u0438 \u0432 \u043E\u0447\u0435\u0440\u0435\
+    \u0434\u0438\", \"gridPos\": {\"x\": 0, \"y\": 8, \"w\": 12, \"h\": 8}, \"datasource\"\
+    : {\"type\": \"prometheus\", \"uid\": \"prom\"}, \"targets\": [{\"refId\": \"\
+    A\", \"expr\": \"{__name__=~\\\"hw11_running|hw11_waiting\\\"}\", \"legendFormat\"\
+    : \"{{__name__}} \xB7 {{pod}}\"}], \"fieldConfig\": {\"defaults\": {\"unit\":\
+    \ \"short\", \"min\": 0}, \"overrides\": []}}, {\"id\": 4, \"type\": \"timeseries\"\
+    , \"title\": \"\u0417\u0430\u0432\u0435\u0440\u0448\u0451\u043D\u043D\u044B\u0435\
+    \ \u043E\u0442\u0432\u0435\u0442\u044B \u0432 \u0441\u0435\u043A\u0443\u043D\u0434\
+    \u0443\", \"gridPos\": {\"x\": 12, \"y\": 8, \"w\": 12, \"h\": 8}, \"datasource\"\
+    : {\"type\": \"prometheus\", \"uid\": \"prom\"}, \"targets\": [{\"refId\": \"\
+    A\", \"expr\": \"sum by (pod) (rate(hw11_results_total{outcome=\\\"completed\\\
+    \"}[1m]))\", \"legendFormat\": \"{{pod}}\"}], \"fieldConfig\": {\"defaults\":\
+    \ {\"unit\": \"reqps\", \"min\": 0}, \"overrides\": []}}, {\"id\": 5, \"type\"\
+    : \"timeseries\", \"title\": \"\u041E\u0442\u043A\u0430\u0437\u044B \u0438 \u043E\
+    \u0431\u0440\u044B\u0432\u044B \u0432 \u0441\u0435\u043A\u0443\u043D\u0434\u0443\
+    \", \"gridPos\": {\"x\": 0, \"y\": 16, \"w\": 12, \"h\": 8}, \"datasource\": {\"\
+    type\": \"prometheus\", \"uid\": \"prom\"}, \"targets\": [{\"refId\": \"A\", \"\
+    expr\": \"sum by (pod,outcome) (rate(hw11_results_total{outcome!=\\\"completed\\\
+    \"}[1m]))\", \"legendFormat\": \"{{pod}} \xB7 {{outcome}}\"}], \"fieldConfig\"\
+    : {\"defaults\": {\"unit\": \"reqps\", \"min\": 0}, \"overrides\": []}}, {\"id\"\
+    : 6, \"type\": \"timeseries\", \"title\": \"\u0418\u0441\u043F\u043E\u043B\u044C\
+    \u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u043F\u0440\u043E\u0446\u0435\u0441\
+    \u0441\u043E\u0440\u0430\", \"gridPos\": {\"x\": 12, \"y\": 16, \"w\": 12, \"\
+    h\": 8}, \"datasource\": {\"type\": \"prometheus\", \"uid\": \"prom\"}, \"targets\"\
+    : [{\"refId\": \"A\", \"expr\": \"sum by (pod) (rate(container_cpu_usage_seconds_total{namespace=\\\
+    \"hw11\\\",container=\\\"api\\\"}[1m]))\", \"legendFormat\": \"{{pod}}\"}], \"\
+    fieldConfig\": {\"defaults\": {\"unit\": \"cores\", \"min\": 0}, \"overrides\"\
+    : []}}, {\"id\": 7, \"type\": \"timeseries\", \"title\": \"\u041E\u043F\u0435\u0440\
+    \u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u0430\u043C\u044F\u0442\u044C\
+    \", \"gridPos\": {\"x\": 0, \"y\": 24, \"w\": 12, \"h\": 8}, \"datasource\": {\"\
+    type\": \"prometheus\", \"uid\": \"prom\"}, \"targets\": [{\"refId\": \"A\", \"\
+    expr\": \"sum by (pod) (container_memory_working_set_bytes{namespace=\\\"hw11\\\
+    \",container=\\\"api\\\"})\", \"legendFormat\": \"{{pod}}\"}], \"fieldConfig\"\
+    : {\"defaults\": {\"unit\": \"bytes\", \"min\": 0}, \"overrides\": []}}, {\"id\"\
+    : 8, \"type\": \"timeseries\", \"title\": \"\u0413\u043E\u0442\u043E\u0432\u044B\
+    \u0435 \u0440\u0435\u043F\u043B\u0438\u043A\u0438\", \"gridPos\": {\"x\": 12,\
+    \ \"y\": 24, \"w\": 12, \"h\": 8}, \"datasource\": {\"type\": \"prometheus\",\
+    \ \"uid\": \"prom\"}, \"targets\": [{\"refId\": \"A\", \"expr\": \"sum(kube_pod_status_ready{namespace=\\\
+    \"hw11\\\",pod=~\\\"hw11-api-.*\\\",condition=\\\"true\\\"})\", \"legendFormat\"\
+    : \"Ready\"}], \"fieldConfig\": {\"defaults\": {\"unit\": \"short\", \"min\":\
+    \ 0}, \"overrides\": []}}, {\"id\": 9, \"type\": \"timeseries\", \"title\": \"\
+    \u041F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u044F \u0432 \u0438\u043C\u0438\
+    \u0442\u0430\u0446\u0438\u044E \u043A\u0435\u0448\u0430\", \"gridPos\": {\"x\"\
+    : 0, \"y\": 32, \"w\": 12, \"h\": 8}, \"datasource\": {\"type\": \"prometheus\"\
+    , \"uid\": \"prom\"}, \"targets\": [{\"refId\": \"A\", \"expr\": \"sum by (pod,result)\
+    \ (rate(hw11_cache_total[1m]))\", \"legendFormat\": \"{{pod}} \xB7 {{result}}\"\
+    }], \"fieldConfig\": {\"defaults\": {\"unit\": \"ops\", \"min\": 0}, \"overrides\"\
+    : []}}, {\"id\": 10, \"type\": \"timeseries\", \"title\": \"\u041E\u0436\u0438\
+    \u0434\u0430\u043D\u0438\u0435 \u043E\u0447\u0435\u0440\u0435\u0434\u0438 \xB7\
+    \ p95\", \"gridPos\": {\"x\": 12, \"y\": 32, \"w\": 12, \"h\": 8}, \"datasource\"\
+    : {\"type\": \"prometheus\", \"uid\": \"prom\"}, \"targets\": [{\"refId\": \"\
+    A\", \"expr\": \"histogram_quantile(0.95, sum by (le,pod) (rate(hw11_queue_seconds_bucket[1m])))\"\
+    , \"legendFormat\": \"{{pod}}\"}], \"fieldConfig\": {\"defaults\": {\"unit\":\
+    \ \"s\", \"min\": 0}, \"overrides\": []}}]}"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+  namespace: hw11
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus
+  template:
+    metadata:
+      labels:
+        app: prometheus
+    spec:
+      serviceAccountName: monitoring
+      containers:
+      - name: prometheus
+        image: prom/prometheus:v3.6.0
+        ports:
+        - containerPort: 9090
+        resources:
+          requests:
+            cpu: 50m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        readinessProbe:
+          httpGet:
+            path: /-/ready
+            port: 9090
+          initialDelaySeconds: 3
+          periodSeconds: 5
+        args:
+        - --config.file=/etc/prometheus/prometheus.yml
+        - --storage.tsdb.path=/prometheus
+        - --storage.tsdb.retention.time=3h
+        - --storage.tsdb.retention.size=256MB
+        volumeMounts:
+        - name: config
+          mountPath: /etc/prometheus
+        - name: data
+          mountPath: /prometheus
+      volumes:
+      - name: config
+        configMap:
+          name: prometheus-config
+      - name: data
+        emptyDir:
+          sizeLimit: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+  namespace: hw11
+spec:
+  selector:
+    app: prometheus
+  ports:
+  - port: 9090
+    targetPort: 9090
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-state-metrics
+  namespace: hw11
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-state-metrics
+  template:
+    metadata:
+      labels:
+        app: kube-state-metrics
+    spec:
+      serviceAccountName: monitoring
+      containers:
+      - name: kube-state-metrics
+        image: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.17.0
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 50m
+            memory: 32Mi
+          limits:
+            cpu: 500m
+            memory: 128Mi
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 3
+          periodSeconds: 5
+        args:
+        - --resources=pods,nodes,deployments,horizontalpodautoscalers
+      volumes: []
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kube-state-metrics
+  namespace: hw11
+spec:
+  selector:
+    app: kube-state-metrics
+  ports:
+  - port: 8080
+    targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  namespace: hw11
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana
+  template:
+    metadata:
+      labels:
+        app: grafana
+    spec:
+      serviceAccountName: monitoring
+      containers:
+      - name: grafana
+        image: grafana/grafana:12.2.0
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            cpu: 50m
+            memory: 96Mi
+          limits:
+            cpu: 500m
+            memory: 256Mi
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+          initialDelaySeconds: 3
+          periodSeconds: 5
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/grafana
+        - name: provision
+          mountPath: /etc/grafana/provisioning/datasources/datasources.yaml
+          subPath: datasources.yaml
+        - name: provision
+          mountPath: /etc/grafana/provisioning/dashboards/dashboards.yaml
+          subPath: dashboards.yaml
+        - name: dashboard
+          mountPath: /var/lib/grafana/dashboards
+        env:
+        - name: GF_AUTH_ANONYMOUS_ENABLED
+          value: 'true'
+        - name: GF_AUTH_ANONYMOUS_ORG_ROLE
+          value: Viewer
+        - name: GF_AUTH_DISABLE_LOGIN_FORM
+          value: 'true'
+        - name: GF_ANALYTICS_REPORTING_ENABLED
+          value: 'false'
+        - name: GF_ANALYTICS_CHECK_FOR_UPDATES
+          value: 'false'
+        - name: GF_ANALYTICS_CHECK_FOR_PLUGIN_UPDATES
+          value: 'false'
+      volumes:
+      - name: data
+        emptyDir:
+          sizeLimit: 256Mi
+      - name: provision
+        configMap:
+          name: grafana-provision
+      - name: dashboard
+        configMap:
+          name: grafana-dashboard
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  namespace: hw11
+spec:
+  selector:
+    app: grafana
+  ports:
+  - port: 3000
+    targetPort: 3000

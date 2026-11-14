@@ -1,0 +1,138 @@
+{
+  "experiment": "A-crash",
+  "url": "http://hw11-api:8080",
+  "start_wall": 1794647132.4065762,
+  "timeout": 30,
+  "schedule": [
+    {
+      "client": 3,
+      "offset": 6.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "crash-background-0003",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 14.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "crash-background-0007",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 22.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "crash-background-0011",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 30.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "crash-background-0015",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 38.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "crash-background-0019",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 46.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "crash-background-0023",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 54.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "crash-background-0027",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 62.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "crash-background-0031",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 70.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "crash-background-0035",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 78.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "crash-background-0039",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

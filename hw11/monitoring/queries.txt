@@ -1,0 +1,29 @@
+Время до первой части · p95
+histogram_quantile(0.95, sum by (le,pod) (rate(hw11_ttfc_seconds_bucket[1m])))
+
+Длительность ответа · p95
+histogram_quantile(0.95, sum by (le,pod) (rate(hw11_total_seconds_bucket[1m])))
+
+В работе и в очереди
+{__name__=~"hw11_running|hw11_waiting"}
+
+Завершённые ответы в секунду
+sum by (pod) (rate(hw11_results_total{outcome="completed"}[1m]))
+
+Отказы и обрывы в секунду
+sum by (pod,outcome) (rate(hw11_results_total{outcome!="completed"}[1m]))
+
+Использование процессора
+sum by (pod) (rate(container_cpu_usage_seconds_total{namespace="hw11",container="api"}[1m]))
+
+Оперативная память
+sum by (pod) (container_memory_working_set_bytes{namespace="hw11",container="api"})
+
+Готовые реплики
+sum(kube_pod_status_ready{namespace="hw11",pod=~"hw11-api-.*",condition="true"})
+
+Попадания в имитацию кеша
+sum by (pod,result) (rate(hw11_cache_total[1m]))
+
+Ожидание очереди · p95
+histogram_quantile(0.95, sum by (le,pod) (rate(hw11_queue_seconds_bucket[1m])))

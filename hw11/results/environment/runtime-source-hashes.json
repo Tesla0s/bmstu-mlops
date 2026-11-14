@@ -1,0 +1,13 @@
+{
+  "expected": {
+    "service.py": "61eb83911bb3ca7494e5f7be9ce390bec2a2dd646f1d0d9ec4e32605561526c5",
+    "client.py": "65d3c166f2d3aca5fa99c5a2d8853300395e649f89136e4a017396d96b614065",
+    "requirements.lock": "73ffc22be26789f212b5645d2a439547cc0797b70b9e7eb2afa7bb3116562025"
+  },
+  "container_actual": {
+    "service.py": "61eb83911bb3ca7494e5f7be9ce390bec2a2dd646f1d0d9ec4e32605561526c5",
+    "client.py": "65d3c166f2d3aca5fa99c5a2d8853300395e649f89136e4a017396d96b614065",
+    "requirements.lock": "73ffc22be26789f212b5645d2a439547cc0797b70b9e7eb2afa7bb3116562025"
+  },
+  "matches": true
+}

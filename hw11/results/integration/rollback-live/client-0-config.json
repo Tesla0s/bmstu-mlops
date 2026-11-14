@@ -1,0 +1,21 @@
+{
+  "experiment": "rollback-live",
+  "url": "http://hw11-api:8080",
+  "start_wall": 1794648016.673273,
+  "timeout": 30,
+  "schedule": [
+    {
+      "client": 0,
+      "offset": 0,
+      "body": {
+        "request_id": "rollback-live",
+        "session_id": "integration",
+        "prompt": "How to add an issue label?",
+        "history": [],
+        "prefix": "integration-prefix",
+        "max_chunks": 3,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

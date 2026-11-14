@@ -1,0 +1,1241 @@
+{
+  "wall": 1794645328.0346959,
+  "query": "{__name__=~\"hw11_ttfc_seconds_bucket|hw11_ttfc_seconds_count|hw11_total_seconds_bucket|hw11_total_seconds_count|hw11_cache_total\"}",
+  "retrieved_wall": 1794646835.689514,
+  "series": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {
+            "__name__": "hw11_cache_total",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2",
+            "result": "hit"
+          },
+          "value": [
+            1794645328.035,
+            "187"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_cache_total",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2",
+            "result": "miss"
+          },
+          "value": [
+            1794645328.035,
+            "136"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.01",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.025",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.05",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.1",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.2",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "85"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.4",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "202"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.6",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "224"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.8",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "254"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "1.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "269"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "1.5",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "284"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "2.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "288"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "3.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "297"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "4.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "307"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "6.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "8.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "12.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "20.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "30.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "60.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "+Inf",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_count",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.01",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.025",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.05",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.1",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.2",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.4",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.6",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "0.8",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "123"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "1.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "207"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "1.5",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "268"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "2.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "284"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "3.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "291"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "4.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "302"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "6.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "8.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "12.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "20.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "30.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "60.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "le": "+Inf",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_count",
+            "instance": "10.244.0.18:8080",
+            "job": "hw11-api",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-pqvw2"
+          },
+          "value": [
+            1794645328.035,
+            "323"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_cache_total",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4",
+            "result": "hit"
+          },
+          "value": [
+            1794645328.035,
+            "331"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_cache_total",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4",
+            "result": "miss"
+          },
+          "value": [
+            1794645328.035,
+            "147"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.01",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.025",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.05",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.1",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.2",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "67"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.4",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "156"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.6",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "171"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.8",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "197"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "1.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "209"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "1.5",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "230"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "2.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "237"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "3.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "267"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "4.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "310"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "6.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "8.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "12.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "20.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "30.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "60.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "+Inf",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_ttfc_seconds_count",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.01",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.025",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.05",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.1",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.2",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.4",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.6",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "0.8",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "90"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "1.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "161"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "1.5",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "209"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "2.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "230"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "3.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "246"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "4.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "282"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "6.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "8.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "12.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "20.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "30.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "60.0",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_bucket",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "le": "+Inf",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "hw11_total_seconds_count",
+            "instance": "10.244.0.19:8080",
+            "job": "hw11-api",
+            "namespace": "hw11",
+            "pod": "hw11-api-74dd74c8b9-cmsh4"
+          },
+          "value": [
+            1794645328.035,
+            "478"
+          ]
+        }
+      ]
+    }
+  }
+}

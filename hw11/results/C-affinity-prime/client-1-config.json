@@ -1,0 +1,21 @@
+{
+  "experiment": "C-affinity-prime",
+  "url": "http://hw11-sticky:8080",
+  "start_wall": 1794647538.699939,
+  "timeout": 30,
+  "schedule": [
+    {
+      "client": 1,
+      "offset": 2.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-00",
+        "request_id": "prime-0001",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "experiment": "dialog-beta",
+  "url": "http://10.244.0.31:8080",
+  "start_wall": 1794647248.5238771,
+  "timeout": 70,
+  "schedule": [
+    {
+      "client": 0,
+      "offset": 0,
+      "body": {
+        "prompt": "How do I report an issue?",
+        "request_id": "dialog-beta",
+        "session_id": "dialog-B",
+        "max_chunks": 5,
+        "cpu_scale": 1.0,
+        "history": [
+          "DIALOG-BETA-CONTROL-1826"
+        ]
+      }
+    }
+  ]
+}

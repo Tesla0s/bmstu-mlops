@@ -1,0 +1,24 @@
+{
+  "experiment": "replacement-after",
+  "url": "http://10.244.0.38:8080",
+  "start_wall": 1794648041.1009028,
+  "timeout": 30,
+  "schedule": [
+    {
+      "client": 0,
+      "offset": 0,
+      "body": {
+        "request_id": "replacement-after",
+        "session_id": "integration",
+        "prompt": "How to add an issue label?",
+        "history": [
+          "RECOVERY-CONTROL-4062",
+          "simulated:question"
+        ],
+        "prefix": "integration-prefix",
+        "max_chunks": 3,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

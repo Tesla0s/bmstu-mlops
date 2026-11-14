@@ -1,0 +1,15 @@
+{
+  "rollout_start": 1794646739.541871,
+  "rollout_ready": 1794646782.2857401,
+  "old_pods": [
+    "hw11-api-764f4f8fd8-8cg4r",
+    "hw11-api-764f4f8fd8-zr6tw"
+  ],
+  "grace_seconds": 60,
+  "prestop_seconds": 5,
+  "uvicorn_grace_seconds": 45,
+  "long_stream_request_ids": [
+    "A-long-0",
+    "A-long-1"
+  ]
+}

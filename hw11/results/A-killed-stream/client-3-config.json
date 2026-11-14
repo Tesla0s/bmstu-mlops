@@ -1,0 +1,7 @@
+{
+  "experiment": "A-killed-stream",
+  "url": "http://10.244.0.28:8080",
+  "start_wall": 1794647132.407068,
+  "timeout": 70,
+  "schedule": []
+}

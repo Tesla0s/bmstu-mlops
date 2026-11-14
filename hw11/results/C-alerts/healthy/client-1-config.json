@@ -1,0 +1,177 @@
+{
+  "experiment": "C-alert-healthy",
+  "url": "http://hw11-api:8080",
+  "start_wall": 1794647863.4181361,
+  "timeout": 30,
+  "schedule": [
+    {
+      "client": 1,
+      "offset": 2.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-00",
+        "request_id": "alert-healthy-0001",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 10.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-01",
+        "request_id": "alert-healthy-0005",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 18.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-02",
+        "request_id": "alert-healthy-0009",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 26.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-03",
+        "request_id": "alert-healthy-0013",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 34.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-04",
+        "request_id": "alert-healthy-0017",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 42.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-05",
+        "request_id": "alert-healthy-0021",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 50.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-06",
+        "request_id": "alert-healthy-0025",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 58.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-07",
+        "request_id": "alert-healthy-0029",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 66.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-00",
+        "request_id": "alert-healthy-0033",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 74.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-01",
+        "request_id": "alert-healthy-0037",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 82.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-02",
+        "request_id": "alert-healthy-0041",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 90.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-03",
+        "request_id": "alert-healthy-0045",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 98.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-04",
+        "request_id": "alert-healthy-0049",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

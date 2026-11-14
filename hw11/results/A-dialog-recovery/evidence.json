@@ -1,0 +1,202 @@
+{
+  "deleted": 1794647219.193908,
+  "old_uid": "5c848962-1a6b-486e-ad85-4643786b6361",
+  "new_uid": "a20d9172-e36f-4afc-a198-fe135ee0d526",
+  "old_pod": "hw11-api-689b5d4db4-26wxm",
+  "new_pod": "hw11-api-689b5d4db4-jbpqw",
+  "before": [
+    {
+      "experiment": "dialog-before",
+      "client": "client-0",
+      "client_ip": "10.244.0.8",
+      "request_id": "dialog-before",
+      "planned_mono": 3391.992974281311,
+      "sent_mono": 3391.998483407,
+      "planned_wall": 1794647218.407202,
+      "sent_wall": 1794647218.413379,
+      "send_lag_seconds": 0.005509125689059147,
+      "first_mono": 3392.299629094,
+      "end_mono": 3392.806570313,
+      "http_status": 200,
+      "outcome": "completed",
+      "chunks": 5,
+      "inter_chunk_seconds": [
+        0.12625418700008595,
+        0.1267044490000444,
+        0.12735534199964604,
+        0.1262366060000204
+      ],
+      "pod": "hw11-api-689b5d4db4-26wxm",
+      "model_id": "A",
+      "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+      "queue_seconds": 0.00021604700032185065,
+      "cache_hit": false,
+      "backend_mode": "simulated",
+      "terminal": {
+        "request_id": "dialog-before",
+        "session_id": "dialog-A",
+        "pod": "hw11-api-689b5d4db4-26wxm",
+        "model_id": "A",
+        "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+        "backend_mode": "simulated",
+        "client_ip": "10.244.0.8",
+        "done": true,
+        "chunks": 5,
+        "history_sha256": "825345a14b1729bbe9c7716e5b227e6a6867d022045cd71ff8ccd087286c0569",
+        "history_echo": [
+          "DIALOG-ALPHA-CONTROL-7391",
+          "How can I configure issue labels?"
+        ],
+        "prompt_echo": "How do I report an issue?",
+        "answer": "simulated:question"
+      },
+      "expected_chunks": 5,
+      "request": {
+        "prompt": "How do I report an issue?",
+        "request_id": "dialog-before",
+        "session_id": "dialog-A",
+        "max_chunks": 5,
+        "cpu_scale": 1.0,
+        "history": [
+          "DIALOG-ALPHA-CONTROL-7391",
+          "How can I configure issue labels?"
+        ]
+      },
+      "keep_alive": false,
+      "server_observed_client_ip": "10.244.0.8",
+      "end_wall": 1794647219.220798,
+      "total_seconds": 0.8080869059999713,
+      "ttfc_seconds": 0.3011456869999165
+    }
+  ],
+  "after": [
+    {
+      "experiment": "dialog-after",
+      "client": "client-0",
+      "client_ip": "10.244.0.8",
+      "request_id": "dialog-after",
+      "planned_mono": 3418.349061012268,
+      "sent_mono": 3418.352089693,
+      "planned_wall": 1794647244.763289,
+      "sent_wall": 1794647244.7672806,
+      "send_lag_seconds": 0.0030286807318589126,
+      "first_mono": 3418.660272471,
+      "end_mono": 3419.16710064,
+      "http_status": 200,
+      "outcome": "completed",
+      "chunks": 5,
+      "inter_chunk_seconds": [
+        0.1264057429998502,
+        0.12680904499984536,
+        0.12686233800013724,
+        0.12623694700005217
+      ],
+      "pod": "hw11-api-689b5d4db4-jbpqw",
+      "model_id": "A",
+      "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+      "queue_seconds": 0.006015945999934047,
+      "cache_hit": false,
+      "backend_mode": "simulated",
+      "terminal": {
+        "request_id": "dialog-after",
+        "session_id": "dialog-A",
+        "pod": "hw11-api-689b5d4db4-jbpqw",
+        "model_id": "A",
+        "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+        "backend_mode": "simulated",
+        "client_ip": "10.244.0.8",
+        "done": true,
+        "chunks": 5,
+        "history_sha256": "ef3e8ad282b8266f256a1da756f85132192654e32bf0f230ecc12e0c72a89d1d",
+        "history_echo": [
+          "DIALOG-ALPHA-CONTROL-7391",
+          "How can I configure issue labels?",
+          "simulated:question"
+        ],
+        "prompt_echo": "How do I report an issue?",
+        "answer": "simulated:question"
+      },
+      "expected_chunks": 5,
+      "request": {
+        "prompt": "How do I report an issue?",
+        "request_id": "dialog-after",
+        "session_id": "dialog-A",
+        "max_chunks": 5,
+        "cpu_scale": 1.0,
+        "history": [
+          "DIALOG-ALPHA-CONTROL-7391",
+          "How can I configure issue labels?",
+          "simulated:question"
+        ]
+      },
+      "keep_alive": false,
+      "server_observed_client_ip": "10.244.0.8",
+      "end_wall": 1794647245.5813284,
+      "total_seconds": 0.8150109470002462,
+      "ttfc_seconds": 0.30818277800017313
+    }
+  ],
+  "other": [
+    {
+      "experiment": "dialog-beta",
+      "client": "client-0",
+      "client_ip": "10.244.0.8",
+      "request_id": "dialog-beta",
+      "planned_mono": 3422.109649181366,
+      "sent_mono": 3422.111683292,
+      "planned_wall": 1794647248.5238771,
+      "sent_wall": 1794647248.5269706,
+      "send_lag_seconds": 0.0020341106342129933,
+      "first_mono": 3422.275032198,
+      "end_mono": 3422.782403448,
+      "http_status": 200,
+      "outcome": "completed",
+      "chunks": 5,
+      "inter_chunk_seconds": [
+        0.12640549799971268,
+        0.12618145100032052,
+        0.12827338099987173,
+        0.1259093630001189
+      ],
+      "pod": "hw11-api-689b5d4db4-jbpqw",
+      "model_id": "A",
+      "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+      "queue_seconds": 0.0002623400000629772,
+      "cache_hit": true,
+      "backend_mode": "simulated",
+      "terminal": {
+        "request_id": "dialog-beta",
+        "session_id": "dialog-B",
+        "pod": "hw11-api-689b5d4db4-jbpqw",
+        "model_id": "A",
+        "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+        "backend_mode": "simulated",
+        "client_ip": "10.244.0.8",
+        "done": true,
+        "chunks": 5,
+        "history_sha256": "ba74595da5db0c04b63b5d3947bc3f494d037ff7efafbaf75b2d260fc1ad5096",
+        "history_echo": [
+          "DIALOG-BETA-CONTROL-1826"
+        ],
+        "prompt_echo": "How do I report an issue?",
+        "answer": "simulated:question"
+      },
+      "expected_chunks": 5,
+      "request": {
+        "prompt": "How do I report an issue?",
+        "request_id": "dialog-beta",
+        "session_id": "dialog-B",
+        "max_chunks": 5,
+        "cpu_scale": 1.0,
+        "history": [
+          "DIALOG-BETA-CONTROL-1826"
+        ]
+      },
+      "keep_alive": false,
+      "server_observed_client_ip": "10.244.0.8",
+      "end_wall": 1794647249.1966312,
+      "total_seconds": 0.6707201559997884,
+      "ttfc_seconds": 0.16334890600001017
+    }
+  ]
+}

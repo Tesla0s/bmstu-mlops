@@ -1,0 +1,18 @@
+{
+  "query": "histogram_quantile(0.95, sum by (le) (hw11_ttfc_seconds_bucket @ 1794645866.620 - hw11_ttfc_seconds_bucket @ 1794645736.373))",
+  "result": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {},
+          "value": [
+            1794645866.726,
+            "2.2555555555555546"
+          ]
+        }
+      ]
+    }
+  }
+}

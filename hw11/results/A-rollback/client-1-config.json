@@ -1,0 +1,229 @@
+{
+  "experiment": "A-rollback",
+  "url": "http://hw11-api:8080",
+  "start_wall": 1794646864.014156,
+  "timeout": 30,
+  "schedule": [
+    {
+      "client": 1,
+      "offset": 1.4285714285714286,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-00",
+        "request_id": "bad-B-0001",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 7.142857142857143,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-01",
+        "request_id": "bad-B-0005",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 12.857142857142858,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-02",
+        "request_id": "bad-B-0009",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 18.571428571428573,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-03",
+        "request_id": "bad-B-0013",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 24.28571428571429,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-04",
+        "request_id": "bad-B-0017",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 30.000000000000004,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-05",
+        "request_id": "bad-B-0021",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 35.714285714285715,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-06",
+        "request_id": "bad-B-0025",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 41.42857142857143,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-07",
+        "request_id": "bad-B-0029",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 47.142857142857146,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-00",
+        "request_id": "bad-B-0033",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 52.85714285714286,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-01",
+        "request_id": "bad-B-0037",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 58.57142857142858,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-02",
+        "request_id": "bad-B-0041",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 64.28571428571429,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-03",
+        "request_id": "bad-B-0045",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 70.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-04",
+        "request_id": "bad-B-0049",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 75.71428571428572,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-05",
+        "request_id": "bad-B-0053",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 81.42857142857143,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-06",
+        "request_id": "bad-B-0057",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 87.14285714285715,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-07",
+        "request_id": "bad-B-0061",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 92.85714285714286,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-00",
+        "request_id": "bad-B-0065",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "rollout_start": 1794646609.453293,
+  "broken_probes": true,
+  "warmup_seconds": 20,
+  "same_schedule": "warmup-identical",
+  "rate": 0.8
+}

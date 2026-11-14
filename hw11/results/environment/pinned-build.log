@@ -1,0 +1,31 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  43.52kB
+
+Step 1/8 : FROM python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c
+ ---> 593bd06efe90
+Step 2/8 : WORKDIR /app
+ ---> Using cache
+ ---> a8b1fc079e27
+Step 3/8 : COPY requirements.lock .
+ ---> Using cache
+ ---> e1fb41acd32d
+Step 4/8 : RUN pip install --no-cache-dir --require-hashes -r requirements.lock
+ ---> Using cache
+ ---> 56f66db0785e
+Step 5/8 : COPY service.py client.py /app/
+ ---> Using cache
+ ---> 215edea7d5d7
+Step 6/8 : USER 10001:10001
+ ---> Using cache
+ ---> 09b10888b376
+Step 7/8 : EXPOSE 8080
+ ---> Using cache
+ ---> 33d3f605bf48
+Step 8/8 : CMD ["uvicorn","service:app","--host","0.0.0.0","--port","8080","--timeout-graceful-shutdown","45","--no-access-log"]
+ ---> Using cache
+ ---> f1b1f24cb6d7
+Successfully built f1b1f24cb6d7
+Successfully tagged hw11-api:verify-pinned

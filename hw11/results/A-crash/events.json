@@ -1,0 +1,21 @@
+{
+  "kill_wall": 1794647136.409489,
+  "victim": "hw11-api-689b5d4db4-26wxm",
+  "container_id": "9f0922bb5eff9edbc419e5a50b3a13823a0f4e7f805b0b50c66e62de3d310b29",
+  "command": [
+    "/opt/homebrew/bin/docker",
+    "exec",
+    "mlops-hw11-control-plane",
+    "ctr",
+    "-n",
+    "k8s.io",
+    "tasks",
+    "kill",
+    "--signal",
+    "SIGKILL",
+    "9f0922bb5eff9edbc419e5a50b3a13823a0f4e7f805b0b50c66e62de3d310b29"
+  ],
+  "exit_code": 0,
+  "output": "",
+  "stderr": ""
+}

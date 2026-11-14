@@ -1,0 +1,11 @@
+2026-11-14T09:01:07.888691644Z INFO:     Started server process [1]
+2026-11-14T09:01:07.888718394Z INFO:     Waiting for application startup.
+2026-11-14T09:01:07.888953024Z {"wall": 1794646867.888884, "event": "load_started", "pod": "hw11-api-76568f4f4-vhjt8", "backend_mode": "simulated", "model_id": "B", "artifact_sha256": "b6604cec349bca060932f4a1e2cbed0a494948ac72ffea5fad7781eebcf8055a", "warmup_seconds": 20.0, "source": "ConfigMap/hw11-model-b/model.json"}
+2026-11-14T09:01:07.888975066Z INFO:     Application startup complete.
+2026-11-14T09:01:07.889115693Z INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-14T09:01:27.890364255Z {"wall": 1794646887.8901315, "event": "load_failed", "pod": "hw11-api-76568f4f4-vhjt8", "backend_mode": "simulated", "model_id": "B", "artifact_sha256": "b6604cec349bca060932f4a1e2cbed0a494948ac72ffea5fad7781eebcf8055a", "error": "Intentional failed warmup for rollback experiment"}
+2026-11-14T09:01:39.451076533Z {"wall": 1794646899.450973, "event": "draining", "pod": "hw11-api-76568f4f4-vhjt8", "backend_mode": "simulated", "model_id": "B", "artifact_sha256": "b6604cec349bca060932f4a1e2cbed0a494948ac72ffea5fad7781eebcf8055a", "pending": 0}
+2026-11-14T09:01:44.534111773Z INFO:     Shutting down
+2026-11-14T09:01:44.634667054Z INFO:     Waiting for application shutdown.
+2026-11-14T09:01:44.634697346Z INFO:     Application shutdown complete.
+2026-11-14T09:01:44.634725805Z INFO:     Finished server process [1]

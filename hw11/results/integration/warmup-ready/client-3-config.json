@@ -1,0 +1,7 @@
+{
+  "experiment": "warmup-ready",
+  "url": "http://10.244.0.36:8080",
+  "start_wall": 1794648015.698844,
+  "timeout": 30,
+  "schedule": []
+}

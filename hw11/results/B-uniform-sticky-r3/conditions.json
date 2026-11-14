@@ -1,0 +1,18 @@
+{
+  "duration_seconds": 120,
+  "arrival_rate": 2.4,
+  "cache_initial": "empty",
+  "warmup": "both Pods warmed for 20 seconds before all trials; only prefix cache reset before each trial",
+  "policy": "sticky",
+  "traffic": "uniform",
+  "repeat": 3,
+  "cpu_hit": 0.02,
+  "cpu_miss": 0.16,
+  "cpu_chunk": 0.025,
+  "delay_chunk": 0.1,
+  "chunks": 5,
+  "concurrency": 1,
+  "queue_capacity": 8,
+  "cache_capacity": 16,
+  "schedule_sha256": "c540372fafa781848c6b3f3d612233b7a0f3cdbaa214289d11af1f3f01abee34"
+}

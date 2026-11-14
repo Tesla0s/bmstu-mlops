@@ -1,0 +1,13 @@
+Hardware:
+
+    Hardware Overview:
+
+      Model Name: MacBook Pro
+      Model Identifier: Mac15,7
+      Model Number: Z1AK000YEHN/A
+      Chip: Apple M3 Pro
+      Total Number of Cores: 12 (6 performance and 6 efficiency)
+      Memory: 36 GB
+      System Firmware Version: mBoot-18000.161.10
+      OS Loader Version: 11881.140.96.701.1
+      Activation Lock Status: Disabled

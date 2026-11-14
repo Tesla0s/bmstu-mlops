@@ -1,0 +1,60 @@
+{
+  "experiment": "A-rollout",
+  "url": "http://hw11-api:8080",
+  "start_wall": 1794646735.240654,
+  "timeout": 70,
+  "schedule": [
+    {
+      "client": 1,
+      "offset": 5.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-00",
+        "request_id": "normal-rollout-0001",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 25.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-01",
+        "request_id": "normal-rollout-0005",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 45.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-02",
+        "request_id": "normal-rollout-0009",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 1,
+      "offset": 65.0,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-1-03",
+        "request_id": "normal-rollout-0013",
+        "session_id": "dialog-1",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

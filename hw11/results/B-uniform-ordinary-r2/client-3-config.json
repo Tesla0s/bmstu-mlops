@@ -1,0 +1,944 @@
+{
+  "experiment": "B-uniform-ordinary-r2",
+  "url": "http://hw11-api:8080",
+  "start_wall": 1794645466.9645472,
+  "timeout": 20,
+  "schedule": [
+    {
+      "client": 3,
+      "offset": 1.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0003",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 2.916666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0007",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 4.583333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0011",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 6.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0015",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 7.916666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0019",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 9.583333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0023",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 11.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0027",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 12.916666666666668,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0031",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 14.583333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0035",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 16.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0039",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 17.916666666666668,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0043",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 19.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0047",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 21.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0051",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 22.916666666666668,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0055",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 24.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0059",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 26.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0063",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 27.916666666666668,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0067",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 29.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0071",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 31.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0075",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 32.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0079",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 34.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0083",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 36.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0087",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 37.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0091",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 39.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0095",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 41.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0099",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 42.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0103",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 44.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0107",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 46.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0111",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 47.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0115",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 49.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0119",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 51.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0123",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 52.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0127",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 54.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0131",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 56.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0135",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 57.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0139",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 59.583333333333336,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0143",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 61.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0147",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 62.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0151",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 64.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0155",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 66.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0159",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 67.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0163",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 69.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0167",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 71.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0171",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 72.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0175",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 74.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0179",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 76.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0183",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 77.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0187",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 79.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0191",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 81.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0195",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 82.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0199",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 84.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0203",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 86.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0207",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 87.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0211",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 89.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0215",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 91.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0219",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 92.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0223",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 94.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0227",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 96.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0231",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 97.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0235",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 99.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0239",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 101.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0243",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 102.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0247",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 104.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0251",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 106.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0255",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 107.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-00",
+        "request_id": "B-uniform-r2-0259",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 109.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-01",
+        "request_id": "B-uniform-r2-0263",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 111.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-02",
+        "request_id": "B-uniform-r2-0267",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 112.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-03",
+        "request_id": "B-uniform-r2-0271",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 114.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-04",
+        "request_id": "B-uniform-r2-0275",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 116.25,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-05",
+        "request_id": "B-uniform-r2-0279",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 117.91666666666667,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-06",
+        "request_id": "B-uniform-r2-0283",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    },
+    {
+      "client": 3,
+      "offset": 119.58333333333334,
+      "body": {
+        "prompt": "Classify this GitHub issue: how do I configure the application? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "history": [],
+        "prefix": "project-3-07",
+        "request_id": "B-uniform-r2-0287",
+        "session_id": "dialog-3",
+        "max_chunks": 5,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

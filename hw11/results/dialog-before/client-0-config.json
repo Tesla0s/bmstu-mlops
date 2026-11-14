@@ -1,0 +1,23 @@
+{
+  "experiment": "dialog-before",
+  "url": "http://10.244.0.28:8080",
+  "start_wall": 1794647218.407202,
+  "timeout": 70,
+  "schedule": [
+    {
+      "client": 0,
+      "offset": 0,
+      "body": {
+        "prompt": "How do I report an issue?",
+        "request_id": "dialog-before",
+        "session_id": "dialog-A",
+        "max_chunks": 5,
+        "cpu_scale": 1.0,
+        "history": [
+          "DIALOG-ALPHA-CONTROL-7391",
+          "How can I configure issue labels?"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "ДЗ 11 · Губин Виталий · Kubernetes под нагрузкой",
+  "height": 13504,
+  "width": 1600,
+  "viewport": 1600,
+  "images": [
+    {
+      "src": "figures/01-warmup-rollout.png",
+      "ok": true
+    },
+    {
+      "src": "figures/02-pod-latency-queue.png",
+      "ok": true
+    },
+    {
+      "src": "figures/03-policy-comparison.png",
+      "ok": true
+    },
+    {
+      "src": "figures/04-hpa-load.png",
+      "ok": true
+    }
+  ],
+  "headings": [
+    "1. Стенд и связь с предыдущей работой",
+    "2. Опыт A: прогрев, обновление, откат и авария",
+    "3. Опыт B: привязка по IP и горячая реплика",
+    "4. Опыт C: CPU, число реплик и оповещения",
+    "5. Измерения и проверка чисел",
+    "6. Пять собственных проверок и границы результата",
+    "7. Ревью предложения о постоянной привязке диалога",
+    "Источники и воспроизведение"
+  ],
+  "horizontalOverflow": [],
+  "literalSlashN": false,
+  "missingLocalLinks": [],
+  "errors": [],
+  "checked_wall": 1794648252.7106152,
+  "report_sha256": "a1126a88145dd6dd98858025e50f5823a6fff3e0c301940381830b8bab81eb94",
+  "method": "Local report opened in an isolated Chromium; screenshots reviewed; DOM overflow, image loading and local links checked."
+}

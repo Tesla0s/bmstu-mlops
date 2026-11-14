@@ -1,0 +1,192 @@
+[
+  {
+    "namespace": "hw11",
+    "pod": "client-0",
+    "containers": [
+      {
+        "image": "docker.io/library/hw11-api:1.0.1",
+        "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983"
+      }
+    ]
+  },
+  {
+    "namespace": "hw11",
+    "pod": "client-1",
+    "containers": [
+      {
+        "image": "docker.io/library/hw11-api:1.0.1",
+        "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983"
+      }
+    ]
+  },
+  {
+    "namespace": "hw11",
+    "pod": "client-2",
+    "containers": [
+      {
+        "image": "docker.io/library/hw11-api:1.0.1",
+        "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983"
+      }
+    ]
+  },
+  {
+    "namespace": "hw11",
+    "pod": "client-3",
+    "containers": [
+      {
+        "image": "docker.io/library/hw11-api:1.0.1",
+        "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983"
+      }
+    ]
+  },
+  {
+    "namespace": "hw11",
+    "pod": "grafana-57d95b65fb-tnpxv",
+    "containers": [
+      {
+        "image": "docker.io/grafana/grafana:12.2.0",
+        "imageID": "docker.io/grafana/grafana@sha256:74144189b38447facf737dfd0f3906e42e0776212bf575dc3334c3609183adf7"
+      }
+    ]
+  },
+  {
+    "namespace": "hw11",
+    "pod": "hw11-api-74dd74c8b9-cmsh4",
+    "containers": [
+      {
+        "image": "docker.io/library/hw11-api:1.0.1",
+        "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983"
+      }
+    ]
+  },
+  {
+    "namespace": "hw11",
+    "pod": "hw11-api-74dd74c8b9-pqvw2",
+    "containers": [
+      {
+        "image": "docker.io/library/hw11-api:1.0.1",
+        "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983"
+      }
+    ]
+  },
+  {
+    "namespace": "hw11",
+    "pod": "kube-state-metrics-7fc65f487b-xvhb6",
+    "containers": [
+      {
+        "image": "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.17.0",
+        "imageID": "registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:2bbc915567334b13632bf62c0a97084aff72a36e13c4dabd5f2f11c898c5bacd"
+      }
+    ]
+  },
+  {
+    "namespace": "hw11",
+    "pod": "prometheus-7fdb7df979-z9dt5",
+    "containers": [
+      {
+        "image": "docker.io/prom/prometheus:v3.6.0",
+        "imageID": "docker.io/prom/prometheus@sha256:76947e7ef22f8a698fc638f706685909be425dbe09bd7a2cd7aca849f79b5f64"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "coredns-66bc5c9577-hjkkn",
+    "containers": [
+      {
+        "image": "registry.k8s.io/coredns/coredns:v1.12.1",
+        "imageID": "sha256:138784d87c9c50f8e59412544da4cf4928d61ccbaf93b9f5898a3ba406871bfc"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "coredns-66bc5c9577-lmmz8",
+    "containers": [
+      {
+        "image": "registry.k8s.io/coredns/coredns:v1.12.1",
+        "imageID": "sha256:138784d87c9c50f8e59412544da4cf4928d61ccbaf93b9f5898a3ba406871bfc"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "etcd-mlops-hw11-control-plane",
+    "containers": [
+      {
+        "image": "registry.k8s.io/etcd:3.6.4-0",
+        "imageID": "sha256:a1894772a478e07c67a56e8bf32335fdbe1dd4ec96976a5987083164bd00bc0e"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kindnet-58qgn",
+    "containers": [
+      {
+        "image": "docker.io/kindest/kindnetd:v20250512-df8de77b",
+        "imageID": "sha256:b1a8c6f707935fd5f346ce5846d21ff8dd65e14c15406a14dbd16b9b897b9b4c"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kube-apiserver-mlops-hw11-control-plane",
+    "containers": [
+      {
+        "image": "registry.k8s.io/kube-apiserver-arm64:v1.34.0",
+        "imageID": "sha256:d291939e994064911484215449d0ab96c535b02adc4fc5d0ad4e438cf71465be"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kube-controller-manager-mlops-hw11-control-plane",
+    "containers": [
+      {
+        "image": "registry.k8s.io/kube-controller-manager-arm64:v1.34.0",
+        "imageID": "sha256:996be7e86d9b3a549d718de63713d9fea9db1f45ac44863a6770292d7b463570"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kube-proxy-sg9c9",
+    "containers": [
+      {
+        "image": "registry.k8s.io/kube-proxy-arm64:v1.34.0",
+        "imageID": "sha256:6fc32d66c141152245438e6512df788cb52d64a1617e33561950b0e7a4675abf"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kube-scheduler-mlops-hw11-control-plane",
+    "containers": [
+      {
+        "image": "registry.k8s.io/kube-scheduler-arm64:v1.34.0",
+        "imageID": "sha256:a25f5ef9c34c37c649f3b4f9631a169221ac2d6f41d9767c7588cd355f76f9ee"
+      }
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "metrics-server-649887c879-dqjc2",
+    "containers": [
+      {
+        "image": "registry.k8s.io/metrics-server/metrics-server:v0.8.0",
+        "imageID": "registry.k8s.io/metrics-server/metrics-server@sha256:89258156d0e9af60403eafd44da9676fd66f600c7934d468ccc17e42b199aee2"
+      }
+    ]
+  },
+  {
+    "namespace": "local-path-storage",
+    "pod": "local-path-provisioner-7b8c8ddbd6-9lsfz",
+    "containers": [
+      {
+        "image": "docker.io/kindest/local-path-provisioner:v20250214-acbabc1a",
+        "imageID": "sha256:653e2348b2d4ab640e418f5eade4c0335d4f648b83ca46a69c96fb382ed26dd2"
+      }
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+Наблюдение перед созданием kind и загрузкой библиотек, 2026-11-14:
+Filesystem Size Used Avail Capacity
+/dev/disk3s5 926Gi 884Gi 21Gi 98%
+Colima mlops-hw11: 4 CPU, RAM 6 GiB, data disk 12 GiB, root disk 8 GiB; VZ; activate=false.
+Это отдельный профиль; существующий default не используется.

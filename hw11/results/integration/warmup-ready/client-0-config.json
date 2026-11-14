@@ -1,0 +1,21 @@
+{
+  "experiment": "warmup-ready",
+  "url": "http://10.244.0.36:8080",
+  "start_wall": 1794648015.698844,
+  "timeout": 30,
+  "schedule": [
+    {
+      "client": 0,
+      "offset": 0,
+      "body": {
+        "request_id": "warmup-ready",
+        "session_id": "integration",
+        "prompt": "How to add an issue label?",
+        "history": [],
+        "prefix": "integration-prefix",
+        "max_chunks": 3,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

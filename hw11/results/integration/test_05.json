@@ -1,0 +1,122 @@
+{
+  "alpha": {
+    "experiment": "isolation-alpha",
+    "client": "client-0",
+    "client_ip": "10.244.0.8",
+    "request_id": "isolation-alpha",
+    "planned_mono": 4215.707416296005,
+    "sent_mono": 4215.780271162,
+    "planned_wall": 1794648042.121644,
+    "sent_wall": 1794648042.1949322,
+    "send_lag_seconds": 0.07285486599448632,
+    "first_mono": 4215.940924391,
+    "end_mono": 4216.194680457,
+    "http_status": 200,
+    "outcome": "completed",
+    "chunks": 3,
+    "inter_chunk_seconds": [
+      0.12678346099983173,
+      0.12661977100015065
+    ],
+    "pod": "hw11-api-678b94ddbd-4mtkw",
+    "model_id": "A",
+    "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+    "queue_seconds": 0.00023126499945647083,
+    "cache_hit": true,
+    "backend_mode": "simulated",
+    "terminal": {
+      "request_id": "isolation-alpha",
+      "session_id": "alpha",
+      "pod": "hw11-api-678b94ddbd-4mtkw",
+      "model_id": "A",
+      "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+      "backend_mode": "simulated",
+      "client_ip": "10.244.0.8",
+      "done": true,
+      "chunks": 3,
+      "history_sha256": "798b7584acdcf7b42181e2c393f359bcd6c7303500f1b8c1fc7f439e869fca08",
+      "history_echo": [
+        "ALPHA-PRIVATE-CONTROL-9917"
+      ],
+      "prompt_echo": "How to add an issue label?",
+      "answer": "simulated:question"
+    },
+    "expected_chunks": 3,
+    "request": {
+      "request_id": "isolation-alpha",
+      "session_id": "alpha",
+      "prompt": "How to add an issue label?",
+      "history": [
+        "ALPHA-PRIVATE-CONTROL-9917"
+      ],
+      "prefix": "integration-prefix",
+      "max_chunks": 3,
+      "cpu_scale": 1.0
+    },
+    "keep_alive": false,
+    "server_observed_client_ip": "10.244.0.8",
+    "end_wall": 1794648042.608908,
+    "total_seconds": 0.4144092950000413,
+    "ttfc_seconds": 0.16065322900067258
+  },
+  "beta": {
+    "experiment": "isolation-beta",
+    "client": "client-0",
+    "client_ip": "10.244.0.8",
+    "request_id": "isolation-beta",
+    "planned_mono": 4215.707466125488,
+    "sent_mono": 4215.778549445,
+    "planned_wall": 1794648042.1216938,
+    "sent_wall": 1794648042.193347,
+    "send_lag_seconds": 0.07108331951167202,
+    "first_mono": 4215.941153115,
+    "end_mono": 4216.194748199,
+    "http_status": 200,
+    "outcome": "completed",
+    "chunks": 3,
+    "inter_chunk_seconds": [
+      0.12606141900050716,
+      0.12712029699923733
+    ],
+    "pod": "hw11-api-678b94ddbd-wcj46",
+    "model_id": "A",
+    "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+    "queue_seconds": 0.0002009760000873939,
+    "cache_hit": true,
+    "backend_mode": "simulated",
+    "terminal": {
+      "request_id": "isolation-beta",
+      "session_id": "beta",
+      "pod": "hw11-api-678b94ddbd-wcj46",
+      "model_id": "A",
+      "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+      "backend_mode": "simulated",
+      "client_ip": "10.244.0.8",
+      "done": true,
+      "chunks": 3,
+      "history_sha256": "3e2662fa01325dd6ace1b1be8a0ca63ab7b8f03092a2a1cb550d8362f1b630a7",
+      "history_echo": [
+        "BETA-PRIVATE-CONTROL-2143"
+      ],
+      "prompt_echo": "How to add an issue label?",
+      "answer": "simulated:question"
+    },
+    "expected_chunks": 3,
+    "request": {
+      "request_id": "isolation-beta",
+      "session_id": "beta",
+      "prompt": "How to add an issue label?",
+      "history": [
+        "BETA-PRIVATE-CONTROL-2143"
+      ],
+      "prefix": "integration-prefix",
+      "max_chunks": 3,
+      "cpu_scale": 1.0
+    },
+    "keep_alive": false,
+    "server_observed_client_ip": "10.244.0.8",
+    "end_wall": 1794648042.608976,
+    "total_seconds": 0.4161987540001064,
+    "ttfc_seconds": 0.16260366999995313
+  }
+}

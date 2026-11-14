@@ -1,0 +1,20 @@
+[
+  {
+    "file": "kind",
+    "url": "https://kind.sigs.k8s.io/dl/v0.30.0/kind-darwin-arm64",
+    "sha256": "ceaf40df1d1551c481fb50e3deb5c3deecad5fd599df5469626b70ddf52a1518",
+    "verified": true
+  },
+  {
+    "file": "kubectl",
+    "url": "https://dl.k8s.io/release/v1.34.0/bin/darwin/arm64/kubectl",
+    "sha256": "d491f4c47c34856188d38e87a27866bd94a66a57b8db3093a82ae43baf3bb20d",
+    "verified": true
+  },
+  {
+    "file": "helm.tar.gz",
+    "url": "https://get.helm.sh/helm-v3.19.0-darwin-arm64.tar.gz",
+    "sha256": "31513e1193da4eb4ae042eb5f98ef9aca7890cfa136f4707c8d4f70e2115bef6",
+    "verified": true
+  }
+]

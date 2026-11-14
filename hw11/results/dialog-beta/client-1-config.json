@@ -1,0 +1,7 @@
+{
+  "experiment": "dialog-beta",
+  "url": "http://10.244.0.31:8080",
+  "start_wall": 1794647248.5238771,
+  "timeout": 70,
+  "schedule": []
+}

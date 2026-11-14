@@ -1,0 +1,7 @@
+2026-11-14T09:13:00.495387231Z INFO:     Started server process [1]
+2026-11-14T09:13:00.495413357Z INFO:     Waiting for application startup.
+2026-11-14T09:13:00.495625363Z {"wall": 1794647580.495571, "event": "load_started", "pod": "hw11-api-6fcf7857db-rkntq", "backend_mode": "simulated", "model_id": "A", "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87", "warmup_seconds": 20.0, "source": "ConfigMap/hw11-model-a/model.json"}
+2026-11-14T09:13:00.495642947Z INFO:     Application startup complete.
+2026-11-14T09:13:00.497900347Z INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-14T09:13:20.509020984Z {"wall": 1794647600.5089068, "event": "warmup_finished", "pod": "hw11-api-6fcf7857db-rkntq", "backend_mode": "simulated", "model_id": "A", "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87"}
+2026-11-14T09:16:30.042498587Z {"wall": 1794647790.0423925, "event": "draining", "pod": "hw11-api-6fcf7857db-rkntq", "backend_mode": "simulated", "model_id": "A", "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87", "pending": 0}

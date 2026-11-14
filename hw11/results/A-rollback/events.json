@@ -1,0 +1,8 @@
+{
+  "bad_B_begin": 1794646867.193685,
+  "rollback_begin": 1794646899.241576,
+  "helm_revision_restored": 8,
+  "measurement_finished_wall": 1794646957.618612,
+  "rollback_cleanup_observed_wall": 1794646907.087709,
+  "timing_note": "Original rollback_end was recorded after waiting for the load run. It is correctly named measurement_finished_wall here; no exact CLI completion timestamp is claimed. Cleanup time is the first saved Kubernetes observation without the bad Pod."
+}

@@ -1,0 +1,23 @@
+{
+  "experiment": "isolation-alpha",
+  "url": "http://hw11-api:8080",
+  "start_wall": 1794648042.121644,
+  "timeout": 30,
+  "schedule": [
+    {
+      "client": 0,
+      "offset": 0,
+      "body": {
+        "request_id": "isolation-alpha",
+        "session_id": "alpha",
+        "prompt": "How to add an issue label?",
+        "history": [
+          "ALPHA-PRIVATE-CONTROL-9917"
+        ],
+        "prefix": "integration-prefix",
+        "max_chunks": 3,
+        "cpu_scale": 1.0
+      }
+    }
+  ]
+}

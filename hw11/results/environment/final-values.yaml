@@ -1,0 +1,26 @@
+COMPUTED VALUES:
+brokenProbes: false
+cacheSize: 16
+chunkCpuSeconds: 0.025
+chunkDelaySeconds: 0.1
+concurrency: 1
+failWarmup: false
+hitCpuSeconds: 0.02
+hpa:
+  downscaleSeconds: 60
+  enabled: false
+  targetCPU: 60
+image: hw11-api:1.0.1
+missCpuSeconds: 0.16
+modelVersion: A
+queueCapacity: 8
+replicas: 2
+resources:
+  limits:
+    cpu: "1"
+    memory: 192Mi
+  requests:
+    cpu: 250m
+    memory: 80Mi
+revision: integration-warmup
+warmupSeconds: 20

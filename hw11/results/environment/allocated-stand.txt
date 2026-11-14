@@ -1,0 +1,3 @@
+1467916	/Users/vitalygubin/.colima/_lima/colima-mlops-hw11
+4676732	/Users/vitalygubin/.colima/_lima/_disks/colima-mlops-hw11
+16	/Users/vitalygubin/.colima/mlops-hw11

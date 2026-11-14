@@ -1,0 +1,66 @@
+{
+  "rollback": {
+    "bad_B_begin": 1794646867.193685,
+    "rollback_begin": 1794646899.241576,
+    "helm_revision_restored": 8,
+    "measurement_finished_wall": 1794646957.618612,
+    "rollback_cleanup_observed_wall": 1794646907.087709,
+    "timing_note": "Original rollback_end was recorded after waiting for the load run. It is correctly named measurement_finished_wall here; no exact CLI completion timestamp is claimed. Cleanup time is the first saved Kubernetes observation without the bad Pod."
+  },
+  "live_reply": {
+    "experiment": "rollback-live",
+    "client": "client-0",
+    "client_ip": "10.244.0.8",
+    "request_id": "rollback-live",
+    "planned_mono": 4190.259045124054,
+    "sent_mono": 4190.260315314,
+    "planned_wall": 1794648016.673273,
+    "sent_wall": 1794648016.6760375,
+    "send_lag_seconds": 0.001270189945898892,
+    "first_mono": 4190.576462875,
+    "end_mono": 4190.830628927,
+    "http_status": 200,
+    "outcome": "completed",
+    "chunks": 3,
+    "inter_chunk_seconds": [
+      0.1279691029994865,
+      0.12578979099998833
+    ],
+    "pod": "hw11-api-678b94ddbd-wcj46",
+    "model_id": "A",
+    "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+    "queue_seconds": 0.006787539000470133,
+    "cache_hit": false,
+    "backend_mode": "simulated",
+    "terminal": {
+      "request_id": "rollback-live",
+      "session_id": "integration",
+      "pod": "hw11-api-678b94ddbd-wcj46",
+      "model_id": "A",
+      "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+      "backend_mode": "simulated",
+      "client_ip": "10.244.0.8",
+      "done": true,
+      "chunks": 3,
+      "history_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "history_echo": [],
+      "prompt_echo": "How to add an issue label?",
+      "answer": "simulated:question"
+    },
+    "expected_chunks": 3,
+    "request": {
+      "request_id": "rollback-live",
+      "session_id": "integration",
+      "prompt": "How to add an issue label?",
+      "history": [],
+      "prefix": "integration-prefix",
+      "max_chunks": 3,
+      "cpu_scale": 1.0
+    },
+    "keep_alive": false,
+    "server_observed_client_ip": "10.244.0.8",
+    "end_wall": 1794648017.2448566,
+    "total_seconds": 0.5703136130005078,
+    "ttfc_seconds": 0.3161475610004345
+  }
+}

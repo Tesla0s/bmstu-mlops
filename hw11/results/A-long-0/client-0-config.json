@@ -1,0 +1,21 @@
+{
+  "experiment": "A-long-0",
+  "url": "http://10.244.0.24:8080",
+  "start_wall": 1794646735.240861,
+  "timeout": 70,
+  "schedule": [
+    {
+      "client": 0,
+      "offset": 0,
+      "body": {
+        "prompt": "How do I report an issue?",
+        "request_id": "A-long-0",
+        "session_id": "dialog-A",
+        "max_chunks": 90,
+        "cpu_scale": 1.0,
+        "chunk_delay": 0.4,
+        "prefix": "long-stream"
+      }
+    }
+  ]
+}

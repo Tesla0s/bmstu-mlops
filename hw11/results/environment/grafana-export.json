@@ -1,0 +1,7 @@
+{
+  "captured_wall": 1794647767.3424692,
+  "command": "GET http://127.0.0.1:13000/api/dashboards/uid/hw11",
+  "uid": "hw11",
+  "panels": 10,
+  "export_file": "monitoring/dashboard-export.json"
+}

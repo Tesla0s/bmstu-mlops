@@ -1,0 +1,29 @@
+{
+  "burst_begin": 1794647803.309168,
+  "healthy_begin": 1794647860.4180322,
+  "final_wall": 1794647972.009302,
+  "final_alerts": {
+    "status": "success",
+    "data": {
+      "alerts": []
+    }
+  },
+  "burst_counts": {
+    "planned": 810,
+    "sent": 810,
+    "completed": 88,
+    "rejected": 722,
+    "http_5xx": 0
+  },
+  "healthy_counts": {
+    "planned": 50,
+    "sent": 50,
+    "completed": 50,
+    "http_5xx": 0
+  },
+  "latency_threshold_seconds": 1,
+  "failure_fraction_threshold": 0.05,
+  "minimum_observations": 20,
+  "window_seconds": 60,
+  "for_seconds": 15
+}

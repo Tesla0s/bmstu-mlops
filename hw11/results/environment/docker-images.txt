@@ -1,0 +1,113 @@
+[
+    {
+        "Architecture": "arm64",
+        "Config": {
+            "Cmd": [
+                "uvicorn",
+                "service:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8080",
+                "--timeout-graceful-shutdown",
+                "45",
+                "--no-access-log"
+            ],
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.12",
+                "PYTHON_SHA256=fb85a13414b028c49ba18bbd523c2d055a30b56b18b92ce454ea2c51edc656c4"
+            ],
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "User": "10001:10001",
+            "WorkingDir": "/app"
+        },
+        "Created": "2026-11-14T11:25:26.06074882+03:00",
+        "Descriptor": {
+            "digest": "sha256:f1b1f24cb6d77f400be3240dfd61fdc968b5addaa892d28511771abd03156f9e",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "size": 2057
+        },
+        "Id": "sha256:f1b1f24cb6d77f400be3240dfd61fdc968b5addaa892d28511771abd03156f9e",
+        "Metadata": {
+            "LastTagTime": "2026-11-14T08:25:26.083398525Z"
+        },
+        "Os": "linux",
+        "Parent": "sha256:33d3f605bf48ec89aacfa2a51ce149bb5b745e96840cfc870d78450f6db56191",
+        "RepoDigests": [
+            "hw11-api@sha256:f1b1f24cb6d77f400be3240dfd61fdc968b5addaa892d28511771abd03156f9e"
+        ],
+        "RepoTags": [
+            "hw11-api:1.0.1"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:100031c9cce7b091dd637c1afa21331c3448979cc0953828264b5868ec3f225e",
+                "sha256:7d9e14b92a5462bc25f27c7225ccbfd919303ad240e3e44ebacfb639f16573a6",
+                "sha256:edc46d2649b4a11db14b483cbc36296c0969b257410236b9e3a777de7d4535a9",
+                "sha256:2d83ed6643723ec4e7194dda5f8fe4b0596096857e5a59dc379a0c8d50587aa2",
+                "sha256:2d805ad6fd78fe2b5a256e6eabda0b5d92e5f82e973eb2d552587737dab175a5",
+                "sha256:d77e5112674173490df85903703072dd851a0ee984e8f4381139408bcaa1d5e9",
+                "sha256:970b8ca5b621770ebae5de295c0331b2fd30d9ff89380567af52bbb907967a43",
+                "sha256:b3b4cf8395ca25de08b3bee66a0084612843c14970879b49f2df6bf842837d08"
+            ],
+            "Type": "layers"
+        },
+        "Size": 55432183
+    },
+    {
+        "Id": "sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c",
+        "RepoTags": [
+            "python:3.12.12-slim-bookworm"
+        ],
+        "RepoDigests": [
+            "python@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-02-24T20:44:48.967875049Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.12",
+                "PYTHON_SHA256=fb85a13414b028c49ba18bbd523c2d055a30b56b18b92ce454ea2c51edc656c4"
+            ],
+            "Cmd": [
+                "python3"
+            ]
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 45078526,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:100031c9cce7b091dd637c1afa21331c3448979cc0953828264b5868ec3f225e",
+                "sha256:7d9e14b92a5462bc25f27c7225ccbfd919303ad240e3e44ebacfb639f16573a6",
+                "sha256:edc46d2649b4a11db14b483cbc36296c0969b257410236b9e3a777de7d4535a9",
+                "sha256:2d83ed6643723ec4e7194dda5f8fe4b0596096857e5a59dc379a0c8d50587aa2"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-14T08:19:59.159627482Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c",
+            "size": 9131
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/python"
+                }
+            ]
+        }
+    }
+]

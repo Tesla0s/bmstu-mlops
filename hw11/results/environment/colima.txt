@@ -1,0 +1,1 @@
+{"name": "mlops-hw11", "status": "Running", "arch": "aarch64", "cpus": 4, "memory": 6442450944, "disk": 12884901888, "runtime": "docker"}

@@ -1,0 +1,126 @@
+{
+  "old_uid": "45e19286-257d-4655-bf50-9303414da355",
+  "new_uid": "5f0005fc-f910-4274-b225-a507e72f6ca0",
+  "before": {
+    "experiment": "replacement-before",
+    "client": "client-0",
+    "client_ip": "10.244.0.8",
+    "request_id": "replacement-before",
+    "planned_mono": 4191.272979021072,
+    "sent_mono": 4191.274031143,
+    "planned_wall": 1794648017.687207,
+    "sent_wall": 1794648017.6888578,
+    "send_lag_seconds": 0.0010521219273869065,
+    "first_mono": 4191.434043478,
+    "end_mono": 4191.687817359,
+    "http_status": 200,
+    "outcome": "completed",
+    "chunks": 3,
+    "inter_chunk_seconds": [
+      0.12724594500014064,
+      0.12613760800013551
+    ],
+    "pod": "hw11-api-678b94ddbd-cjqwt",
+    "model_id": "A",
+    "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+    "queue_seconds": 0.00022447199989983346,
+    "cache_hit": true,
+    "backend_mode": "simulated",
+    "terminal": {
+      "request_id": "replacement-before",
+      "session_id": "integration",
+      "pod": "hw11-api-678b94ddbd-cjqwt",
+      "model_id": "A",
+      "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+      "backend_mode": "simulated",
+      "client_ip": "10.244.0.8",
+      "done": true,
+      "chunks": 3,
+      "history_sha256": "7d9e54ec117b38fa8825dc5cff4d05696906ed34e753be51f2877a788f6612b9",
+      "history_echo": [
+        "RECOVERY-CONTROL-4062"
+      ],
+      "prompt_echo": "How to add an issue label?",
+      "answer": "simulated:question"
+    },
+    "expected_chunks": 3,
+    "request": {
+      "request_id": "replacement-before",
+      "session_id": "integration",
+      "prompt": "How to add an issue label?",
+      "history": [
+        "RECOVERY-CONTROL-4062"
+      ],
+      "prefix": "integration-prefix",
+      "max_chunks": 3,
+      "cpu_scale": 1.0
+    },
+    "keep_alive": false,
+    "server_observed_client_ip": "10.244.0.8",
+    "end_wall": 1794648018.1020448,
+    "total_seconds": 0.413786216000517,
+    "ttfc_seconds": 0.1600123349999194
+  },
+  "after": {
+    "experiment": "replacement-after",
+    "client": "client-0",
+    "client_ip": "10.244.0.8",
+    "request_id": "replacement-after",
+    "planned_mono": 4214.686675310135,
+    "sent_mono": 4214.688650288,
+    "planned_wall": 1794648041.1009028,
+    "sent_wall": 1794648041.103809,
+    "send_lag_seconds": 0.0019749778648474603,
+    "first_mono": 4215.002230565,
+    "end_mono": 4215.257792439,
+    "http_status": 200,
+    "outcome": "completed",
+    "chunks": 3,
+    "inter_chunk_seconds": [
+      0.12835645300037868,
+      0.12670285399963177
+    ],
+    "pod": "hw11-api-678b94ddbd-4mtkw",
+    "model_id": "A",
+    "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+    "queue_seconds": 0.0063989210002546315,
+    "cache_hit": false,
+    "backend_mode": "simulated",
+    "terminal": {
+      "request_id": "replacement-after",
+      "session_id": "integration",
+      "pod": "hw11-api-678b94ddbd-4mtkw",
+      "model_id": "A",
+      "artifact_sha256": "73ee23f9d56e4263a3194bf0bb250236a0512a7c1f0763f141b86c516dda4a87",
+      "backend_mode": "simulated",
+      "client_ip": "10.244.0.8",
+      "done": true,
+      "chunks": 3,
+      "history_sha256": "8ef9eb85e5079bf350afc2761273884bf5d98da07bb6ee55046a8dd882238ffb",
+      "history_echo": [
+        "RECOVERY-CONTROL-4062",
+        "simulated:question"
+      ],
+      "prompt_echo": "How to add an issue label?",
+      "answer": "simulated:question"
+    },
+    "expected_chunks": 3,
+    "request": {
+      "request_id": "replacement-after",
+      "session_id": "integration",
+      "prompt": "How to add an issue label?",
+      "history": [
+        "RECOVERY-CONTROL-4062",
+        "simulated:question"
+      ],
+      "prefix": "integration-prefix",
+      "max_chunks": 3,
+      "cpu_scale": 1.0
+    },
+    "keep_alive": false,
+    "server_observed_client_ip": "10.244.0.8",
+    "end_wall": 1794648041.67202,
+    "total_seconds": 0.5691421510000509,
+    "ttfc_seconds": 0.3135802770002556
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "requirement": "Все содержательные ответы обозначены simulated и имеют фактический хеш",
+      "passed": true,
+      "evidence": "requests.jsonl",
+      "details": null
+    },
+    {
+      "requirement": "Попытки имеют уникальный составной ключ",
+      "passed": true,
+      "evidence": "requests.jsonl",
+      "details": null
+    },
+    {
+      "requirement": "Дефект прогрева воспроизведён и исправлен",
+      "passed": true,
+      "evidence": [
+        "A-warmup-broken/",
+        "A-warmup-fixed/"
+      ],
+      "details": null
+    },
+    {
+      "requirement": "Полный штатный выпуск: ноль 5xx, отказов и незавершённых потоков",
+      "passed": true,
+      "evidence": [
+        "A-rollout/",
+        "A-long-0/",
+        "A-long-1/"
+      ],
+      "details": null
+    },
+    {
+      "requirement": "Длительные потоки пересекают начало обновления",
+      "passed": true,
+      "evidence": [
+        "A-rollout/events.json",
+        "A-long-0/",
+        "A-long-1/"
+      ],
+      "details": null
+    },
+    {
+      "requirement": "Старый поток пережил начало удаления Pod и уложился в grace period",
+      "passed": true,
+      "evidence": [
+        "A-rollout/timeline.jsonl",
+        "A-rollout/kubernetes.jsonl.gz"
+      ],
+      "details": {
+        "end_after_termination_request_seconds": [
+          -8.029375076293945,
+          13.918787240982056
+        ],
+        "metadata": [
+          {
+            "pod": "hw11-api-764f4f8fd8-8cg4r",
+            "deletion_deadline": 1794646842.0,
+            "grace_seconds": 60,
+            "inferred_start_second_precision": 1794646782.0,
+            "first_terminating_observation": 1794646782.314611,
+            "stream_end": 1794646773.970625,
+            "completed_before_deadline": true
+          },
+          {
+            "pod": "hw11-api-764f4f8fd8-zr6tw",
+            "deletion_deadline": 1794646820.0,
+            "grace_seconds": 60,
+            "inferred_start_second_precision": 1794646760.0,
+            "first_terminating_observation": 1794646762.291021,
+            "stream_end": 1794646773.9187872,
+            "completed_before_deadline": true
+          }
+        ],
+        "reference": "https://kubernetes.io/docs/reference/kubernetes-api/definitions/object-meta-v1-meta/"
+      }
+    },
+    {
+      "requirement": "Неготовая B исключена из готовых EndpointSlice",
+      "passed": true,
+      "evidence": "A-rollback/bad-B-state.json",
+      "details": null
+    },
+    {
+      "requirement": "После управляемого отката фактически отвечает A",
+      "passed": true,
+      "evidence": [
+        "A-rollback/requests.jsonl",
+        "A-rollback/helm-rollback.log"
+      ],
+      "details": null
+    },
+    {
+      "requirement": "Авария отдельно: частичный ответ, обнаружение и восстановление",
+      "passed": true,
+      "evidence": [
+        "A-killed-stream/requests.jsonl",
+        "A-crash/"
+      ],
+      "details": {
+        "partial_chunks": 9,
+        "client_detected_seconds": 0.183610200881958,
+        "first_unready_observation_seconds": 1.0086591243743896,
+        "first_recovered_response_seconds": 28.811402320861816
+      }
+    },
+    {
+      "requirement": "Замена Pod восстанавливает тот же артефакт и историю",
+      "passed": true,
+      "evidence": "A-dialog-recovery/evidence.json",
+      "details": null
+    },
+    {
+      "requirement": "Две политики × два сценария × три измерения не короче 120 с",
+      "passed": true,
+      "evidence": [
+        "B-*/conditions.json",
+        "B-*/requests.jsonl"
+      ],
+      "details": null
+    },
+    {
+      "requirement": "В каждой паре совпадает расписание и состав запросов",
+      "passed": true,
+      "evidence": "B-*/conditions.json",
+      "details": null
+    },
+    {
+      "requirement": "Четыре разных IP доходят до серверов без подмены адреса",
+      "passed": true,
+      "evidence": [
+        "B-network.json",
+        "environment/iptables-nat.txt",
+        "requests.jsonl"
+      ],
+      "details": null
+    },
+    {
+      "requirement": "Очередь горячей реплики наблюдается при простое другой",
+      "passed": true,
+      "evidence": "B-hot80-sticky-*/prometheus-range-complete.json",
+      "details": null
+    },
+    {
+      "requirement": "Сохранён случай без перекоса при привязке",
+      "passed": true,
+      "evidence": "B-uniform-sticky-r1/requests.jsonl",
+      "details": null
+    },
+    {
+      "requirement": "Исправление горячего сценария проверено во всех трёх повторах",
+      "passed": true,
+      "evidence": "B-verified-summary.json",
+      "details": null
+    },
+    {
+      "requirement": "Клиент и Prometheus сопоставляют один набор завершённых ответов",
+      "passed": true,
+      "evidence": "B-*/metrics-*-complete.json",
+      "details": null
+    },
+    {
+      "requirement": "C-hpa-uniform: реальные 2 → 3 → 2 и вычислительная CPU-нагрузка",
+      "passed": true,
+      "evidence": [
+        "C-hpa-uniform/timeline.jsonl",
+        "C-hpa-uniform/events.json"
+      ],
+      "details": {
+        "peak_cpu_cores": 0.9994269362519843,
+        "return_after_last_response_seconds": 86.68282699584961,
+        "hpa_condition_reasons": [
+          "DesiredWithinRange",
+          "FailedGetResourceMetric",
+          "ReadyForNewScale",
+          "ScaleDownStabilized",
+          "SucceededGetScale",
+          "SucceededRescale",
+          "TooFewReplicas",
+          "TooManyReplicas",
+          "ValidMetricFound"
+        ]
+      }
+    },
+    {
+      "requirement": "C-hpa-hot80: реальные 2 → 3 → 2 и вычислительная CPU-нагрузка",
+      "passed": true,
+      "evidence": [
+        "C-hpa-hot80/timeline.jsonl",
+        "C-hpa-hot80/events.json"
+      ],
+      "details": {
+        "peak_cpu_cores": 0.998684606252474,
+        "return_after_last_response_seconds": 86.55263805389404,
+        "hpa_condition_reasons": [
+          "DesiredWithinRange",
+          "ReadyForNewScale",
+          "ScaleDownStabilized",
+          "SucceededRescale",
+          "TooFewReplicas",
+          "TooManyReplicas",
+          "ValidMetricFound"
+        ]
+      }
+    },
+    {
+      "requirement": "HighTTFC: pending → firing → inactive",
+      "passed": true,
+      "evidence": "C-alerts/timeline.jsonl",
+      "details": [
+        {
+          "wall": 1794647793.307997,
+          "state": "inactive"
+        },
+        {
+          "wall": 1794647823.347463,
+          "state": "pending"
+        },
+        {
+          "wall": 1794647837.36693,
+          "state": "firing"
+        },
+        {
+          "wall": 1794647921.489504,
+          "state": "inactive"
+        }
+      ]
+    },
+    {
+      "requirement": "HighFailureFraction: pending → firing → inactive",
+      "passed": true,
+      "evidence": "C-alerts/timeline.jsonl",
+      "details": [
+        {
+          "wall": 1794647793.307997,
+          "state": "inactive"
+        },
+        {
+          "wall": 1794647813.334997,
+          "state": "pending"
+        },
+        {
+          "wall": 1794647827.356981,
+          "state": "firing"
+        },
+        {
+          "wall": 1794647911.472468,
+          "state": "inactive"
+        }
+      ]
+    },
+    {
+      "requirement": "Пять собственных проверок имеют сохранённые реальные доказательства",
+      "passed": true,
+      "evidence": [
+        "integration/",
+        "integration.log"
+      ],
+      "details": null
+    },
+    {
+      "requirement": "Четыре требуемых графика созданы из сырых измерений",
+      "passed": true,
+      "evidence": "../figures/",
+      "details": null
+    }
+  ],
+  "request_attempts": 5260,
+  "cpu_backend": "simulated"
+}

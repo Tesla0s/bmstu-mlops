@@ -1,0 +1,7 @@
+{
+  "planned": 42,
+  "sent": 42,
+  "broken": 1,
+  "completed": 41,
+  "http_5xx": 0
+}
