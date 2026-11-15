@@ -17,6 +17,7 @@ def wait_replicas(count,timeout=240):
 
 
 def main():
+    prepare_outputs("C-resource-metrics-before.json","C-hpa-uniform","C-hpa-hot80","C-affinity-prime","C-alerts")
     upgrade(image="hw11-api:1.0.1",modelVersion="A",brokenProbes=False,failWarmup=False,
             revision="C-baseline",**{"hpa.enabled":True})
     wait_ready()

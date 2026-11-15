@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "run": 1,
+      "log": "integration-pass1.log",
+      "new_pod": "hw11-api-6b56868fbd-tjdbf",
+      "uid": "e299e43d-e2da-4bae-90e5-1c72c30febd5",
+      "revision": "integration-warmup-1794747467654163000",
+      "ready_probe_during_warmup": 503
+    },
+    {
+      "run": 2,
+      "log": "integration-pass2.log",
+      "new_pod": "hw11-api-76b7f7b677-r7426",
+      "uid": "ec4f777f-9cc7-435e-834a-f7faf06f7235",
+      "revision": "integration-warmup-1794747538716915000",
+      "ready_probe_during_warmup": 503
+    }
+  ],
+  "service_client_and_requirements_unchanged": true
+}

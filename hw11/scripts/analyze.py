@@ -163,6 +163,7 @@ def audit_and_summary():
     all_requests.sort(key=lambda x:(x["planned_wall"],x["request_id"]))
     (R/"requests.jsonl").write_text("".join(json.dumps(x,ensure_ascii=False)+"\n" for x in all_requests))
     (R/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+    (R/"B-verified-summary.json").write_text(json.dumps(summary["B"],ensure_ascii=False,indent=2))
     return summary
 
 

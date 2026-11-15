@@ -11,6 +11,10 @@ def one_request(name,pod_ip,body):
 
 
 def main():
+    outputs=["A-crash","A-killed-stream","A-dialog-recovery","dialog-before","dialog-after","dialog-beta"]
+    if "--only-recovery" not in sys.argv:
+        outputs += ["A-warmup-broken","A-warmup-fixed","A-rollout","A-long-0","A-long-1","A-rollback"]
+    prepare_outputs(*outputs)
     if "--only-recovery" not in sys.argv:
         upgrade(image="hw11-api:1.0.1",modelVersion="A",warmupSeconds=20,brokenProbes=False,failWarmup=False,
                 revision="A-baseline",**{"hpa.enabled":False})

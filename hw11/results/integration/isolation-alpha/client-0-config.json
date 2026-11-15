@@ -1,7 +1,7 @@
 {
   "experiment": "isolation-alpha",
   "url": "http://hw11-api:8080",
-  "start_wall": 1794648042.121644,
+  "start_wall": 1794747609.0497699,
   "timeout": 30,
   "schedule": [
     {

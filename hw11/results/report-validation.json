@@ -1,6 +1,6 @@
 {
   "title": "ДЗ 11 · Губин Виталий · Kubernetes под нагрузкой",
-  "height": 13504,
+  "height": 14035,
   "width": 1600,
   "viewport": 1600,
   "images": [
@@ -35,7 +35,7 @@
   "literalSlashN": false,
   "missingLocalLinks": [],
   "errors": [],
-  "checked_wall": 1794648252.7106152,
-  "report_sha256": "a1126a88145dd6dd98858025e50f5823a6fff3e0c301940381830b8bab81eb94",
-  "method": "Local report opened in an isolated Chromium; screenshots reviewed; DOM overflow, image loading and local links checked."
+  "checked_wall": 1794747904.5755641,
+  "report_sha256": "cfe51750cd00d770758d407e38cf8a5189fe18a4af2108cb81f9a28c0553415b",
+  "method": "Updated report opened in isolated Chromium; all tables and changed sections visually reviewed; no horizontal overflow, broken images or missing local links."
 }

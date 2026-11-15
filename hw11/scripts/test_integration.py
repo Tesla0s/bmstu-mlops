@@ -1,9 +1,9 @@
 """Five own checks; first three perform real HTTP calls to Pods in Kubernetes."""
 import unittest
+import sys
 from lab import *
 
 TEST_DIR=RESULTS/"integration"
-TEST_DIR.mkdir(exist_ok=True)
 
 
 def inspect_url(url):
@@ -27,7 +27,7 @@ class KubernetesIntegration(unittest.TestCase):
     def test_01_warmup_is_not_ready_or_an_endpoint(self):
         old_names={p["metadata"]["name"] for p in pods()}
         began=time.time()
-        upgrade(revision="integration-warmup",modelVersion="A",brokenProbes=False,failWarmup=False,**{"hpa.enabled":False})
+        upgrade(revision=f"integration-warmup-{time.time_ns()}",modelVersion="A",brokenProbes=False,failWarmup=False,**{"hpa.enabled":False})
         deadline=time.monotonic()+90
         new=None
         while time.monotonic()<deadline:
@@ -117,4 +117,14 @@ class KubernetesIntegration(unittest.TestCase):
 
 
 if __name__=="__main__":
-    unittest.main(verbosity=2)
+    prepare_outputs("integration","integration.log")
+    TEST_DIR.mkdir(parents=True)
+    class Tee:
+        def __init__(self,*streams):self.streams=streams
+        def write(self,text):
+            for stream in self.streams:stream.write(text)
+        def flush(self):
+            for stream in self.streams:stream.flush()
+    with (RESULTS/"integration.log").open("w") as output:
+        runner=unittest.TextTestRunner(stream=Tee(sys.stderr,output),verbosity=2)
+        unittest.main(testRunner=runner)

@@ -1,0 +1,10 @@
+test_collector_refuses_to_append_to_an_existing_capture (__main__.OutputIsolation.test_collector_refuses_to_append_to_an_existing_capture) ... ok
+test_load_refuses_to_overwrite_previous_requests (__main__.OutputIsolation.test_load_refuses_to_overwrite_previous_requests) ... ok
+test_repeated_preparation_keeps_every_previous_run (__main__.OutputIsolation.test_repeated_preparation_keeps_every_previous_run) ... Previous evidence preserved in /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpf4l7tfj8/workspace/archived-results/20261115-155951-1794747591496218000
+Previous evidence preserved in /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpf4l7tfj8/workspace/archived-results/20261115-155951-1794747591497404000
+ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK

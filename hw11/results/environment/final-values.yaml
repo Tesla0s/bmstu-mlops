@@ -22,5 +22,5 @@ resources:
   requests:
     cpu: 250m
     memory: 80Mi
-revision: integration-warmup
+revision: integration-warmup-1794747538716915000
 warmupSeconds: 20

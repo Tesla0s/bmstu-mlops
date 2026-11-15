@@ -19,5 +19,7 @@ report:
 	$(PYTHON) scripts/analyze.py
 	$(PYTHON) scripts/build_report.py
 check: lint
+	$(PYTHON) scripts/test_reproducibility.py
 	$(PYTHON) scripts/analyze.py
 	$(PYTHON) scripts/verify_evidence.py
+	$(PYTHON) scripts/audit_raw.py

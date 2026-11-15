@@ -4,6 +4,8 @@ from collections import Counter
 
 
 def main():
+    prepare_outputs("B-network.json", *[f"B-{traffic}-{policy}-r{repeat}"
+        for traffic in ("uniform","hot80") for policy in ("sticky","ordinary") for repeat in (1,2,3)])
     upgrade(image="hw11-api:1.0.1",modelVersion="A",warmupSeconds=20,brokenProbes=False,failWarmup=False,revision="B-baseline",**{"hpa.enabled":False})
     wait_ready()
     # HPA removal does not implicitly restore replicas in all Helm histories.

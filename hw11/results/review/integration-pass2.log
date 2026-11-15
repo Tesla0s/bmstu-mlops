@@ -1,0 +1,19 @@
+Previous evidence preserved in /Users/vitalygubin/Desktop/MLOPS/hw11/workspace/archived-results/20261115-155858-1794747538678999000
+test_01_warmup_is_not_ready_or_an_endpoint (__main__.KubernetesIntegration.test_01_warmup_is_not_ready_or_an_endpoint) ... Release "hw11" has been upgraded. Happy Helming!
+NAME: hw11
+LAST DEPLOYED: Sun Nov 15 15:58:58 2026
+NAMESPACE: hw11
+STATUS: deployed
+REVISION: 15
+TEST SUITE: None
+
+ok
+test_02_actual_loaded_version_after_rollback (__main__.KubernetesIntegration.test_02_actual_loaded_version_after_rollback) ... ok
+test_03_replacement_restores_artifact_and_dialogue (__main__.KubernetesIntegration.test_03_replacement_restores_artifact_and_dialogue) ... ok
+test_04_accounting_keeps_rejections_and_broken_streams (__main__.KubernetesIntegration.test_04_accounting_keeps_rejections_and_broken_streams) ... ok
+test_05_two_dialogues_never_share_history (__main__.KubernetesIntegration.test_05_two_dialogues_never_share_history) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 70.816s
+
+OK

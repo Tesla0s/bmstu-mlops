@@ -15,7 +15,7 @@
                 },
                 "name": "client-0",
                 "namespace": "hw11",
-                "resourceVersion": "1833",
+                "resourceVersion": "7916",
                 "uid": "d7711c47-d469-46ec-a529-36b973ba1c68"
             },
             "spec": {
@@ -74,7 +74,7 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
@@ -88,14 +88,14 @@
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "ContainersReady"
@@ -114,16 +114,16 @@
                             "cpu": "20m",
                             "memory": "40Mi"
                         },
-                        "containerID": "containerd://edfcfa386556f74cf61b742e6b0e4acc665b2fcc05381796c3047ea553eda0be",
+                        "containerID": "containerd://d071dcee2d70df025a61416f7b8c722e2b4b6fe8b06c3f499c07036a63773e2e",
                         "image": "docker.io/library/hw11-api:1.0.1",
                         "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983",
                         "lastState": {
                             "terminated": {
-                                "containerID": "containerd://bd0a9136b530a9fa541cf3a1115f7adb608be958cde6d894caedf799fd4fd292",
-                                "exitCode": 137,
-                                "finishedAt": "2026-11-14T08:28:16Z",
-                                "reason": "Error",
-                                "startedAt": "2026-11-14T08:21:38Z"
+                                "containerID": "containerd://edfcfa386556f74cf61b742e6b0e4acc665b2fcc05381796c3047ea553eda0be",
+                                "exitCode": 255,
+                                "finishedAt": "2026-11-14T09:25:41Z",
+                                "reason": "Unknown",
+                                "startedAt": "2026-11-14T08:28:16Z"
                             }
                         },
                         "name": "client",
@@ -138,11 +138,11 @@
                                 "memory": "40Mi"
                             }
                         },
-                        "restartCount": 1,
+                        "restartCount": 2,
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T08:28:16Z"
+                                "startedAt": "2026-11-15T12:56:58Z"
                             }
                         },
                         "user": {
@@ -164,10 +164,10 @@
                 ],
                 "observedGeneration": 2,
                 "phase": "Running",
-                "podIP": "10.244.0.8",
+                "podIP": "10.244.0.5",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.8"
+                        "ip": "10.244.0.5"
                     }
                 ],
                 "qosClass": "Burstable",
@@ -188,7 +188,7 @@
                 },
                 "name": "client-1",
                 "namespace": "hw11",
-                "resourceVersion": "1834",
+                "resourceVersion": "7925",
                 "uid": "2ba5c4b4-a494-492a-b7cd-46c10a8544fb"
             },
             "spec": {
@@ -247,7 +247,7 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
@@ -261,14 +261,14 @@
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "ContainersReady"
@@ -287,16 +287,16 @@
                             "cpu": "20m",
                             "memory": "40Mi"
                         },
-                        "containerID": "containerd://4b2f5d7b3a310602dd0b320aa202551041d072f444042f3ea7a665e7a9b5d313",
+                        "containerID": "containerd://9fc03e1057e88786f834f74780953207761adddc513888b934ebeba3aeb5550a",
                         "image": "docker.io/library/hw11-api:1.0.1",
                         "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983",
                         "lastState": {
                             "terminated": {
-                                "containerID": "containerd://c8b7cb819258f44df6bd4acf0bdd42c11d2284b41b9845022b871891d7bc2c41",
-                                "exitCode": 137,
-                                "finishedAt": "2026-11-14T08:28:16Z",
-                                "reason": "Error",
-                                "startedAt": "2026-11-14T08:21:38Z"
+                                "containerID": "containerd://4b2f5d7b3a310602dd0b320aa202551041d072f444042f3ea7a665e7a9b5d313",
+                                "exitCode": 255,
+                                "finishedAt": "2026-11-14T09:25:41Z",
+                                "reason": "Unknown",
+                                "startedAt": "2026-11-14T08:28:17Z"
                             }
                         },
                         "name": "client",
@@ -311,11 +311,11 @@
                                 "memory": "40Mi"
                             }
                         },
-                        "restartCount": 1,
+                        "restartCount": 2,
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T08:28:17Z"
+                                "startedAt": "2026-11-15T12:56:58Z"
                             }
                         },
                         "user": {
@@ -337,10 +337,10 @@
                 ],
                 "observedGeneration": 2,
                 "phase": "Running",
-                "podIP": "10.244.0.7",
+                "podIP": "10.244.0.2",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.7"
+                        "ip": "10.244.0.2"
                     }
                 ],
                 "qosClass": "Burstable",
@@ -361,7 +361,7 @@
                 },
                 "name": "client-2",
                 "namespace": "hw11",
-                "resourceVersion": "1832",
+                "resourceVersion": "7926",
                 "uid": "dfc098d2-85dd-4a2c-9ad0-ac3f4dd53986"
             },
             "spec": {
@@ -420,7 +420,7 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
@@ -434,14 +434,14 @@
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "ContainersReady"
@@ -460,16 +460,16 @@
                             "cpu": "20m",
                             "memory": "40Mi"
                         },
-                        "containerID": "containerd://d2bd05067528b6be35e4245a5a7f8dc794b57504e97758c0420b53697fe504cd",
+                        "containerID": "containerd://f95821c2a7886ee4ceb1aaab38ba29cec53fa0260c5990349de2ee68037f34ce",
                         "image": "docker.io/library/hw11-api:1.0.1",
                         "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983",
                         "lastState": {
                             "terminated": {
-                                "containerID": "containerd://6cbbc1cce9ce1502934b7f4683d2c194839d2b57b354c392ed5b9ccb61967c9a",
-                                "exitCode": 137,
-                                "finishedAt": "2026-11-14T08:28:16Z",
-                                "reason": "Error",
-                                "startedAt": "2026-11-14T08:21:38Z"
+                                "containerID": "containerd://d2bd05067528b6be35e4245a5a7f8dc794b57504e97758c0420b53697fe504cd",
+                                "exitCode": 255,
+                                "finishedAt": "2026-11-14T09:25:41Z",
+                                "reason": "Unknown",
+                                "startedAt": "2026-11-14T08:28:17Z"
                             }
                         },
                         "name": "client",
@@ -484,11 +484,11 @@
                                 "memory": "40Mi"
                             }
                         },
-                        "restartCount": 1,
+                        "restartCount": 2,
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T08:28:17Z"
+                                "startedAt": "2026-11-15T12:56:58Z"
                             }
                         },
                         "user": {
@@ -510,10 +510,10 @@
                 ],
                 "observedGeneration": 2,
                 "phase": "Running",
-                "podIP": "10.244.0.10",
+                "podIP": "10.244.0.3",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.10"
+                        "ip": "10.244.0.3"
                     }
                 ],
                 "qosClass": "Burstable",
@@ -534,7 +534,7 @@
                 },
                 "name": "client-3",
                 "namespace": "hw11",
-                "resourceVersion": "1835",
+                "resourceVersion": "7922",
                 "uid": "29487e1c-bb35-4d36-9476-2e2ad4ee20fd"
             },
             "spec": {
@@ -593,7 +593,7 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
@@ -607,14 +607,14 @@
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:21:39Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 2,
                         "status": "True",
                         "type": "ContainersReady"
@@ -633,16 +633,16 @@
                             "cpu": "20m",
                             "memory": "40Mi"
                         },
-                        "containerID": "containerd://746465a87b9b25877a3d117abee803a497b6dd5524a8b126380ab3d9bae6f0fc",
+                        "containerID": "containerd://5846fe4396e7414f66a4362e34a413cf3e8ab44e34e60a00ec79e961a3f311e4",
                         "image": "docker.io/library/hw11-api:1.0.1",
                         "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983",
                         "lastState": {
                             "terminated": {
-                                "containerID": "containerd://d8aae3602d2f2bc5ea7665814df2d0299c8a572ad0a8fdcfadfda8450b16f638",
-                                "exitCode": 137,
-                                "finishedAt": "2026-11-14T08:28:17Z",
-                                "reason": "Error",
-                                "startedAt": "2026-11-14T08:21:38Z"
+                                "containerID": "containerd://746465a87b9b25877a3d117abee803a497b6dd5524a8b126380ab3d9bae6f0fc",
+                                "exitCode": 255,
+                                "finishedAt": "2026-11-14T09:25:41Z",
+                                "reason": "Unknown",
+                                "startedAt": "2026-11-14T08:28:17Z"
                             }
                         },
                         "name": "client",
@@ -657,11 +657,11 @@
                                 "memory": "40Mi"
                             }
                         },
-                        "restartCount": 1,
+                        "restartCount": 2,
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T08:28:17Z"
+                                "startedAt": "2026-11-15T12:56:58Z"
                             }
                         },
                         "user": {
@@ -683,10 +683,10 @@
                 ],
                 "observedGeneration": 2,
                 "phase": "Running",
-                "podIP": "10.244.0.9",
+                "podIP": "10.244.0.4",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.9"
+                        "ip": "10.244.0.4"
                     }
                 ],
                 "qosClass": "Burstable",
@@ -716,7 +716,7 @@
                         "uid": "3ec8376f-5048-4e9d-a736-02b0db110234"
                     }
                 ],
-                "resourceVersion": "1090",
+                "resourceVersion": "7928",
                 "uid": "b9cc5d7d-186c-4d91-b3fb-c537cc8617e7"
             },
             "spec": {
@@ -898,7 +898,7 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:23:16Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
@@ -912,14 +912,14 @@
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:23:22Z",
+                        "lastTransitionTime": "2026-11-15T12:57:02Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:23:22Z",
+                        "lastTransitionTime": "2026-11-15T12:57:02Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "ContainersReady"
@@ -938,10 +938,18 @@
                             "cpu": "50m",
                             "memory": "96Mi"
                         },
-                        "containerID": "containerd://5159a90406642fe390b4b20e70989d550f4fc2f40348cbaba6b5b5d141591908",
+                        "containerID": "containerd://5f8eca418aaab2e8b1b31d875902702506e12af8ccc36456b56eee9e9ef22fef",
                         "image": "docker.io/grafana/grafana:12.2.0",
                         "imageID": "docker.io/grafana/grafana@sha256:74144189b38447facf737dfd0f3906e42e0776212bf575dc3334c3609183adf7",
-                        "lastState": {},
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://5159a90406642fe390b4b20e70989d550f4fc2f40348cbaba6b5b5d141591908",
+                                "exitCode": 255,
+                                "finishedAt": "2026-11-14T09:25:41Z",
+                                "reason": "Unknown",
+                                "startedAt": "2026-11-14T08:23:15Z"
+                            }
+                        },
                         "name": "grafana",
                         "ready": true,
                         "resources": {
@@ -954,11 +962,11 @@
                                 "memory": "96Mi"
                             }
                         },
-                        "restartCount": 0,
+                        "restartCount": 1,
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T08:23:15Z"
+                                "startedAt": "2026-11-15T12:56:59Z"
                             }
                         },
                         "user": {
@@ -1019,18 +1027,18 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "experiment-revision": "integration-warmup",
+                    "experiment-revision": "integration-warmup-1794747538716915000",
                     "prometheus.io/port": "8080",
                     "prometheus.io/scrape": "true"
                 },
-                "creationTimestamp": "2026-11-14T09:20:18Z",
-                "generateName": "hw11-api-678b94ddbd-",
+                "creationTimestamp": "2026-11-15T12:59:44Z",
+                "generateName": "hw11-api-76b7f7b677-",
                 "generation": 1,
                 "labels": {
                     "app": "hw11-api",
-                    "pod-template-hash": "678b94ddbd"
+                    "pod-template-hash": "76b7f7b677"
                 },
-                "name": "hw11-api-678b94ddbd-4mtkw",
+                "name": "hw11-api-76b7f7b677-6qk5p",
                 "namespace": "hw11",
                 "ownerReferences": [
                     {
@@ -1038,12 +1046,12 @@
                         "blockOwnerDeletion": true,
                         "controller": true,
                         "kind": "ReplicaSet",
-                        "name": "hw11-api-678b94ddbd",
-                        "uid": "fc336eba-5e23-45a7-adc1-1a200cfade24"
+                        "name": "hw11-api-76b7f7b677",
+                        "uid": "62734bf8-cdba-4ef0-a003-e64eada967b3"
                     }
                 ],
-                "resourceVersion": "7489",
-                "uid": "5f0005fc-f910-4274-b225-a507e72f6ca0"
+                "resourceVersion": "8843",
+                "uid": "fc4c2eb1-5e50-4d38-8fd6-7b385b966894"
             },
             "spec": {
                 "automountServiceAccountToken": false,
@@ -1227,35 +1235,35 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:20:18Z",
+                        "lastTransitionTime": "2026-11-15T12:59:45Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:20:18Z",
+                        "lastTransitionTime": "2026-11-15T12:59:44Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:20:39Z",
+                        "lastTransitionTime": "2026-11-15T13:00:06Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:20:39Z",
+                        "lastTransitionTime": "2026-11-15T13:00:06Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:20:18Z",
+                        "lastTransitionTime": "2026-11-15T12:59:44Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "PodScheduled"
@@ -1267,7 +1275,7 @@
                             "cpu": "250m",
                             "memory": "80Mi"
                         },
-                        "containerID": "containerd://0b3e83910dcc57282bf0a2c58633e4f2a2fd97cfa0ec9736b12d970c7e83a7dd",
+                        "containerID": "containerd://3217220c2e582c0eab588ed6fe86ed4c5dcae5b376e24c57580b43cfdbe1dcc5",
                         "image": "docker.io/library/hw11-api:1.0.1",
                         "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983",
                         "lastState": {},
@@ -1287,7 +1295,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T09:20:18Z"
+                                "startedAt": "2026-11-15T12:59:45Z"
                             }
                         },
                         "user": {
@@ -1317,14 +1325,14 @@
                 ],
                 "observedGeneration": 1,
                 "phase": "Running",
-                "podIP": "10.244.0.38",
+                "podIP": "10.244.0.20",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.38"
+                        "ip": "10.244.0.20"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2026-11-14T09:20:18Z"
+                "startTime": "2026-11-15T12:59:44Z"
             }
         },
         {
@@ -1332,18 +1340,18 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "experiment-revision": "integration-warmup",
+                    "experiment-revision": "integration-warmup-1794747538716915000",
                     "prometheus.io/port": "8080",
                     "prometheus.io/scrape": "true"
                 },
-                "creationTimestamp": "2026-11-14T09:19:53Z",
-                "generateName": "hw11-api-678b94ddbd-",
+                "creationTimestamp": "2026-11-15T12:58:58Z",
+                "generateName": "hw11-api-76b7f7b677-",
                 "generation": 1,
                 "labels": {
                     "app": "hw11-api",
-                    "pod-template-hash": "678b94ddbd"
+                    "pod-template-hash": "76b7f7b677"
                 },
-                "name": "hw11-api-678b94ddbd-wcj46",
+                "name": "hw11-api-76b7f7b677-r7426",
                 "namespace": "hw11",
                 "ownerReferences": [
                     {
@@ -1351,12 +1359,12 @@
                         "blockOwnerDeletion": true,
                         "controller": true,
                         "kind": "ReplicaSet",
-                        "name": "hw11-api-678b94ddbd",
-                        "uid": "fc336eba-5e23-45a7-adc1-1a200cfade24"
+                        "name": "hw11-api-76b7f7b677",
+                        "uid": "62734bf8-cdba-4ef0-a003-e64eada967b3"
                     }
                 ],
-                "resourceVersion": "7367",
-                "uid": "9383a4dd-75e8-41b2-9622-165879d6f698"
+                "resourceVersion": "8613",
+                "uid": "ec4f777f-9cc7-435e-834a-f7faf06f7235"
             },
             "spec": {
                 "automountServiceAccountToken": false,
@@ -1540,35 +1548,35 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:19:54Z",
+                        "lastTransitionTime": "2026-11-15T12:58:59Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:19:53Z",
+                        "lastTransitionTime": "2026-11-15T12:58:58Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:20:15Z",
+                        "lastTransitionTime": "2026-11-15T12:59:20Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:20:15Z",
+                        "lastTransitionTime": "2026-11-15T12:59:20Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T09:19:53Z",
+                        "lastTransitionTime": "2026-11-15T12:58:58Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "PodScheduled"
@@ -1580,7 +1588,7 @@
                             "cpu": "250m",
                             "memory": "80Mi"
                         },
-                        "containerID": "containerd://786cba61673dbf0ec2767a7056c9d2354aa8997154e17008cc7e9de6475da94c",
+                        "containerID": "containerd://37fa007762eb2a55678d1bb5693673955c27bc8b7538b4ab930d754fc9fa4d47",
                         "image": "docker.io/library/hw11-api:1.0.1",
                         "imageID": "sha256:c9db3db70b593cbc1f9507303be131e6632c5d4d1b9ae5df54486c12bbc81983",
                         "lastState": {},
@@ -1600,7 +1608,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T09:19:54Z"
+                                "startedAt": "2026-11-15T12:58:59Z"
                             }
                         },
                         "user": {
@@ -1630,14 +1638,14 @@
                 ],
                 "observedGeneration": 1,
                 "phase": "Running",
-                "podIP": "10.244.0.37",
+                "podIP": "10.244.0.18",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.37"
+                        "ip": "10.244.0.18"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2026-11-14T09:19:53Z"
+                "startTime": "2026-11-15T12:58:58Z"
             }
         },
         {
@@ -1663,7 +1671,7 @@
                         "uid": "b86d79f3-86a6-435a-9937-9078ecabd3cd"
                     }
                 ],
-                "resourceVersion": "961",
+                "resourceVersion": "8243",
                 "uid": "c03aaa96-9f4d-4ece-a81d-00b8574b9187"
             },
             "spec": {
@@ -1784,7 +1792,7 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:22:16Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
@@ -1798,14 +1806,14 @@
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:22:22Z",
+                        "lastTransitionTime": "2026-11-15T12:57:48Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:22:22Z",
+                        "lastTransitionTime": "2026-11-15T12:57:48Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "ContainersReady"
@@ -1824,10 +1832,18 @@
                             "cpu": "50m",
                             "memory": "32Mi"
                         },
-                        "containerID": "containerd://9bf2c975720c48c1c902ef3e215862a707310302e4ae58bd93fa31c6a9c5ae24",
+                        "containerID": "containerd://29074aee781ffc53c81cf2878264af5e5d0b3b101f7f0eafe1885e6f779edf64",
                         "image": "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.17.0",
                         "imageID": "registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:2bbc915567334b13632bf62c0a97084aff72a36e13c4dabd5f2f11c898c5bacd",
-                        "lastState": {},
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://7383c0159080a79cd6765a8383b98db90a94a1c3ed21535adb4eefa779973a4a",
+                                "exitCode": 1,
+                                "finishedAt": "2026-11-15T12:57:30Z",
+                                "reason": "Error",
+                                "startedAt": "2026-11-15T12:56:59Z"
+                            }
+                        },
                         "name": "kube-state-metrics",
                         "ready": true,
                         "resources": {
@@ -1840,11 +1856,11 @@
                                 "memory": "32Mi"
                             }
                         },
-                        "restartCount": 0,
+                        "restartCount": 2,
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T08:22:15Z"
+                                "startedAt": "2026-11-15T12:57:42Z"
                             }
                         },
                         "user": {
@@ -1874,10 +1890,10 @@
                 ],
                 "observedGeneration": 1,
                 "phase": "Running",
-                "podIP": "10.244.0.12",
+                "podIP": "10.244.0.11",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.12"
+                        "ip": "10.244.0.11"
                     }
                 ],
                 "qosClass": "Burstable",
@@ -1907,7 +1923,7 @@
                         "uid": "f6e6f357-f717-41ae-b667-1ef1d52c7f27"
                     }
                 ],
-                "resourceVersion": "1003",
+                "resourceVersion": "8047",
                 "uid": "8d46bf61-8f72-4add-adb5-0a4fc053fecf"
             },
             "spec": {
@@ -2052,7 +2068,7 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:22:38Z",
+                        "lastTransitionTime": "2026-11-15T12:56:59Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "PodReadyToStartContainers"
@@ -2066,14 +2082,14 @@
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:22:44Z",
+                        "lastTransitionTime": "2026-11-15T12:57:05Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2026-11-14T08:22:44Z",
+                        "lastTransitionTime": "2026-11-15T12:57:05Z",
                         "observedGeneration": 1,
                         "status": "True",
                         "type": "ContainersReady"
@@ -2092,10 +2108,18 @@
                             "cpu": "50m",
                             "memory": "128Mi"
                         },
-                        "containerID": "containerd://7e14153757fee5f96e6f6c022f761665789cf01af6e5569943c11aafd000a648",
+                        "containerID": "containerd://78670a97b0ba38053c4c317748ca7d43c922208b20f9987acbaf1e4c9af4a14d",
                         "image": "docker.io/prom/prometheus:v3.6.0",
                         "imageID": "docker.io/prom/prometheus@sha256:76947e7ef22f8a698fc638f706685909be425dbe09bd7a2cd7aca849f79b5f64",
-                        "lastState": {},
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://7e14153757fee5f96e6f6c022f761665789cf01af6e5569943c11aafd000a648",
+                                "exitCode": 255,
+                                "finishedAt": "2026-11-14T09:25:41Z",
+                                "reason": "Unknown",
+                                "startedAt": "2026-11-14T08:22:38Z"
+                            }
+                        },
                         "name": "prometheus",
                         "ready": true,
                         "resources": {
@@ -2108,11 +2132,11 @@
                                 "memory": "128Mi"
                             }
                         },
-                        "restartCount": 0,
+                        "restartCount": 1,
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2026-11-14T08:22:38Z"
+                                "startedAt": "2026-11-15T12:56:59Z"
                             }
                         },
                         "user": {
@@ -2150,10 +2174,10 @@
                 ],
                 "observedGeneration": 1,
                 "phase": "Running",
-                "podIP": "10.244.0.11",
+                "podIP": "10.244.0.14",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.11"
+                        "ip": "10.244.0.14"
                     }
                 ],
                 "qosClass": "Burstable",
@@ -2557,18 +2581,18 @@
             "kind": "Deployment",
             "metadata": {
                 "annotations": {
-                    "deployment.kubernetes.io/revision": "12",
+                    "deployment.kubernetes.io/revision": "14",
                     "meta.helm.sh/release-name": "hw11",
                     "meta.helm.sh/release-namespace": "hw11"
                 },
                 "creationTimestamp": "2026-11-14T08:21:38Z",
-                "generation": 17,
+                "generation": 19,
                 "labels": {
                     "app.kubernetes.io/managed-by": "Helm"
                 },
                 "name": "hw11-api",
                 "namespace": "hw11",
-                "resourceVersion": "7495",
+                "resourceVersion": "8849",
                 "uid": "0d0dfc90-451d-47d3-90c0-f7db685317c9"
             },
             "spec": {
@@ -2590,7 +2614,7 @@
                 "template": {
                     "metadata": {
                         "annotations": {
-                            "experiment-revision": "integration-warmup",
+                            "experiment-revision": "integration-warmup-1794747538716915000",
                             "prometheus.io/port": "8080",
                             "prometheus.io/scrape": "true"
                         },
@@ -2763,22 +2787,22 @@
                 "conditions": [
                     {
                         "lastTransitionTime": "2026-11-14T08:21:38Z",
-                        "lastUpdateTime": "2026-11-14T09:20:15Z",
-                        "message": "ReplicaSet \"hw11-api-678b94ddbd\" has successfully progressed.",
+                        "lastUpdateTime": "2026-11-15T12:59:41Z",
+                        "message": "ReplicaSet \"hw11-api-76b7f7b677\" has successfully progressed.",
                         "reason": "NewReplicaSetAvailable",
                         "status": "True",
                         "type": "Progressing"
                     },
                     {
-                        "lastTransitionTime": "2026-11-14T09:20:39Z",
-                        "lastUpdateTime": "2026-11-14T09:20:39Z",
+                        "lastTransitionTime": "2026-11-15T13:00:06Z",
+                        "lastUpdateTime": "2026-11-15T13:00:06Z",
                         "message": "Deployment has minimum availability.",
                         "reason": "MinimumReplicasAvailable",
                         "status": "True",
                         "type": "Available"
                     }
                 ],
-                "observedGeneration": 17,
+                "observedGeneration": 19,
                 "readyReplicas": 2,
                 "replicas": 2,
                 "updatedReplicas": 2
@@ -2796,7 +2820,7 @@
                 "generation": 1,
                 "name": "kube-state-metrics",
                 "namespace": "hw11",
-                "resourceVersion": "965",
+                "resourceVersion": "8247",
                 "uid": "317ec38f-b30c-4c53-998a-0b5477f74a61"
             },
             "spec": {
@@ -2876,20 +2900,20 @@
                 "availableReplicas": 1,
                 "conditions": [
                     {
-                        "lastTransitionTime": "2026-11-14T08:22:22Z",
-                        "lastUpdateTime": "2026-11-14T08:22:22Z",
-                        "message": "Deployment has minimum availability.",
-                        "reason": "MinimumReplicasAvailable",
-                        "status": "True",
-                        "type": "Available"
-                    },
-                    {
                         "lastTransitionTime": "2026-11-14T08:21:38Z",
                         "lastUpdateTime": "2026-11-14T08:22:22Z",
                         "message": "ReplicaSet \"kube-state-metrics-7fc65f487b\" has successfully progressed.",
                         "reason": "NewReplicaSetAvailable",
                         "status": "True",
                         "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-11-15T12:57:48Z",
+                        "lastUpdateTime": "2026-11-15T12:57:48Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
                     }
                 ],
                 "observedGeneration": 1,
@@ -3103,7 +3127,7 @@
             "endpoints": [
                 {
                     "addresses": [
-                        "10.244.0.37"
+                        "10.244.0.18"
                     ],
                     "conditions": {
                         "ready": true,
@@ -3113,14 +3137,14 @@
                     "nodeName": "mlops-hw11-control-plane",
                     "targetRef": {
                         "kind": "Pod",
-                        "name": "hw11-api-678b94ddbd-wcj46",
+                        "name": "hw11-api-76b7f7b677-r7426",
                         "namespace": "hw11",
-                        "uid": "9383a4dd-75e8-41b2-9622-165879d6f698"
+                        "uid": "ec4f777f-9cc7-435e-834a-f7faf06f7235"
                     }
                 },
                 {
                     "addresses": [
-                        "10.244.0.38"
+                        "10.244.0.20"
                     ],
                     "conditions": {
                         "ready": true,
@@ -3130,20 +3154,20 @@
                     "nodeName": "mlops-hw11-control-plane",
                     "targetRef": {
                         "kind": "Pod",
-                        "name": "hw11-api-678b94ddbd-4mtkw",
+                        "name": "hw11-api-76b7f7b677-6qk5p",
                         "namespace": "hw11",
-                        "uid": "5f0005fc-f910-4274-b225-a507e72f6ca0"
+                        "uid": "fc4c2eb1-5e50-4d38-8fd6-7b385b966894"
                     }
                 }
             ],
             "kind": "EndpointSlice",
             "metadata": {
                 "annotations": {
-                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T09:20:39Z"
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-15T13:00:06Z"
                 },
                 "creationTimestamp": "2026-11-14T08:21:38Z",
                 "generateName": "hw11-api-",
-                "generation": 118,
+                "generation": 151,
                 "labels": {
                     "app.kubernetes.io/managed-by": "Helm",
                     "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
@@ -3161,7 +3185,7 @@
                         "uid": "fc98c93f-521f-413f-b7c7-87093d69a77b"
                     }
                 ],
-                "resourceVersion": "7490",
+                "resourceVersion": "8846",
                 "uid": "8636250c-fee3-44f2-8c7f-05d103421d42"
             },
             "ports": [
@@ -3178,7 +3202,7 @@
             "endpoints": [
                 {
                     "addresses": [
-                        "10.244.0.37"
+                        "10.244.0.18"
                     ],
                     "conditions": {
                         "ready": true,
@@ -3188,14 +3212,14 @@
                     "nodeName": "mlops-hw11-control-plane",
                     "targetRef": {
                         "kind": "Pod",
-                        "name": "hw11-api-678b94ddbd-wcj46",
+                        "name": "hw11-api-76b7f7b677-r7426",
                         "namespace": "hw11",
-                        "uid": "9383a4dd-75e8-41b2-9622-165879d6f698"
+                        "uid": "ec4f777f-9cc7-435e-834a-f7faf06f7235"
                     }
                 },
                 {
                     "addresses": [
-                        "10.244.0.38"
+                        "10.244.0.20"
                     ],
                     "conditions": {
                         "ready": true,
@@ -3205,20 +3229,20 @@
                     "nodeName": "mlops-hw11-control-plane",
                     "targetRef": {
                         "kind": "Pod",
-                        "name": "hw11-api-678b94ddbd-4mtkw",
+                        "name": "hw11-api-76b7f7b677-6qk5p",
                         "namespace": "hw11",
-                        "uid": "5f0005fc-f910-4274-b225-a507e72f6ca0"
+                        "uid": "fc4c2eb1-5e50-4d38-8fd6-7b385b966894"
                     }
                 }
             ],
             "kind": "EndpointSlice",
             "metadata": {
                 "annotations": {
-                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T09:20:39Z"
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-15T13:00:06Z"
                 },
                 "creationTimestamp": "2026-11-14T08:21:38Z",
                 "generateName": "hw11-sticky-",
-                "generation": 118,
+                "generation": 151,
                 "labels": {
                     "app.kubernetes.io/managed-by": "Helm",
                     "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
@@ -3236,65 +3260,8 @@
                         "uid": "f8efeecb-76ac-40a1-84e6-d76c5bba68b7"
                     }
                 ],
-                "resourceVersion": "7493",
+                "resourceVersion": "8847",
                 "uid": "c3f9b9a2-4696-4be9-909c-77ea497c6870"
-            },
-            "ports": [
-                {
-                    "name": "",
-                    "port": 8080,
-                    "protocol": "TCP"
-                }
-            ]
-        },
-        {
-            "addressType": "IPv4",
-            "apiVersion": "discovery.k8s.io/v1",
-            "endpoints": [
-                {
-                    "addresses": [
-                        "10.244.0.12"
-                    ],
-                    "conditions": {
-                        "ready": true,
-                        "serving": true,
-                        "terminating": false
-                    },
-                    "nodeName": "mlops-hw11-control-plane",
-                    "targetRef": {
-                        "kind": "Pod",
-                        "name": "kube-state-metrics-7fc65f487b-xvhb6",
-                        "namespace": "hw11",
-                        "uid": "c03aaa96-9f4d-4ece-a81d-00b8574b9187"
-                    }
-                }
-            ],
-            "kind": "EndpointSlice",
-            "metadata": {
-                "annotations": {
-                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T08:22:22Z"
-                },
-                "creationTimestamp": "2026-11-14T08:21:38Z",
-                "generateName": "kube-state-metrics-",
-                "generation": 3,
-                "labels": {
-                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
-                    "kubernetes.io/service-name": "kube-state-metrics"
-                },
-                "name": "kube-state-metrics-ff29k",
-                "namespace": "hw11",
-                "ownerReferences": [
-                    {
-                        "apiVersion": "v1",
-                        "blockOwnerDeletion": true,
-                        "controller": true,
-                        "kind": "Service",
-                        "name": "kube-state-metrics",
-                        "uid": "8c709806-eac8-40f7-ae1b-6862b385d62a"
-                    }
-                ],
-                "resourceVersion": "962",
-                "uid": "ee690904-b29c-44d8-a5d1-563c268ab245"
             },
             "ports": [
                 {
@@ -3320,6 +3287,63 @@
                     "nodeName": "mlops-hw11-control-plane",
                     "targetRef": {
                         "kind": "Pod",
+                        "name": "kube-state-metrics-7fc65f487b-xvhb6",
+                        "namespace": "hw11",
+                        "uid": "c03aaa96-9f4d-4ece-a81d-00b8574b9187"
+                    }
+                }
+            ],
+            "kind": "EndpointSlice",
+            "metadata": {
+                "annotations": {
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-15T12:57:48Z"
+                },
+                "creationTimestamp": "2026-11-14T08:21:38Z",
+                "generateName": "kube-state-metrics-",
+                "generation": 5,
+                "labels": {
+                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+                    "kubernetes.io/service-name": "kube-state-metrics"
+                },
+                "name": "kube-state-metrics-ff29k",
+                "namespace": "hw11",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Service",
+                        "name": "kube-state-metrics",
+                        "uid": "8c709806-eac8-40f7-ae1b-6862b385d62a"
+                    }
+                ],
+                "resourceVersion": "8244",
+                "uid": "ee690904-b29c-44d8-a5d1-563c268ab245"
+            },
+            "ports": [
+                {
+                    "name": "",
+                    "port": 8080,
+                    "protocol": "TCP"
+                }
+            ]
+        },
+        {
+            "addressType": "IPv4",
+            "apiVersion": "discovery.k8s.io/v1",
+            "endpoints": [
+                {
+                    "addresses": [
+                        "10.244.0.14"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "nodeName": "mlops-hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
                         "name": "prometheus-7fdb7df979-z9dt5",
                         "namespace": "hw11",
                         "uid": "8d46bf61-8f72-4add-adb5-0a4fc053fecf"
@@ -3329,11 +3353,11 @@
             "kind": "EndpointSlice",
             "metadata": {
                 "annotations": {
-                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T08:22:44Z"
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T08:21:38Z"
                 },
                 "creationTimestamp": "2026-11-14T08:21:38Z",
                 "generateName": "prometheus-",
-                "generation": 3,
+                "generation": 4,
                 "labels": {
                     "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
                     "kubernetes.io/service-name": "prometheus"
@@ -3350,7 +3374,7 @@
                         "uid": "3af5289f-7732-4c6a-ad33-056ccc034af2"
                     }
                 ],
-                "resourceVersion": "1004",
+                "resourceVersion": "8109",
                 "uid": "623b5d16-acab-419b-a02c-81ee283fc0ce"
             },
             "ports": [

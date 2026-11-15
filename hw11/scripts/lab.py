@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import shutil
 import threading
 import time
 import urllib.parse
@@ -20,6 +21,22 @@ ENV = {**os.environ, "KUBECONFIG": str(WORK / "kubeconfig"),
 RESULTS = ROOT / "results"
 RESULTS.mkdir(exist_ok=True)
 PROM = "http://127.0.0.1:19090"
+
+
+
+def prepare_outputs(*names):
+    """Keep previous evidence outside the submission before starting a fresh experiment."""
+    if any(Path(name).name != name or name in (".", "..") for name in names):
+        raise ValueError("Output names must be direct children of results")
+    existing=[RESULTS/name for name in names if (RESULTS/name).exists()]
+    if not existing:
+        return None
+    archive=WORK/"archived-results"/(time.strftime("%Y%m%d-%H%M%S")+"-"+str(time.time_ns()))
+    archive.mkdir(parents=True)
+    for source in existing:
+        shutil.move(str(source),str(archive/source.name))
+    print(f"Previous evidence preserved in {archive}",flush=True)
+    return archive
 
 
 def command(args, stdin=None, check=True, timeout=600):
@@ -98,13 +115,15 @@ class Collector:
         self.thread = None
 
     def __enter__(self):
+        if any((self.directory/name).exists() for name in ("timeline.jsonl","kubernetes.jsonl.gz","timeline-complete.jsonl")):
+            raise FileExistsError("Existing capture: call prepare_outputs before this experiment")
         self.thread = threading.Thread(target=self.collect, daemon=True)
         self.thread.start()
         return self
 
     def collect(self):
         raw_path=self.directory/"kubernetes.jsonl.gz"
-        with gzip.open(raw_path,"at") as raw, (self.directory/"timeline.jsonl").open("a") as small:
+        with gzip.open(raw_path,"xt") as raw, (self.directory/"timeline.jsonl").open("x") as small:
             while not self.stop_event.is_set():
                 began=time.monotonic()
                 try:
@@ -177,6 +196,8 @@ def schedule(duration, rate, traffic="uniform", prefix="load", body_overrides=No
 def load(name, rows, service="hw11-api", directory=None, start_delay=3, timeout=30):
     directory=Path(directory or RESULTS/name)
     directory.mkdir(parents=True,exist_ok=True)
+    if (directory/"requests.jsonl").exists():
+        raise FileExistsError("Existing request results: call prepare_outputs before this experiment")
     start=time.time()+start_delay
     configs=[]
     for i in range(4):

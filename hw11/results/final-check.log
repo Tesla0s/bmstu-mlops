@@ -3,6 +3,17 @@
 [INFO] Chart.yaml: icon is recommended
 
 1 chart(s) linted, 0 chart(s) failed
+.venv/bin/python scripts/test_reproducibility.py
+test_collector_refuses_to_append_to_an_existing_capture (__main__.OutputIsolation.test_collector_refuses_to_append_to_an_existing_capture) ... ok
+test_load_refuses_to_overwrite_previous_requests (__main__.OutputIsolation.test_load_refuses_to_overwrite_previous_requests) ... ok
+test_repeated_preparation_keeps_every_previous_run (__main__.OutputIsolation.test_repeated_preparation_keeps_every_previous_run) ... Previous evidence preserved in /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpigoyk5wo/workspace/archived-results/20261115-160332-1794747812360091000
+Previous evidence preserved in /var/folders/ll/jhp03rw50gzfdqbmzc9q46yr0000gn/T/tmpigoyk5wo/workspace/archived-results/20261115-160332-1794747812360639000
+ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+OK
 .venv/bin/python scripts/analyze.py
 Raw data audited; summary and four figures generated.
 .venv/bin/python scripts/verify_evidence.py
@@ -29,3 +40,11 @@ PASS HighTTFC: pending → firing → inactive
 PASS HighFailureFraction: pending → firing → inactive
 PASS Пять собственных проверок имеют сохранённые реальные доказательства
 PASS Четыре требуемых графика созданы из сырых измерений
+.venv/bin/python scripts/audit_raw.py
+{
+  "passed": true,
+  "assertions": 75844,
+  "failures": [],
+  "folders": 34,
+  "all_source_attempts": 5273
+}
